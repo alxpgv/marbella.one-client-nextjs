@@ -1,0 +1,27 @@
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    return Document.getInitialProps(ctx);
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body className="min-w-[320px] min-h-screen">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument;

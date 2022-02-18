@@ -1,8 +1,8 @@
 module.exports = {
-  arrowParens: 'always',
+  arrowParens: "always",
   printWidth: 80,
   semi: true,
-  singleQuote: true,
+  singleQuote: false,
   tabWidth: 2,
   useTabs: false,
 };

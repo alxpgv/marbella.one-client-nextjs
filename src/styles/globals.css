@@ -1,0 +1,42 @@
+@import url("public/fonts/SourceSansPro/stylesheet.css");
+@import url("public/fonts/judson/stylesheet.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-xl;
+  }
+
+  h1 {
+    @apply text-9xl font-serif;
+  }
+
+  h2 {
+  }
+
+  #__next {
+    @apply flex flex-col justify-between min-h-screen;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+}
+
+/*@layer components {*/
+/*  .btn-blue {*/
+/*    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;*/
+/*  }*/
+/*}*/
+
+/*@layer utilities {*/
+/*  .filter-none {*/
+/*    filter: none;*/
+/*  }*/
+/*  .filter-grayscale {*/
+/*    filter: grayscale(100%);*/
+/*  }*/
+/*}*/

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Judson';
+  src: url('Judson-Bold.eot');
+  src: local('Judson Bold'), local('Judson-Bold'),
+  url('Judson-Bold.eot?#iefix') format('embedded-opentype'),
+  url('Judson-Bold.woff2') format('woff2'),
+  url('Judson-Bold.woff') format('woff'),
+  url('Judson-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Judson';
+  src: url('Judson-Regular.eot');
+  src: local('Judson Regular'), local('Judson-Regular'),
+  url('Judson-Regular.eot?#iefix') format('embedded-opentype'),
+  url('Judson-Regular.woff2') format('woff2'),
+  url('Judson-Regular.woff') format('woff'),
+  url('Judson-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
