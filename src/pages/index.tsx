@@ -16,19 +16,15 @@ const Index: NextPage = () => {
         <h4>Heading h4</h4>
         <h5>Heading h5</h5>
         <h6>Heading h6</h6>
-
         <Button size={"lg"} color={"red"}>
           Click me
         </Button>
-
         <Button size={"md"} color={"red"}>
           Click me
         </Button>
-
         <Button size={"sm"} color={"red"}>
           Click me
         </Button>
-
         <div className="flex py-4 px-3 border-2 border-amber-900">
           <p>Font Judson</p>
           <p>Source Sans Pro</p>
@@ -47,8 +43,82 @@ const Index: NextPage = () => {
           Color gray Selling any property is easy with us! We will make a 3D
           video presentation of the object and conduct a professional photo
           session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
+        </p>{" "}
+        <p>
+          Color gray Selling any property is easy with us! We will make a 3D
+          video presentation of the object and conduct a professional photo
+          session
         </p>
-
         <a href="#">Read more</a>
       </MainLayout>
     </>

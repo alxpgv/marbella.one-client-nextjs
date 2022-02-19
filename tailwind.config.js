@@ -29,6 +29,8 @@ module.exports = {
       white: "#FFFFFF",
       black: "#000000",
       "grey-100": "#F2F2F2",
+      "grey-150": "#D7D7D7",
+      "grey-200": "#E0E0E0",
       "grey-300": "#7F8C92",
       "grey-400": "#666666",
       "grey-500": "#3C413F",
@@ -39,11 +41,17 @@ module.exports = {
       "black-800": "#151415",
       "red-400": "#F8271A",
     },
+    screens: {
+      "2xl": "1536px",
+      lg: "1024px",
+      md: "768px",
+      sm: "640px",
+      xl: "1280px",
+    },
     extend: {
       container: {
         center: true,
         margin: "auto",
-        padding: "1.25rem",
         screens: {
           sm: "100%",
           md: "100%",

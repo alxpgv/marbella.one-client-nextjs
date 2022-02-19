@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply text-xl;
+    @apply text-xl min-w-[320px] min-h-screen;
   }
 
   h1 {
@@ -18,11 +18,15 @@
   }
 
   #__next {
-    @apply flex flex-col justify-between min-h-screen;
+    @apply flex flex-col min-h-screen;
   }
 
   a {
     @apply transition-colors duration-300;
+  }
+
+  .container {
+    @apply px-1 sm:px-5;
   }
 }
 

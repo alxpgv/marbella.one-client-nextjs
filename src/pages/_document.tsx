@@ -15,7 +15,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body className="min-w-[320px] min-h-screen">
+        <body>
           <Main />
           <NextScript />
         </body>
