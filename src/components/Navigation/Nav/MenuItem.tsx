@@ -1,7 +1,6 @@
 import React, { RefObject, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./Nav.module.css";
 import IconArrowDown from "@/components/Icons/IconArrowDown";
 import { MenuItemsProps } from "@/components/Navigation/Nav";
 import SubMenu from "@/components/Navigation/Nav/SubMenu";
@@ -13,7 +12,7 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
   const hasChildLinkRef: RefObject<HTMLLIElement> = useRef(null);
 
   const activeItem = (targetUrl: string) => {
-    return targetUrl === router.pathname || openSubMenu ? styles.active : "";
+    return targetUrl === router.pathname || openSubMenu ? "text-red-400" : "";
   };
 
   const toggleSubMenu = (e: React.MouseEvent) => {
@@ -40,9 +39,17 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
 
   if (child?.length) {
     return (
-      <li className={styles.hasChild} ref={hasChildLinkRef}>
+      <li
+        className="flex relative items-center self-stretch"
+        ref={hasChildLinkRef}
+      >
         <Link href={url}>
-          <a className={activeItem(url)} onClick={toggleSubMenu}>
+          <a
+            className={`flex items-center hover:text-red-400 ${activeItem(
+              url
+            )}`}
+            onClick={toggleSubMenu}
+          >
             {title}
             <IconArrowDown rotate={openSubMenu} />
           </a>
@@ -54,7 +61,7 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
     return (
       <li>
         <Link href={url}>
-          <a className={activeItem(url)}>{title}</a>
+          <a className={`hover:text-red-400 ${activeItem(url)}`}>{title}</a>
         </Link>
       </li>
     );

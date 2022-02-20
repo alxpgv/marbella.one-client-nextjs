@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./MobileNav.module.css";
 import { MenuItemProps } from "@/components/Navigation/Nav";
 
 const SubMenu = ({
@@ -11,9 +10,13 @@ const SubMenu = ({
   opened: boolean;
 }) => {
   return (
-    <ul className={`${styles.subMenu} ${opened ? styles.open : ""}`}>
+    <ul
+      className={`flex-col justify-center mt-3 divide-y divide-grey-150 ${
+        opened ? "flex" : "hidden"
+      }`}
+    >
       {items.map(({ url, title }, index: number) => (
-        <li key={index}>
+        <li className="py-2" key={index}>
           <Link href={url}>
             <a>{title}</a>
           </Link>

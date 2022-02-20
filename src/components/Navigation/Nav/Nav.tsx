@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Nav.module.css";
 import MenuItem from "@/components/Navigation/Nav/MenuItem";
 
 export type MenuItemProps = {
@@ -13,8 +12,8 @@ export type MenuItemsProps = {
 
 const Nav = ({ menu }: { menu: MenuItemsProps[] }) => {
   return (
-    <nav className={styles.nav}>
-      <ul className={styles.menu}>
+    <nav className="hidden lg:block" role="navigation">
+      <ul className="flex items-center h-[50px] md:h-[80px] space-x-10 text-base text-grey-500">
         {menu.length &&
           menu.map((item, index) => <MenuItem item={item} key={index} />)}
       </ul>

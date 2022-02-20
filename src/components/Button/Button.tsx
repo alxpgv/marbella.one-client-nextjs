@@ -1,6 +1,7 @@
 import React from "react";
 
 const sizes = {
+  xs: "px-3 py-1.5 rounded-md text-sm",
   sm: "px-6 py-2 rounded-md text-sm",
   md: "px-12 py-4 rounded-lg text-sm font-bold",
   lg: "px-12 py-5 rounded-xl text-sm font-bold",
@@ -11,7 +12,7 @@ const colors = {
 };
 
 type ButtonProps = {
-  size: "sm" | "md" | "lg";
+  size: "xs" | "sm" | "md" | "lg";
   color: "red";
   children?: React.ReactNode;
 };

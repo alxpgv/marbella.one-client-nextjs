@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./MobileNav.module.css";
 import IconArrowDown from "@/components/Icons/IconArrowDown";
 import SubMenu from "@/components/Navigation/MobileNav/SubMenu";
 import { MenuItemsProps } from "@/components/Navigation/Nav";
@@ -12,7 +11,7 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
   const { title, url, child } = item;
 
   const activeItem = (targetUrl: string) => {
-    return targetUrl === router.pathname || openSubMenu ? styles.active : "";
+    return targetUrl === router.pathname || openSubMenu ? "text-red-400" : "";
   };
 
   const toggleSubMenu = (e: React.MouseEvent) => {
@@ -22,9 +21,12 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
 
   if (child?.length) {
     return (
-      <li className={`${styles.hasChild} ${openSubMenu ? styles.active : ""}`}>
+      <li className={`p-4 ${openSubMenu ? "bg-grey-100" : ""}`}>
         <Link href={url}>
-          <a className={activeItem(url)} onClick={toggleSubMenu}>
+          <a
+            className={`flex items-center justify-between ${activeItem(url)}`}
+            onClick={toggleSubMenu}
+          >
             {title}
             <IconArrowDown rotate={openSubMenu} />
           </a>
@@ -34,7 +36,7 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
     );
   } else {
     return (
-      <li>
+      <li className="p-4">
         <Link href={url}>
           <a className={activeItem(url)}>{title}</a>
         </Link>

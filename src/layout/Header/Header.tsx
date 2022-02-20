@@ -13,7 +13,12 @@ const Header = () => {
         <Logo />
         <Nav menu={navMenu} />
         <div className="flex items-center">
-          <a href={`tel:${clearPhone(settings.phone)}`}>{settings.phone}</a>
+          <a
+            className="text-red-400"
+            href={`tel:${clearPhone(settings.phone)}`}
+          >
+            {settings.phone}
+          </a>
           <MobileNav menu={navMenu} />
         </div>
       </div>
