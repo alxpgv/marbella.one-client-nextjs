@@ -1,4 +1,4 @@
-import MainLayout from "@/layout/MainLayout";
+import MainLayout from "@/layout/MainLayout/MainLayout";
 import Meta from "@/layout/Meta";
 
 const About = () => {

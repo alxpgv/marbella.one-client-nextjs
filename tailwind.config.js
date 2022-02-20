@@ -41,13 +41,13 @@ module.exports = {
       "black-800": "#151415",
       "red-400": "#F8271A",
     },
-    screens: {
-      "2xl": "1536px",
-      lg: "1024px",
-      md: "768px",
-      sm: "640px",
-      xl: "1280px",
-    },
+    // screens: {
+    //   "2xl": "1536px",
+    //   lg: "1024px",
+    //   md: "768px",
+    //   sm: "640px",
+    //   xl: "1280px",
+    // },
     extend: {
       container: {
         center: true,

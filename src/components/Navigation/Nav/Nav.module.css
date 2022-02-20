@@ -1,0 +1,48 @@
+.nav {
+  @apply hidden lg:block
+}
+
+.menu {
+  @apply flex items-center
+  h-[50px] md:h-[80px]
+  space-x-10
+  text-base text-grey-500
+}
+
+.menu > li > a {
+  @apply hover:text-red-400
+}
+
+.menu > li.hasChild {
+  @apply flex relative items-center self-stretch
+}
+
+.menu > li.hasChild > a {
+  @apply flex items-center
+}
+
+.menu > li a.active {
+  @apply text-red-400
+}
+
+/*subMenu*/
+.subMenu {
+  @apply absolute min-w-[280px] max-w-[320px]
+  py-4 px-8 top-full mt-0.5
+  divide-y divide-grey-150
+  bg-white text-base
+  opacity-0 invisible
+  rounded-b-lg shadow-lg
+}
+
+.subMenu.open {
+  @apply opacity-100 visible
+}
+
+.subMenu > li {
+  @apply py-4 px-2 whitespace-nowrap
+}
+
+.subMenu > li > a {
+  @apply hover:text-red-400
+}

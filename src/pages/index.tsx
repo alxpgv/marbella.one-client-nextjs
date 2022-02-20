@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import Button from "@/components/Button";
-import MainLayout from "@/layout/MainLayout";
+import Button from "@/components/Button/Button";
+import MainLayout from "@/layout/MainLayout/MainLayout";
 import Meta from "@/layout/Meta";
 
 const Index: NextPage = () => {

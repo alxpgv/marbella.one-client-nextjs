@@ -1,6 +1,4 @@
-import { MenuItemsProps } from "@/layout/Navigation/NavBar";
-
-export const menuItems: MenuItemsProps[] = [
+export const navMenu = [
   { title: "About me", url: "/about" },
   { title: "Our services", url: "/services" },
   { title: "Real Estate", url: "/realestate" },
@@ -10,11 +8,11 @@ export const menuItems: MenuItemsProps[] = [
     child: [
       {
         title: "Sell luxury real estate",
-        url: "#",
+        url: "/about",
       },
       {
         title: "Real estate price",
-        url: "#",
+        url: "/about",
       },
       {
         title: "We guarantee",
