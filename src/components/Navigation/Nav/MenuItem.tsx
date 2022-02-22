@@ -1,4 +1,4 @@
-import React, { RefObject, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import IconArrowDown from "@/components/Icons/IconArrowDown";
@@ -9,7 +9,7 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const router = useRouter();
   const { title, url, child } = item;
-  const hasChildLinkRef: RefObject<HTMLLIElement> = useRef(null);
+  const hasChildLinkRef = useRef<HTMLLIElement | null>(null);
 
   const activeItem = (targetUrl: string) => {
     return targetUrl === router.pathname || openSubMenu ? "text-red-400" : "";

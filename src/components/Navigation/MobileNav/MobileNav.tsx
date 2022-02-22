@@ -31,14 +31,14 @@ const MobileNav = ({ menu }: { menu: MenuItemProps[] }) => {
 
       {/*background overlay*/}
       <div
-        className={`left-0 top-0 bottom-0 right-0 bg-black opacity-60 ${
+        className={`left-0 top-0 bottom-0 right-0 bg-black opacity-60 z-10 ${
           opened ? "fixed" : "hidden"
         }`}
       />
 
       {/*container*/}
       <div
-        className={`h-screen fixed flex top-0 right-0 left-0 transition-transform duration-200 ${
+        className={`h-screen fixed flex top-0 right-0 left-0 transition-transform duration-200 z-20 ${
           opened ? "translate-x-0" : "translate-x-full"
         }`}
       >

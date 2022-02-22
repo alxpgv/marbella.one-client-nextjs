@@ -6,9 +6,9 @@ export type MenuItemProps = {
   url: string;
 };
 
-export type MenuItemsProps = {
+export type MenuItemsProps = MenuItemProps & {
   child?: MenuItemProps[];
-} & MenuItemProps;
+};
 
 const Nav = ({ menu }: { menu: MenuItemsProps[] }) => {
   return (

@@ -12,7 +12,8 @@ const SubMenu = ({
   return (
     <ul
       className={`absolute min-w-[280px] max-w-[320px] py-4 px-8 top-full mt-0.5 
-      divide-y divide-grey-150 bg-white text-base rounded-b-lg shadow-lg 
+      divide-y divide-grey-150 bg-white text-base rounded-b-lg shadow-lg
+      z-10
       ${opened ? "opacity-100 visible" : "opacity-0 invisible"}`}
     >
       {items.map(({ url, title }, index: number) => (
