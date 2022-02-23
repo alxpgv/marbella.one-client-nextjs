@@ -1,5 +1,6 @@
 @import url("public/fonts/SourceSansPro/stylesheet.css");
 @import url("public/fonts/judson/stylesheet.css");
+@import url("webkit-scrollbar.css");
 
 @tailwind base;
 @tailwind components;

@@ -1,0 +1,10 @@
+/*.imageContainer{*/
+/*  height: calc(100vh - theme('height.nav-bar-sm'));*/
+/*  @apply absolute left-0 top-0 right-0 max-h-[1080px]*/
+/*}*/
+
+/*@screen md {*/
+/*  .imageContainer {*/
+/*    height: calc(100vh - theme('height.nav-bar-md'));*/
+/*  }*/
+/*}*/

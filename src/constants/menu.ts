@@ -1,18 +1,44 @@
 export const navMenu = [
-  { title: "About me", url: "/about" },
-  { title: "Our services", url: "/services" },
-  { title: "Real Estate", url: "/realestate" },
+  {
+    title: "About me",
+    url: "/about",
+    child: [
+      {
+        title: "Our philosophy",
+        url: "#",
+      },
+      {
+        title: "Reviews",
+        url: "#",
+      },
+    ],
+  },
+  { title: "Our services", url: "#" },
+  {
+    title: "Real Estate",
+    url: "#",
+    child: [
+      {
+        title: "Buy luxury real estate",
+        url: "#",
+      },
+      {
+        title: "Buying land in Marbella",
+        url: "#",
+      },
+    ],
+  },
   {
     title: "Owners",
-    url: "/owners",
+    url: "#",
     child: [
       {
         title: "Sell luxury real estate",
-        url: "/about",
+        url: "#",
       },
       {
         title: "Real estate price",
-        url: "/about",
+        url: "#",
       },
       {
         title: "We guarantee",
@@ -24,6 +50,6 @@ export const navMenu = [
       },
     ],
   },
-  { title: "Blog", url: "/blog" },
-  { title: "Contacts", url: "/contact" },
+  { title: "Blog", url: "#" },
+  { title: "Contacts", url: "#" },
 ];
