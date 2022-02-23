@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import IconArrowDown from "@/components/Icons/IconArrowDown";
+import IconArrow from "@/components/Icons/IconArrow";
 import SubMenu from "@/components/Navigation/MobileNav/SubMenu";
 import { MenuItemsProps } from "@/components/Navigation/Nav";
 
@@ -28,7 +28,7 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
             onClick={toggleSubMenu}
           >
             {title}
-            <IconArrowDown rotate={openSubMenu} />
+            <IconArrow rotate={openSubMenu ? "rotate-180" : null} />
           </a>
         </Link>
         <SubMenu items={child} opened={openSubMenu} />

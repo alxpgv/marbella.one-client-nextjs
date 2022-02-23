@@ -8,7 +8,7 @@ const sizes = {
 };
 
 const colors = {
-  red: "bg-red-400 text-white",
+  red: "bg-red-400 hover:bg-red-300 text-white",
 };
 
 type ButtonProps = {
@@ -25,7 +25,10 @@ const Button: React.FC<ButtonProps> = ({
   const sizesClasses = sizes[size];
   const colorClasses = colors[color];
   return (
-    <button type="button" className={`${sizesClasses} ${colorClasses}`}>
+    <button
+      type="button"
+      className={`${sizesClasses} ${colorClasses} transition-colors duration-200`}
+    >
       {children}
     </button>
   );

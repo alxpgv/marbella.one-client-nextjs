@@ -1,4 +1,4 @@
-import IconArrowDown from "@/components/Icons/IconArrowDown";
+import IconArrow from "@/components/Icons/IconArrowDown";
 import IconClose from "@/components/Icons/IconClose";
 import IconFacebook from "@/components/Icons/IconFacebook";
 import IconInstagram from "@/components/Icons/IconInstagram";
@@ -7,7 +7,7 @@ import IconYoutube from "@/components/Icons/IconYoutube";
 
 export {
   IconClose,
-  IconArrowDown,
+  IconArrow,
   IconFacebook,
   IconTwitter,
   IconYoutube,
