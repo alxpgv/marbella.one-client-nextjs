@@ -9,7 +9,7 @@ import { clearPhone } from "@/lib/helpers";
 const Header = () => {
   return (
     <header className="border-b-2 border-red-400">
-      <div className="container flex h-[50px] md:h-[80px] justify-between items-center space-x-5 transition-all duration-200">
+      <div className="container flex h-nav-bar-sm md:h-nav-bar-md justify-between items-center space-x-5 transition-all duration-200">
         <Logo />
         <Nav menu={navMenu} />
         <div className="flex items-center">

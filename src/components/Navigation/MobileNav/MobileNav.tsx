@@ -31,21 +31,21 @@ const MobileNav = ({ menu }: { menu: MenuItemProps[] }) => {
 
       {/*background overlay*/}
       <div
-        className={`left-0 top-0 bottom-0 right-0 bg-black opacity-60 z-10 ${
+        className={`left-0 top-0 bottom-0 right-0 bg-black opacity-60 z-30 ${
           opened ? "fixed" : "hidden"
         }`}
       />
 
       {/*container*/}
       <div
-        className={`h-screen fixed flex top-0 right-0 left-0 transition-transform duration-200 z-20 ${
+        className={`h-screen fixed flex top-0 right-0 left-0 transition-transform duration-200 z-40 ${
           opened ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/*left overlay*/}
         <div className="flex-1 min-w-[40px]" onClick={() => setOpened(false)} />
 
-        {/*right container*/}
+        {/*right container for menu*/}
         <div className="flex-1 flex flex-col min-w-[280px] max-w-[400px] bg-white">
           {/*header*/}
           <div className="flex items-center justify-between p-4 border-b border-red-400 bg-grey-200">
