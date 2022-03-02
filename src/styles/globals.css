@@ -8,7 +8,7 @@
 
 @layer base {
   body {
-    @apply text-xl min-w-[320px] min-h-screen;
+    @apply text-base min-w-[320px] min-h-screen;
   }
 
   h1 {
@@ -16,6 +16,10 @@
   }
 
   h2 {
+  }
+
+  h6 {
+    @apply text-2xl text-grey-500;
   }
 
   #__next {

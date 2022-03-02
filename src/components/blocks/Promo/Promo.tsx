@@ -3,13 +3,13 @@ import Image from "next/image";
 import ListService from "@/components/blocks/ListService";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
-import { listServices } from "@/constants/listServices";
-import { promo } from "@/constants/promo";
+import { listServices } from "@/data/listServices";
+import { promo } from "@/data/promo";
 
 const Promo = () => {
   return (
     <div className="relative w-full z-10">
-      <div className="absolute left-0 top-0 right-0 h-[90vh] max-h-[1080px]">
+      <div className="absolute left-0 -top-[40px] md:-top-[80px] right-0 h-[90vh] max-h-[1080px]">
         <Image src={promo.bgUrl} layout="fill" objectFit="cover" alt="" />
       </div>
 

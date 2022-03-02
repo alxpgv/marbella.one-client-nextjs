@@ -3,7 +3,7 @@ import IconFacebook from "@/components/Icons/IconFacebook";
 import IconInstagram from "@/components/Icons/IconInstagram";
 import IconTwitter from "@/components/Icons/IconTwitter";
 import IconYoutube from "@/components/Icons/IconYoutube";
-import { settings } from "@/constants/settings";
+import { settings } from "@/data/settings";
 
 const Socials = () => {
   return (

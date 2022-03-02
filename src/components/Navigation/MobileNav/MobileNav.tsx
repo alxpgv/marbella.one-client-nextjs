@@ -4,7 +4,7 @@ import IconClose from "@/components/Icons/IconClose";
 import MenuItem from "@/components/Navigation/MobileNav/MenuItem";
 import Socials from "@/components/Navigation/MobileNav/Socials";
 import { MenuItemProps } from "@/components/Navigation/Nav";
-import { settings } from "@/constants/settings";
+import { settings } from "@/data/settings";
 import { clearPhone } from "@/lib/helpers";
 
 const MobileNav = ({ menu }: { menu: MenuItemProps[] }) => {
