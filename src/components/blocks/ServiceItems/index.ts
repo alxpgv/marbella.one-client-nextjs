@@ -1,1 +1,1 @@
-export { ServiceItems } from "./ListService";
+export { ServiceItems } from "./ServiceItems";

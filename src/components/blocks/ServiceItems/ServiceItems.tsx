@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/Button";
-import { IconByName } from "@/components/Icons/IconByName";
+// import {} from "@/components/Icons";
 
 // TODO: adding typing items
 export const ServiceItems = ({ items }: { items: any[] }) => {
@@ -18,7 +18,7 @@ export const ServiceItems = ({ items }: { items: any[] }) => {
             after:xs:odd:border-r
             after:sm:border-r after:sm:last:border-r-0"
             >
-              <IconByName iconId={item.iconId} />
+              {/*<IconByName iconId={item.iconId} />*/}
               <h6 className={"mt-7 text-grey-500"}>{item.title}</h6>
               <p className={"my-3 text-center text-grey-400"}>{item.text}</p>
               <div className={"mt-auto"}>

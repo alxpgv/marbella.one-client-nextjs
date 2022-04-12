@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@/components/Container";
 import { MainLayout } from "@/layout/MainLayout/MainLayout";
 import { Meta } from "@/layout/Meta";
-import { ListService } from "@/components/blocks/ListService";
+import { ServiceItems } from "@/components/blocks/ServiceItems";
 import { listServices } from "@/data/listServices";
 
 const About = () => {
@@ -10,7 +10,7 @@ const About = () => {
     <>
       <Meta />
       <MainLayout>
-        <ListService items={listServices} />
+        <ServiceItems items={listServices} />
         <Container>About</Container>
       </MainLayout>
     </>
