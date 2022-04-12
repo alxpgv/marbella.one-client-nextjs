@@ -1,18 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { IconArrow } from "@/components/Icons/IconArrow";
-import { MenuItemsProps } from "@/components/Navigation/Nav";
-import { SubMenu } from "@/components/Navigation/Nav/SubMenu";
+import { MenuProps } from "@/types";
+import { SubMenu } from "@/layout/navigation/MainNav/SubMenu";
+import styles from "./MainNav.module.scss";
 
-export const MenuItem = ({ item }: { item: MenuItemsProps }) => {
+export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const router = useRouter();
   const { title, url, child } = item;
-  const hasChildLinkRef = useRef<HTMLLIElement | null>(null);
+  const hasChildRef = useRef<HTMLLIElement | null>(null);
 
   const activeItem = (targetUrl: string) => {
-    return targetUrl === router.pathname || openSubMenu ? "text-red-400" : "";
+    return targetUrl === router.pathname || openSubMenu ? styles.active : "";
   };
 
   const toggleSubMenu = (e: React.MouseEvent) => {
@@ -24,11 +25,10 @@ export const MenuItem = ({ item }: { item: MenuItemsProps }) => {
   useEffect(() => {
     if (child?.length && openSubMenu) {
       const handleClickOutside = (e: any) => {
-        if (!hasChildLinkRef?.current?.contains(e.target)) {
+        if (!hasChildRef?.current?.contains(e.target)) {
           setOpenSubMenu(false);
         }
       };
-
       document.addEventListener("mousedown", handleClickOutside);
 
       return () => {
@@ -39,29 +39,21 @@ export const MenuItem = ({ item }: { item: MenuItemsProps }) => {
 
   if (child?.length) {
     return (
-      <li
-        className="flex relative items-center self-stretch"
-        ref={hasChildLinkRef}
-      >
+      <li ref={hasChildRef}>
         <Link href={url}>
-          <a
-            className={`flex items-center hover:text-red-400 ${activeItem(
-              url
-            )}`}
-            onClick={toggleSubMenu}
-          >
+          <a className={activeItem(url)} onClick={toggleSubMenu}>
             {title}
             <IconArrow rotate={openSubMenu ? "rotate-180" : null} />
           </a>
         </Link>
-        <SubMenu items={child} opened={openSubMenu} />
+        <SubMenu items={child} isOpen={openSubMenu} />
       </li>
     );
   } else {
     return (
       <li>
         <Link href={url}>
-          <a className={`hover:text-red-400 ${activeItem(url)}`}>{title}</a>
+          <a className={activeItem(url)}>{title}</a>
         </Link>
       </li>
     );

@@ -6,7 +6,6 @@ import {
   IconTwitter,
   IconYoutube,
 } from "@/components/Icons";
-import styles from "./SocialLinks.module.scss";
 
 export const SocialLinks = () => {
   return (

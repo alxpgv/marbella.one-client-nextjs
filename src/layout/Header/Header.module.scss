@@ -1,23 +1,60 @@
 @import "../../styles/utils";
 
-.header {
+.root {
   position: relative;
   background: rgba($white, .7);
-  border-bottom: 2px solid $red-400;
+  border-bottom: 3px solid $red-400;
   z-index: 20;
 }
 
-.headerInner {
+.inner {
   height: $header-height-sm;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   transition: height 200ms;
-  border: 1px solid blue;
 
-  @include screen(md) {
+  @include screen(lg) {
     height: $header-height-md;
   }
+}
 
-  // space-x-5
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 10px;
+
+  @include screen(xs) {
+    margin-left: 20px;
+  }
+}
+
+.logo {
+  img {
+    width: 85px;
+
+    @include screen(lg) {
+      width: 138px;
+    }
+  }
+}
+
+.menu {
+  flex: 1;
+  display: none;
+  margin-right: 20px;
+
+  @include screen(lg) {
+    display: block;
+  }
+}
+
+.mobile {
+  display: block;
+  margin-left: 20px;
+
+  @include screen(lg) {
+    display: none;
+  }
 }

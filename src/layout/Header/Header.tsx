@@ -1,28 +1,34 @@
 import React from "react";
-import { Logo } from "@/components/Logo/Logo";
-import { MobileNav } from "@/components/Navigation/MobileNav/MobileNav";
-import { Nav } from "@/components/Navigation/Nav/Nav";
+import { Logo } from "@/components/Logo";
+import { MainNav } from "@/layout/navigation/MainNav";
 import { mainMenu, settings } from "@/data/settings";
-import { clearPhone } from "@/lib/helpers";
-import styles from "./Header.module.scss";
+import { getNumberFromString } from "@/lib/helpers";
 import { Container } from "@/components/Container";
+import { MainMobileNav } from "@/layout/navigation/MainMobileNav";
+import styles from "./Header.module.scss";
 
 export const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={styles.root}>
       <Container>
-        <div className={styles.headerInner}>
-          <Logo />
-          <Nav menu={mainMenu} />
+        <div className={styles.inner}>
+          <div className={styles.left}>
+            <Logo className={styles.logo} />
+          </div>
 
-          <div className="flex items-center">
+          <div className={styles.right}>
+            <div className={styles.menu}>
+              <MainNav menu={mainMenu} />
+            </div>
             <a
-              className="text-red-400 text-xl"
-              href={`tel:${clearPhone(settings.contact.phone)}`}
+              className="text-20"
+              href={`tel:${getNumberFromString(settings.contact.phone)}`}
             >
               {settings.contact.phone}
             </a>
-            <MobileNav menu={mainMenu} />
+            <div className={styles.mobile}>
+              <MainMobileNav menu={mainMenu} />
+            </div>
           </div>
         </div>
       </Container>

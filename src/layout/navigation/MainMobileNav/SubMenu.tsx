@@ -1,28 +1,27 @@
-import React, { useEffect, useRef } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import Link from "next/link";
-import { MenuItemProps } from "@/layout/Navigation/Nav";
+import { MenuProps } from "@/types";
 
-export const SubMenu = ({
-  items,
-  opened,
-}: {
-  items: MenuItemProps[];
-  opened: boolean;
-}) => {
+interface SubMenuProps {
+  items: MenuProps[];
+  isOpen: boolean;
+}
+
+export const SubMenu: FC<SubMenuProps> = ({ items, isOpen }) => {
   const subMenuRef = useRef<HTMLUListElement | null>(null);
 
   useEffect(() => {
     if (subMenuRef?.current) {
-      if (opened) {
+      if (isOpen) {
         subMenuRef.current.style.maxHeight = "500px";
       } else {
         subMenuRef.current.style.maxHeight = "0";
       }
     }
-  }, [opened]);
+  }, [isOpen]);
 
   return (
-    <div className={`overflow-hidden ${opened ? "block" : "hidden"}`}>
+    <div className={`overflow-hidden ${isOpen ? "block" : "hidden"}`}>
       <ul
         className={`flex flex-col justify-center mt-3 
         divide-y divide-grey-150 transition-all duration-500`}

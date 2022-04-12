@@ -26,7 +26,7 @@ h3, .text-h3 {
 
 a {
   vertical-align: middle;
-  color: $red-300;
+  color: $red-400;
   text-decoration: none;
   @include transition;
 
@@ -56,4 +56,12 @@ select,
 textarea,
 button {
   @include font-family($font-family-primary);
+}
+
+.text-18 {
+  font-size: $font-size-18;
+}
+
+.text-20 {
+  font-size: $font-size-20;
 }

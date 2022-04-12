@@ -67,19 +67,19 @@ $heading-line-height: 1.1;
 $paragraph-line-height: 1.3;
 
 // Body
-$body-min-width: 240px;
+$body-min-width: 320px;
 $body-color: $black;
 $body-color-bg: $white;
 
 $body-font-family: $font-family-primary;
 $body-font-size: $font-size-20;
 $body-font-weight: normal;
-$body-line-height: 1.5;
+$body-line-height: 1.2;
 
 // Containers
 $container-max-width: 1330px;
-$container-padding-sm: 1.2rem;
-$container-padding-md: 2rem;
+$container-padding-md: 20px;
+$container-padding-sm: 12px;
 
 // Header
 $header-height-sm: 50px;
