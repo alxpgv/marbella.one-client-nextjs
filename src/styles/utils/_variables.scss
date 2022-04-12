@@ -1,0 +1,89 @@
+// Screens Breakpoints
+$screen-xs: 380px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+// Colors socials icons
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$instagram: #833AB4;
+$youtube: #FF0000;
+$pinterest: #E60023;
+$viber: #7C509A;
+
+// Base colors
+$black: #000000;
+$white: #ffffff;
+
+$grey-100: #F2F2F2;
+$grey-150: #D7D7D7;
+$grey-200: #E0E0E0;
+$grey-300: #7F8C92;
+$grey-400: #666666;
+$grey-500: #3C413F;
+$grey-600: #1F1C19;
+$blue-100: #8FC7D1;
+$blue-300: #428AB5;
+$blue-400: #133D55;
+$black-800: #151415;
+$red-300: #FB3F33;
+$red-400: #F8271A;
+
+// notify colors
+$info: #2c8ad2;
+$success: #04b20c;
+$warning: #ecb90d;
+$error: #e23e32;
+
+//typography
+$font-family-primary: 'Source Sans Pro', sans-serif;
+$font-family-secondary: 'Source Sans Pro', sans-serif;
+$font-family-heading: 'Judson', serif;
+
+$font-size-base: 16px; // 1rem = 10px
+
+$font-size-10: 10px;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-22: 24px;
+$font-size-24: 24px;
+$font-size-28: 28px;
+$font-size-30: 30px;
+$font-size-32: 32px;
+$font-size-34: 34px;
+$font-size-42: 42px;
+$font-size-48: 48px;
+$font-size-60: 60px;
+
+// heading
+$heading-line-height: 1.1;
+
+// paragraph
+$paragraph-line-height: 1.3;
+
+// Body
+$body-min-width: 240px;
+$body-color: $black;
+$body-color-bg: $white;
+
+$body-font-family: $font-family-primary;
+$body-font-size: $font-size-16;
+$body-font-weight: normal;
+$body-line-height: 1.5;
+
+// Containers
+$container-max-width: 1330px;
+$container-padding-sm: 1.2rem;
+$container-padding-md: 2rem;
+
+// Header
+$header-height-sm: 50px;
+$header-height-md: 80px;
+
+// Transition timeouts
+$base-transition: 310ms;

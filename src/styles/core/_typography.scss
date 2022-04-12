@@ -1,0 +1,64 @@
+@import "../utils";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  @include font-family($font-family-heading);
+  line-height: $heading-line-height;
+}
+
+h1, .text-h1 {
+  font-size: clamp(#{$font-size-32}, 5vw, #{$font-size-64});
+  font-weight: 500;
+}
+
+h2, .text-h2 {
+  font-size: clamp(#{$font-size-28}, 4.5vw, #{$font-size-64});
+  font-weight: 500;
+}
+
+h3, .text-h3 {
+  font-size: clamp(#{$font-size-24}, 3.8vw, #{$font-size-36});
+}
+
+h4, .text-h4 {
+  font-size: clamp(#{$font-size-18}, 2vw, #{$font-size-24});
+}
+
+a {
+  padding-bottom: .2rem;
+  vertical-align: middle;
+  color: $blue-200;
+  text-decoration: none;
+  @include transition;
+
+  &:hover {
+    color: $pink-400;
+  }
+}
+
+p {
+  // font-size: clamp(#{$font-size-16}, 2.5vw, #{$font-size-16});
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: $paragraph-line-height;
+
+  & + p {
+    margin-top: 1.4rem;
+  }
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+  @include font-family($font-family-primary);
+}

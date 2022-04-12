@@ -1,13 +1,16 @@
 import React from "react";
 
-export const Container = ({
-  children,
-  className,
-}: {
+interface ContainerProps {
   children: React.ReactNode;
   className?: string;
-}) => {
-  return (
-    <div className={`container ${className && className}`}>{children}</div>
-  );
+  fullHeight?: boolean;
+}
+
+export const Container = ({
+  children,
+  className = "",
+  fullHeight = false,
+}: ContainerProps) => {
+  const classes = `container ${className} ${fullHeight ? "h-100" : ""}`;
+  return <div className={classes}>{children}</div>;
 };

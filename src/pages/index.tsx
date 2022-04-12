@@ -9,9 +9,14 @@ const Index: NextPage = () => {
   return (
     <>
       <Meta />
-      <Header />
+      {/*<Header />*/}
       <main>
-        <Promo />
+        {/*<Promo />*/}
+        <h1>we will find your dream home!</h1>
+        <h2>we will find your dream home!</h2>
+        <h3>we will find your dream home!</h3>
+        <h4>we will find your dream home!</h4>
+        <h5>we will find your dream home!</h5>
         <p>asdasd asdasdas asdasdasd asdsad </p>
         <p>asdasd asdasdas asdasdasd asdsad </p>
         <p>asdasd asdasdas asdasdasd asdsad </p>

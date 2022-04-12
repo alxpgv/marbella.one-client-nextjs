@@ -29,12 +29,10 @@
         "**/*.tsx"
       ],
       "plugins": [
-        "@typescript-eslint",
-        "unused-imports",
-        "tailwindcss"
+        "@typescript-eslint"
+        // "unused-imports"
       ],
       "extends": [
-        "plugin:tailwindcss/recommended",
         "next/core-web-vitals",
         "plugin:prettier/recommended"
       ],
@@ -87,19 +85,16 @@
         // Avoid conflict rule between Eslint and Prettier
         "import/prefer-default-export": "off",
         // Named export is easier to refactor automatically
-        "class-methods-use-this": "off",
-        // _document.tsx use render method without `this` keyword
-        "tailwindcss/no-custom-classname": "off",
-        "tailwindcss/classnames-order": "off",
+        "class-methods-use-this": "off"
         // Disabled otherwise nightmare to allow each custom tailwind classes
-        "@typescript-eslint/no-unused-vars": "off",
-        "unused-imports/no-unused-imports": "error",
-        "unused-imports/no-unused-vars": [
-          "error",
-          {
-            "argsIgnorePattern": "^_"
-          }
-        ]
+        // "@typescript-eslint/no-unused-vars": "off"
+        // "unused-imports/no-unused-imports": "error",
+        //        "unused-imports/no-unused-vars": [
+        //          "error",
+        //          {
+        //            "argsIgnorePattern": "^_"
+        //          }
+        //        ]
       }
     }
   ]

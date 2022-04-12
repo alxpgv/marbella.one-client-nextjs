@@ -25,9 +25,6 @@
       "@/public/*": [
         "./public/*"
       ]
-      // "@utils/*": ["utils/*"],
-      // "@lib/*": ["lib/*"],
-      // "@services/*": ["services/*"]
     },
     "incremental": true
   },

@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../public/fonts/SourceSansPro-Regular.eot');
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+  url('../public/fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../public/fonts/SourceSansPro-Regular.woff') format('woff'),
+  url('../public/fonts/SourceSansPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../public/fonts/SourceSansPro-Bold.eot');
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+  url('../public/fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../public/fonts/SourceSansPro-Bold.woff') format('woff'),
+  url('../public/fonts/SourceSansPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Judson';
+  src: url('../public/fonts/Judson-Bold.eot');
+  src: local('Judson Bold'), local('Judson-Bold'),
+  url('../public/fonts/Judson-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../public/fonts/Judson-Bold.woff2') format('woff2'),
+  url('../public/fonts/Judson-Bold.woff') format('woff'),
+  url('../public/fonts/Judson-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Judson';
+  src: url('../public/fonts/Judson-Regular.eot');
+  src: local('Judson Regular'), local('Judson-Regular'),
+  url('../public/fonts/Judson-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../public/fonts/Judson-Regular.woff2') format('woff2'),
+  url('../public/fonts/Judson-Regular.woff') format('woff'),
+  url('../public/fonts/Judson-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
