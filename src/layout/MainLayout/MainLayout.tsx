@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-import Footer from "@/layout/Footer/Footer";
-import Header from "@/layout/Header/Header";
+import { Footer } from "@/layout/Footer/Footer";
+import { Header } from "@/layout/Header/Header";
 
-type MainLayoutProps = {
+interface MainLayoutProps {
   children: React.ReactNode;
-};
+}
 
-const MainLayout: FC<MainLayoutProps> = ({ children }): JSX.Element => {
+export const MainLayout: FC<MainLayoutProps> = ({ children }): JSX.Element => {
   return (
     <>
       <Header />
@@ -15,5 +15,3 @@ const MainLayout: FC<MainLayoutProps> = ({ children }): JSX.Element => {
     </>
   );
 };
-
-export default MainLayout;

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import IconArrow from "@/components/Icons/IconArrow";
-import SubMenu from "@/components/Navigation/MobileNav/SubMenu";
+import { IconArrow } from "@/components/Icons/IconArrow";
+import { SubMenu } from "@/components/Navigation/MobileNav/SubMenu";
 import { MenuItemsProps } from "@/components/Navigation/Nav";
 
-const MenuItem = ({ item }: { item: MenuItemsProps }) => {
+export const MenuItem = ({ item }: { item: MenuItemsProps }) => {
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const router = useRouter();
   const { title, url, child } = item;
@@ -44,5 +44,3 @@ const MenuItem = ({ item }: { item: MenuItemsProps }) => {
     );
   }
 };
-
-export default MenuItem;

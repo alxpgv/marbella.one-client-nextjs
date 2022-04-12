@@ -78,7 +78,7 @@
             ],
             // "newlines-between": "always",
             "alphabetize": {
-              "order": "asc",
+              // "order": "asc",
               "caseInsensitive": true
             }
           }
@@ -90,6 +90,7 @@
         "class-methods-use-this": "off",
         // _document.tsx use render method without `this` keyword
         "tailwindcss/no-custom-classname": "off",
+        "tailwindcss/classnames-order": "off",
         // Disabled otherwise nightmare to allow each custom tailwind classes
         "@typescript-eslint/no-unused-vars": "off",
         "unused-imports/no-unused-imports": "error",

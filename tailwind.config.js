@@ -33,6 +33,9 @@ module.exports = {
     //   xl: "1280px",
     // },
     extend: {
+      screens: {
+        xs: "380px",
+      },
       container: {
         center: true,
         margin: "auto",

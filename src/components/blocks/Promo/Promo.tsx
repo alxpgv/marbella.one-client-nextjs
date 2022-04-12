@@ -1,15 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import ListService from "@/components/blocks/ListService";
-import Button from "@/components/Button";
-import Container from "@/components/Container";
-import { listServices } from "@/data/listServices";
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
 import { promo } from "@/data/promo";
 
-const Promo = () => {
+export const Promo = () => {
   return (
     <div className="relative w-full z-10">
-      <div className="absolute left-0 -top-[40px] md:-top-[80px] right-0 h-[90vh] max-h-[1080px]">
+      <div className="absolute inset-x-0 -top-[40px] md:-top-[80px] h-[90vh] max-h-[1080px]">
         <Image src={promo.bgUrl} layout="fill" objectFit="cover" alt="" />
       </div>
 
@@ -26,14 +24,8 @@ const Promo = () => {
             Online consultation
           </Button>
         </div>
-
-        {/*list services*/}
-        <div className="relative mt-16 md:mt-24">
-          <ListService items={listServices} />
-        </div>
+        list services
       </Container>
     </div>
   );
 };
-
-export default Promo;

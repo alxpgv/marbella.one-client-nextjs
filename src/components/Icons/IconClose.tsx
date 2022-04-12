@@ -1,4 +1,4 @@
-const IconArrowDown = () => {
+export const IconClose = () => {
   return (
     <svg
       width="10"
@@ -17,5 +17,3 @@ const IconArrowDown = () => {
     </svg>
   );
 };
-
-export default IconArrowDown;

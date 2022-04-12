@@ -1,5 +1,5 @@
 import React from "react";
-import MenuItem from "@/components/Navigation/Nav/MenuItem";
+import { MenuItem } from "@/components/Navigation/Nav/MenuItem";
 
 export type MenuItemProps = {
   title: string;
@@ -10,7 +10,7 @@ export type MenuItemsProps = MenuItemProps & {
   child?: MenuItemProps[];
 };
 
-const Nav = ({ menu }: { menu: MenuItemsProps[] }) => {
+export const Nav = ({ menu }: { menu: MenuItemsProps[] }) => {
   return (
     <nav className="hidden lg:block" role="navigation">
       <ul className="flex items-center h-[50px] md:h-[80px] space-x-10 text-base text-grey-500">
@@ -20,5 +20,3 @@ const Nav = ({ menu }: { menu: MenuItemsProps[] }) => {
     </nav>
   );
 };
-
-export default Nav;

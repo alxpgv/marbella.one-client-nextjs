@@ -1,4 +1,4 @@
-const IconInstagram = () => {
+export const IconInstagram = () => {
   return (
     <svg
       width="18"
@@ -22,5 +22,3 @@ const IconInstagram = () => {
     </svg>
   );
 };
-
-export default IconInstagram;

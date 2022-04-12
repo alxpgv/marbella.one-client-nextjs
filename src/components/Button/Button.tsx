@@ -17,7 +17,7 @@ type ButtonProps = {
   children?: React.ReactNode;
 };
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   size,
   color,
   children,
@@ -33,4 +33,3 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-export default Button;

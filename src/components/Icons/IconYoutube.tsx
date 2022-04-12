@@ -1,4 +1,4 @@
-const IconYoutube = () => {
+export const IconYoutube = () => {
   return (
     <svg
       width="22"
@@ -18,5 +18,3 @@ const IconYoutube = () => {
     </svg>
   );
 };
-
-export default IconYoutube;

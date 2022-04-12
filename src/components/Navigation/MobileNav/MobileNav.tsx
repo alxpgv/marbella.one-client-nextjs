@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Button from "@/components/Button";
-import IconClose from "@/components/Icons/IconClose";
-import MenuItem from "@/components/Navigation/MobileNav/MenuItem";
-import Socials from "@/components/Navigation/MobileNav/Socials";
+import { Button } from "@/components/Button";
+import { IconClose } from "@/components/Icons/IconClose";
+import { MenuItem } from "@/components/Navigation/MobileNav/MenuItem";
+import { Socials } from "@/components/Navigation/MobileNav/Socials";
 import { MenuItemProps } from "@/components/Navigation/Nav";
 import { settings } from "@/data/settings";
 import { clearPhone } from "@/lib/helpers";
 
-const MobileNav = ({ menu }: { menu: MenuItemProps[] }) => {
+export const MobileNav = ({ menu }: { menu: MenuItemProps[] }) => {
   const [opened, setOpened] = useState<boolean>(false);
 
   useEffect(() => {
@@ -85,5 +85,3 @@ const MobileNav = ({ menu }: { menu: MenuItemProps[] }) => {
     </nav>
   );
 };
-
-export default MobileNav;

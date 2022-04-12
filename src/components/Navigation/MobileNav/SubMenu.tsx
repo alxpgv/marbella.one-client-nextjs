@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { MenuItemProps } from "@/components/Navigation/Nav";
 
-const SubMenu = ({
+export const SubMenu = ({
   items,
   opened,
 }: {
@@ -39,5 +39,3 @@ const SubMenu = ({
     </div>
   );
 };
-
-export default SubMenu;

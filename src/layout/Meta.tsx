@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const Meta = () => {
+export const Meta = () => {
   return (
     <Head>
       <title>Marbella.one</title>
@@ -18,5 +18,3 @@ const Meta = () => {
     </Head>
   );
 };
-
-export default Meta;

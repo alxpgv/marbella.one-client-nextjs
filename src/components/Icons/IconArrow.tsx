@@ -4,7 +4,7 @@ type RotationDeg = {
   rotate: "rotate-90" | "-rotate-90" | "rotate-180" | "-rotate-180" | null;
 };
 
-const IconArrow: React.FC<RotationDeg> = ({ rotate = null }) => {
+export const IconArrow: React.FC<RotationDeg> = ({ rotate = null }) => {
   return (
     <svg
       width="7"
@@ -21,5 +21,3 @@ const IconArrow: React.FC<RotationDeg> = ({ rotate = null }) => {
     </svg>
   );
 };
-
-export default IconArrow;

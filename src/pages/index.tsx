@@ -1,9 +1,9 @@
 import React from "react";
 import { NextPage } from "next";
-import Promo from "@/components/blocks/Promo";
-import Footer from "@/layout/Footer";
-import Header from "@/layout/Header";
-import Meta from "@/layout/Meta";
+import { Promo } from "@/components/blocks/Promo";
+import { Footer } from "@/layout/Footer";
+import { Header } from "@/layout/Header";
+import { Meta } from "@/layout/Meta";
 
 const Index: NextPage = () => {
   return (

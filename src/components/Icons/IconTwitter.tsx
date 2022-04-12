@@ -1,4 +1,4 @@
-const IconTwitter = () => {
+export const IconTwitter = () => {
   return (
     <svg
       width="22"
@@ -14,5 +14,3 @@ const IconTwitter = () => {
     </svg>
   );
 };
-
-export default IconTwitter;
