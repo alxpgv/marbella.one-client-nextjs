@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import { MenuItemProps } from "@/components/Navigation/Nav";
+import { MenuItemProps } from "@/layout/Navigation/Nav";
 
 export const SubMenu = ({
   items,

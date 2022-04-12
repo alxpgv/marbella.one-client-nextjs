@@ -1,5 +1,5 @@
 import React from "react";
-import { MenuItem } from "@/components/Navigation/Nav/MenuItem";
+import { MenuItem } from "./MenuItem";
 
 export type MenuItemProps = {
   title: string;

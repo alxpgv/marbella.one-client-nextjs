@@ -9,7 +9,7 @@ const Index: NextPage = () => {
   return (
     <>
       <Meta />
-      {/*<Header />*/}
+      <Header />
       <main>
         {/*<Promo />*/}
         <h1>we will find your dream home!</h1>

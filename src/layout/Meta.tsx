@@ -15,6 +15,13 @@ export const Meta = () => {
       {/*  type="font/woff"*/}
       {/*  crossOrigin="anonymous"*/}
       {/*/>*/}
+      {/*<link*/}
+      {/*  rel="preload"*/}
+      {/*  href="/fonts/SourceSansPro/SourceSansPro-Regular.woff"*/}
+      {/*  as="font"*/}
+      {/*  type="font/woff"*/}
+      {/*  crossOrigin=""*/}
+      {/*/>*/}
     </Head>
   );
 };

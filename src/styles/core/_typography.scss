@@ -11,32 +11,27 @@ h6, {
 }
 
 h1, .text-h1 {
-  font-size: clamp(#{$font-size-32}, 5vw, #{$font-size-64});
+  font-size: clamp(#{$font-size-30}, 4.5vw, #{$font-size-48});
   font-weight: 500;
 }
 
 h2, .text-h2 {
-  font-size: clamp(#{$font-size-28}, 4.5vw, #{$font-size-64});
+  font-size: clamp(#{$font-size-30}, 4.5vw, #{$font-size-48});
   font-weight: 500;
 }
 
 h3, .text-h3 {
-  font-size: clamp(#{$font-size-24}, 3.8vw, #{$font-size-36});
-}
-
-h4, .text-h4 {
-  font-size: clamp(#{$font-size-18}, 2vw, #{$font-size-24});
+  font-size: clamp(#{$font-size-24}, 3.4vw, #{$font-size-32});
 }
 
 a {
-  padding-bottom: .2rem;
   vertical-align: middle;
-  color: $blue-200;
+  color: $red-300;
   text-decoration: none;
   @include transition;
 
   &:hover {
-    color: $pink-400;
+    color: $grey-500;
   }
 }
 

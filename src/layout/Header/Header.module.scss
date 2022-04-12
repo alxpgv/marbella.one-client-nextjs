@@ -1,0 +1,23 @@
+@import "../../styles/utils";
+
+.header {
+  position: relative;
+  background: rgba($white, .7);
+  border-bottom: 2px solid $red-400;
+  z-index: 20;
+}
+
+.headerInner {
+  height: $header-height-sm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: height 200ms;
+  border: 1px solid blue;
+
+  @include screen(md) {
+    height: $header-height-md;
+  }
+
+  // space-x-5
+}
