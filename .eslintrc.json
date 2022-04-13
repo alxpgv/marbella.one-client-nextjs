@@ -56,31 +56,31 @@
         // _app.tsx uses spread operator and also, react-hook-form
         "@next/next/no-img-element": "off",
         // We currently not using next/image because it isn't supported with SSG mode
-        "import/order": [
-          "error",
-          {
-            "groups": [
-              "builtin",
-              "external",
-              "internal"
-            ],
-            "pathGroups": [
-              {
-                "pattern": "react",
-                "group": "external",
-                "position": "before"
-              }
-            ],
-            "pathGroupsExcludedImportTypes": [
-              "react"
-            ],
-            // "newlines-between": "always",
-            "alphabetize": {
-              // "order": "asc",
-              "caseInsensitive": true
-            }
-          }
-        ],
+        //        "import/order": [
+        //          "error",
+        //          {
+        //            "groups": [
+        //              "builtin",
+        //              "external",
+        //              "internal"
+        //            ],
+        //            "pathGroups": [
+        //              {
+        //                "pattern": "react",
+        //                "group": "external",
+        //                "position": "before"
+        //              }
+        //            ],
+        //            "pathGroupsExcludedImportTypes": [
+        //              "react"
+        //            ],
+        //            // "newlines-between": "always",
+        //            "alphabetize": {
+        //              // "order": "asc",
+        //              "caseInsensitive": true
+        //            }
+        //          }
+        //        ],
         "@typescript-eslint/comma-dangle": "off",
         // Avoid conflict rule between Eslint and Prettier
         "import/prefer-default-export": "off",

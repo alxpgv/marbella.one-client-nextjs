@@ -9,13 +9,11 @@ export const IconHome = () => {
     >
       <path
         d="M36.1772 13.1267V38.1181H4.82275V13.1267"
-        stroke="#428AB5"
         strokeWidth="2.51667"
         strokeMiterlimit="10"
       />
       <path
         d="M40.5 16.4697L20.5 1L0.5 16.4697"
-        stroke="#428AB5"
         strokeWidth="2.51667"
         strokeMiterlimit="10"
       />

@@ -10,18 +10,34 @@ h6, {
   line-height: $heading-line-height;
 }
 
-h1, .text-h1 {
-  font-size: clamp(#{$font-size-30}, 4.5vw, #{$font-size-48});
-  font-weight: 500;
-}
-
+h1, .text-h1,
 h2, .text-h2 {
-  font-size: clamp(#{$font-size-30}, 4.5vw, #{$font-size-48});
-  font-weight: 500;
+  font-size: $font-size-30;
+  font-weight: bold;
+
+  @include md {
+    font-size: $font-size-34;
+  }
+
+  @include lg {
+    font-size: $font-size-42;
+  }
+
+  @include xl {
+    font-size: $font-size-48;
+  }
 }
 
 h3, .text-h3 {
-  font-size: clamp(#{$font-size-24}, 3.4vw, #{$font-size-32});
+
+}
+
+h6, .text-h6 {
+  font-size: $font-size-18;
+
+  @include md {
+    font-size: $font-size-20;
+  }
 }
 
 a {
@@ -36,13 +52,45 @@ a {
 }
 
 p {
-  // font-size: clamp(#{$font-size-16}, 2.5vw, #{$font-size-16});
+  // font-size: $font-size-18;
   margin-block-start: 0;
   margin-block-end: 0;
   line-height: $paragraph-line-height;
 
+  //@include sm {
+  //  font-size: $font-size-20;
+  //}
+
   & + p {
     margin-top: 1.4rem;
+  }
+}
+
+.text-sm {
+  font-size: $font-size-14;
+
+  @include lg {
+    font-size: $font-size-16;
+  }
+}
+
+.text-md {
+  font-size: $font-size-20;
+
+  @include lg {
+    font-size: $font-size-24;
+  }
+}
+
+.text-lg {
+  font-size: $font-size-18;
+
+  @include md {
+    font-size: $font-size-22;
+  }
+
+  @include lg {
+    font-size: $font-size-24;
   }
 }
 
@@ -56,12 +104,4 @@ select,
 textarea,
 button {
   @include font-family($font-family-primary);
-}
-
-.text-18 {
-  font-size: $font-size-18;
-}
-
-.text-20 {
-  font-size: $font-size-20;
 }

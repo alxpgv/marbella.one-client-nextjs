@@ -1,61 +1,81 @@
-@mixin screen($res) {
-  @if xs == $res {
-    @media only screen and (min-width: $screen-xs) {
-      @content;
-    }
+@mixin xs {
+  @media only screen and (min-width: #{$screen-xs}) {
+    @content;
   }
+}
 
-  @if xs-max == $res {
-    @media only screen and (max-width: #{$screen-xs - 1}) {
-      @content;
-    }
+@mixin not-xs {
+  @media only screen and (max-width: #{$screen-xs - 1}) {
+    @content;
   }
+}
 
-  @if sm == $res {
-    @media only screen and (min-width: $screen-sm) {
-      @content;
-    }
+@mixin sm {
+  @media only screen and (min-width: $screen-sm) {
+    @content;
   }
+}
 
-  @if sm-max == $res {
-    @media only screen and (max-width: #{$screen-sm - 1}) {
-      @content;
-    }
+@mixin not-sm {
+  @media only screen and (max-width: #{$screen-sm - 1}) {
+    @content;
   }
+}
 
-  @if md == $res {
-    @media only screen and (min-width: $screen-md) {
-      @content;
-    }
+@mixin md {
+  @media only screen and (min-width: $screen-md) {
+    @content;
   }
+}
 
-  @if md-max == $res {
-    @media only screen and (max-width: #{$screen-md - 1}) {
-      @content;
-    }
+@mixin not-md {
+  @media only screen and (max-width: #{$screen-md - 1}) {
+    @content;
   }
+}
 
-  @if lg == $res {
-    @media only screen and (min-width: $screen-lg) {
-      @content;
-    }
+@mixin lg {
+  @media only screen and (min-width: $screen-lg) {
+    @content;
   }
+}
 
-  @if lg-max == $res {
-    @media only screen and (max-width: #{$screen-lg - 1}) {
-      @content;
-    }
+@mixin not-lg {
+  @media only screen and (max-width: #{$screen-lg - 1}) {
+    @content;
   }
+}
 
-  @if xl == $res {
-    @media only screen and (min-width: $screen-xl) {
-      @content;
-    }
+@mixin xl {
+  @media only screen and (min-width: $screen-xl) {
+    @content;
   }
+}
 
-  @if xl-max == $res {
-    @media only screen and (max-width: #{$screen-xl - 1}) {
-      @content;
+@mixin not-xl {
+  @media only screen and (max-width: #{$screen-xl - 1}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media only screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media only screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin min-landscape {
+  @include xs {
+    @include landscape {
+      @media (max-height: ($screen-sm + 10px)) {
+        @content;
+      }
     }
   }
 }

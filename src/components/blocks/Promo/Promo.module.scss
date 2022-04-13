@@ -1,0 +1,67 @@
+@import "../../../styles/utils";
+
+.promo {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.bgImage {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  max-height: 1080px;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+
+  @include padding-nav-header;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 480px;
+  max-width: 240px;
+
+  @include sm {
+    max-width: 530px;
+  }
+
+  @include md {
+    max-width: 580px;
+  }
+
+  @include lg {
+    height: 540px;
+  }
+
+  @include min-landscape {
+    height: 320px;
+  }
+}
+
+.title {
+  margin-bottom: 30px;
+  color: $grey-500;
+  text-transform: uppercase;
+
+  font-size: $font-size-42;
+  font-weight: bold;
+
+  @include md {
+    font-size: $font-size-48;
+  }
+
+  @include lg {
+    font-size: $font-size-60;
+  }
+}
+
+.text {
+  color: $grey-300;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,50 @@
+@import "../../styles/utils";
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: 200ms all ease-out;
+  @include noselect;
+}
+
+// variants
+.btn {
+  // primary
+  &-primary {
+    background: $red-400;
+    color: $white;
+
+    &:hover,
+    &:active {
+      background: $red-300;
+    }
+  }
+}
+
+// sizes
+.btn {
+  &-sm {
+    padding: 8px 20px;
+    font-size: $font-size-12;
+    border-radius: 5px;
+
+    @include xs {
+      padding: 8px 25px;
+      font-size: $font-size-14;
+    }
+  }
+
+  &-md {
+    padding: 20px 50px;
+    font-size: $font-size-14;
+    font-weight: bold;
+    border-radius: 10px;
+
+    @include md {
+      font-size: $font-size-16;
+    }
+  }
+}

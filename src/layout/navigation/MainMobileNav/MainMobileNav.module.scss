@@ -35,12 +35,17 @@
 }
 
 .header {
+  flex: 1 0 $header-height-sm;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 6px 6px 10px;
+  padding: 0 14px;
   background: $grey-200;
   border-bottom: 1px solid $red-400;
+}
+
+.phone {
+  font-size: $font-size-16;
 }
 
 .menu {
@@ -60,7 +65,7 @@
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
-  padding: 6px 0;
+  padding: 12px 0;
 }
 
 .menu {

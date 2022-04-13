@@ -9,7 +9,7 @@ import styles from "./Header.module.scss";
 
 export const Header = () => {
   return (
-    <header className={styles.root}>
+    <header className={styles.header}>
       <Container>
         <div className={styles.inner}>
           <div className={styles.left}>

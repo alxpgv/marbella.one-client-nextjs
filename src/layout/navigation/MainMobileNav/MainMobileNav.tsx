@@ -47,13 +47,13 @@ export const MainMobileNav: FC<{ menu: MenuProps[] }> = ({ menu }) => {
         <div className={styles.inner}>
           <div className={styles.header}>
             <a
-              className="text-18"
+              className={styles.phone}
               href={`tel:${getNumberFromString(settings.contact.phone)}`}
             >
               {settings.contact.phone}
             </a>
 
-            <Button size="xs" color="red">
+            <Button size="sm" variant="primary">
               Callback
             </Button>
 

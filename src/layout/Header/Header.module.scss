@@ -1,20 +1,22 @@
 @import "../../styles/utils";
 
-.root {
-  position: relative;
+.header {
+  position: fixed;
+  width: 100%;
+  min-width: $body-min-width;
   background: rgba($white, .7);
   border-bottom: 2px solid $red-400;
   z-index: 20;
 }
 
 .inner {
-  height: $header-height-sm;
   display: flex;
   align-items: center;
   transition: height 200ms;
+  height: $header-height-sm;
 
-  @include screen(lg) {
-    height: $header-height-md;
+  @include lg {
+    height: $header-height-lg;
   }
 }
 
@@ -25,7 +27,7 @@
   justify-content: flex-end;
   margin-left: 10px;
 
-  @include screen(xs) {
+  @include xs {
     margin-left: 20px;
   }
 }
@@ -34,7 +36,7 @@
   img {
     width: 85px;
 
-    @include screen(lg) {
+    @include lg {
       width: 138px;
     }
   }
@@ -45,7 +47,7 @@
   display: none;
   margin-right: 20px;
 
-  @include screen(lg) {
+  @include lg {
     display: block;
   }
 }
@@ -54,7 +56,7 @@
   display: block;
   margin-left: 20px;
 
-  @include screen(lg) {
+  @include lg {
     display: none;
   }
 }

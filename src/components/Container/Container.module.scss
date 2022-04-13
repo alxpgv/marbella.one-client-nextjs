@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding: 0 $container-padding-sm;
 
-  @include screen(md) {
+  @include md {
     padding: 0 $container-padding-md;
   }
 }
