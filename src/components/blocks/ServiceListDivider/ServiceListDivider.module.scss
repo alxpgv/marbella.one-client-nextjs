@@ -4,11 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  &-primary {
-    background: rgba($white, .9);
-    border-radius: 5px;
-  }
+  background: rgba($white, .9);
+  border-radius: 5px;
 }
 
 .item {
@@ -82,7 +79,6 @@
 
 .itemTitle {
   margin-bottom: 12px;
-  @include font-family($font-family-primary);
   color: $grey-500;
 }
 

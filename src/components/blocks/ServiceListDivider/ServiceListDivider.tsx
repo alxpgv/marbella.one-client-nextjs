@@ -2,25 +2,14 @@ import React, { FC } from "react";
 import cn from "classnames";
 import { Button } from "@/components/Button";
 import { mapIcons } from "@/components/Icons";
-import styles from "./ServiceList.module.scss";
+import styles from "./ServiceListDivider.module.scss";
+import { ServiceListProps } from "@/types";
 
-interface ServiceListProps {
-  variant: "primary" | "secondary";
-  items: {
-    id: number;
-    icon: string;
-    title: string;
-    text: string;
-    link: string;
-  }[];
-}
-
-export const ServiceList: FC<ServiceListProps> = ({
-  variant = "primary",
+export const ServiceListDivider: FC<{ items: ServiceListProps[] }> = ({
   items,
 }) => {
   return (
-    <div className={cn(styles.service, styles[`service-${variant}`])}>
+    <div className={styles.service}>
       {items?.length > 0 &&
         items.map(({ id, icon, title, text, link }) => {
           return (
@@ -30,11 +19,15 @@ export const ServiceList: FC<ServiceListProps> = ({
               )}
               {title && (
                 <div className={styles.itemTitle}>
-                  <h6 className={styles.itemTitle}>{title}</h6>
+                  <h6 className={cn("text-sm-30", styles.itemTitle)}>
+                    {title}
+                  </h6>
                 </div>
               )}
 
-              {text && <p className={cn("text-sm", styles.itemText)}>{text}</p>}
+              {text && (
+                <p className={cn("text-sm-20", styles.itemText)}>{text}</p>
+              )}
 
               <div className={styles.itemBtn}>
                 <Button size="sm" variant={"primary"}>

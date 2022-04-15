@@ -17,13 +17,13 @@
     opacity: 1;
     visibility: visible;
 
-    .inner {
+    .wrapper {
       transform: translateX(0);
     }
   }
 }
 
-.inner {
+.wrapper {
   display: flex;
   flex-direction: column;
   width: 85%;

@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <Container>
-        <div className={styles.inner}>
+        <div className={styles.wrapper}>
           <div className={styles.left}>
             <Logo className={styles.logo} />
           </div>

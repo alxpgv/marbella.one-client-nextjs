@@ -6,39 +6,42 @@ h3,
 h4,
 h5,
 h6, {
-  @include font-family($font-family-heading);
   line-height: $heading-line-height;
 }
 
-h1, .text-h1,
-h2, .text-h2 {
-  font-size: $font-size-30;
+h1, h2, h3 {
+  @include font-family($font-family-heading);
   font-weight: bold;
-
-  @include md {
-    font-size: $font-size-34;
-  }
-
-  @include lg {
-    font-size: $font-size-42;
-  }
-
-  @include xl {
-    font-size: $font-size-48;
-  }
 }
 
-h3, .text-h3 {
+h6 {
+  @include font-family($font-family-primary);
+}
+
+.text-sm-10 {
 
 }
 
-h6, .text-h6 {
-  font-size: $font-size-18;
-
-  @include md {
-    font-size: $font-size-20;
-  }
+.text-sm-20 {
+  font-size: clamp(#{$font-size-14}, 2.8vw, #{$font-size-16});
 }
+
+.text-sm-30 {
+  font-size: clamp(#{$font-size-18}, 3vw, #{$font-size-20});
+}
+
+.text-sm-40 {
+  font-size: clamp(#{$font-size-18}, 3.2vw, #{$font-size-24});
+}
+
+.text-md-10 {
+  font-size: clamp(#{$font-size-20}, 3.2vw, #{$font-size-24});
+}
+
+.text-lg-10 {
+  font-size: clamp(#{$font-size-30}, 4vw, #{$font-size-48});
+}
+
 
 a {
   vertical-align: middle;
@@ -52,45 +55,12 @@ a {
 }
 
 p {
-  // font-size: $font-size-18;
   margin-block-start: 0;
   margin-block-end: 0;
   line-height: $paragraph-line-height;
 
-  //@include sm {
-  //  font-size: $font-size-20;
-  //}
-
   & + p {
     margin-top: 1.4rem;
-  }
-}
-
-.text-sm {
-  font-size: $font-size-14;
-
-  @include lg {
-    font-size: $font-size-16;
-  }
-}
-
-.text-md {
-  font-size: $font-size-20;
-
-  @include lg {
-    font-size: $font-size-24;
-  }
-}
-
-.text-lg {
-  font-size: $font-size-18;
-
-  @include md {
-    font-size: $font-size-22;
-  }
-
-  @include lg {
-    font-size: $font-size-24;
   }
 }
 

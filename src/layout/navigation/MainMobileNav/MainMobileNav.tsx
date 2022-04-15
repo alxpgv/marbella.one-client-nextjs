@@ -44,7 +44,7 @@ export const MainMobileNav: FC<{ menu: MenuProps[] }> = ({ menu }) => {
         onClick={clickOutside}
         ref={navRef}
       >
-        <div className={styles.inner}>
+        <div className={styles.wrapper}>
           <div className={styles.header}>
             <a
               className={styles.phone}

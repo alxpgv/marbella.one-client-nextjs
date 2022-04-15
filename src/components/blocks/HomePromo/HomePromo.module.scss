@@ -4,43 +4,45 @@
   position: relative;
   width: 100%;
   z-index: 10;
+  overflow: hidden;
 }
 
 .bgImage {
   position: absolute;
   width: 100%;
   height: 100vh;
-  max-height: 1080px;
+  max-height: 980px;
 }
 
-.inner {
+.wrapper {
   position: relative;
   width: 100%;
-
-  @include padding-nav-header;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 480px;
+  height: 500px;
   max-width: 240px;
 
-  @include sm {
-    max-width: 530px;
+  @include padding-nav-header;
+
+  @include min-landscape {
+    height: 360px;
   }
 
-  @include md {
-    max-width: 580px;
+  @include sm {
+    max-width: 430px;
   }
 
   @include lg {
+    max-width: 580px;
     height: 540px;
   }
 
-  @include min-landscape {
-    height: 320px;
+  @include xl {
+    height: 620px;
   }
 }
 
@@ -48,17 +50,7 @@
   margin-bottom: 30px;
   color: $grey-500;
   text-transform: uppercase;
-
-  font-size: $font-size-42;
-  font-weight: bold;
-
-  @include md {
-    font-size: $font-size-48;
-  }
-
-  @include lg {
-    font-size: $font-size-60;
-  }
+  font-size: clamp(#{$font-size-42}, 6vw, #{$font-size-60});
 }
 
 .text {
