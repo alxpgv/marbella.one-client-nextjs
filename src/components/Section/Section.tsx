@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./Section.module.scss";
 import cn from "classnames";
+import styles from "./Section.module.scss";
 
 interface SectionProps {
   children: React.ReactNode;
