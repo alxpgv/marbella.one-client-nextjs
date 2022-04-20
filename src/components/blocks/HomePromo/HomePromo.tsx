@@ -35,7 +35,7 @@ export const HomePromo: FC<HomePromoProps> = ({
           {title && <h1 className={styles.title}>{title}</h1>}
           {text && <p className={cn("text-sm-40", styles.text)}>{text}</p>}
           <div>
-            <Button size={"md"} variant={"primary"}>
+            <Button size={"lg"} variant={"primary"}>
               Online consultation
             </Button>
           </div>
