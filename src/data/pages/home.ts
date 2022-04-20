@@ -22,7 +22,8 @@ export const home = {
     image: {
       url: "/images/home/relax-min.jpg",
       alt: "An ideal home is your personal fortress",
+      width: 740,
+      height: 257,
     },
-    button: null,
   },
 };
