@@ -2,7 +2,7 @@
 
 .btn {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   font-weight: 500;
   line-height: 1;
   cursor: pointer;
@@ -12,6 +12,16 @@
 
 // variants
 .btn {
+
+  .icon {
+    svg {
+      height: 8px;
+      width: 8px;
+      margin-left: 10px;
+      stroke: currentColor;
+    }
+  }
+
   // primary
   &-primary {
     background: $red-400;
@@ -38,6 +48,13 @@
   }
 
   &-md {
+    padding: 14px 50px;
+    font-size: $font-size-14;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  &-lg {
     padding: 20px 50px;
     font-size: $font-size-14;
     font-weight: bold;

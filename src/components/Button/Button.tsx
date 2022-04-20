@@ -3,15 +3,17 @@ import cn from "classnames";
 import styles from "./Button.module.scss";
 
 interface ButtonProps {
-  size: "sm" | "md";
+  size: "lg" | "md" | "sm";
   variant: "primary";
   children?: React.ReactNode;
+  icon?: React.ReactNode;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   size,
   variant,
   children,
+  icon,
 }): JSX.Element => {
   return (
     <button
@@ -23,6 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
       )}
     >
       {children}
+      {icon && <span className={styles.icon}>{icon}</span>}
     </button>
   );
 };
