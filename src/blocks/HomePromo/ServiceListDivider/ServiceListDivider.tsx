@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import cn from "classnames";
 import { Button } from "@/components/Button";
 import { mapIcons } from "@/components/Icons";
-import styles from "./ServiceListDivider.module.scss";
 import { TileItemProps } from "@/types";
+import styles from "./ServiceListDivider.module.scss";
 
 export const ServiceListDivider: FC<{ items: TileItemProps[] }> = ({
   items,

@@ -77,4 +77,9 @@ export const home = {
       },
     ],
   },
+  saleConsultation: {
+    title: "Find out the value of your property",
+    subTitle: "Property For Sale",
+    text: "Get a free consultation from our experts on the current market value of your property!",
+  },
 };
