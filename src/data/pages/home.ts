@@ -37,4 +37,44 @@ export const home = {
       "Do you already know what your ideal home will be? Draw it in your imagination?",
     text: "<p>Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!</p><p>We understand your desire to cross the threshold of such a house one day, and therefore we will do our best to make it a reality!</p>",
   },
+  clientOffer: {
+    title: "We offer our clients",
+    listItems: [
+      "Buy an exclusive villa, townhouse or apartment in Spain",
+      "Construction of houses on a turnkey basis",
+      "Sell a villa, townhouse or apartment in Spain",
+      "Rent a yacht or plane in Spain",
+    ],
+    image: {
+      url: "/images/home/offer-clients-min.jpg",
+      alt: "We offer our clients",
+      width: 673,
+      height: 506,
+    },
+  },
+  advantages: {
+    title: "We are chosen for",
+    items: [
+      {
+        id: 1,
+        icon: "award",
+        title: "Professionalism and solid experience in the real estate market",
+      },
+      {
+        id: 2,
+        icon: "targetuser",
+        title: "Attention to each client, individual approach",
+      },
+      {
+        id: 3,
+        icon: "checkmark",
+        title: "Responsibility and punctuality",
+      },
+      {
+        id: 4,
+        icon: "handgood",
+        title: "Guaranteed high quality work",
+      },
+    ],
+  },
 };

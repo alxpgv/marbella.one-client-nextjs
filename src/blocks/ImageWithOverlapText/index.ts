@@ -1,0 +1,1 @@
+export { ImageWithOverlapText } from "./ImageWithOverlapText";

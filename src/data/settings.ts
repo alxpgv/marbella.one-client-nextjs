@@ -1,7 +1,7 @@
 export const settings = {
   contact: {
     phone: "+34 608 281 712",
-    email: "",
+    email: "violet@marbella.one",
     socials: {
       twitter: "https://twitter.com",
       youtube: "https://youtube.com",

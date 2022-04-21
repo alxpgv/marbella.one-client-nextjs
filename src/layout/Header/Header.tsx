@@ -2,7 +2,7 @@ import React from "react";
 import { Logo } from "@/components/Logo";
 import { MainNav } from "@/layout/navigation/MainNav";
 import { mainMenu, settings } from "@/data/settings";
-import { getNumberFromString } from "@/lib/helpers";
+import { getPhoneFromString } from "@/lib/helpers";
 import { Container } from "@/components/Container";
 import { MainMobileNav } from "@/layout/navigation/MainMobileNav";
 import styles from "./Header.module.scss";
@@ -22,7 +22,7 @@ export const Header = () => {
             </div>
             <a
               className="text-20"
-              href={`tel:${getNumberFromString(settings.contact.phone)}`}
+              href={`tel:${getPhoneFromString(settings.contact.phone)}`}
             >
               {settings.contact.phone}
             </a>

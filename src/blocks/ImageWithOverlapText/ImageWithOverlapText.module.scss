@@ -1,4 +1,4 @@
-@import "../../../styles/utils";
+@import "../../styles/utils";
 
 .wrapper {
   display: flex;
@@ -9,8 +9,12 @@
 }
 
 .image {
-  flex: 1;
+  flex: 1 57%;
   position: relative;
+
+  img {
+    border-radius: 5px;
+  }
 
   @include not-sm {
     flex: auto;
@@ -20,7 +24,7 @@
 }
 
 .content {
-  flex: 1;
+  flex: 1 53%;
   position: relative;
   margin: -130px 10px 0 10px;
   padding: 40px;

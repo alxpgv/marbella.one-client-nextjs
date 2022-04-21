@@ -2,16 +2,16 @@ import React, { FC } from "react";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
-import { ServiceListDivider } from "@/components/blocks/ServiceListDivider";
+import { ServiceListDivider } from "@/blocks/HomePromo/ServiceListDivider";
 import cn from "classnames";
-import { ImageProps, ServiceListProps } from "@/types";
+import { ImageProps, TileItemProps } from "@/types";
 import styles from "./HomePromo.module.scss";
 
 interface HomePromoProps {
   title: string;
   text: string;
   image: ImageProps;
-  services: ServiceListProps[];
+  services: TileItemProps[];
 }
 
 export const HomePromo: FC<HomePromoProps> = ({

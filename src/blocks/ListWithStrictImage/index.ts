@@ -1,0 +1,1 @@
+export { ListWithStrictImage } from "./ListWithStrictImage";

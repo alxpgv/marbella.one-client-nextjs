@@ -16,10 +16,11 @@ export interface ImageProps {
   alt?: string;
 }
 
-export interface ServiceListProps {
+export interface TileItemProps {
   id: number;
-  icon: string;
+  icon?: string;
   title: string;
-  text: string;
+  text?: string;
+  button?: "link" | "callback" | "consultation";
   link?: string;
 }

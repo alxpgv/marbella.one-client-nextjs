@@ -3,16 +3,16 @@ import { ImageProps } from "@/types";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import Image from "next/image";
-import styles from "./ListWithImageText.module.scss";
+import styles from "./ListWithStrictImage.module.scss";
 import cn from "classnames";
 
-interface ListWithImageTextProps {
+interface ListWithStrictImageProps {
   text?: string;
   listItems: string[];
   image: ImageProps;
 }
 
-export const ListWithImageText: FC<ListWithImageTextProps> = ({
+export const ListWithStrictImage: FC<ListWithStrictImageProps> = ({
   text,
   listItems,
   image,
@@ -22,9 +22,9 @@ export const ListWithImageText: FC<ListWithImageTextProps> = ({
       <Container className={styles.wrapper}>
         {listItems?.length > 0 && (
           <div className={styles.list}>
-            {listItems.map((item, index) => (
+            {listItems.map((title, index) => (
               <div key={index} className={cn("text-md-10", styles.listItem)}>
-                {item}
+                {title}
               </div>
             ))}
           </div>

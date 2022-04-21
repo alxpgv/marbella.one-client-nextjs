@@ -4,17 +4,17 @@ import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import Image from "next/image";
 import cn from "classnames";
-import styles from "./ImageWithText.module.scss";
 import { Button } from "@/components/Button";
 import { IconArrow } from "@/components/Icons";
+import styles from "./ImageWithOverlapText.module.scss";
 
-interface ImageWithTextProps {
+interface ImageWithOverlapTextProps {
   title?: string;
   text?: string;
   image: ImageProps;
 }
 
-export const ImageWithText: FC<ImageWithTextProps> = ({
+export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({
   title,
   text,
   image,

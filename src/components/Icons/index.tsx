@@ -9,12 +9,20 @@ import { IconSearch } from "./IconSearch";
 import { IconRepair } from "./IconRepair";
 import { IconMarker } from "./IconMarker";
 import { IconHome } from "./IconHome";
+import { IconAward } from "@/components/Icons/IconAward";
+import { IconTargetUser } from "@/components/Icons/IconTargetUser";
+import { IconCheckmark } from "@/components/Icons/IconCheckmark";
+import { IconHandGood } from "@/components/Icons/IconHandGood";
 
 export const mapIcons: { [key: string]: React.ReactNode } = {
   search: <IconSearch />,
   repair: <IconRepair />,
   marker: <IconMarker />,
   home: <IconHome />,
+  award: <IconAward />,
+  targetuser: <IconTargetUser />,
+  checkmark: <IconCheckmark />,
+  handgood: <IconHandGood />,
 };
 
 export {

@@ -3,7 +3,7 @@ import { Button } from "@/components/Button";
 import { MenuItem } from "./MenuItem";
 import { SocialLinks } from "@/components/SocialLinks";
 import { settings } from "@/data/settings";
-import { getNumberFromString } from "@/lib/helpers";
+import { getPhoneFromString } from "@/lib/helpers";
 import { MenuProps } from "@/types";
 import {
   CloseButton,
@@ -48,7 +48,7 @@ export const MainMobileNav: FC<{ menu: MenuProps[] }> = ({ menu }) => {
           <div className={styles.header}>
             <a
               className={styles.phone}
-              href={`tel:${getNumberFromString(settings.contact.phone)}`}
+              href={`tel:${getPhoneFromString(settings.contact.phone)}`}
             >
               {settings.contact.phone}
             </a>

@@ -11,7 +11,6 @@ h6, {
 
 h1, h2, h3 {
   @include font-family($font-family-heading);
-  font-weight: bold;
 }
 
 h6 {
@@ -26,16 +25,28 @@ h6 {
   font-size: clamp(#{$font-size-14}, 2.8vw, #{$font-size-16});
 }
 
+.text-sm-25 {
+  font-size: clamp(#{$font-size-14}, 2.4vw, #{$font-size-24});
+}
+
 .text-sm-30 {
   font-size: clamp(#{$font-size-18}, 3vw, #{$font-size-20});
 }
 
 .text-sm-40 {
-  font-size: clamp(#{$font-size-18}, 3.2vw, #{$font-size-24});
+  font-size: clamp(#{$font-size-18}, 2.2vw, #{$font-size-24});
 }
 
 .text-md-10 {
   font-size: clamp(#{$font-size-20}, 2.8vw, #{$font-size-24});
+}
+
+.text-md-30 {
+  font-size: clamp(#{$font-size-24}, 2.2vw, #{$font-size-32});
+}
+
+.text-md-40 {
+  font-size: clamp(#{$font-size-24}, 3vw, #{$font-size-42});
 }
 
 .text-lg-10 {
@@ -60,7 +71,7 @@ p {
   line-height: $paragraph-line-height;
 
   & + p {
-    margin-top: 1.4rem;
+    margin-top: 16px;
   }
 }
 
