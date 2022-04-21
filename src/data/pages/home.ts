@@ -1,4 +1,5 @@
-import { serviceItems } from "@/data/pages/blocks/services";
+import { ourServices } from "@/data/pages/blocks/services";
+import { onlineServices } from "@/data/pages/blocks/online-services";
 
 export const home = {
   promo: {
@@ -10,7 +11,7 @@ export const home = {
       height: 1920,
       width: 1080,
     },
-    services: serviceItems,
+    services: ourServices,
   },
   listIdeal: {
     text: "An ideal home is your personal fortress, in which it is safe and good in any weather in the shower and outside the window. Here is everything that was dreamed of in childhood. Every detail blends harmoniously with the interior and creates an environment with your character and your interests.",
@@ -81,5 +82,10 @@ export const home = {
     title: "Find out the value of your property",
     subTitle: "Property For Sale",
     text: "Get a free consultation from our experts on the current market value of your property!",
+  },
+  onlineServices: {
+    title: "Relax and have fun beautifully",
+    text: "The unique subtropical climate of the Costa del Sol and Marbella create excellent conditions for an unforgettable holiday. We will organize any kind of holiday on the Costa del Sol for you!",
+    services: onlineServices,
   },
 };

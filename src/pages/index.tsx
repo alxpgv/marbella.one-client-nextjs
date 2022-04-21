@@ -8,6 +8,7 @@ import { ListWithStrictImage } from "@/blocks/ListWithStrictImage";
 import { ImageWithOverlapText } from "@/blocks/ImageWithOverlapText";
 import { ListWithImage } from "@/blocks/ListWithImage";
 import { AdvantageTile } from "@/blocks/AdvantageTile";
+import { SaleConsultation } from "@/blocks/SaleConsultation";
 
 const Index: NextPage = () => {
   return (
@@ -18,6 +19,9 @@ const Index: NextPage = () => {
       {home?.clientOffer && <ListWithImage {...home.clientOffer} />}
       {home?.advantages && (
         <AdvantageTile {...home.advantages} contact={settings?.contact} />
+      )}
+      {home?.saleConsultation && (
+        <SaleConsultation {...home.saleConsultation} />
       )}
     </MainLayout>
   );

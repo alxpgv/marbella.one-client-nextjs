@@ -1,4 +1,4 @@
-export const serviceItems = [
+export const ourServices = [
   {
     id: 1,
     icon: "search",
