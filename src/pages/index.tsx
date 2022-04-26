@@ -10,6 +10,7 @@ import { ListWithImage } from "@/blocks/ListWithImage";
 import { AdvantageTile } from "@/blocks/AdvantageTile";
 import { SaleConsultation } from "@/blocks/SaleConsultation";
 import { OnlineService } from "@/blocks/OnlineService";
+import { Banner } from "@/blocks/Banner/Banner";
 
 const Index: NextPage = () => {
   return (
@@ -25,6 +26,7 @@ const Index: NextPage = () => {
         <SaleConsultation {...home.saleConsultation} />
       )}
       {home?.onlineServices && <OnlineService {...home.onlineServices} />}
+      {home?.banners && <Banner banners={home.banners} />}
     </MainLayout>
   );
 };

@@ -1,0 +1,35 @@
+@import "../../styles/utils";
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.banner {
+  position: relative;
+  flex: 1 100%;
+  margin: 15px;
+  height: 260px;
+
+  @include sm {
+    height: 320px;
+  }
+
+  @include md {
+    flex: 1 calc(50% - 30px);
+    height: 300px;
+  }
+
+  &:first-child {
+    .image img {
+      object-position: right;
+    }
+  }
+
+  &:last-child {
+    .image img {
+      object-position: left;
+    }
+  }
+}
