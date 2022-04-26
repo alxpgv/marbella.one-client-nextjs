@@ -14,8 +14,8 @@ export const ContactInfo = ({ contact }: { contact: any }) => {
       <div className={styles.contactBg}>
         <IconMarker />
       </div>
-      <div className={styles.contactContent}>
-        <h3 className={cn("text-md-30", styles.contactTitle)}>
+      <div className={cn("text-white", styles.contactContent)}>
+        <h3 className={cn("text-md-30 text-white", styles.contactTitle)}>
           It is always easy and pleasant to cooperate with us!
         </h3>
         <p className="text-sm-20">
