@@ -21,7 +21,7 @@ export const SaleConsultation: FC<SaleConsultationProps> = ({
         <div className={styles.wrapper}>
           {subTitle && (
             <div className={styles.subHeading}>
-              <h6 className="">{subTitle}</h6>
+              <h6 className="text-sm-22">{subTitle}</h6>
             </div>
           )}
           {title && (

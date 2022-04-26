@@ -6,6 +6,7 @@ h3,
 h4,
 h5,
 h6, {
+  color: $grey-500;
   line-height: $heading-line-height;
 }
 
@@ -19,6 +20,10 @@ h6 {
 
 .text-sm-20 {
   font-size: clamp(#{$font-size-14}, 2.8vw, #{$font-size-16});
+}
+
+.text-sm-22 {
+  font-size: clamp(#{$font-size-14}, 2.8vw, #{$font-size-20});
 }
 
 .text-sm-23 {
