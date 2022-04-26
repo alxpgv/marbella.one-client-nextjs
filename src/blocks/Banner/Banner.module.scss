@@ -13,12 +13,11 @@
   height: 260px;
 
   @include sm {
-    height: 320px;
+    height: 300px;
   }
 
   @include md {
     flex: 1 calc(50% - 30px);
-    height: 300px;
   }
 
   &:first-child {
