@@ -36,7 +36,7 @@
 .formAgreeControl {
   display: none;
 
-  &:checked {
+  &:not(:checked) {
     & + .formAgreeCheck:after {
       content: "";
     }
