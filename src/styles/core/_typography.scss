@@ -21,6 +21,10 @@ h6 {
   font-size: clamp(#{$font-size-14}, 2.8vw, #{$font-size-16});
 }
 
+.text-sm-23 {
+  font-size: clamp(#{$font-size-16}, 2.4vw, #{$font-size-20});
+}
+
 .text-sm-25 {
   font-size: clamp(#{$font-size-14}, 2.4vw, #{$font-size-24});
 }
@@ -52,7 +56,6 @@ h6 {
 .text-lg-20 {
   font-size: clamp(#{$font-size-42}, 4vw, #{$font-size-48});
 }
-
 
 a {
   vertical-align: middle;
