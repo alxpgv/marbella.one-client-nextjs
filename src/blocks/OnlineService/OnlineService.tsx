@@ -60,12 +60,7 @@ export const OnlineService: FC<OnlineServiceProps> = ({
                     </div>
                   )}
                   <div className={styles.itemServiceContent}>
-                    <div
-                      className={cn(
-                        "text-sm-23 text-white",
-                        styles.itemServiceTitle
-                      )}
-                    >
+                    <div className={cn("text-white", styles.itemServiceTitle)}>
                       {title}
                     </div>
                     <div className={styles.itemServiceBtn}>
