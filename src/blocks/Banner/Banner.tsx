@@ -22,14 +22,12 @@ export const Banner: FC<BannerProps> = ({ banners }) => {
           {banners?.length > 0 &&
             banners.map(({ id, image, link }) => {
               const bannerImage = image?.url ? (
-                <div className={styles.image}>
-                  <Image
-                    src={image.url}
-                    layout="fill"
-                    objectFit="cover"
-                    alt={image.alt ?? ""}
-                  />
-                </div>
+                <Image
+                  src={image.url}
+                  layout="fill"
+                  objectFit="cover"
+                  alt={image.alt ?? ""}
+                />
               ) : null;
 
               return (

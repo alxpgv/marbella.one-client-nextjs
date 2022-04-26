@@ -91,7 +91,7 @@ export const home = {
   banners: [
     {
       id: 1,
-      link: "/#banner",
+      // link: "/#banner",
       image: {
         url: "/images/home/banner-repair-min.jpg",
         alt: "Design and interior",
