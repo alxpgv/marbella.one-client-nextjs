@@ -35,7 +35,11 @@ export const HomePromo: FC<HomePromoProps> = ({
       <Container className={styles.wrapper}>
         <div className={styles.content}>
           {title && <h1 className={styles.title}>{title}</h1>}
-          {text && <p className={cn("text-sm-40", styles.text)}>{text}</p>}
+          {text && (
+            <p className={cn("text-sm-40 text-grey-300", styles.text)}>
+              {text}
+            </p>
+          )}
           <div>
             <Button size={"lg"} variant={"primary"}>
               Online consultation

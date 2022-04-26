@@ -3,6 +3,7 @@ import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import styles from "./SaleConsultation.module.scss";
+import cn from "classnames";
 
 interface SaleConsultationProps {
   title: string;
@@ -20,7 +21,7 @@ export const SaleConsultation: FC<SaleConsultationProps> = ({
       <Container>
         <div className={styles.wrapper}>
           {subTitle && (
-            <div className={styles.subHeading}>
+            <div className={cn("text-grey-300", styles.subHeading)}>
               <h6 className="text-sm-22">{subTitle}</h6>
             </div>
           )}
@@ -30,7 +31,7 @@ export const SaleConsultation: FC<SaleConsultationProps> = ({
             </div>
           )}
           {text && (
-            <div className={styles.text}>
+            <div className={cn("text-grey-300", styles.text)}>
               <p>{text}</p>
             </div>
           )}

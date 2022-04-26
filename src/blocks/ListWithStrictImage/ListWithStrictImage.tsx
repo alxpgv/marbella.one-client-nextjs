@@ -23,7 +23,10 @@ export const ListWithStrictImage: FC<ListWithStrictImageProps> = ({
         {listItems?.length > 0 && (
           <div className={styles.list}>
             {listItems.map((title, index) => (
-              <div key={index} className={cn("text-md-10", styles.listItem)}>
+              <div
+                key={index}
+                className={cn("text-md-10 text-grey-500", styles.listItem)}
+              >
                 {title}
               </div>
             ))}

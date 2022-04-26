@@ -30,7 +30,10 @@ export const AdvantageTile: FC<AdvantageTileProps> = ({
           {items?.length > 0 && (
             <div className={styles.items}>
               {items.map(({ id, title, icon }) => (
-                <div key={id} className={cn("text-md-10", styles.item)}>
+                <div
+                  key={id}
+                  className={cn("text-md-10 text-grey-500", styles.item)}
+                >
                   {icon && (
                     <div className={styles.itemIcon}>{mapIcons[icon]}</div>
                   )}

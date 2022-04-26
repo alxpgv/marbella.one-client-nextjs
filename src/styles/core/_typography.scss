@@ -62,6 +62,14 @@ h6 {
   font-size: clamp(#{$font-size-42}, 4vw, #{$font-size-48});
 }
 
+.text-grey-300 {
+  color: $grey-300;
+}
+
+.text-grey-500 {
+  color: $grey-500;
+}
+
 a {
   vertical-align: middle;
   color: $red-400;

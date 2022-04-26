@@ -3,6 +3,7 @@ import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import styles from "./OnlineConsultation.module.scss";
 import { CallbackForm } from "@/components/CallbackForm";
+import cn from "classnames";
 
 interface OnlineConsultationProps {
   title: string;
@@ -23,7 +24,7 @@ export const OnlineConsultation: FC<OnlineConsultationProps> = ({
         <div className={styles.wrapper}>
           <div className={styles.content}>
             {subTitle && (
-              <div className={styles.subHeading}>
+              <div className={cn("text-grey-300", styles.subHeading)}>
                 <h6 className="text-sm-22">{subTitle}</h6>
               </div>
             )}
@@ -33,12 +34,12 @@ export const OnlineConsultation: FC<OnlineConsultationProps> = ({
               </div>
             )}
             {text && (
-              <div className={styles.text}>
+              <div className={cn("text-grey-500", styles.text)}>
                 <p>{text}</p>
               </div>
             )}
             {note && (
-              <div className={styles.note}>
+              <div className={cn("text-grey-300", styles.note)}>
                 <p>{note}</p>
               </div>
             )}
