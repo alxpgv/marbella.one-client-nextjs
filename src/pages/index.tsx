@@ -9,6 +9,7 @@ import { ImageWithOverlapText } from "@/blocks/ImageWithOverlapText";
 import { ListWithImage } from "@/blocks/ListWithImage";
 import { AdvantageTile } from "@/blocks/AdvantageTile";
 import { SaleConsultation } from "@/blocks/SaleConsultation";
+import { OnlineService } from "@/blocks/OnlineService";
 
 const Index: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Index: NextPage = () => {
       {home?.saleConsultation && (
         <SaleConsultation {...home.saleConsultation} />
       )}
+      {home?.onlineServices && <OnlineService {...home.onlineServices} />}
     </MainLayout>
   );
 };
