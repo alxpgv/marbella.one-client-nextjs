@@ -11,6 +11,7 @@ import { AdvantageTile } from "@/blocks/AdvantageTile";
 import { SaleConsultation } from "@/blocks/SaleConsultation";
 import { OnlineService } from "@/blocks/OnlineService";
 import { Banner } from "@/blocks/Banner/Banner";
+import { OnlineConsultation } from "@/blocks/OnlineConsultation";
 
 const Index: NextPage = () => {
   return (
@@ -27,6 +28,9 @@ const Index: NextPage = () => {
       )}
       {home?.onlineServices && <OnlineService {...home.onlineServices} />}
       {home?.banners && <Banner banners={home.banners} />}
+      {home?.onlineConsultation && (
+        <OnlineConsultation {...home.onlineConsultation} />
+      )}
     </MainLayout>
   );
 };
