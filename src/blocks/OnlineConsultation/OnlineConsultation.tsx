@@ -24,8 +24,8 @@ export const OnlineConsultation: FC<OnlineConsultationProps> = ({
         <div className={styles.wrapper}>
           <div className={styles.content}>
             {subTitle && (
-              <div className={cn("text-grey-300", styles.subHeading)}>
-                <h6 className="text-sm-22">{subTitle}</h6>
+              <div className={styles.subHeading}>
+                <h6 className="text-sm-22 text-grey-300">{subTitle}</h6>
               </div>
             )}
             {title && (
