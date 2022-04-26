@@ -25,8 +25,10 @@ export const HomePromo: FC<HomePromoProps> = ({
   return (
     <div className={styles.promo}>
       {imageUrl && (
-        <div className={styles.bgImage}>
-          <Image src={imageUrl} layout="fill" objectFit="cover" alt="" />
+        <div className={styles.bgImageWrapper}>
+          <div className={styles.bgImage}>
+            <Image src={imageUrl} layout="fill" objectFit="cover" alt="" />
+          </div>
         </div>
       )}
 

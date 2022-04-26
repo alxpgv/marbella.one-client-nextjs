@@ -7,11 +7,18 @@
   overflow: hidden;
 }
 
-.bgImage {
+.bgImageWrapper {
   position: absolute;
   width: 100%;
   height: 100vh;
   max-height: 980px;
+}
+
+.bgImage {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .wrapper {
