@@ -8,6 +8,11 @@ export const settings = {
       instagram: "https://instagram.com",
       facebook: "https://facebook.com",
     },
+    messengers: {
+      whatsapp: "https://whatsapp.com",
+      telegram: "https://web.telegram.org",
+      viber: "https://www.viber.com",
+    },
   },
 };
 
