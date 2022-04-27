@@ -9,7 +9,6 @@ interface SocialLinksProps {
 }
 
 export const SocialLinks: FC<SocialLinksProps> = ({ socials }) => {
-  console.log(socials);
   return (
     <div className={styles.socialLinks}>
       {socials?.facebook && (
