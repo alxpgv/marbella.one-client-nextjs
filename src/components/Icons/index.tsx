@@ -13,6 +13,9 @@ import { IconAward } from "@/components/Icons/IconAward";
 import { IconTargetUser } from "@/components/Icons/IconTargetUser";
 import { IconCheckmark } from "@/components/Icons/IconCheckmark";
 import { IconHandGood } from "@/components/Icons/IconHandGood";
+import { IconWhatsapp } from "@/components/Icons/IconWhatsapp";
+import { IconTelegram } from "@/components/Icons/IconTelegram";
+import { IconViber } from "@/components/Icons/IconViber";
 
 export const mapIcons: { [key: string]: React.ReactNode } = {
   search: <IconSearch />,
@@ -36,4 +39,7 @@ export {
   IconHome,
   IconSearch,
   IconRepair,
+  IconWhatsapp,
+  IconTelegram,
+  IconViber,
 };
