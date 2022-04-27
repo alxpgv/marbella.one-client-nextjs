@@ -25,8 +25,6 @@ export const SocialContact: FC<SocialContactProps> = ({
   socials,
   messengers,
 }) => {
-  console.log(socials);
-  console.log(messengers);
   return (
     <Section>
       <Container>
