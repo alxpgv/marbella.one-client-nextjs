@@ -1,11 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import Link from "next/link";
 
-export const Logo = ({ className = "" }) => {
+interface LogoProps {
+  className?: string;
+  color?: "primary" | "secondary";
+}
+
+export const Logo: FC<LogoProps> = ({ className = "", color = "primary" }) => {
   return (
     <Link href="/">
       <a className={className}>
-        <img src="/images/logo.svg" className="" alt="Violet Real Estate" />
+        {color === "primary" ? (
+          <img src="/images/logo.svg" alt="Violet Real Estate" />
+        ) : (
+          <img src="/images/logo-secondary.svg" alt="Violet Real Estate" />
+        )}
       </a>
     </Link>
   );
