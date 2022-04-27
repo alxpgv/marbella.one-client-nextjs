@@ -1,5 +1,9 @@
-import { ourServices } from "@/data/pages/blocks/services";
-import { onlineServices } from "@/data/pages/blocks/online-services";
+import {
+  ourServices,
+  onlineServices,
+  banners,
+  onlineConsultation,
+} from "@/data/static-blocks";
 
 export const home = {
   promo: {
@@ -83,37 +87,7 @@ export const home = {
     subTitle: "Property For Sale",
     text: "Get a free consultation from our experts on the current market value of your property!",
   },
-  onlineServices: {
-    title: "Relax and have fun beautifully",
-    text: "The unique subtropical climate of the Costa del Sol and Marbella create excellent conditions for an unforgettable holiday. We will organize any kind of holiday on the Costa del Sol for you!",
-    services: onlineServices,
-  },
-  banners: [
-    {
-      id: 1,
-      // link: "/#banner",
-      image: {
-        url: "/images/home/banner-repair-min.jpg",
-        alt: "Design and interior",
-        width: 630,
-        height: 300,
-      },
-    },
-    {
-      id: 2,
-      link: "/#banner",
-      image: {
-        url: "/images/home/banner-villa-turnkey-min.jpg",
-        alt: "Construction of a turnkey villa",
-        width: 630,
-        height: 300,
-      },
-    },
-  ],
-  onlineConsultation: {
-    title: "Online consultation",
-    subTitle: "We will definitely call you back",
-    text: "our manager will contact you and answer all your questions",
-    note: "* We do not share your personal information with third parties!",
-  },
+  onlineServices,
+  banners,
+  onlineConsultation,
 };
