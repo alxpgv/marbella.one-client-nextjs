@@ -9,8 +9,8 @@
   }
 }
 
-.messenger,
-.social {
+.messengerCol,
+.socialCol {
   flex: 1;
   margin: 15px;
 }
@@ -32,7 +32,7 @@
 }
 
 //messenger block
-.messenger {
+.messengerCol {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 40px 20px;
@@ -55,7 +55,7 @@
   margin-top: 20px;
 }
 
-.messengerIcons {
+.messengerLinks {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +88,7 @@
 }
 
 //social block
-.social {
+.socialCol {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,7 +116,7 @@
   }
 }
 
-.socialIcons {
+.socialLinks {
   margin-top: 25px;
 
   .iconItem + .iconItem {

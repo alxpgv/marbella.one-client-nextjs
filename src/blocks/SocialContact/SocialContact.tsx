@@ -3,22 +3,13 @@ import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import cn from "classnames";
 import { Button } from "@/components/Button";
-import {
-  IconFacebook,
-  IconInstagram,
-  IconTelegram,
-  IconViber,
-  IconWhatsapp,
-} from "@/components/Icons";
+import { MessengerLinks } from "@/blocks/SocialContact/MessengerLinks";
+import { SocialLinks } from "@/blocks/SocialContact/SocialLinks";
 import styles from "./SocialContact.module.scss";
 
 interface SocialContactProps {
-  socials?: {
-    [key: string]: string;
-  };
-  messengers?: {
-    [key: string]: string;
-  };
+  socials?: any;
+  messengers?: any;
 }
 
 export const SocialContact: FC<SocialContactProps> = ({
@@ -29,7 +20,7 @@ export const SocialContact: FC<SocialContactProps> = ({
     <Section>
       <Container>
         <div className={styles.wrapper}>
-          <div className={styles.messenger}>
+          <div className={styles.messengerCol}>
             <div className={styles.messengerContent}>
               <div className={styles.messengerTop}>
                 <h2 className={"text-lg-20"}>Join us!</h2>
@@ -63,42 +54,12 @@ export const SocialContact: FC<SocialContactProps> = ({
                 </div>
               </div>
             </div>
-
-            <div className={styles.messengerIcons}>
-              {messengers?.whatsapp && (
-                <a
-                  href={messengers.whatsapp}
-                  className={styles.iconItem}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                >
-                  <IconWhatsapp />
-                </a>
-              )}
-              {messengers?.telegram && (
-                <a
-                  href={messengers.telegram}
-                  className={styles.iconItem}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                >
-                  <IconTelegram />
-                </a>
-              )}
-              {messengers?.viber && (
-                <a
-                  href={messengers.viber}
-                  className={styles.iconItem}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                >
-                  <IconViber />
-                </a>
-              )}
-            </div>
+            {Object.keys(messengers).length > 0 && (
+              <MessengerLinks messengers={messengers} />
+            )}
           </div>
 
-          <div className={styles.social}>
+          <div className={styles.socialCol}>
             <div className={styles.socialHeading}>
               <h3 className={"text-white"}>We are in social networks!</h3>
             </div>
@@ -108,29 +69,9 @@ export const SocialContact: FC<SocialContactProps> = ({
                 date with the best real estate offers in Spain
               </p>
             </div>
-
-            <div className={styles.socialIcons}>
-              {socials?.facebook && (
-                <a
-                  href={socials.facebook}
-                  className={styles.iconItem}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                >
-                  <IconFacebook />
-                </a>
-              )}
-              {socials?.instagram && (
-                <a
-                  href={socials.instagram}
-                  className={styles.iconItem}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                >
-                  <IconInstagram />
-                </a>
-              )}
-            </div>
+            {Object.keys(socials).length > 0 && (
+              <SocialLinks socials={socials} />
+            )}
           </div>
         </div>
       </Container>
