@@ -12,6 +12,7 @@ import { SaleConsultation } from "@/blocks/SaleConsultation";
 import { OnlineService } from "@/blocks/OnlineService";
 import { Banner } from "@/blocks/Banner/Banner";
 import { OnlineConsultation } from "@/blocks/OnlineConsultation";
+import { SocialContact } from "@/blocks/SocialContact";
 
 const Index: NextPage = () => {
   return (
@@ -31,6 +32,12 @@ const Index: NextPage = () => {
       {home?.onlineConsultation && (
         <OnlineConsultation {...home.onlineConsultation} />
       )}
+      {
+        <SocialContact
+          messengers={settings?.contact?.messengers}
+          socials={settings?.contact?.socials}
+        />
+      }
     </MainLayout>
   );
 };
