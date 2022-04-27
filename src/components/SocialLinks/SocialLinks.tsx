@@ -1,5 +1,4 @@
-import React from "react";
-import { settings } from "@/data/settings";
+import React, { FC } from "react";
 import {
   IconFacebook,
   IconInstagram,
@@ -7,37 +6,51 @@ import {
   IconYoutube,
 } from "@/components/Icons";
 
-export const SocialLinks = () => {
+interface SocialLinksProps {
+  socials: {
+    [key: string]: string;
+  };
+}
+
+export const SocialLinks: FC<SocialLinksProps> = ({ socials }) => {
   return (
     <>
-      <a
-        href={settings.contact.socials.instagram}
-        target="_blank"
-        rel="noreferrer noopener nofollow"
-      >
-        <IconInstagram />
-      </a>
-      <a
-        href={settings.contact.socials.instagram}
-        target="_blank"
-        rel="noreferrer noopener nofollow"
-      >
-        <IconFacebook />
-      </a>
-      <a
-        href={settings.contact.socials.instagram}
-        target="_blank"
-        rel="noreferrer noopener nofollow"
-      >
-        <IconYoutube />
-      </a>
-      <a
-        href={settings.contact.socials.instagram}
-        target="_blank"
-        rel="noreferrer noopener nofollow"
-      >
-        <IconTwitter />
-      </a>
+      {socials?.instagram && (
+        <a
+          href={socials.instagram}
+          target="_blank"
+          rel="noreferrer noopener nofollow"
+        >
+          <IconInstagram />
+        </a>
+      )}
+      {socials?.facebook && (
+        <a
+          href={socials.facebook}
+          target="_blank"
+          rel="noreferrer noopener nofollow"
+        >
+          <IconFacebook />
+        </a>
+      )}
+      {socials?.youtube && (
+        <a
+          href={socials.youtube}
+          target="_blank"
+          rel="noreferrer noopener nofollow"
+        >
+          <IconYoutube />
+        </a>
+      )}
+      {socials?.twitter && (
+        <a
+          href={socials.twitter}
+          target="_blank"
+          rel="noreferrer noopener nofollow"
+        >
+          <IconTwitter />
+        </a>
+      )}
     </>
   );
 };

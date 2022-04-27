@@ -2,7 +2,6 @@ import React, { FC, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/Button";
 import { MenuItem } from "./MenuItem";
 import { SocialLinks } from "@/components/SocialLinks";
-import { settings } from "@/data/settings";
 import { getPhoneFromString } from "@/lib/helpers";
 import { MenuProps } from "@/types";
 import {
@@ -11,7 +10,12 @@ import {
 } from "@/layout/navigation/MainMobileNav/buttons";
 import styles from "./MainMobileNav.module.scss";
 
-export const MainMobileNav: FC<{ menu: MenuProps[] }> = ({ menu }) => {
+interface MainMobileNavProps {
+  menu: MenuProps[];
+  contact?: any;
+}
+
+export const MainMobileNav: FC<MainMobileNavProps> = ({ menu, contact }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
 
@@ -46,13 +50,14 @@ export const MainMobileNav: FC<{ menu: MenuProps[] }> = ({ menu }) => {
       >
         <div className={styles.wrapper}>
           <div className={styles.header}>
-            <a
-              className={styles.phone}
-              href={`tel:${getPhoneFromString(settings.contact.phone)}`}
-            >
-              {settings.contact.phone}
-            </a>
-
+            {contact?.phone && (
+              <a
+                className={styles.phone}
+                href={`tel:${getPhoneFromString(contact.phone)}`}
+              >
+                {contact.phone}
+              </a>
+            )}
             <Button size="sm" variant="primary">
               Callback
             </Button>
@@ -64,7 +69,7 @@ export const MainMobileNav: FC<{ menu: MenuProps[] }> = ({ menu }) => {
               menu.map((item, index) => <MenuItem item={item} key={index} />)}
           </ul>
           <div className={styles.footer}>
-            <SocialLinks />
+            {contact?.socials && <SocialLinks socials={contact.socials} />}
           </div>
         </div>
       </nav>

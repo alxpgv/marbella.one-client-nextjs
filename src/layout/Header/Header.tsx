@@ -17,17 +17,21 @@ export const Header = () => {
           </div>
 
           <div className={styles.right}>
-            <div className={styles.menu}>
-              <MainNav menu={mainMenu} />
-            </div>
-            <a
-              className="text-20"
-              href={`tel:${getPhoneFromString(settings.contact.phone)}`}
-            >
-              {settings.contact.phone}
-            </a>
+            {mainMenu && (
+              <div className={styles.menu}>
+                <MainNav menu={mainMenu} />
+              </div>
+            )}
+            {settings?.contact?.phone && (
+              <a
+                className="text-20"
+                href={`tel:${getPhoneFromString(settings.contact.phone)}`}
+              >
+                {settings.contact.phone}
+              </a>
+            )}
             <div className={styles.mobile}>
-              <MainMobileNav menu={mainMenu} />
+              <MainMobileNav menu={mainMenu} contact={settings?.contact} />
             </div>
           </div>
         </div>
