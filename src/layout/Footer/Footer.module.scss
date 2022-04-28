@@ -1,0 +1,140 @@
+@import "../../styles/utils";
+
+.footer {
+  color: $white;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $red-300;
+    }
+  }
+}
+
+// main row
+.main {
+  padding: 20px 0 40px;
+  background: $black-800;
+
+  @include sm {
+    padding: 60px 0 40px;
+  }
+}
+
+.mainWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+
+  .col {
+    flex: 1 100%;
+    margin-top: 20px;
+    padding: 0 10px;
+    text-align: center;
+
+    @include sm {
+      flex: 1 33.3333%;
+      text-align: left;
+    }
+
+    @include md {
+      flex: 1;
+    }
+
+  }
+}
+
+// contact items
+.contact {
+  font-size: $font-size-14;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+
+  @include not-sm {
+    justify-content: center;
+  }
+
+  .icon, .icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon {
+    margin-right: 7px;
+
+    svg {
+      stroke: $grey-250;
+    }
+  }
+}
+
+.contactPhone {
+  font-size: $font-size-18;
+}
+
+.contactEmail {
+  text-decoration: underline;
+}
+
+// menu items
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  .menuTitle {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: $white;
+    font-size: $font-size-20;
+    border-bottom: 1px solid #333333;
+  }
+
+  .menuItem {
+    font-size: $font-size-16;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// bottom row
+.bottom {
+  padding: 5px 0 20px 0;
+  background: $black;
+  font-size: $font-size-14;
+
+  @include sm {
+    padding: 15px 0 30px 0;
+  }
+}
+
+.bottomWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include not-md {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .col {
+    margin-top: 15px;
+  }
+
+  .privacy a {
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+
+    @include not-md {
+      text-align: center;
+    }
+  }
+}

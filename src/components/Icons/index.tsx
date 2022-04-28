@@ -16,6 +16,10 @@ import { IconHandGood } from "@/components/Icons/IconHandGood";
 import { IconWhatsapp } from "@/components/Icons/IconWhatsapp";
 import { IconTelegram } from "@/components/Icons/IconTelegram";
 import { IconViber } from "@/components/Icons/IconViber";
+import { IconPhoneSmooth } from "@/components/Icons/IconPhoneSmooth";
+import { IconCalendarSmooth } from "@/components/Icons/IconCalendarSmooth";
+import { IconBoxArrowSmooth } from "@/components/Icons/IconBoxArrowSmooth";
+import { IconLocationSmooth } from "@/components/Icons/IconLocationSmooth";
 
 export const mapIcons: { [key: string]: React.ReactNode } = {
   search: <IconSearch />,
@@ -42,4 +46,8 @@ export {
   IconWhatsapp,
   IconTelegram,
   IconViber,
+  IconBoxArrowSmooth,
+  IconLocationSmooth,
+  IconCalendarSmooth,
+  IconPhoneSmooth,
 };
