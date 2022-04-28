@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./Footer.module.scss";
 import { Container } from "@/components/Container";
-import { Logo } from "@/components/Logo";
+import { Logo } from "@/layout/Logo";
 import Image from "next/image";
 import Link from "next/link";
 import { settings, mainMenu } from "@/data/settings";
 import { getPhoneFromString } from "@/lib/helpers";
+import { FooterMenuItems } from "@/layout/Footer/FooterMenuItems";
 import cn from "classnames";
 import {
   IconBoxArrowSmooth,
@@ -13,7 +13,7 @@ import {
   IconLocationSmooth,
   IconPhoneSmooth,
 } from "@/components/Icons";
-import { ChildMenu } from "@/layout/Footer/ChildMenu";
+import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   const menuAbout = mainMenu[0];
@@ -65,21 +65,25 @@ export const Footer = () => {
                 </div>
               )}
             </div>
-            {mainMenu?.length > 0 && (
-              <div className={cn(styles.col, styles.menu)}>
-                <div className={styles.menuTitle}>Menu</div>
-                {mainMenu.map(({ id, title, url }) => {
-                  return (
-                    <Link key={id} href={url}>
-                      <a className={styles.menuItem}>{title}</a>
-                    </Link>
-                  );
-                })}
-              </div>
+            <FooterMenuItems items={mainMenu} title={"Menu"} />
+            {menuAbout?.child && (
+              <FooterMenuItems
+                items={menuAbout.child}
+                title={menuAbout.title}
+              />
             )}
-            {menuAbout && <ChildMenu itemWithChild={menuAbout} />}
-            {menuRealEstate && <ChildMenu itemWithChild={menuRealEstate} />}
-            {menuOwners && <ChildMenu itemWithChild={menuOwners} />}
+            {menuRealEstate?.child && (
+              <FooterMenuItems
+                items={menuRealEstate.child}
+                title={menuRealEstate.title}
+              />
+            )}
+            {menuOwners?.child && (
+              <FooterMenuItems
+                items={menuOwners.child}
+                title={menuOwners.title}
+              />
+            )}
           </div>
         </Container>
       </div>

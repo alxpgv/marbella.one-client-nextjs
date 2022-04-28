@@ -1,5 +1,5 @@
 import React from "react";
-import { Logo } from "@/components/Logo";
+import { Logo } from "@/layout/Logo";
 import { MainNav } from "@/layout/navigation/MainNav";
 import { mainMenu, settings } from "@/data/settings";
 import { getPhoneFromString } from "@/lib/helpers";
