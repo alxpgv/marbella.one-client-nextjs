@@ -1,9 +1,8 @@
 import React, { FC } from "react";
 import { MenuItemProps } from "@/types";
 import Link from "next/link";
-import styles from "@/layout/Footer/Footer.module.scss";
 import cn from "classnames";
-import { mainMenu } from "@/data/settings";
+import styles from "@/layout/Footer/Footer.module.scss";
 
 interface FooterMenuItems {
   items: MenuItemProps[];
