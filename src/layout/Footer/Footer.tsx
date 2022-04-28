@@ -77,9 +77,9 @@ export const Footer = () => {
                 })}
               </div>
             )}
-            {menuAbout && <ChildMenu menuItem={menuAbout} />}
-            {menuRealEstate && <ChildMenu menuItem={menuRealEstate} />}
-            {menuOwners && <ChildMenu menuItem={menuOwners} />}
+            {menuAbout && <ChildMenu itemWithChild={menuAbout} />}
+            {menuRealEstate && <ChildMenu itemWithChild={menuRealEstate} />}
+            {menuOwners && <ChildMenu itemWithChild={menuOwners} />}
           </div>
         </Container>
       </div>

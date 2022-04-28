@@ -4,12 +4,12 @@ import cn from "classnames";
 import Link from "next/link";
 import styles from "@/layout/Footer/Footer.module.scss";
 
-export const ChildMenu = ({ menuItem }: { menuItem: MenuProps }) => {
-  if (menuItem?.child && menuItem.child.length > 0) {
+export const ChildMenu = ({ itemWithChild }: { itemWithChild: MenuProps }) => {
+  if (itemWithChild?.child && itemWithChild.child.length > 0) {
     return (
       <div className={cn(styles.col, styles.menu)}>
-        <div className={styles.menuTitle}>{menuItem.title}</div>
-        {menuItem.child.map(({ id, title, url }) => {
+        <div className={styles.menuTitle}>{itemWithChild.title}</div>
+        {itemWithChild.child.map(({ id, title, url }) => {
           return (
             <Link key={id} href={url}>
               <a className={styles.menuItem}>{title}</a>
