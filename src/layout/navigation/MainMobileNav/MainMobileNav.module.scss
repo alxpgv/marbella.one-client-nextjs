@@ -13,7 +13,7 @@
   opacity: 0;
   transition: 200ms all ease-in;
 
-  &.open {
+  &.isOpen {
     opacity: 1;
     visibility: visible;
 
@@ -74,7 +74,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 20px;
+      height: 60px;
+      padding: 0 20px;
       font-size: $font-size-16;
       color: $grey-500;
       border-bottom: 1px solid $grey-200;
@@ -83,14 +84,41 @@
         background: $red-400;
         color: $white;
 
-        svg {
+        .expandBtn svg {
           stroke: currentColor;
         }
       }
     }
 
-    &.childItem {
-      background: $grey-100;
+    .expandBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid $grey-200;
+      border-radius: 50%;
+
+      svg {
+        stroke: currentColor;
+      }
+    }
+  }
+}
+
+.subMenu {
+  display: none;
+
+  &.isOpen {
+    display: block;
+  }
+
+  li {
+    padding-left: 10px;
+    background: $grey-100;
+
+    a {
+      height: 50px;
     }
   }
 }

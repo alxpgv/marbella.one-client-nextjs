@@ -8,6 +8,7 @@ import {
   CloseButton,
   Hamburger,
 } from "@/layout/navigation/MainMobileNav/buttons";
+import cn from "classnames";
 import styles from "./MainMobileNav.module.scss";
 
 interface MainMobileNavProps {
@@ -43,7 +44,7 @@ export const MainMobileNav: FC<MainMobileNavProps> = ({ menu, contact }) => {
     <>
       <Hamburger handleClick={handleToggle} />
       <nav
-        className={`${styles.nav} ${isOpen ? styles.open : ""}`}
+        className={cn(styles.nav, isOpen ? styles.isOpen : "")}
         role="navigation"
         onClick={clickOutside}
         ref={navRef}
