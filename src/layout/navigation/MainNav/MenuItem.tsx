@@ -16,32 +16,23 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
     return targetUrl === router.pathname || openSubMenu ? styles.active : "";
   };
 
-  const toggleSubMenu = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setOpenSubMenu((prev) => !prev);
+  const handleMouseEnter = () => {
+    setOpenSubMenu(true);
   };
 
-  // TODO: check this code
-  useEffect(() => {
-    if (child?.length && openSubMenu) {
-      const handleClickOutside = (e: any) => {
-        if (!hasChildRef?.current?.contains(e.target)) {
-          setOpenSubMenu(false);
-        }
-      };
-      document.addEventListener("mousedown", handleClickOutside);
-
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }
-  }, [openSubMenu]);
+  const handleMouseLeave = () => {
+    setOpenSubMenu(false);
+  };
 
   if (child?.length) {
     return (
-      <li ref={hasChildRef}>
+      <li
+        ref={hasChildRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <Link href={url}>
-          <a className={activeItem(url)} onClick={toggleSubMenu}>
+          <a className={activeItem(url)}>
             {title}
             <IconArrow rotate={openSubMenu ? "rotate-180" : null} />
           </a>
