@@ -21,7 +21,9 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
           <a className={openSubMenu ? styles.active : ""}>
             {title}
             <div className={styles.expandBtn} onClick={toggleSubMenu}>
-              <IconArrow rotate={openSubMenu ? "rotate-180" : null} />
+              <span className={styles.icon}>
+                <IconArrow rotate={openSubMenu ? "rotate-180" : null} />
+              </span>
             </div>
           </a>
         </Link>
