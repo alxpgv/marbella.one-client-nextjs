@@ -21,14 +21,9 @@ export const settings = {
 export const mainMenu = [
   {
     id: 1,
-    title: "About",
-    url: "#",
+    title: "About me",
+    url: "/about",
     child: [
-      {
-        id: 2,
-        title: "About me",
-        url: "/about",
-      },
       {
         id: 3,
         title: "Our philosophy",
@@ -41,11 +36,11 @@ export const mainMenu = [
       },
     ],
   },
-  { id: 5, title: "Our services", url: "#" },
+  { id: 5, title: "Our services", url: "/our-service" },
   {
     id: 6,
     title: "Real Estate",
-    url: "#",
+    url: "/real-estate",
     child: [
       {
         id: 7,
@@ -62,7 +57,7 @@ export const mainMenu = [
   {
     id: 9,
     title: "Owners",
-    url: "#",
+    url: "/owners",
     child: [
       {
         id: 10,
@@ -86,6 +81,6 @@ export const mainMenu = [
       },
     ],
   },
-  { id: 14, title: "Blog", url: "#" },
-  { id: 15, title: "Contacts", url: "#" },
+  { id: 14, title: "Blog", url: "/blog" },
+  { id: 15, title: "Contacts", url: "/contacts" },
 ];
