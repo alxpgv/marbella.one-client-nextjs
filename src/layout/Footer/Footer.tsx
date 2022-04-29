@@ -65,23 +65,27 @@ export const Footer = () => {
                 </div>
               )}
             </div>
-            <FooterMenuItems items={mainMenu} title={"Menu"} />
+            <FooterMenuItems items={mainMenu} itemTitle={"Menu"} />
             {menuAbout?.child && (
               <FooterMenuItems
                 items={menuAbout.child}
-                title={menuAbout.title}
+                itemTitle={<Link href={menuAbout.url}>{menuAbout.title}</Link>}
               />
             )}
             {menuRealEstate?.child && (
               <FooterMenuItems
                 items={menuRealEstate.child}
-                title={menuRealEstate.title}
+                itemTitle={
+                  <Link href={menuRealEstate.url}>{menuRealEstate.title}</Link>
+                }
               />
             )}
             {menuOwners?.child && (
               <FooterMenuItems
                 items={menuOwners.child}
-                title={menuOwners.title}
+                itemTitle={
+                  <Link href={menuOwners.url}>{menuOwners.title}</Link>
+                }
               />
             )}
           </div>

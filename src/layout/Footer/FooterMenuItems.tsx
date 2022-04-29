@@ -6,14 +6,14 @@ import styles from "@/layout/Footer/Footer.module.scss";
 
 interface FooterMenuItems {
   items: MenuItemProps[];
-  title: string;
+  itemTitle: string | React.ReactNode;
 }
 
-export const FooterMenuItems: FC<FooterMenuItems> = ({ items, title }) => {
+export const FooterMenuItems: FC<FooterMenuItems> = ({ items, itemTitle }) => {
   if (items?.length > 0) {
     return (
       <div className={cn(styles.col, styles.menu)}>
-        {title && <div className={styles.menuTitle}>{title}</div>}
+        {itemTitle && <div className={styles.menuTitle}>{itemTitle}</div>}
         {items.map(({ id, title, url }) => {
           return (
             <Link key={id} href={url}>
