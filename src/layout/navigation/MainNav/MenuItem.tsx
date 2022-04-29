@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { IconArrow } from "@/components/Icons/IconArrow";
@@ -10,7 +10,6 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const router = useRouter();
   const { title, url, child } = item;
-  const hasChildRef = useRef<HTMLLIElement | null>(null);
 
   const activeItem = (targetUrl: string) => {
     return targetUrl === router.pathname || openSubMenu ? styles.active : "";
@@ -26,11 +25,7 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
 
   if (child?.length) {
     return (
-      <li
-        ref={hasChildRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+      <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <Link href={url}>
           <a className={activeItem(url)}>
             {title}
