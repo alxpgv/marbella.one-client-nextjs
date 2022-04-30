@@ -1,1 +1,1 @@
-export { ToTopBtn } from "./ToTopButton";
+export { ToTopBtn } from "./ToTopBtn";

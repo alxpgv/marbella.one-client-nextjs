@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Footer } from "@/layout/Footer/Footer";
 import { Header } from "@/layout/Header/Header";
-import { ToTopBtn } from "@/components/ToTopBtn/ToTopBtn";
+import { ToTopBtn } from "@/components/ToTopBtn";
 
 interface MainLayoutProps {
   children: React.ReactNode;
