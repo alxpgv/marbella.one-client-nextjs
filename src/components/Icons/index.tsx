@@ -20,6 +20,7 @@ import { IconPhoneSmooth } from "@/components/Icons/IconPhoneSmooth";
 import { IconCalendarSmooth } from "@/components/Icons/IconCalendarSmooth";
 import { IconBoxArrowSmooth } from "@/components/Icons/IconBoxArrowSmooth";
 import { IconLocationSmooth } from "@/components/Icons/IconLocationSmooth";
+import { IconPhone } from "@/components/Icons/IconPhone";
 
 export const mapIcons: { [key: string]: React.ReactNode } = {
   search: <IconSearch />,
@@ -50,4 +51,5 @@ export {
   IconLocationSmooth,
   IconCalendarSmooth,
   IconPhoneSmooth,
+  IconPhone,
 };
