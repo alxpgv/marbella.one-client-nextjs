@@ -1,7 +1,10 @@
 import React, { FormEvent, useState } from "react";
-import styles from "./CallbackForm.module.scss";
-import cn from "classnames";
+import PhoneInput from "react-phone-input-2";
 import { Button } from "@/components/Button";
+import cn from "classnames";
+import { IconUser } from "@/components/Icons/IconUser";
+import { IconPhone } from "@/components/Icons";
+import styles from "./CallbackForm.module.scss";
 
 interface CallbackFormProps {
   title?: string;
@@ -11,10 +14,15 @@ interface CallbackFormProps {
 
 export const CallbackForm = ({ title, text, btnText }: CallbackFormProps) => {
   const [agreeIsChecked, setAgreeIsChecked] = useState(true);
+  const [phone, setPhone] = useState("");
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(e);
+  };
+
+  const phoneChange = (value: string) => {
+    setPhone(value);
   };
 
   return (
@@ -24,10 +32,32 @@ export const CallbackForm = ({ title, text, btnText }: CallbackFormProps) => {
 
       <form onSubmit={onSubmit}>
         <div className={styles.formField}>
-          <input className={styles.formInput} type={"text"} />
+          <span className={styles.formFieldIcon}>
+            <IconUser />
+          </span>
+          <input
+            className={styles.formInput}
+            type={"text"}
+            placeholder={"Your name"}
+          />
         </div>
         <div className={styles.formField}>
-          <input className={styles.formInput} type={"tel"} />
+          <span className={styles.formFieldIcon}>
+            <IconPhone />
+          </span>
+          <PhoneInput
+            disableDropdown={true}
+            placeholder={"Phone number"}
+            specialLabel={""}
+            inputClass={styles.formInput}
+            value={phone}
+            onChange={phoneChange}
+            // inputClass={
+            //   errors.phone
+            //     ? "form-feedback__input error"
+            //     : "form-feedback__input"
+            // }
+          />
         </div>
         <div className={styles.formField}>
           <Button size={"md"} variant={"primary"} gutter={"sm"} fullWidth>
