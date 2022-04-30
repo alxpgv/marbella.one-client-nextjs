@@ -23,6 +23,6 @@ export interface TileItemProps {
   icon?: string;
   title: string;
   text?: string;
-  button?: "link" | "callback" | "consultation";
+  button?: "link" | "callback" | "consultation" | null;
   link?: string;
 }
