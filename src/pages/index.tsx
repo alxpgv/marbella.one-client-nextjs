@@ -13,10 +13,12 @@ import { OnlineService } from "@/blocks/OnlineService";
 import { Banner } from "@/blocks/Banner/Banner";
 import { OnlineConsultation } from "@/blocks/OnlineConsultation";
 import { SocialContact } from "@/blocks/SocialContact";
+import { Meta } from "@/layout/Meta";
 
 const Index: NextPage = () => {
   return (
     <MainLayout>
+      <Meta />
       {home?.promo && <HomePromo {...home.promo} />}
       {home?.listIdeal && <ListWithStrictImage {...home.listIdeal} />}
       {home?.dreamPerfect && <ImageWithOverlapText {...home.dreamPerfect} />}
