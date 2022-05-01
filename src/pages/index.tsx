@@ -17,8 +17,8 @@ import { Meta } from "@/layout/Meta";
 
 const Index: NextPage = () => {
   return (
-    <MainLayout>
-      <Meta />
+    <MainLayout headingOffset={false}>
+      <Meta title={"Index page"} />
       {home?.promo && <HomePromo {...home.promo} />}
       {home?.listIdeal && <ListWithStrictImage {...home.listIdeal} />}
       {home?.dreamPerfect && <ImageWithOverlapText {...home.dreamPerfect} />}

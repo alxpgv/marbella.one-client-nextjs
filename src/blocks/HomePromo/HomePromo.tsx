@@ -33,7 +33,7 @@ export const HomePromo: FC<HomePromoProps> = ({
       )}
 
       <Container className={styles.wrapper}>
-        <div className={styles.content}>
+        <div className={cn(styles.content, "pt-heading")}>
           {title && <h1 className={styles.title}>{title}</h1>}
           {text && (
             <p className={cn("text-sm-40 text-grey-300", styles.text)}>

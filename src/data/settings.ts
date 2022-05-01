@@ -36,7 +36,7 @@ export const mainMenu = [
       },
     ],
   },
-  { id: 5, title: "Our services", url: "/our-service" },
+  { id: 5, title: "Our services", url: "/our-services" },
   {
     id: 6,
     title: "Real Estate",
