@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { MenuItemProps } from "@/types";
+import type { MenuItemProps } from "@/types";
 import Link from "next/link";
 import cn from "classnames";
 import styles from "@/layout/Footer/Footer.module.scss";

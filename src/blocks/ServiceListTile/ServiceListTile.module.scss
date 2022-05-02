@@ -1,0 +1,86 @@
+@import "../../styles/utils";
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  @include md {
+    margin-bottom: 50px;
+  }
+
+  .title {
+    @include not-sm {
+      max-width: 180px;
+    }
+  }
+
+  .firstLetter {
+    margin-right: 20px;
+    font-size: clamp(100px, 10vw, 144px);
+    line-height: 0;
+  }
+}
+
+.serviceItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -5px;
+
+  @include lg {
+    margin: -15px;
+  }
+}
+
+.item {
+  position: relative;
+  flex: 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  max-width: 300px;
+  margin: 5px;
+  padding: 40px 20px;
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba($black, 0.1);
+  border-radius: 5px;
+
+  @include xs {
+    flex: 1 calc(50% - 10px);
+    min-width: 160px;
+  }
+
+  @include md {
+    flex: 1;
+    min-width: auto;
+  }
+
+  @include lg {
+    margin: 15px;
+  }
+}
+
+.itemIcon {
+  margin-bottom: 24px;
+
+  svg {
+    stroke: $blue-300;
+  }
+}
+
+.itemTitle {
+  margin-bottom: 12px;
+}
+
+.itemText {
+  margin-bottom: 24px;
+}
+
+.itemBtn {
+  margin-top: auto;
+}

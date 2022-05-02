@@ -3,7 +3,7 @@ import { Button } from "@/components/Button";
 import { MenuItem } from "./MenuItem";
 import { SocialLinks } from "@/components/SocialLinks";
 import { getPhoneFromString } from "@/lib/helpers";
-import { MenuProps } from "@/types";
+import type { MenuProps } from "@/types";
 import {
   CloseButton,
   Hamburger,

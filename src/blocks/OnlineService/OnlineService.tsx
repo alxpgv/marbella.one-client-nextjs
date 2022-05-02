@@ -4,9 +4,9 @@ import { Container } from "@/components/Container";
 import cn from "classnames";
 import { Button } from "@/components/Button";
 import Image from "next/image";
-import { ImageProps } from "@/types";
-import styles from "./OnlineService.module.scss";
+import type { ImageProps } from "@/types";
 import { CallbackForm } from "@/components/CallbackForm";
+import styles from "./OnlineService.module.scss";
 
 interface OnlineServiceProps {
   title: string;

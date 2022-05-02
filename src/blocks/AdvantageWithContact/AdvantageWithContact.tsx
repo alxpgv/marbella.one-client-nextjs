@@ -2,18 +2,18 @@ import React, { FC } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import cn from "classnames";
-import { TileItemProps } from "@/types";
-import { ContactInfo } from "@/blocks/AdvantageTile/ContactInfo";
+import type { TileItemProps } from "@/types";
+import { ContactInfo } from "./ContactInfo";
 import { mapIcons } from "@/components/Icons";
-import styles from "./AdvantageTile.module.scss";
+import styles from "./AdvantageWithContact.module.scss";
 
-interface AdvantageTileProps {
+interface AdvantageWithContactProps {
   title?: string;
   items: TileItemProps[];
   contact: any;
 }
 
-export const AdvantageTile: FC<AdvantageTileProps> = ({
+export const AdvantageWithContact: FC<AdvantageWithContactProps> = ({
   title,
   items,
   contact,

@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
-import styles from "./OnlineConsultation.module.scss";
 import { CallbackForm } from "@/components/CallbackForm";
 import cn from "classnames";
+import styles from "./OnlineConsultation.module.scss";
 
 interface OnlineConsultationProps {
   title: string;

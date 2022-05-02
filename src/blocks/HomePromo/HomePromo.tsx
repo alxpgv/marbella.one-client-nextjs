@@ -4,7 +4,7 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { ServiceListDivider } from "@/blocks/HomePromo/ServiceListDivider";
 import cn from "classnames";
-import { ImageProps, TileItemProps } from "@/types";
+import type { ImageProps, TileItemProps } from "@/types";
 import styles from "./HomePromo.module.scss";
 
 interface HomePromoProps {
@@ -33,7 +33,7 @@ export const HomePromo: FC<HomePromoProps> = ({
       )}
 
       <Container className={styles.wrapper}>
-        <div className={cn(styles.content, "pt-heading")}>
+        <div className={cn(styles.content, "pt-navbar")}>
           {title && <h1 className={styles.title}>{title}</h1>}
           {text && (
             <p className={cn("text-sm-40 text-grey-300", styles.text)}>

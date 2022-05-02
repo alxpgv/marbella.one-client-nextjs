@@ -5,11 +5,11 @@ import { mainMenu, settings } from "@/data/settings";
 import { getPhoneFromString } from "@/lib/helpers";
 import { Container } from "@/components/Container";
 import { MainMobileNav } from "@/layout/navigation/MainMobileNav";
-import styles from "./Header.module.scss";
+import styles from "./Navbar.module.scss";
 
-export const Header = () => {
+export const Navbar = () => {
   return (
-    <header className={styles.header}>
+    <div className={styles.navbar}>
       <Container>
         <div className={styles.wrapper}>
           <div className={styles.left}>
@@ -36,6 +36,6 @@ export const Header = () => {
           </div>
         </div>
       </Container>
-    </header>
+    </div>
   );
 };

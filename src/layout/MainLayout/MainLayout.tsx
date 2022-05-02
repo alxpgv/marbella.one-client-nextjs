@@ -1,21 +1,21 @@
 import React, { FC } from "react";
-import { Footer } from "@/layout/Footer/Footer";
-import { Header } from "@/layout/Header/Header";
+import { Footer } from "@/layout/Footer";
+import { Navbar } from "@/layout/Navbar";
 import { ToTopBtn } from "@/components/ToTopBtn";
 
 interface MainLayoutProps {
-  headingOffset?: boolean;
+  navbarOffset?: boolean;
   children: React.ReactNode;
 }
 
 export const MainLayout: FC<MainLayoutProps> = ({
-  headingOffset = true,
+  navbarOffset = true,
   children,
 }): JSX.Element => {
   return (
     <>
-      <Header />
-      <main className={headingOffset ? "pt-heading" : ""}>{children}</main>
+      <Navbar />
+      <main className={navbarOffset ? "pt-navbar" : ""}>{children}</main>
       <Footer />
       <ToTopBtn />
     </>

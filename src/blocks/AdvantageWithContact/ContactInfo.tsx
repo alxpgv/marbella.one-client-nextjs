@@ -2,8 +2,8 @@ import React from "react";
 import { getPhoneFromString } from "@/lib/helpers";
 import { Button } from "@/components/Button";
 import cn from "classnames";
-import styles from "./AdvantageTile.module.scss";
 import { IconMarker } from "@/components/Icons";
+import styles from "./AdvantageWithContact.module.scss";
 
 export const ContactInfo = ({ contact }: { contact: any }) => {
   const email = contact?.email;

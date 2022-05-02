@@ -1,6 +1,6 @@
 @import "../../styles/utils";
 
-.header {
+.navbar {
   position: fixed;
   width: 100%;
   min-width: $body-min-width;
@@ -13,10 +13,10 @@
   display: flex;
   align-items: center;
   transition: height 200ms;
-  height: $header-height-sm;
+  height: $navbar-height-sm;
 
   @include lg {
-    height: $header-height-lg;
+    height: $navbar-height-lg;
   }
 }
 

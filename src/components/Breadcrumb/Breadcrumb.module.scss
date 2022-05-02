@@ -1,0 +1,34 @@
+@import "../../styles/utils";
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 0;
+  font-size: $font-size-14;
+
+  @include md {
+    padding: 40px 0;
+  }
+}
+
+.crumbItem {
+  color: $grey-300;
+}
+
+.crumbItemLink {
+  color: $grey-500;
+
+  &:hover {
+    color: $red-400;
+  }
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 1px 20px 0 20px;
+
+  svg {
+    color: $grey-500;
+  }
+}

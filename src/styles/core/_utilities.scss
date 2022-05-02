@@ -28,10 +28,10 @@
   }
 }
 
-.pt-heading {
-  padding-top: $header-height-sm;
+.pt-navbar {
+  padding-top: $navbar-height-sm;
 
   @include lg {
-    padding-top: $header-height-lg;
+    padding-top: $navbar-height-lg;
   }
 }

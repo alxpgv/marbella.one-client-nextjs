@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { MenuItem } from "./MenuItem";
-import { MenuProps } from "@/types";
+import type { MenuProps } from "@/types";
 import styles from "./MainNav.module.scss";
 
 export const MainNav: FC<{ menu: MenuProps[] }> = ({ menu }) => {

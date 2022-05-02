@@ -1,0 +1,17 @@
+@import "../../styles/utils";
+
+.title {
+  position: relative;
+  padding-bottom: 20px;
+  // border: 1px solid blue;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    border-bottom: 1px solid $red-400;
+  }
+}

@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
-import styles from "./SaleConsultation.module.scss";
 import cn from "classnames";
+import styles from "./SaleConsultation.module.scss";
 
 interface SaleConsultationProps {
   title: string;

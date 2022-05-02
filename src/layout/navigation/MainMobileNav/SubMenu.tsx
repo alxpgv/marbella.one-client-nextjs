@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import { MenuProps } from "@/types";
+import type { MenuProps } from "@/types";
 import cn from "classnames";
 import styles from "./MainMobileNav.module.scss";
 

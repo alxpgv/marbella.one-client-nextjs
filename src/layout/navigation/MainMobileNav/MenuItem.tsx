@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import Link from "next/link";
 import { IconArrow } from "@/components/Icons/IconArrow";
 import { SubMenu } from "./SubMenu";
-import { MenuProps } from "@/types";
+import type { MenuProps } from "@/types";
 import styles from "./MainMobileNav.module.scss";
 
 export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {

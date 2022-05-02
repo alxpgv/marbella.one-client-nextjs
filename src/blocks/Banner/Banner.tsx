@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
-import { ImageProps } from "@/types";
+import type { ImageProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Banner.module.scss";

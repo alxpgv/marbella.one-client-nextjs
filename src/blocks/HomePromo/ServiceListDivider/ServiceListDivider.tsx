@@ -2,15 +2,15 @@ import React, { FC } from "react";
 import cn from "classnames";
 import { Button } from "@/components/Button";
 import { mapIcons } from "@/components/Icons";
-import { TileItemProps } from "@/types";
+import type { TileItemProps } from "@/types";
 import styles from "./ServiceListDivider.module.scss";
 
 export const ServiceListDivider: FC<{ items: TileItemProps[] }> = ({
   items,
 }) => {
   return (
-    <div className={styles.service}>
-      {items.map(({ id, icon, title, text, link }) => {
+    <div className={styles.serviceItems}>
+      {items.map(({ id, icon, title, text, button, url }) => {
         return (
           <div key={id} className={styles.item}>
             {icon && mapIcons[icon] && (

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ImageProps } from "@/types";
+import type { ImageProps } from "@/types";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import Image from "next/image";
