@@ -1,4 +1,9 @@
 import { serviceItems } from "@/data/service-items";
+import {
+  banners,
+  onlineConsultation,
+  onlineServices,
+} from "@/data/static-blocks";
 
 export const pageOurServices = {
   title: "Our services",
@@ -22,5 +27,11 @@ export const pageOurServices = {
         items: serviceItems,
       },
     },
+    onlineConsultation,
+    {
+      blockName: "social-with-contact",
+    },
+    onlineServices,
+    banners,
   ],
 };
