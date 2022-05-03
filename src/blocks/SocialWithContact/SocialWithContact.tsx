@@ -1,14 +1,14 @@
-import React, { FC } from "react";
+import React from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
-import cn from "classnames";
 import { Button } from "@/components/Button";
-import { MessengerLinks } from "@/blocks/SocialContact/MessengerLinks";
-import { SocialLinks } from "@/blocks/SocialContact/SocialLinks";
-import styles from "./SocialContact.module.scss";
+import { MessengerLinks } from "@/blocks/SocialWithContact/MessengerLinks";
+import { SocialLinks } from "@/blocks/SocialWithContact/SocialLinks";
+import cn from "classnames";
 import { settings } from "@/data/settings";
+import styles from "./SocialWithContact.module.scss";
 
-export const SocialContact = () => {
+export const SocialWithContact = () => {
   const socials = settings?.contact?.socials;
   const messengers = settings?.contact?.messengers;
 

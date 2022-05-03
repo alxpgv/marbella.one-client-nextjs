@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { IconTelegram, IconViber, IconWhatsapp } from "@/components/Icons";
-import styles from "./SocialContact.module.scss";
+import styles from "./SocialWithContact.module.scss";
 
 interface MessengerLinksProps {
   messengers: {

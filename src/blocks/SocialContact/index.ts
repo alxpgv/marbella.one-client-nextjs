@@ -1,1 +1,0 @@
-export { SocialContact } from "./SocialContact";

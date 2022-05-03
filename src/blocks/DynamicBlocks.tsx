@@ -11,7 +11,7 @@ import { OnlineConsultation } from "@/blocks/OnlineConsultation";
 import { SloganWithText } from "@/blocks/SloganWithText";
 import { ImageWithOverlapText } from "@/blocks/ImageWithOverlapText";
 import { ServiceListTiled } from "@/blocks/ServiceListTiled";
-import { SocialContact } from "@/blocks/SocialContact";
+import { SocialWithContact } from "@/blocks/SocialWithContact";
 
 interface DynamicBlockProps {
   blocks: {
@@ -30,7 +30,7 @@ const mapBlocks = {
   "online-service": OnlineService,
   banners: Banner,
   "online-consultation": OnlineConsultation,
-  "social-with-contact": SocialContact,
+  "social-with-contact": SocialWithContact,
   "slogan-with-text": SloganWithText,
   "service-list-tiled": ServiceListTiled,
 };

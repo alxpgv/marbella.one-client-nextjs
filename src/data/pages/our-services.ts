@@ -1,9 +1,10 @@
-import { serviceItems } from "@/data/service-items";
 import {
   banners,
   onlineConsultation,
   onlineServices,
+  socialWithContact,
 } from "@/data/static-blocks";
+import { serviceItems } from "@/data/service-items";
 
 export const pageOurServices = {
   title: "Our services",
@@ -28,9 +29,7 @@ export const pageOurServices = {
       },
     },
     onlineConsultation,
-    {
-      blockName: "social-with-contact",
-    },
+    socialWithContact,
     onlineServices,
     banners,
   ],

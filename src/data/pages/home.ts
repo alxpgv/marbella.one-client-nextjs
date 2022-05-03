@@ -2,6 +2,7 @@ import {
   onlineServices,
   banners,
   onlineConsultation,
+  socialWithContact,
 } from "@/data/static-blocks";
 import { serviceItems } from "@/data/service-items";
 
@@ -117,8 +118,6 @@ export const pageHome = {
     onlineServices,
     banners,
     onlineConsultation,
-    {
-      blockName: "social-with-contact",
-    },
+    socialWithContact,
   ],
 };
