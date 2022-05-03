@@ -12,13 +12,19 @@ import { SloganWithText } from "@/blocks/SloganWithText";
 import { ImageWithOverlapText } from "@/blocks/ImageWithOverlapText";
 import { ServiceListTiled } from "@/blocks/ServiceListTiled";
 import { SocialWithContact } from "@/blocks/SocialWithContact";
+import { MapWithContact } from "@/blocks/MapWithContact";
 
-interface DynamicBlockProps {
+interface DisplayBlocksProps {
   blocks: {
     blockName: string;
     fields?: any;
   }[];
 }
+
+// TODO: now generate to shared bundle css
+// TODO: the styles of these blocks are compiled in one css bundle (one bundle for all pages)
+// TODO: if it is dynamic, then compile a separate css bundle for each block (it turns out a lot css files)
+// TODO: optionally - for each page a separate map of blocks example: ({blocks, mapBlocks}) - (one bundle for page)
 
 const mapBlocks = {
   "home-promo": HomePromo,
@@ -33,9 +39,10 @@ const mapBlocks = {
   "social-with-contact": SocialWithContact,
   "slogan-with-text": SloganWithText,
   "service-list-tiled": ServiceListTiled,
+  "map-with-contact": MapWithContact,
 };
 
-export const DynamicBlocks = ({ blocks }: DynamicBlockProps) => {
+export const DisplayBlocks = ({ blocks }: DisplayBlocksProps) => {
   return (
     <>
       {blocks?.length > 0 &&

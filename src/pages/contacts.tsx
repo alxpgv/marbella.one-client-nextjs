@@ -6,9 +6,9 @@ import { MainLayout } from "@/layout/MainLayout";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
-import { DynamicBlocks } from "@/blocks/DynamicBlocks";
+import { DisplayBlocks } from "@/blocks/DisplayBlocks";
 
-const OurServices: NextPage = () => {
+const Contacts: NextPage = () => {
   const meta = pageContacts?.meta;
   const title = pageContacts?.title;
   const blocks = pageContacts?.blocks;
@@ -20,9 +20,9 @@ const OurServices: NextPage = () => {
         <Breadcrumb links={[{ title }]} />
         <PageTitle title={title} />
       </Container>
-      <DynamicBlocks blocks={blocks} />
+      <DisplayBlocks blocks={blocks} />
     </MainLayout>
   );
 };
 
-export default OurServices;
+export default Contacts;

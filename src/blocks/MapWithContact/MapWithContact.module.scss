@@ -1,0 +1,48 @@
+@import "../../styles/utils";
+
+.content {
+  padding: 80px 100px;
+  background: $grey-600;
+
+  @include not-md {
+    padding: 40px 30px;
+    text-align: center;
+  }
+}
+
+.headerText,
+.mainText {
+  margin-bottom: 15px;
+}
+
+.main {
+  display: flex;
+  margin: 0 -30px;
+
+  @include not-md {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.col {
+  flex: 1;
+  padding: 30px 30px 0 30px;
+}
+
+.phone,
+.email {
+  color: $white;
+
+  &:hover {
+    color: $red-300;
+  }
+}
+
+.phone {
+  white-space: nowrap;
+}
+
+.email {
+  text-decoration: underline;
+}

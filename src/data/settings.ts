@@ -15,7 +15,7 @@ export const settings = {
     },
   },
   workMode: "Mo - So: 8:00-22:00",
-  location: "Campos de Guadalmina 29069 Marbella",
+  address: "Campos de Guadalmina 29069 Marbella",
   coordinates: [36.4834098, -5.006422],
   defaultMeta: {
     title: "Violet Real Estate",

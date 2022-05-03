@@ -25,7 +25,7 @@ export const Footer = () => {
       <div className={styles.main}>
         <Container>
           <div className={styles.mainWrapper}>
-            <div className={cn(styles.col, styles.contact)}>
+            <div className={cn(styles.col, styles.contact, "text-sm")}>
               <Logo className={styles.logo} color={"secondary"} />
               {settings?.contact?.phone && (
                 <div className={cn(styles.contactItem, styles.contactPhone)}>
@@ -56,12 +56,12 @@ export const Footer = () => {
                   </a>
                 </div>
               )}
-              {settings?.location && (
+              {settings?.address && (
                 <div className={cn(styles.contactItem, styles.contactLocation)}>
                   <span className={styles.icon}>
                     <IconLocationSmooth />
                   </span>
-                  {settings.location}
+                  {settings.address}
                 </div>
               )}
             </div>
@@ -92,7 +92,7 @@ export const Footer = () => {
         </Container>
       </div>
 
-      <div className={styles.bottom}>
+      <div className={cn(styles.bottom, "text-sm")}>
         <Container>
           <div className={styles.bottomWrapper}>
             <div className={styles.col}>© VIOLET real estate, 2010 - 2022</div>

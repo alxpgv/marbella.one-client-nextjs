@@ -18,6 +18,10 @@ h6 {
   @include font-family($font-family-primary);
 }
 
+.text-sm {
+  font-size: $font-size-14;
+}
+
 .text-sm-20 {
   font-size: clamp(#{$font-size-14}, 2.8vw, #{$font-size-16});
 }

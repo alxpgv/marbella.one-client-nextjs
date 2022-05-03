@@ -6,7 +6,7 @@ import { pageOurServices } from "@/data/pages/our-services";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
 import { PageTitle } from "@/components/PageTitle";
-import { DynamicBlocks } from "@/blocks/DynamicBlocks";
+import { DisplayBlocks } from "@/blocks/DisplayBlocks";
 
 const OurServices: NextPage = () => {
   const meta = pageOurServices?.meta;
@@ -20,7 +20,7 @@ const OurServices: NextPage = () => {
         <Breadcrumb links={[{ title }]} />
         <PageTitle title={title} />
       </Container>
-      <DynamicBlocks blocks={blocks} />
+      <DisplayBlocks blocks={blocks} />
     </MainLayout>
   );
 };

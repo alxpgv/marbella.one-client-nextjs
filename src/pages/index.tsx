@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import { pageHome } from "@/data/pages/home";
 import { MainLayout } from "@/layout/MainLayout";
 import { Meta } from "@/layout/Meta";
-import { DynamicBlocks } from "@/blocks/DynamicBlocks";
+import { DisplayBlocks } from "@/blocks/DisplayBlocks";
 
 const Index: NextPage = () => {
   const blocks = pageHome?.blocks;
@@ -11,7 +11,7 @@ const Index: NextPage = () => {
   return (
     <MainLayout navbarOffset={false}>
       <Meta {...pageHome?.meta} />
-      <DynamicBlocks blocks={blocks} />
+      <DisplayBlocks blocks={blocks} />
     </MainLayout>
   );
 };

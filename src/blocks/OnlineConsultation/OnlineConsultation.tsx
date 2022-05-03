@@ -39,7 +39,7 @@ export const OnlineConsultation: FC<OnlineConsultationProps> = ({
               </div>
             )}
             {note && (
-              <div className={cn("text-grey-300", styles.note)}>
+              <div className={cn("text-grey-300", "text-sm")}>
                 <p>{note}</p>
               </div>
             )}

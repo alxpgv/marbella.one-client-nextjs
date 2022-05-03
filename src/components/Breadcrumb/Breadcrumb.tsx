@@ -27,7 +27,7 @@ export const Breadcrumb: FC<BreadcrumbProps> = ({ links = [] }) => {
   );
 
   return (
-    <div className={styles.breadcrumb}>
+    <div className={cn(styles.breadcrumb, "text-sm")}>
       {breadcrumbs.map(({ href, title }, index) => {
         return (
           <div key={index} className={styles.crumb}>
