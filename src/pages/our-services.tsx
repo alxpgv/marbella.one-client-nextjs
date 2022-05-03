@@ -18,7 +18,7 @@ const OurServices: NextPage = () => {
       <Meta {...meta} />
       <Container>
         <Breadcrumb links={[{ title }]} />
-        <PageTitle title={pageOurServices.title} />
+        <PageTitle title={title} />
       </Container>
       <DynamicBlocks blocks={blocks} />
     </MainLayout>
