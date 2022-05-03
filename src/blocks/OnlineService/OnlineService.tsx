@@ -15,7 +15,7 @@ interface OnlineServiceProps {
     id: number;
     title: string;
     image?: ImageProps;
-    link: string;
+    href: string;
   }[];
 }
 
@@ -44,7 +44,7 @@ export const OnlineService: FC<OnlineServiceProps> = ({
           </div>
 
           {services?.length > 0 &&
-            services.map(({ id, title, image, link }) => {
+            services.map(({ id, title, image, href }) => {
               return (
                 <div key={id} className={cn(styles.item, styles.itemService)}>
                   {image?.url && (

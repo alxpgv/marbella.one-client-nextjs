@@ -1,22 +1,19 @@
 import React, { FC } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
-import cn from "classnames";
 import type { TileItemProps } from "@/types";
 import { ContactInfo } from "./ContactInfo";
-import { mapIcons } from "@/components/Icons";
+import { TiledItems } from "@/components/TiledItems";
 import styles from "./AdvantageWithContact.module.scss";
 
 interface AdvantageWithContactProps {
   title?: string;
   items: TileItemProps[];
-  contact: any;
 }
 
 export const AdvantageWithContact: FC<AdvantageWithContactProps> = ({
   title,
   items,
-  contact,
 }) => {
   return (
     <Section>
@@ -27,27 +24,9 @@ export const AdvantageWithContact: FC<AdvantageWithContactProps> = ({
               <h2 className="text-lg-10">{title}</h2>
             </div>
           )}
-          {items?.length > 0 && (
-            <div className={styles.items}>
-              {items.map(({ id, title, icon }) => (
-                <div
-                  key={id}
-                  className={cn("text-md-10 text-grey-500", styles.item)}
-                >
-                  {icon && (
-                    <div className={styles.itemIcon}>{mapIcons[icon]}</div>
-                  )}
-                  {title && (
-                    <div className={cn("text-sm-25", styles.itemTitle)}>
-                      {title}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
+          <TiledItems items={items} className={styles} />
         </div>
-        <ContactInfo contact={contact} />
+        <ContactInfo />
       </Container>
     </Section>
   );

@@ -9,15 +9,11 @@ import styles from "./ListWithImage.module.scss";
 
 interface ListWithImageProps {
   title?: string;
-  listItems: string[];
+  items: string[];
   image: ImageProps;
 }
 
-export const ListWithImage: FC<ListWithImageProps> = ({
-  title,
-  listItems,
-  image,
-}) => {
+export const ListWithImage: FC<ListWithImageProps> = ({ title, items, image }) => {
   return (
     <Section>
       <Container className={styles.wrapper}>
@@ -27,9 +23,9 @@ export const ListWithImage: FC<ListWithImageProps> = ({
               <h2 className="text-lg-10">{title}</h2>
             </div>
           )}
-          {listItems?.length > 0 && (
+          {items?.length > 0 && (
             <div className={styles.list}>
-              {listItems.map((title, index) => (
+              {items.map((title, index) => (
                 <div
                   key={index}
                   className={cn("text-md-10 text-grey-500", styles.listItem)}

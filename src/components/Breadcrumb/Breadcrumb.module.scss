@@ -11,11 +11,11 @@
   }
 }
 
-.crumbItem {
-  color: $grey-300;
+.crumb {
+  display: inline-flex;
 }
 
-.crumbItemLink {
+.crumbLink {
   color: $grey-500;
 
   &:hover {

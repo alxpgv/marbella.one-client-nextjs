@@ -24,5 +24,5 @@ export interface TileItemProps {
   title: string;
   text?: string;
   button?: "link" | "callback" | "consultation" | null;
-  url?: string;
+  href?: string;
 }

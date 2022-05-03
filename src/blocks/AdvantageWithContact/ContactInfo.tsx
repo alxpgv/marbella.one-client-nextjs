@@ -3,11 +3,12 @@ import { getPhoneFromString } from "@/lib/helpers";
 import { Button } from "@/components/Button";
 import cn from "classnames";
 import { IconMarker } from "@/components/Icons";
+import { settings } from "@/data/settings";
 import styles from "./AdvantageWithContact.module.scss";
 
-export const ContactInfo = ({ contact }: { contact: any }) => {
-  const email = contact?.email;
-  const phone = contact?.phone;
+export const ContactInfo = () => {
+  const email = settings?.contact?.email;
+  const phone = settings?.contact?.phone;
 
   return (
     <div className={styles.contact}>

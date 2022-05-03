@@ -23,7 +23,7 @@
   }
 }
 
-.serviceItems {
+.tileItems {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,7 +34,7 @@
   }
 }
 
-.item {
+.tileItem {
   position: relative;
   flex: 1 100%;
   display: flex;
@@ -63,24 +63,4 @@
   @include lg {
     margin: 15px;
   }
-}
-
-.itemIcon {
-  margin-bottom: 24px;
-
-  svg {
-    stroke: $blue-300;
-  }
-}
-
-.itemTitle {
-  margin-bottom: 12px;
-}
-
-.itemText {
-  margin-bottom: 24px;
-}
-
-.itemBtn {
-  margin-top: auto;
 }

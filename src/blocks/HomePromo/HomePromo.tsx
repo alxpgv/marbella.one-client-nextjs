@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
-import { ServiceListDivider } from "@/blocks/HomePromo/ServiceListDivider";
 import cn from "classnames";
 import type { ImageProps, TileItemProps } from "@/types";
 import styles from "./HomePromo.module.scss";
+import { TiledItems } from "@/components/TiledItems";
 
 interface HomePromoProps {
   title: string;
@@ -20,14 +20,17 @@ export const HomePromo: FC<HomePromoProps> = ({
   image,
   services,
 }) => {
-  const imageUrl = image?.url;
-
   return (
     <div className={styles.promo}>
-      {imageUrl && (
+      {image?.url && (
         <div className={styles.bgImageWrapper}>
           <div className={styles.bgImage}>
-            <Image src={imageUrl} layout="fill" objectFit="cover" alt="" />
+            <Image
+              src={image.url}
+              layout="fill"
+              objectFit="cover"
+              alt={image?.alt ?? ""}
+            />
           </div>
         </div>
       )}
@@ -47,11 +50,7 @@ export const HomePromo: FC<HomePromoProps> = ({
           </div>
         </div>
 
-        {services?.length > 0 && (
-          <div className={styles.service}>
-            <ServiceListDivider items={services} />
-          </div>
-        )}
+        <TiledItems items={services} className={styles} />
       </Container>
     </div>
   );

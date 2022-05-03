@@ -8,21 +8,21 @@ import cn from "classnames";
 
 interface ListWithStrictImageProps {
   text?: string;
-  listItems: string[];
+  items: string[];
   image: ImageProps;
 }
 
 export const ListWithStrictImage: FC<ListWithStrictImageProps> = ({
   text,
-  listItems,
+  items,
   image,
 }) => {
   return (
     <Section>
       <Container className={styles.wrapper}>
-        {listItems?.length > 0 && (
+        {items?.length > 0 && (
           <div className={styles.list}>
-            {listItems.map((title, index) => (
+            {items.map((title, index) => (
               <div
                 key={index}
                 className={cn("text-md-10 text-grey-500", styles.listItem)}

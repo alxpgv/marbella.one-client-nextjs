@@ -7,20 +7,20 @@ import Link from "next/link";
 import styles from "./Banner.module.scss";
 
 interface BannerProps {
-  banners: {
+  items: {
     id: number;
     image: ImageProps;
-    link?: string;
+    href?: string;
   }[];
 }
 
-export const Banner: FC<BannerProps> = ({ banners }) => {
+export const Banner: FC<BannerProps> = ({ items }) => {
   return (
     <Section>
       <Container>
         <div className={styles.wrapper}>
-          {banners?.length > 0 &&
-            banners.map(({ id, image, link }) => {
+          {items?.length > 0 &&
+            items.map(({ id, image, href }) => {
               const bannerImage = image?.url ? (
                 <Image
                   src={image.url}
@@ -32,8 +32,8 @@ export const Banner: FC<BannerProps> = ({ banners }) => {
 
               return (
                 <div key={id} className={styles.banner}>
-                  {bannerImage && link ? (
-                    <Link href={link}>
+                  {bannerImage && href ? (
+                    <Link href={href}>
                       <a>{bannerImage}</a>
                     </Link>
                   ) : (

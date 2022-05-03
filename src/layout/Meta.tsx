@@ -1,6 +1,6 @@
 import Head from "next/head";
+import { settings } from "@/data/settings";
 import { FC } from "react";
-import { defaultMeta } from "@/config";
 
 interface MetaProps {
   title?: string;
@@ -9,18 +9,20 @@ interface MetaProps {
 }
 
 export const Meta: FC<MetaProps> = ({ title, description, keywords }) => {
+  const defaultMeta = settings?.defaultMeta;
+
   return (
     <Head>
-      <title>{title || defaultMeta.title}</title>
+      <title>{title || defaultMeta.title || ""}</title>
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       />
       <meta
         name="description"
-        content={description || defaultMeta.description}
+        content={description || defaultMeta.description || ""}
       />
-      <meta name="keywords" content={keywords || defaultMeta.keywords} />
+      <meta name="keywords" content={keywords || defaultMeta.keywords || ""} />
 
       {/*<link*/}
       {/*  rel="preload"*/}

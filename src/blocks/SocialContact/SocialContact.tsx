@@ -6,16 +6,12 @@ import { Button } from "@/components/Button";
 import { MessengerLinks } from "@/blocks/SocialContact/MessengerLinks";
 import { SocialLinks } from "@/blocks/SocialContact/SocialLinks";
 import styles from "./SocialContact.module.scss";
+import { settings } from "@/data/settings";
 
-interface SocialContactProps {
-  socials?: any;
-  messengers?: any;
-}
+export const SocialContact = () => {
+  const socials = settings?.contact?.socials;
+  const messengers = settings?.contact?.messengers;
 
-export const SocialContact: FC<SocialContactProps> = ({
-  socials,
-  messengers,
-}) => {
   return (
     <Section>
       <Container>

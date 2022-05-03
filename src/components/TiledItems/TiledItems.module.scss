@@ -1,0 +1,21 @@
+@import "../../styles/utils";
+
+.tileIcon {
+  margin-bottom: 24px;
+
+  svg {
+    stroke: $blue-300;
+  }
+}
+
+.tileHeading {
+  margin-bottom: 12px;
+}
+
+.tileText {
+  margin-bottom: 24px;
+}
+
+.tileBtn {
+  margin-top: auto;
+}

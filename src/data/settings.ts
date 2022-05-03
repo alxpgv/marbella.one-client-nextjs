@@ -16,6 +16,12 @@ export const settings = {
   },
   workMode: "Mo - So: 8:00-22:00",
   location: "Campus de Guadalmina 29069 Marbella",
+  defaultMeta: {
+    title: "Violet Real Estate",
+    description:
+      "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
+    keywords: "",
+  },
 };
 
 export const mainMenu = [
