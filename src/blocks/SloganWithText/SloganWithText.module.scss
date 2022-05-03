@@ -1,0 +1,30 @@
+@import "../../styles/utils";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  @include not-md {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.heading {
+  flex: 1 43%;
+  padding: 50px 70px;
+  background: $grey-100;
+
+  @include not-md {
+    padding: 20px 40px;
+  }
+}
+
+.text {
+  flex: 1 57%;
+  padding: 50px;
+
+  @include not-md {
+    padding: 20px 20px 0;
+  }
+}
