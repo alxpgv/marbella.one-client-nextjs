@@ -13,7 +13,11 @@ interface ListWithImageProps {
   image: ImageProps;
 }
 
-export const ListWithImage: FC<ListWithImageProps> = ({ title, items, image }) => {
+export const ListWithImage: FC<ListWithImageProps> = ({
+  title,
+  items,
+  image,
+}) => {
   return (
     <Section>
       <Container className={styles.wrapper}>
