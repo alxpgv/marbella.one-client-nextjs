@@ -2,13 +2,13 @@
 
 .section {
   position: relative;
-  margin: 50px 0;
+  margin: 30px 0 50px 0;
 
   @include lg {
-    margin: 80px 0;
+    margin: 50px 0 80px 0;
   }
 
   @include xl {
-    margin: 100px 0;
+    margin: 70px 0 100px 0;
   }
 }
