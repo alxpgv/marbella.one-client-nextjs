@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { IconFacebook, IconInstagram } from "@/components/Icons";
-import styles from "./SocialWithContact.module.scss";
+import styles from "./JoinUs.module.scss";
 
 interface SocialLinksProps {
   socials: {

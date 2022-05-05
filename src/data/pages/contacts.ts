@@ -1,6 +1,6 @@
 import {
   onlineConsultation,
-  socialWithContact,
+  joinUs,
   mapWithContact,
 } from "@/data/static-blocks";
 
@@ -11,5 +11,5 @@ export const pageContacts = {
     description: "",
     keywords: "",
   },
-  blocks: [mapWithContact, onlineConsultation, socialWithContact],
+  blocks: [mapWithContact, onlineConsultation, joinUs],
 };

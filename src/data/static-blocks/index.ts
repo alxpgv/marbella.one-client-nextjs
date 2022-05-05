@@ -1,13 +1,15 @@
 import { banners } from "./banners";
 import { onlineServices } from "./online-services";
 import { onlineConsultation } from "./online-consultation";
-import { socialWithContact } from "./social-with-contact";
+import { joinUs } from "./join-us";
 import { mapWithContact } from "./map-with-contact";
+import { contactUs } from "./contact-us";
 
 export {
   banners,
   onlineServices,
   onlineConsultation,
-  socialWithContact,
+  joinUs,
   mapWithContact,
+  contactUs,
 };

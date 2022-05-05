@@ -2,7 +2,7 @@ import {
   banners,
   onlineConsultation,
   onlineServices,
-  socialWithContact,
+  joinUs,
 } from "@/data/static-blocks";
 import { serviceItems } from "@/data/service-items";
 
@@ -29,7 +29,7 @@ export const pageOurServices = {
       },
     },
     onlineConsultation,
-    socialWithContact,
+    joinUs,
     onlineServices,
     banners,
   ],

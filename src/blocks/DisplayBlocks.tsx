@@ -11,7 +11,7 @@ import { OnlineConsultation } from "@/blocks/OnlineConsultation";
 import { SloganWithText } from "@/blocks/SloganWithText";
 import { ImageWithOverlapText } from "@/blocks/ImageWithOverlapText";
 import { ServiceListTiled } from "@/blocks/ServiceListTiled";
-import { SocialWithContact } from "@/blocks/SocialWithContact";
+import { JoinUs } from "@/blocks/JoinUs";
 import { MapWithContact } from "@/blocks/MapWithContact";
 
 interface DisplayBlocksProps {
@@ -36,7 +36,7 @@ const mapBlocks = {
   "online-service": OnlineService,
   banners: Banner,
   "online-consultation": OnlineConsultation,
-  "social-with-contact": SocialWithContact,
+  "join-us": JoinUs,
   "slogan-with-text": SloganWithText,
   "service-list-tiled": ServiceListTiled,
   "map-with-contact": MapWithContact,

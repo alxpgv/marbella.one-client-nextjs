@@ -2,13 +2,13 @@ import React from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
-import { MessengerLinks } from "@/blocks/SocialWithContact/MessengerLinks";
-import { SocialLinks } from "@/blocks/SocialWithContact/SocialLinks";
+import { MessengerLinks } from "@/blocks/JoinUs/MessengerLinks";
+import { SocialLinks } from "@/blocks/JoinUs/SocialLinks";
 import cn from "classnames";
 import { settings } from "@/data/settings";
-import styles from "./SocialWithContact.module.scss";
+import styles from "./JoinUs.module.scss";
 
-export const SocialWithContact = () => {
+export const JoinUs = () => {
   const socials = settings?.contact?.socials;
   const messengers = settings?.contact?.messengers;
 
