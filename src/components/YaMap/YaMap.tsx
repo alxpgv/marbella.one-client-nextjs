@@ -1,21 +1,26 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import Script from "next/script";
-import styles from "./MapWithContact.module.scss";
 
-interface MapProps {
+interface YaMapProps {
   center: [number, number];
   zoom?: number;
   lang?: string;
+  className?: any;
 }
 
-interface YaMap {
+interface MapProps {
   behaviors: any;
   controls: any;
   geoObjects: any;
 }
 
-export const Map: FC<MapProps> = ({ center, zoom = 10, lang = "en_US" }) => {
-  const [map, setMap] = useState<YaMap | null>(null);
+export const YaMap: FC<YaMapProps> = ({
+  center,
+  zoom = 10,
+  lang = "en_US",
+  className,
+}) => {
+  const [map, setMap] = useState<MapProps | null>(null);
   const [placemark, setPlacemark] = useState(null);
   const mapContainer = useRef(null);
   const api = `//api-maps.yandex.ru/2.1/?load=package.standard&lang=${lang}`;
@@ -73,8 +78,8 @@ export const Map: FC<MapProps> = ({ center, zoom = 10, lang = "en_US" }) => {
   return (
     <>
       <Script src={api} strategy="lazyOnload" onLoad={createMap} />
-      <div ref={mapContainer} className={styles.map}>
-        <div className={styles.mapOverlay} />
+      <div ref={mapContainer} className={className?.map}>
+        <div className={className?.mapOverlay} />
       </div>
     </>
   );

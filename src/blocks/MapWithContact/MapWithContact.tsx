@@ -1,9 +1,10 @@
 import React from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
-import { Map } from "@/blocks/MapWithContact/Map";
 import { ContactInfo } from "@/blocks/MapWithContact/ContactInfo";
 import { settings } from "@/data/settings";
+import { YaMap } from "@/components/YaMap";
+import styles from "./MapWithContact.module.scss";
 
 export const MapWithContact = () => {
   return (
@@ -14,7 +15,12 @@ export const MapWithContact = () => {
           email={settings?.contact?.email}
           address={settings?.address}
         />
-        <Map center={settings?.coordinates as [number, number]} zoom={16} />
+
+        <YaMap
+          center={settings?.coordinates as [number, number]}
+          zoom={16}
+          className={styles}
+        />
       </Container>
     </Section>
   );
