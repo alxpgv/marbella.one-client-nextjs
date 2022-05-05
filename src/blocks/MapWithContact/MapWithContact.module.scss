@@ -46,3 +46,17 @@
 .email {
   text-decoration: underline;
 }
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.mapOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba($black, .2);
+  pointer-events: none;
+  z-index: 10;
+}

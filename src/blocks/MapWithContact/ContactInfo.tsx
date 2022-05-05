@@ -1,15 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import cn from "classnames";
 import { Button } from "@/components/Button";
 import { getPhoneFromString } from "@/lib/helpers";
-import { settings } from "@/data/settings";
 import styles from "./MapWithContact.module.scss";
 
-export const TextContact = () => {
-  const phone = settings?.contact?.phone;
-  const email = settings?.contact?.email;
-  const address = settings?.address;
+interface ContactInfoProps {
+  phone: string;
+  email: string;
+  address: string;
+}
 
+export const ContactInfo: FC<ContactInfoProps> = ({
+  phone,
+  email,
+  address,
+}) => {
   return (
     <div className={cn(styles.content)}>
       <div className={cn(styles.header, "text-md-30")}>
@@ -36,7 +41,7 @@ export const TextContact = () => {
         </div>
         <div className={cn(styles.col, "text-white")}>
           {phone && (
-            <p>
+            <p className={"text-sm-23"}>
               <span className={"text-grey-300"}>Call us by phone: </span>
               <strong>
                 <a
