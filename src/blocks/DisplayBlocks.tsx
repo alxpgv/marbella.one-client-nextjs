@@ -21,10 +21,11 @@ interface DisplayBlocksProps {
   }[];
 }
 
-// TODO: now generate to shared bundle css
-// TODO: the styles of these blocks are compiled in one css bundle (one bundle for all pages)
-// TODO: if it is dynamic, then compile a separate css bundle for each block (it turns out a lot css files)
-// TODO: optionally - for each page a separate map of blocks example: ({blocks, mapBlocks}) - (one bundle for page)
+// TODO:
+// now generate to shared bundle css
+// the styles of these blocks are compiled in one css bundle (one bundle for all pages)
+// if it is dynamic, then compile a separate css bundle for each block (it turns out a lot css files)
+// optionally - for each page a separate map of blocks example: ({blocks, mapBlocks}) - (one bundle for page)
 
 const mapBlocks = {
   "home-promo": HomePromo,
