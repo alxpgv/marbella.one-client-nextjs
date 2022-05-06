@@ -5,7 +5,7 @@ import cn from "classnames";
 export const NullBlock = ({ blockName = "" }: { blockName: string }) => {
   return (
     <div className={cn(styles.block, "text-sm")}>
-      <strong>Not found view for block by name: {blockName}</strong>
+      Not found component by name: <strong>{blockName}</strong>
     </div>
   );
 };
