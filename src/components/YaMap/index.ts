@@ -1,1 +1,0 @@
-export { YaMap } from "./YaMap";

@@ -1,1 +1,0 @@
-export { ServiceListTiled } from "./ServiceListTiled";

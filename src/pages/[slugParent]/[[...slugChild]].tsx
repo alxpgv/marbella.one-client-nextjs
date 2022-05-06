@@ -1,11 +1,11 @@
 import React from "react";
 import { NextPage, GetStaticProps, GetStaticPaths } from "next";
-import { MainLayout } from "@/layout/MainLayout";
-import { Meta, type MetaProps } from "@/layout/Meta";
-import { Container } from "@/components/Container";
-import { Breadcrumb } from "@/components/Breadcrumb";
-import { PageTitle } from "@/components/PageTitle";
-import { type BlockProps, DisplayBlocks } from "@/blocks/DisplayBlocks";
+import { MainLayout } from "@/layout/main-layout";
+import { Meta, type MetaProps } from "@/layout/meta";
+import { Container } from "@/components/container";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { PageTitle } from "@/components/page-title";
+import { type BlockProps, DisplayBlocks } from "@/blocks/display-blocks";
 import { pageOurServices } from "@/data/pages/our-services";
 import { pageContacts } from "@/data/pages/contacts";
 import { pageRealEstate } from "@/data/pages/real-estate";

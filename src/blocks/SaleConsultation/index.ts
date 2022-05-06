@@ -1,1 +1,0 @@
-export { SaleConsultation } from "./SaleConsultation";

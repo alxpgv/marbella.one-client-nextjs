@@ -1,1 +1,0 @@
-export { ImageWithOverlapText } from "./ImageWithOverlapText";

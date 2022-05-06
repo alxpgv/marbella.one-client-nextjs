@@ -1,1 +1,0 @@
-export { OnlineConsultation } from "./OnlineConsultation";

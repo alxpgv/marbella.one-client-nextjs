@@ -1,9 +1,9 @@
 import React from "react";
 import { NextPage } from "next";
 import { pageHome } from "@/data/pages/home";
-import { MainLayout } from "@/layout/MainLayout";
-import { Meta } from "@/layout/Meta";
-import { DisplayBlocks } from "@/blocks/DisplayBlocks";
+import { MainLayout } from "@/layout/main-layout";
+import { Meta } from "@/layout/meta";
+import { DisplayBlocks } from "@/blocks/display-blocks";
 
 const Index: NextPage = () => {
   const blocks = pageHome?.blocks;
