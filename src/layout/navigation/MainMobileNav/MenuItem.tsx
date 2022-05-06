@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import Link from "next/link";
-import { IconArrow } from "@/components/Icons/IconArrow";
 import { SubMenu } from "./SubMenu";
-import type { MenuProps } from "@/types";
+import { Icon } from "@/components/Icon";
+import type { MenuProps } from "../types";
 import styles from "./MainMobileNav.module.scss";
 
 export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
@@ -21,8 +21,8 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
           <a className={openSubMenu ? styles.active : ""}>
             {title}
             <div className={styles.expandBtn} onClick={toggleSubMenu}>
-              <span className={styles.icon}>
-                <IconArrow rotate={openSubMenu ? "rotate-180" : null} />
+              <span className={styles.iconWrapper}>
+                <Icon name={"arrow"} className={styles.icon} />
               </span>
             </div>
           </a>

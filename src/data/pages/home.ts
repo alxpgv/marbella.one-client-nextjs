@@ -91,7 +91,7 @@ export const pageHome = {
           },
           {
             id: 2,
-            icon: "targetuser",
+            icon: "target-user",
             title: "Attention to each client, individual approach",
           },
           {
@@ -101,7 +101,7 @@ export const pageHome = {
           },
           {
             id: 4,
-            icon: "handgood",
+            icon: "hand-good",
             title: "Guaranteed high quality work",
           },
         ],

@@ -3,7 +3,9 @@
 .tileIcon {
   margin-bottom: 24px;
 
-  svg {
+  .icon {
+    width: 40px;
+    height: 40px;
     stroke: $blue-300;
   }
 }

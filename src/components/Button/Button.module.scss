@@ -13,12 +13,16 @@
 
 // variants
 .btn {
-  .icon {
-    svg {
+  .iconWrapper {
+    .icon {
       height: 8px;
       width: 8px;
       margin-left: 10px;
       stroke: currentColor;
+    }
+
+    .iconArrow {
+      transform: rotate(-90deg);
     }
   }
 

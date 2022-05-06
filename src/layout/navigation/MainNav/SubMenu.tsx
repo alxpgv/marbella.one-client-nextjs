@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import type { MenuProps } from "@/types";
+import type { MenuProps } from "../types";
 import styles from "./MainNav.module.scss";
 
 interface SubMenuProps {

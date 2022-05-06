@@ -21,9 +21,16 @@
       &:hover,
       &.active {
         color: $red-400;
+
+        .icon {
+          transform: rotate(-180deg);
+        }
       }
 
-      svg {
+      .icon {
+        width: 6px;
+        height: 6px;
+        stroke: $grey-300;
         margin-left: 5px;
       }
     }

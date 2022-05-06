@@ -1,12 +1,20 @@
 import React, { FC } from "react";
-import { mapIcons } from "@/components/Icons";
 import cn from "classnames";
 import { Button } from "@/components/Button";
-import { TileItemProps } from "@/types";
+import { Icon } from "@/components/Icon";
 import styles from "./TiledItems.module.scss";
 
+export interface TiledItemProps {
+  id: number;
+  icon?: string;
+  title: string;
+  text?: string;
+  button?: "link" | "callback" | "consultation" | null;
+  href?: string;
+}
+
 interface TiledItemsProps {
-  items: TileItemProps[];
+  items: TiledItemProps[];
   className?: any;
 }
 
@@ -19,9 +27,12 @@ export const TiledItems: FC<TiledItemsProps> = ({ items, className }) => {
       {items.map(({ id, icon, title, text, button, href }) => {
         return (
           <div key={id} className={className?.tileItem}>
-            {icon && mapIcons[icon] && (
+            {icon && (
               <div className={cn(styles.tileIcon, className?.tileIcon)}>
-                {mapIcons[icon]}
+                <Icon
+                  name={icon}
+                  className={cn(styles.icon, className?.icon)}
+                />
               </div>
             )}
 

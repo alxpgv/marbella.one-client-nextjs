@@ -1,9 +1,9 @@
 import React, { FC, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { IconArrow } from "@/components/Icons/IconArrow";
-import type { MenuProps } from "@/types";
-import { SubMenu } from "@/layout/navigation/MainNav/SubMenu";
+import type { MenuProps } from "../types";
+import { SubMenu } from "./SubMenu";
+import { Icon } from "@/components/Icon";
 import styles from "./MainNav.module.scss";
 
 export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
@@ -29,7 +29,7 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
         <Link href={url}>
           <a className={activeItem(url)}>
             {title}
-            <IconArrow rotate={openSubMenu ? "rotate-180" : null} />
+            <Icon name={"arrow"} className={styles.icon} />
           </a>
         </Link>
         <SubMenu items={child} isOpen={openSubMenu} />

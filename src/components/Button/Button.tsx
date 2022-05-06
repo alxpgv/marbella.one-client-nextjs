@@ -1,6 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./Button.module.scss";
+import { Icon } from "@/components/Icon";
 
 interface ButtonProps {
   size: "sm" | "md" | "lg";
@@ -8,7 +9,7 @@ interface ButtonProps {
   variant: "primary";
   fullWidth?: boolean;
   children?: React.ReactNode;
-  icon?: React.ReactNode;
+  icon?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -31,7 +32,11 @@ export const Button: React.FC<ButtonProps> = ({
       )}
     >
       {children}
-      {icon && <span className={styles.icon}>{icon}</span>}
+      {icon && icon === "arrow" && (
+        <span className={styles.iconWrapper}>
+          <Icon name={"arrow"} className={cn(styles.icon, styles.iconArrow)} />
+        </span>
+      )}
     </button>
   );
 };

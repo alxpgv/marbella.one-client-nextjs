@@ -1,9 +1,9 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/Button";
 import { MenuItem } from "./MenuItem";
-import { SocialLinks } from "@/components/SocialLinks";
+import { SocialLinks } from "./SocialLinks";
 import { getPhoneFromString } from "@/lib/helpers";
-import type { MenuProps } from "@/types";
+import type { MenuProps } from "../types";
 import {
   CloseButton,
   Hamburger,

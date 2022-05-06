@@ -2,13 +2,12 @@ import React, { FC } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
 import cn from "classnames";
-import type { TileItemProps } from "@/types";
 import styles from "./ServiceListTiled.module.scss";
-import { TiledItems } from "@/components/TiledItems";
+import { TiledItems, type TiledItemProps } from "@/components/TiledItems";
 
 interface ServiceListTiledProps {
   title?: string;
-  items: TileItemProps[];
+  items: TiledItemProps[];
 }
 
 export const ServiceListTiled: FC<ServiceListTiledProps> = ({

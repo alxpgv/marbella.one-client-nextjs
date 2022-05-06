@@ -8,26 +8,6 @@
   overflow: hidden;
 }
 
-.rotate {
-  &-90 {
-    transform: rotate(90deg);
-  }
-
-  &-180 {
-    transform: rotate(180deg);
-  }
-}
-
-.-rotate {
-  &-90 {
-    transform: rotate(-90deg);
-  }
-
-  &-180 {
-    transform: rotate(-180deg);
-  }
-}
-
 .pt-navbar {
   padding-top: $navbar-height-sm;
 

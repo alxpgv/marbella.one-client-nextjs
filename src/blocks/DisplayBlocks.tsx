@@ -14,11 +14,13 @@ import { ServiceListTiled } from "@/blocks/ServiceListTiled";
 import { JoinUs } from "@/blocks/JoinUs";
 import { MapWithContact } from "@/blocks/MapWithContact";
 
+export interface BlockProps {
+  blockName: string;
+  fields?: any;
+}
+
 interface DisplayBlocksProps {
-  blocks: {
-    blockName: string;
-    fields?: any;
-  }[];
+  blocks: BlockProps[];
 }
 
 // TODO:

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { IconClose } from "@/components/Icons/IconClose";
+import { Icon } from "@/components/Icon";
 import styles from "./buttons.module.scss";
 
 interface CloseButtonProps {
@@ -9,7 +9,7 @@ interface CloseButtonProps {
 export const CloseButton: FC<CloseButtonProps> = ({ handleClick }) => {
   return (
     <button className={`${styles.btn} ${styles.close}`} onClick={handleClick}>
-      <IconClose />
+      <Icon name={"close"} className={styles.icon} />
     </button>
   );
 };

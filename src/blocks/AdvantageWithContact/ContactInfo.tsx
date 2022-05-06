@@ -1,8 +1,8 @@
 import React from "react";
 import { getPhoneFromString } from "@/lib/helpers";
 import { Button } from "@/components/Button";
+import { Icon } from "@/components/Icon";
 import cn from "classnames";
-import { IconMarker } from "@/components/Icons";
 import { settings } from "@/data/settings";
 import styles from "./AdvantageWithContact.module.scss";
 
@@ -13,7 +13,7 @@ export const ContactInfo = () => {
   return (
     <div className={styles.contact}>
       <div className={styles.contactBg}>
-        <IconMarker />
+        <Icon name={"marker"} className={styles.contactImage} />
       </div>
       <div className={cn("text-white", styles.contactContent)}>
         <h3 className={cn("text-md-30 text-white", styles.contactTitle)}>

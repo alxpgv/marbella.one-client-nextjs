@@ -21,14 +21,15 @@
     height: 48px;
   }
 
-  svg {
-    width: 20px;
-    height: 20px;
-    stroke: $grey-300;
-  }
-
   &:hover,
   &:active {
     opacity: 1;
   }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke: $grey-300;
+  transform: rotate(-180deg);
 }

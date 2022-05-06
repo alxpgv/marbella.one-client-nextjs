@@ -1,10 +1,9 @@
 import React, { FormEvent, useState } from "react";
-// TODO: rewrite to your component
+// TODO: rewrite to my component
 import PhoneInput from "react-phone-input-2";
 import { Button } from "@/components/Button";
+import { Icon } from "@/components/Icon";
 import cn from "classnames";
-import { IconUser } from "@/components/Icons/IconUser";
-import { IconPhone } from "@/components/Icons";
 import styles from "./CallbackForm.module.scss";
 
 interface CallbackFormProps {
@@ -34,7 +33,7 @@ export const CallbackForm = ({ title, text, btnText }: CallbackFormProps) => {
       <form onSubmit={onSubmit}>
         <div className={styles.formField}>
           <span className={styles.formFieldIcon}>
-            <IconUser />
+            <Icon name={"user"} className={styles.icon} />
           </span>
           <input
             className={styles.formInput}
@@ -44,7 +43,7 @@ export const CallbackForm = ({ title, text, btnText }: CallbackFormProps) => {
         </div>
         <div className={styles.formField}>
           <span className={styles.formFieldIcon}>
-            <IconPhone />
+            <Icon name={"phone"} className={styles.icon} />
           </span>
           <PhoneInput
             disableDropdown={true}

@@ -1,16 +1,24 @@
 import React from "react";
 import { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import { MainLayout } from "@/layout/MainLayout";
-import { Meta } from "@/layout/Meta";
+import { Meta, type MetaProps } from "@/layout/Meta";
 import { Container } from "@/components/Container";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { PageTitle } from "@/components/PageTitle";
-import { DisplayBlocks } from "@/blocks/DisplayBlocks";
+import { type BlockProps, DisplayBlocks } from "@/blocks/DisplayBlocks";
 import { pageOurServices } from "@/data/pages/our-services";
 import { pageContacts } from "@/data/pages/contacts";
 import { pageRealEstate } from "@/data/pages/real-estate";
 
-const Page: NextPage<{ data: any }> = ({ data }) => {
+interface PageProps {
+  data: {
+    meta: MetaProps;
+    title: string;
+    blocks: BlockProps[];
+  };
+}
+
+const Page: NextPage<PageProps> = ({ data }) => {
   const meta = data?.meta;
   const title = data?.title;
   const blocks = data?.blocks;
@@ -51,7 +59,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slugChild || params?.slugParent;
-  let data = null;
+  let data = {};
 
   switch (slug) {
     case "our-services":
@@ -63,8 +71,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     case "real-estate":
       data = pageRealEstate;
       break;
-    default:
-      data = null;
   }
 
   return {

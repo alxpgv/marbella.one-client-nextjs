@@ -7,12 +7,7 @@ import { settings, mainMenu } from "@/data/settings";
 import { getPhoneFromString } from "@/lib/helpers";
 import { FooterMenuItems } from "@/layout/Footer/FooterMenuItems";
 import cn from "classnames";
-import {
-  IconBoxArrowSmooth,
-  IconCalendarSmooth,
-  IconLocationSmooth,
-  IconPhoneSmooth,
-} from "@/components/Icons";
+import { Icon } from "@/components/Icon";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
@@ -29,8 +24,8 @@ export const Footer = () => {
               <Logo className={styles.logo} color={"secondary"} />
               {settings?.contact?.phone && (
                 <div className={cn(styles.contactItem, styles.contactPhone)}>
-                  <span className={styles.icon}>
-                    <IconPhoneSmooth />
+                  <span className={styles.iconWrapper}>
+                    <Icon name={"phone-smooth"} className={styles.icon} />
                   </span>
                   <a href={`tel:${getPhoneFromString(settings.contact.phone)}`}>
                     {settings.contact.phone}
@@ -39,18 +34,17 @@ export const Footer = () => {
               )}
               {settings?.workMode && (
                 <div className={cn(styles.contactItem, styles.contactWorkMode)}>
-                  <span className={styles.icon}>
-                    <IconCalendarSmooth />
+                  <span className={styles.iconWrapper}>
+                    <Icon name={"calendar-smooth"} className={styles.icon} />
                   </span>
                   {settings.workMode}
                 </div>
               )}
               {settings?.contact?.email && (
                 <div className={cn(styles.contactItem, styles.contactEmail)}>
-                  <span className={styles.icon}>
-                    <IconBoxArrowSmooth />
+                  <span className={styles.iconWrapper}>
+                    <Icon name={"box-arrow-smooth"} className={styles.icon} />
                   </span>
-
                   <a href={`mailto:${settings.contact.email}`}>
                     {settings.contact.email}
                   </a>
@@ -58,8 +52,8 @@ export const Footer = () => {
               )}
               {settings?.address && (
                 <div className={cn(styles.contactItem, styles.contactLocation)}>
-                  <span className={styles.icon}>
-                    <IconLocationSmooth />
+                  <span className={styles.iconWrapper}>
+                    <Icon name={"location-smooth"} className={styles.icon} />
                   </span>
                   {settings.address}
                 </div>

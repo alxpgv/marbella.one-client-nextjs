@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { IconTelegram, IconViber, IconWhatsapp } from "@/components/Icons";
+import { Icon } from "@/components/Icon";
 import styles from "./JoinUs.module.scss";
 
 interface MessengerLinksProps {
@@ -18,7 +18,7 @@ export const MessengerLinks: FC<MessengerLinksProps> = ({ messengers }) => {
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconWhatsapp />
+          <Icon name={"whatsapp"} className={styles.icon} />
         </a>
       )}
       {messengers?.telegram && (
@@ -28,7 +28,7 @@ export const MessengerLinks: FC<MessengerLinksProps> = ({ messengers }) => {
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconTelegram />
+          <Icon name={"telegram"} className={styles.icon} />
         </a>
       )}
       {messengers?.viber && (
@@ -38,7 +38,7 @@ export const MessengerLinks: FC<MessengerLinksProps> = ({ messengers }) => {
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconViber />
+          <Icon name={"viber"} className={styles.icon} />
         </a>
       )}
     </div>

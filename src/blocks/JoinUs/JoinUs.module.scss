@@ -24,7 +24,7 @@
   border-radius: 50%;
   transition: 300ms border;
 
-  svg {
+  .icon {
     width: 22px;
     height: 22px;
     transition: 300ms fill;
@@ -76,13 +76,13 @@
     &:hover {
       border: 1px solid $red-400;
 
-      svg {
+      .icon {
         fill: $red-400;
       }
     }
   }
 
-  svg {
+  .icon {
     fill: $grey-500;
   }
 }
@@ -129,18 +129,14 @@
     &:hover {
       border: 1px solid $blue-100;
 
-      svg {
-        path {
-          fill: $blue-100;
-        }
+      .icon {
+        fill: $blue-100;
       }
     }
   }
 
-  svg {
-    path {
-      fill: $white;
-    }
+  .icon {
+    fill: $white;
   }
 }
 

@@ -28,13 +28,10 @@
   left: 12px;
   height: 100%;
 
-  svg {
+  .icon {
     width: 14px;
     height: 14px;
-
-    path {
-      fill: $grey-400;
-    }
+    fill: $grey-400;
   }
 }
 

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { IconFacebook, IconInstagram } from "@/components/Icons";
+import { Icon } from "@/components/Icon";
 import styles from "./JoinUs.module.scss";
 
 interface SocialLinksProps {
@@ -18,7 +18,7 @@ export const SocialLinks: FC<SocialLinksProps> = ({ socials }) => {
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconFacebook />
+          <Icon name={"facebook"} className={styles.icon} />
         </a>
       )}
       {socials?.instagram && (
@@ -28,7 +28,7 @@ export const SocialLinks: FC<SocialLinksProps> = ({ socials }) => {
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconInstagram />
+          <Icon name={"instagram"} className={styles.icon} />
         </a>
       )}
     </div>

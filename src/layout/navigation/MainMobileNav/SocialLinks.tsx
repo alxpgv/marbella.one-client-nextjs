@@ -1,10 +1,6 @@
 import React, { FC } from "react";
-import {
-  IconFacebook,
-  IconInstagram,
-  IconTwitter,
-  IconYoutube,
-} from "@/components/Icons";
+import { Icon } from "@/components/Icon";
+import styles from "./MainMobileNav.module.scss";
 
 interface SocialLinksProps {
   socials: {
@@ -18,37 +14,41 @@ export const SocialLinks: FC<SocialLinksProps> = ({ socials }) => {
       {socials?.instagram && (
         <a
           href={socials.instagram}
+          className={styles.socialItem}
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconInstagram />
+          <Icon name={"instagram"} className={styles.icon} />
         </a>
       )}
       {socials?.facebook && (
         <a
           href={socials.facebook}
+          className={styles.socialItem}
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconFacebook />
+          <Icon name={"facebook"} className={styles.icon} />
         </a>
       )}
       {socials?.youtube && (
         <a
           href={socials.youtube}
+          className={styles.socialItem}
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconYoutube />
+          <Icon name={"youtube"} className={styles.icon} />
         </a>
       )}
       {socials?.twitter && (
         <a
           href={socials.twitter}
+          className={styles.socialItem}
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <IconTwitter />
+          <Icon name={"twitter"} className={styles.icon} />
         </a>
       )}
     </>

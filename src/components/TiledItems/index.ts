@@ -1,1 +1,1 @@
-export { TiledItems } from "./TiledItems";
+export { TiledItems, type TiledItemProps } from "./TiledItems";

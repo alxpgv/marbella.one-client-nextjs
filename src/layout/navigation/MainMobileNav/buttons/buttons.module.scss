@@ -38,9 +38,10 @@
     border-radius: 50%;
     background: $white;
 
-    svg {
+    .icon {
       width: 12px;
       height: 12px;
+      stroke: $grey-300;
     }
   }
 }

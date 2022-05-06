@@ -58,15 +58,16 @@
     justify-content: center;
   }
 
-  .icon, .icon svg {
+  .iconWrapper, .icon {
     width: 16px;
     height: 16px;
   }
 
-  .icon {
+  .iconWrapper {
     margin-right: 7px;
 
-    svg {
+    .icon {
+      fill: none;
       stroke: $grey-250;
     }
   }

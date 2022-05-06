@@ -1,14 +1,14 @@
 import React, { FC } from "react";
 import { Section } from "@/components/Section";
 import { Container } from "@/components/Container";
-import type { TileItemProps } from "@/types";
+import type { TiledItemProps } from "@/components/TiledItems";
 import { ContactInfo } from "./ContactInfo";
 import { TiledItems } from "@/components/TiledItems";
 import styles from "./AdvantageWithContact.module.scss";
 
 interface AdvantageWithContactProps {
   title?: string;
-  items: TileItemProps[];
+  items: TiledItemProps[];
 }
 
 export const AdvantageWithContact: FC<AdvantageWithContactProps> = ({

@@ -59,15 +59,6 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
-  padding: 12px 0;
-}
-
 .menu {
   li {
     a {
@@ -84,8 +75,9 @@
         background: $red-400;
         color: $white;
 
-        .expandBtn svg {
+        .icon {
           stroke: currentColor;
+          transform: rotate(-180deg);
         }
       }
     }
@@ -98,27 +90,17 @@
       height: 38px;
       border: 1px solid $grey-200;
       border-radius: 50%;
-
-      .icon {
-        animation: moving 1.6s cubic-bezier(0.4, 0, 1, 1) infinite;
-      }
-
-      svg {
-        width: 8px;
-        height: 8px;
-        stroke: currentColor;
-      }
     }
-  }
-}
 
-@keyframes moving {
-  25% {
-    transform: translateY(-1px);
-  }
+    .iconWrapper {
+      animation: moving 1.6s cubic-bezier(0.4, 0, 1, 1) infinite;
+    }
 
-  50% {
-    transform: translateY(1px);
+    .icon {
+      width: 8px;
+      height: 8px;
+      stroke: currentColor;
+    }
   }
 }
 
@@ -136,5 +118,32 @@
     a {
       height: 50px;
     }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+
+.socialItem {
+  .icon {
+    width: 22px;
+    height: 22px;
+    fill: $grey-500;
+  }
+}
+
+@keyframes moving {
+  25% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(1px);
   }
 }

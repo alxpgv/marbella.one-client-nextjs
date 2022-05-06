@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 import Image from "next/image";
 import cn from "classnames";
 import { Button } from "@/components/Button";
-import { IconArrow } from "@/components/Icons";
+import { Icon } from "@/components/Icon";
 import styles from "./ImageWithOverlapText.module.scss";
 
 interface ImageWithOverlapTextProps {
@@ -45,11 +45,7 @@ export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({
             />
           )}
           <div className={styles.btn}>
-            <Button
-              size={"md"}
-              variant={"primary"}
-              icon={<IconArrow rotate={"-rotate-90"} />}
-            >
+            <Button size={"md"} variant={"primary"} icon={"arrow"}>
               Learn more
             </Button>
           </div>

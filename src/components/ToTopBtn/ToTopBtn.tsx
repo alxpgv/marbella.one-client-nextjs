@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { IconArrow } from "@/components/Icons";
+import { Icon } from "@/components/Icon";
 import styles from "./ToTopBtn.module.scss";
 
 export const ToTopBtn = () => {
@@ -21,7 +21,7 @@ export const ToTopBtn = () => {
 
   return visible ? (
     <div className={styles.btn} ref={btnRef} onClick={handleClick}>
-      <IconArrow rotate={"-rotate-180"} />
+      <Icon name={"arrow"} className={styles.icon} />
     </div>
   ) : null;
 };

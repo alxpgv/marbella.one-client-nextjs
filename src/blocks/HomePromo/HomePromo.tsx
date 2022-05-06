@@ -3,7 +3,8 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import cn from "classnames";
-import type { ImageProps, TileItemProps } from "@/types";
+import type { ImageProps } from "@/types";
+import type { TiledItemProps } from "@/components/TiledItems";
 import styles from "./HomePromo.module.scss";
 import { TiledItems } from "@/components/TiledItems";
 
@@ -11,7 +12,7 @@ interface HomePromoProps {
   title: string;
   text: string;
   image: ImageProps;
-  services: TileItemProps[];
+  services: TiledItemProps[];
 }
 
 export const HomePromo: FC<HomePromoProps> = ({

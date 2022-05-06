@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import styles from "./Breadcrumb.module.scss";
-import { IconArrow } from "@/components/Icons";
 import cn from "classnames";
+import { Icon } from "@/components/Icon";
+import styles from "./Breadcrumb.module.scss";
 
 interface BreadcrumbProps {
   links: {
@@ -22,7 +22,7 @@ export const Breadcrumb: FC<BreadcrumbProps> = ({ links = [] }) => {
 
   const Separator = () => (
     <span className={styles.separator}>
-      <IconArrow rotate={"-rotate-90"} />
+      <Icon name={"arrow"} className={styles.icon} />
     </span>
   );
 
