@@ -18,6 +18,7 @@ import { ServiceListTiled } from "@/blocks/service-list-tiled";
 import { MapWithContact } from "@/blocks/map-with-contact";
 import { ContentRowsWithImages } from "@/blocks/content-rows-with-images";
 import { ContentExtraWithImage } from "@/blocks/content-extra-with-image";
+import { ContactUs } from "@/blocks/contact-us";
 
 interface PageProps {
   data: {
@@ -37,6 +38,7 @@ const mapBlocks = {
   "map-with-contact": MapWithContact,
   "content-rows-with-images": ContentRowsWithImages,
   "content-extra-with-image": ContentExtraWithImage,
+  "contact-us": ContactUs,
 };
 
 const Page: NextPage<PageProps> = ({ data }) => {
