@@ -39,7 +39,6 @@ export const OnlineService: FC<OnlineServiceProps> = ({
                 <p className={"text-sm-30"}>{text}</p>
               </div>
             )}
-
             <div className={styles.line} />
           </div>
 
