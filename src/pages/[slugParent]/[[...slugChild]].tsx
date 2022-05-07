@@ -9,6 +9,15 @@ import { type BlockProps, DisplayBlocks } from "@/blocks/display-blocks";
 import { pageOurServices } from "@/data/pages/our-services";
 import { pageContacts } from "@/data/pages/contacts";
 import { pageRealEstate } from "@/data/pages/real-estate";
+import { OnlineService } from "@/blocks/online-service";
+import { Banner } from "@/blocks/banner";
+import { OnlineConsultation } from "@/blocks/online-consultation";
+import { JoinUs } from "@/blocks/join-us";
+import { SloganWithText } from "@/blocks/slogan-with-text";
+import { ServiceListTiled } from "@/blocks/service-list-tiled";
+import { MapWithContact } from "@/blocks/map-with-contact";
+import { ContentRowsWithImages } from "@/blocks/content-rows-with-images";
+import { ContentExtraWithImage } from "@/blocks/content-extra-with-image";
 
 interface PageProps {
   data: {
@@ -17,6 +26,18 @@ interface PageProps {
     blocks: BlockProps[];
   };
 }
+
+const mapBlocks = {
+  "online-service": OnlineService,
+  banners: Banner,
+  "online-consultation": OnlineConsultation,
+  "join-us": JoinUs,
+  "slogan-with-text": SloganWithText,
+  "service-list-tiled": ServiceListTiled,
+  "map-with-contact": MapWithContact,
+  "content-rows-with-images": ContentRowsWithImages,
+  "content-extra-with-image": ContentExtraWithImage,
+};
 
 const Page: NextPage<PageProps> = ({ data }) => {
   const meta = data?.meta;
@@ -30,7 +51,7 @@ const Page: NextPage<PageProps> = ({ data }) => {
         <Breadcrumb links={[{ title }]} />
         <PageTitle title={title} />
       </Container>
-      <DisplayBlocks blocks={blocks} />
+      <DisplayBlocks blocks={blocks} mapBlocks={mapBlocks} />
     </MainLayout>
   );
 };

@@ -44,9 +44,7 @@ export const HomePromo: FC<HomePromoProps> = ({
             </p>
           )}
           <div>
-            <Button size={"lg"} variant={"primary"}>
-              Online consultation
-            </Button>
+            <Button size={"lg"}>Online consultation</Button>
           </div>
         </div>
 

@@ -36,6 +36,18 @@
       background: $red-300;
     }
   }
+
+  // secondary
+  &-secondary {
+    background: $red-400;
+    color: $white;
+    border: 2px solid currentColor;
+
+    &:hover,
+    &:active {
+      background: $red-300;
+    }
+  }
 }
 
 // sizes
@@ -43,7 +55,7 @@
   &-sm {
     padding: 8px 20px;
     font-size: $font-size-12;
-    border-radius: 5px;
+    border-radius: 8px;
 
     @include xs {
       padding: 8px 25px;

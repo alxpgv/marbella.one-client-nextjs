@@ -56,9 +56,7 @@ export const TiledItems: FC<TiledItemsProps> = ({ items, className }) => {
 
             {href && (
               <div className={cn(styles.tileBtn, className?.tileBtn)}>
-                <Button size="sm" variant={"primary"}>
-                  Read more
-                </Button>
+                <Button size="sm">Read more</Button>
               </div>
             )}
           </div>

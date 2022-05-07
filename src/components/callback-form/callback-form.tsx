@@ -60,7 +60,7 @@ export const CallbackForm = ({ title, text, btnText }: CallbackFormProps) => {
           />
         </div>
         <div className={styles.formField}>
-          <Button size={"md"} variant={"primary"} gutter={"sm"} fullWidth>
+          <Button size={"md"} gutter={"sm"} fullWidth>
             {btnText}
           </Button>
         </div>

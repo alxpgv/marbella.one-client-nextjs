@@ -36,9 +36,7 @@ export const SaleConsultation: FC<SaleConsultationProps> = ({
             </div>
           )}
           <div className={styles.btn}>
-            <Button size={"md"} variant={"primary"}>
-              Sell property
-            </Button>
+            <Button size={"md"}>Sell property</Button>
           </div>
         </div>
       </Container>

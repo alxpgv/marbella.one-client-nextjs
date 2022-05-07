@@ -35,9 +35,7 @@ export const ContactInfo: FC<ContactInfoProps> = ({
             Our experienced professionals will advise on real estate matters and
             tell you where to start if you want to buy or sell property!
           </p>
-          <Button size={"md"} variant={"primary"}>
-            Callback
-          </Button>
+          <Button size={"md"}>Callback</Button>
         </div>
         <div className={cn(styles.col, "text-white")}>
           {phone && (

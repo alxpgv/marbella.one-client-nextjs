@@ -44,7 +44,7 @@ export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({
             />
           )}
           <div className={styles.btn}>
-            <Button size={"md"} variant={"primary"} icon={"arrow"}>
+            <Button size={"md"} icon={"arrow"}>
               Learn more
             </Button>
           </div>

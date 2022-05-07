@@ -40,9 +40,7 @@ export const ListWithImage: FC<ListWithImageProps> = ({
             </div>
           )}
           <div className={styles.btn}>
-            <Button size={"md"} variant={"primary"}>
-              Online consultation
-            </Button>
+            <Button size={"md"}>Online consultation</Button>
           </div>
         </div>
         {image?.url && (

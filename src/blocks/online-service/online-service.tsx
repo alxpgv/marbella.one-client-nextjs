@@ -64,9 +64,7 @@ export const OnlineService: FC<OnlineServiceProps> = ({
                       {title}
                     </div>
                     <div className={styles.itemServiceBtn}>
-                      <Button size={"sm"} variant={"primary"}>
-                        Read more
-                      </Button>
+                      <Button size={"sm"}>Read more</Button>
                     </div>
                   </div>
                 </div>

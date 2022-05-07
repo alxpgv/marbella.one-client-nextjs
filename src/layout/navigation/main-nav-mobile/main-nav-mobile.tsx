@@ -59,9 +59,7 @@ export const MainNavMobile: FC<MainMobileNavProps> = ({ menu, contact }) => {
                 {contact.phone}
               </a>
             )}
-            <Button size="sm" variant="primary">
-              Callback
-            </Button>
+            <Button size="sm">Callback</Button>
 
             <CloseButton handleClick={() => setIsOpen(false)} />
           </div>
