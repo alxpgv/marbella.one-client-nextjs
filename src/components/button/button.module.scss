@@ -13,17 +13,12 @@
 
 // variants
 .btn {
-  .iconWrapper {
-    .icon {
-      height: 8px;
-      width: 8px;
-      margin-left: 10px;
-      stroke: currentColor;
-    }
-
-    .iconArrow {
-      transform: rotate(-90deg);
-    }
+  .icon {
+    height: 8px;
+    width: 8px;
+    margin-left: 10px;
+    stroke: currentColor;
+    transition: 200ms transform ease-out;
   }
 
   // primary
@@ -33,7 +28,12 @@
 
     &:hover,
     &:active {
+      color: $white;
       background: $red-300;
+
+      .icon {
+        transform: translateX(3px);
+      }
     }
   }
 
@@ -45,6 +45,7 @@
 
     &:hover,
     &:active {
+      color: $white;
       background: $red-300;
     }
   }

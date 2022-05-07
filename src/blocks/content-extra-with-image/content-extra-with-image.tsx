@@ -82,7 +82,7 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
                   )}
                   {extra.button && (
                     <div className={styles.extraBtn}>
-                      {extra.button.as === "link" && extra.button.href && (
+                      {extra.button.href && (
                         <Button
                           variant={"secondary"}
                           size={"sm"}
@@ -96,7 +96,7 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
                         <Button
                           variant={"secondary"}
                           size={"sm"}
-                          as={"callback"}
+                          onClick={() => console.log("callback")}
                         >
                           {extra.button.text}
                         </Button>

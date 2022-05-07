@@ -2,6 +2,9 @@
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 5" id="arrow">
         <path d="M1 1.5L3.5 3.5L6 1.5" stroke-linecap="square"></path>
     </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 10" id="arrow-left">
+        <path d="M1 8.5L4.33333 5L1 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 50" id="award">
         <path d="M29.7939 33.0824V47.5L19.4998 42.3774L9.20569 47.5V33.0824" stroke="#428AB5" stroke-width="2.50185"
               stroke-miterlimit="10"></path>

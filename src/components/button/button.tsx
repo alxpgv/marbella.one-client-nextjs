@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import cn from "classnames";
-import styles from "./button.module.scss";
 import { Icon } from "@/components/icon";
-import { useRouter } from "next/router";
+import Link from "next/link";
+import styles from "./button.module.scss";
 
 export interface ButtonType {
   as?: "link" | "callback";
@@ -32,35 +32,33 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   onClick,
 }): JSX.Element => {
-  const router = useRouter();
+  const classes = cn(
+    styles.btn,
+    styles[`btn-${variant}`],
+    styles[`btn-${size}`],
+    styles[`btn-gutter-${gutter}`],
+    fullWidth && styles[`btn-full-width`]
+  );
 
-  //TODO: change router.push to Link component for seo
-  const handleClick = () => {
-    if (as && as === "link" && href) {
-      router.push(href);
-    } else if (onClick) {
-      onClick();
-    }
-  };
+  const ButtonIcon = () =>
+    icon ? <Icon name={icon} className={styles.icon} /> : null;
+
+  // link
+  if (as && as === "link" && href) {
+    return (
+      <Link href={href}>
+        <a className={classes}>
+          {children}
+          <ButtonIcon />
+        </a>
+      </Link>
+    );
+  }
 
   return (
-    <button
-      type={type}
-      className={cn(
-        styles.btn,
-        styles[`btn-${variant}`],
-        styles[`btn-${size}`],
-        styles[`btn-gutter-${gutter}`],
-        fullWidth && styles[`btn-full-width`]
-      )}
-      onClick={handleClick}
-    >
+    <button type={type} className={classes} onClick={onClick}>
       {children}
-      {icon && icon === "arrow" && (
-        <span className={styles.iconWrapper}>
-          <Icon name={"arrow"} className={cn(styles.icon, styles.iconArrow)} />
-        </span>
-      )}
+      <ButtonIcon />
     </button>
   );
 };

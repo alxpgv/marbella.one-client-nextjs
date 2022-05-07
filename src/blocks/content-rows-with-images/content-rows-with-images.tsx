@@ -39,7 +39,7 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
                 <div className={styles.btn}>
                   <Button
                     size={"md"}
-                    icon={"arrow"}
+                    icon={"arrow-left"}
                     as={"link"}
                     href={rowPrimary.button.href}
                   >
@@ -84,7 +84,7 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
                 <div className={styles.btn}>
                   <Button
                     size={"md"}
-                    icon={"arrow"}
+                    icon={"arrow-left"}
                     as={"link"}
                     href={rowSecondary.button.href}
                   >
