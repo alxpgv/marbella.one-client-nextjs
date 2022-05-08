@@ -3,13 +3,5 @@ import { onlineServices } from "./online-services";
 import { onlineConsultation } from "./online-consultation";
 import { joinUs } from "./join-us";
 import { mapWithContact } from "./map-with-contact";
-import { contactUs } from "./contact-us";
 
-export {
-  banners,
-  onlineServices,
-  onlineConsultation,
-  joinUs,
-  mapWithContact,
-  contactUs,
-};
+export { banners, onlineServices, onlineConsultation, joinUs, mapWithContact };

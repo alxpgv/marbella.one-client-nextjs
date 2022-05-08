@@ -35,16 +35,14 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
                   dangerouslySetInnerHTML={{ __html: rowPrimary.text }}
                 />
               )}
-              {rowPrimary.button?.href && (
+              {rowPrimary.button?.as && (
                 <div className={styles.btn}>
                   <Button
+                    variant={"primary"}
                     size={"md"}
                     icon={"arrow-left"}
-                    as={"link"}
-                    href={rowPrimary.button.href}
-                  >
-                    Read more
-                  </Button>
+                    {...rowPrimary.button}
+                  />
                 </div>
               )}
             </div>
@@ -80,16 +78,14 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
                   dangerouslySetInnerHTML={{ __html: rowSecondary.text }}
                 />
               )}
-              {rowSecondary.button?.href && (
+              {rowSecondary.button?.as && (
                 <div className={styles.btn}>
                   <Button
+                    variant={"primary"}
                     size={"md"}
                     icon={"arrow-left"}
-                    as={"link"}
-                    href={rowSecondary.button.href}
-                  >
-                    Read more
-                  </Button>
+                    {...rowSecondary.button}
+                  />
                 </div>
               )}
             </div>

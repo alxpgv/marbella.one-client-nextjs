@@ -59,12 +59,18 @@ export const OnlineService: FC<OnlineServiceProps> = ({
                     </div>
                   )}
                   <div className={styles.itemServiceContent}>
-                    <div className={cn("text-white", styles.itemServiceTitle)}>
-                      {title}
-                    </div>
-                    <div className={styles.itemServiceBtn}>
-                      <Button size={"sm"}>Read more</Button>
-                    </div>
+                    {title && (
+                      <div
+                        className={cn("text-white", styles.itemServiceTitle)}
+                      >
+                        {title}
+                      </div>
+                    )}
+                    {href && (
+                      <div className={styles.itemServiceBtn}>
+                        <Button size={"sm"} as={"link"} href={href} />
+                      </div>
+                    )}
                   </div>
                 </div>
               );

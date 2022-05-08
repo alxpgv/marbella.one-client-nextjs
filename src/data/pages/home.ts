@@ -27,6 +27,9 @@ export const pageHome = {
           width: 1080,
         },
         services: serviceItems,
+        button: {
+          as: "online-consultation",
+        },
       },
     },
     {
@@ -58,6 +61,10 @@ export const pageHome = {
         title:
           "Do you already know what your ideal home will be? Draw it in your imagination?",
         text: "<p>Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!</p><p>We understand your desire to cross the threshold of such a house one day, and therefore we will do our best to make it a reality!</p>",
+        button: {
+          as: "link",
+          href: "/#",
+        },
       },
     },
     {
@@ -91,7 +98,7 @@ export const pageHome = {
           },
           {
             id: 2,
-            icon: "target-user",
+            icon: "user-target",
             title: "Attention to each client, individual approach",
           },
           {

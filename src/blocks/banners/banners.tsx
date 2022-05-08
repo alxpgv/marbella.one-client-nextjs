@@ -4,7 +4,7 @@ import { Container } from "@/components/container";
 import type { ImageProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./banner.module.scss";
+import styles from "./banners.module.scss";
 
 interface BannerProps {
   items: {
@@ -14,7 +14,7 @@ interface BannerProps {
   }[];
 }
 
-export const Banner: FC<BannerProps> = ({ items }) => {
+export const Banners: FC<BannerProps> = ({ items }) => {
   return (
     <Section>
       <Container>

@@ -3,9 +3,9 @@ import { Section } from "@/components/section";
 import { Container } from "@/components/container";
 import { ImageProps } from "@/types";
 import { Button, ButtonType } from "@/components/button";
-import styles from "./content-extra-with-image.module.scss";
 import cn from "classnames";
 import Image from "next/image";
+import styles from "./content-extra-with-image.module.scss";
 
 interface ContentExtraWithImageProps {
   contentPrimary: {
@@ -82,25 +82,11 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
                   )}
                   {extra.button && (
                     <div className={styles.extraBtn}>
-                      {extra.button.href && (
-                        <Button
-                          variant={"secondary"}
-                          size={"sm"}
-                          as={"link"}
-                          href={extra.button.href}
-                        >
-                          Read more
-                        </Button>
-                      )}
-                      {extra.button.as === "callback" && (
-                        <Button
-                          variant={"secondary"}
-                          size={"sm"}
-                          onClick={() => console.log("callback")}
-                        >
-                          {extra.button.text}
-                        </Button>
-                      )}
+                      <Button
+                        variant={"secondary"}
+                        size={"sm"}
+                        {...extra.button}
+                      />
                     </div>
                   )}
                 </div>

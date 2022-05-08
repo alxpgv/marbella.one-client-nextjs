@@ -1,24 +1,53 @@
-import React, { FC } from "react";
+import React from "react";
 import Link from "next/link";
 import cn from "classnames";
 import { Icon } from "@/components/icon";
 import styles from "./breadcrumb.module.scss";
+import { mainMenu } from "@/data/settings";
+import { useRouter } from "next/router";
 
 interface BreadcrumbProps {
-  links: {
-    href?: string;
-    title: string;
-  }[];
+  url?: string | undefined;
+  title: string;
 }
 
-export const Breadcrumb: FC<BreadcrumbProps> = ({ links = [] }) => {
-  const breadcrumbs = [
+export const Breadcrumb = () => {
+  const breadcrumbs: BreadcrumbProps[] = [
     {
-      href: "/",
+      url: "/",
       title: "Home",
     },
-    ...links,
   ];
+
+  //TODO: rewrite this code
+  const router = useRouter();
+  const urlSegments = router.asPath.split("/");
+  urlSegments.shift();
+
+  if (urlSegments[0]) {
+    const parentItem = mainMenu.find(
+      (item) => item.url === `/${urlSegments[0]}`
+    );
+
+    if (parentItem) {
+      const newItem: BreadcrumbProps = {
+        title: parentItem.title,
+      };
+
+      // if have childs, then parent as link
+      newItem.url = urlSegments[1] ? parentItem.url : undefined;
+      breadcrumbs.push(newItem);
+
+      const child = parentItem.child;
+
+      if (urlSegments[1] && child?.length) {
+        const childItem = child.find(
+          (item) => item.url === `/${urlSegments[0]}/${urlSegments[1]}`
+        );
+        childItem && breadcrumbs.push({ title: childItem.title });
+      }
+    }
+  }
 
   const Separator = () => (
     <span className={styles.separator}>
@@ -28,11 +57,11 @@ export const Breadcrumb: FC<BreadcrumbProps> = ({ links = [] }) => {
 
   return (
     <div className={cn(styles.breadcrumb, "text-sm")}>
-      {breadcrumbs.map(({ href, title }, index) => {
+      {breadcrumbs.map(({ url, title }, index) => {
         return (
           <div key={index} className={styles.crumb}>
-            {href ? (
-              <Link href={href}>
+            {url ? (
+              <Link href={url}>
                 <a className={styles.crumbLink}>{title}</a>
               </Link>
             ) : (

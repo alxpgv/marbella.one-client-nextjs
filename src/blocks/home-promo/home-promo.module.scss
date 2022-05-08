@@ -78,7 +78,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 320px;
   padding: 40px 20px;
   text-align: center;
 
@@ -88,6 +87,7 @@
 
   @include md {
     flex: 1;
+    min-height: 320px;
   }
 
   // min width bottom line

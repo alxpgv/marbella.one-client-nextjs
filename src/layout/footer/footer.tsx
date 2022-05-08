@@ -4,16 +4,21 @@ import { Logo } from "@/layout/logo";
 import Image from "next/image";
 import Link from "next/link";
 import { settings, mainMenu } from "@/data/settings";
-import { getPhoneFromString } from "@/lib/helpers";
 import { FooterMenuItems } from "./footer-menu-items";
 import cn from "classnames";
 import { Icon } from "@/components/icon";
 import styles from "./footer.module.scss";
+import { EmailLink, PhoneLink } from "@/components/links";
 
 export const Footer = () => {
   const menuAbout = mainMenu[0];
   const menuRealEstate = mainMenu[2];
   const menuOwners = mainMenu[3];
+
+  const phone = settings?.contact?.phone;
+  const email = settings?.contact?.email;
+  const workMode = settings?.workMode;
+  const address = settings?.address;
 
   return (
     <footer className={styles.footer}>
@@ -22,40 +27,36 @@ export const Footer = () => {
           <div className={styles.mainWrapper}>
             <div className={cn(styles.col, styles.contact, "text-sm")}>
               <Logo className={styles.logo} color={"secondary"} />
-              {settings?.contact?.phone && (
+              {phone && (
                 <div className={cn(styles.contactItem, styles.contactPhone)}>
                   <span className={styles.iconWrapper}>
                     <Icon name={"phone-smooth"} className={styles.icon} />
                   </span>
-                  <a href={`tel:${getPhoneFromString(settings.contact.phone)}`}>
-                    {settings.contact.phone}
-                  </a>
+                  <PhoneLink value={phone} />
                 </div>
               )}
-              {settings?.workMode && (
+              {workMode && (
                 <div className={cn(styles.contactItem, styles.contactWorkMode)}>
                   <span className={styles.iconWrapper}>
                     <Icon name={"calendar-smooth"} className={styles.icon} />
                   </span>
-                  {settings.workMode}
+                  {workMode}
                 </div>
               )}
-              {settings?.contact?.email && (
+              {email && (
                 <div className={cn(styles.contactItem, styles.contactEmail)}>
                   <span className={styles.iconWrapper}>
                     <Icon name={"box-arrow-smooth"} className={styles.icon} />
                   </span>
-                  <a href={`mailto:${settings.contact.email}`}>
-                    {settings.contact.email}
-                  </a>
+                  <EmailLink value={email} />
                 </div>
               )}
-              {settings?.address && (
+              {address && (
                 <div className={cn(styles.contactItem, styles.contactLocation)}>
                   <span className={styles.iconWrapper}>
                     <Icon name={"location-smooth"} className={styles.icon} />
                   </span>
-                  {settings.address}
+                  {address}
                 </div>
               )}
             </div>

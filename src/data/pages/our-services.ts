@@ -22,8 +22,12 @@ export const pageOurServices = {
       },
     },
     {
-      blockName: "service-list-tiled",
+      blockName: "title-with-tiled-items",
       fields: {
+        options: {
+          cols: 4,
+          firstLetterUppercase: true,
+        },
         title: "4 high-quality<br/> professional services",
         items: serviceItems,
       },

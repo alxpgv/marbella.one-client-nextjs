@@ -2,12 +2,12 @@ import React, { FC, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/button";
 import { MenuItem } from "./menu-item";
 import { SocialLinks } from "./social-links";
-import { getPhoneFromString } from "@/lib/helpers";
 import type { MenuProps } from "../types";
 import {
   CloseButton,
   Hamburger,
 } from "@/layout/navigation/main-nav-mobile/buttons";
+import { PhoneLink } from "@/components/links";
 import cn from "classnames";
 import styles from "./main-nav-mobile.module.scss";
 
@@ -52,12 +52,7 @@ export const MainNavMobile: FC<MainMobileNavProps> = ({ menu, contact }) => {
         <div className={styles.wrapper}>
           <div className={styles.header}>
             {contact?.phone && (
-              <a
-                className={styles.phone}
-                href={`tel:${getPhoneFromString(contact.phone)}`}
-              >
-                {contact.phone}
-              </a>
+              <PhoneLink value={contact.phone} className={styles.phone} />
             )}
             <Button size="sm">Callback</Button>
 

@@ -34,12 +34,12 @@ export const mainMenu = [
       {
         id: 3,
         title: "Our philosophy",
-        url: "#",
+        url: "/#",
       },
       {
         id: 4,
         title: "Reviews",
-        url: "#",
+        url: "/#",
       },
     ],
   },
@@ -52,12 +52,12 @@ export const mainMenu = [
       {
         id: 7,
         title: "Buy luxury real estate",
-        url: "#",
+        url: "/real-estate/buy-luxury-real-estate",
       },
       {
         id: 8,
         title: "Buying land in Marbella",
-        url: "#",
+        url: "/real-estate/buying-land-in-marbella",
       },
     ],
   },
@@ -69,22 +69,22 @@ export const mainMenu = [
       {
         id: 10,
         title: "Sell luxury real estate",
-        url: "#",
+        url: "/#",
       },
       {
         id: 11,
         title: "Real estate price",
-        url: "#",
+        url: "/#",
       },
       {
         id: 12,
         title: "We guarantee",
-        url: "#",
+        url: "/#",
       },
       {
         id: 13,
         title: "Reasons to cooperate with us",
-        url: "#",
+        url: "/#",
       },
     ],
   },

@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./button.module.scss";
 
 export interface ButtonType {
-  as?: "link" | "callback";
+  as?: "link" | "callback" | "online-consultation";
   href?: string;
 }
 
@@ -18,7 +18,14 @@ interface ButtonProps extends ButtonType {
   children?: ReactNode;
   icon?: string;
   onClick?: () => void;
+  className?: string;
 }
+
+const textBtnMap = {
+  link: "Read More",
+  callback: "Callback",
+  "online-consultation": "Online Consultation",
+};
 
 export const Button: React.FC<ButtonProps> = ({
   type = "button",
@@ -31,9 +38,11 @@ export const Button: React.FC<ButtonProps> = ({
   as,
   href,
   onClick,
+  className,
 }): JSX.Element => {
   const classes = cn(
     styles.btn,
+    className,
     styles[`btn-${variant}`],
     styles[`btn-${size}`],
     styles[`btn-gutter-${gutter}`],
@@ -48,10 +57,17 @@ export const Button: React.FC<ButtonProps> = ({
     return (
       <Link href={href}>
         <a className={classes}>
-          {children}
+          {children || textBtnMap[as]}
           <ButtonIcon />
         </a>
       </Link>
+    );
+  } else if (as && Object.keys(textBtnMap).includes(as)) {
+    return (
+      <button className={classes} onClick={() => console.log(textBtnMap[as])}>
+        {textBtnMap[as]}
+        <ButtonIcon />
+      </button>
     );
   }
 

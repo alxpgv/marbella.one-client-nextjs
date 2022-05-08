@@ -10,7 +10,7 @@ const BlogIndex: NextPage = () => {
   return (
     <MainLayout>
       <Container>
-        <Breadcrumb links={[{ title: "Blog" }]} />
+        <Breadcrumb />
         <PageTitle title={"Blog"} />
       </Container>
     </MainLayout>

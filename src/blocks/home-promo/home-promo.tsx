@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import { Button } from "@/components/button";
+import { Button, ButtonType } from "@/components/button";
 import { Container } from "@/components/container";
 import cn from "classnames";
 import type { ImageProps } from "@/types";
@@ -12,6 +12,7 @@ interface HomePromoProps {
   text: string;
   image: ImageProps;
   services: TiledItemProps[];
+  button: ButtonType;
 }
 
 export const HomePromo: FC<HomePromoProps> = ({
@@ -19,6 +20,7 @@ export const HomePromo: FC<HomePromoProps> = ({
   text,
   image,
   services,
+  button,
 }) => {
   return (
     <div className={styles.promo}>
@@ -43,9 +45,11 @@ export const HomePromo: FC<HomePromoProps> = ({
               {text}
             </p>
           )}
-          <div>
-            <Button size={"lg"}>Online consultation</Button>
-          </div>
+          {button?.as && (
+            <div>
+              <Button variant={"primary"} size={"lg"} {...button} />
+            </div>
+          )}
         </div>
 
         <TiledItems items={services} className={styles} />

@@ -4,19 +4,21 @@ import { Section } from "@/components/section";
 import { Container } from "@/components/container";
 import Image from "next/image";
 import cn from "classnames";
-import { Button } from "@/components/button";
+import { Button, type ButtonType } from "@/components/button";
 import styles from "./image-with-overlap-text.module.scss";
 
 interface ImageWithOverlapTextProps {
   title?: string;
   text?: string;
   image: ImageProps;
+  button?: ButtonType;
 }
 
 export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({
   title,
   text,
   image,
+  button,
 }) => {
   return (
     <Section>
@@ -43,11 +45,13 @@ export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({
               dangerouslySetInnerHTML={{ __html: text }}
             />
           )}
-          <div className={styles.btn}>
-            <Button size={"md"} icon={"arrow-left"}>
-              Learn more
-            </Button>
-          </div>
+          {button?.as && (
+            <div className={styles.btn}>
+              <Button size={"md"} icon={"arrow-left"} {...button}>
+                Learn more
+              </Button>
+            </div>
+          )}
         </div>
       </Container>
     </Section>

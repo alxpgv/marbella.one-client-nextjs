@@ -1,10 +1,10 @@
 import React from "react";
-import { getPhoneFromString } from "@/lib/helpers";
 import { Button } from "@/components/button";
 import { Icon } from "@/components/icon";
 import cn from "classnames";
 import { settings } from "@/data/settings";
 import styles from "./advantage-with-contact.module.scss";
+import { EmailLink, PhoneLink } from "@/components/links";
 
 export const ContactInfo = () => {
   const email = settings?.contact?.email;
@@ -29,26 +29,22 @@ export const ContactInfo = () => {
         {phone && (
           <div>
             <p className="text-sm-20">Call us by phone</p>
-            <a className="text-md-40" href={`tel:${getPhoneFromString(phone)}`}>
-              {phone}
-            </a>
+            <PhoneLink value={phone} className={"text-md-40"} />
           </div>
         )}
 
         {email && (
           <div>
             <p className="text-sm-20">or write to our mail</p>
-            <a
+            <EmailLink
+              value={email}
               className={cn("text-sm-40", styles.contactEmail)}
-              href={`mailto:${email}`}
-            >
-              {email}
-            </a>
+            />
           </div>
         )}
 
         <div className={styles.btn}>
-          <Button size={"md"}>Callback</Button>
+          <Button variant={"primary"} size={"md"} as={"callback"} />
         </div>
       </div>
     </div>

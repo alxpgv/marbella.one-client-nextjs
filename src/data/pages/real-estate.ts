@@ -3,7 +3,6 @@ import {
   onlineConsultation,
   onlineServices,
   joinUs,
-  contactUs,
 } from "@/data/static-blocks";
 
 export const pageRealEstate = {
@@ -69,7 +68,13 @@ export const pageRealEstate = {
         },
       },
     },
-    contactUs,
+    {
+      blockName: "contact-us",
+      fields: {
+        title:
+          "Buying an exclusive property in sunny Spain is a snap! Contact us!",
+      },
+    },
     onlineServices,
     banners,
     onlineConsultation,

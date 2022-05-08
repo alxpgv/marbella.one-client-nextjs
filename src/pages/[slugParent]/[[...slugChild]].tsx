@@ -9,16 +9,19 @@ import { type BlockProps, DisplayBlocks } from "@/blocks/display-blocks";
 import { pageOurServices } from "@/data/pages/our-services";
 import { pageContacts } from "@/data/pages/contacts";
 import { pageRealEstate } from "@/data/pages/real-estate";
+import { pageBuyLuxury } from "@/data/pages/buy-luxury-real-estate";
 import { OnlineService } from "@/blocks/online-service";
-import { Banner } from "@/blocks/banner";
+import { Banners } from "@/blocks/banners";
 import { OnlineConsultation } from "@/blocks/online-consultation";
 import { JoinUs } from "@/blocks/join-us";
 import { SloganWithText } from "@/blocks/slogan-with-text";
-import { ServiceListTiled } from "@/blocks/service-list-tiled";
 import { MapWithContact } from "@/blocks/map-with-contact";
 import { ContentRowsWithImages } from "@/blocks/content-rows-with-images";
 import { ContentExtraWithImage } from "@/blocks/content-extra-with-image";
 import { ContactUs } from "@/blocks/contact-us";
+import { TitleWithTiledItems } from "@/blocks/title-with-tiled-items";
+import { pageBuyingLand } from "@/data/pages/buying-land-in-marbella";
+import { SloganWithTextExtend } from "@/blocks/slogan-with-text-extend";
 
 interface PageProps {
   data: {
@@ -30,18 +33,20 @@ interface PageProps {
 
 const mapBlocks = {
   "online-service": OnlineService,
-  banners: Banner,
+  banners: Banners,
   "online-consultation": OnlineConsultation,
   "join-us": JoinUs,
   "slogan-with-text": SloganWithText,
-  "service-list-tiled": ServiceListTiled,
+  "slogan-with-text-extend": SloganWithTextExtend,
   "map-with-contact": MapWithContact,
   "content-rows-with-images": ContentRowsWithImages,
   "content-extra-with-image": ContentExtraWithImage,
   "contact-us": ContactUs,
+  "title-with-tiled-items": TitleWithTiledItems,
 };
 
 const Page: NextPage<PageProps> = ({ data }) => {
+  if (!data) return null;
   const meta = data?.meta;
   const title = data?.title;
   const blocks = data?.blocks;
@@ -50,7 +55,7 @@ const Page: NextPage<PageProps> = ({ data }) => {
     <MainLayout>
       <Meta {...meta} />
       <Container>
-        <Breadcrumb links={[{ title }]} />
+        <Breadcrumb />
         <PageTitle title={title} />
       </Container>
       <DisplayBlocks blocks={blocks} mapBlocks={mapBlocks} />
@@ -72,6 +77,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
     {
       params: { slugParent: "real-estate", slugChild: [] },
     },
+    {
+      params: {
+        slugParent: "real-estate",
+        slugChild: ["buy-luxury-real-estate"],
+      },
+    },
+    {
+      params: {
+        slugParent: "real-estate",
+        slugChild: ["buying-land-in-marbella"],
+      },
+    },
   ];
 
   return {
@@ -81,8 +98,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slugChild || params?.slugParent;
-  let data = {};
+  const slugParent = params?.slugParent;
+  const slugChild =
+    params?.slugChild && params.slugChild[0] ? params.slugChild[0] : null;
+
+  const slug = slugParent
+    ? slugChild
+      ? `${slugParent}/${slugChild}`
+      : slugParent
+    : null;
+
+  let data = null;
 
   switch (slug) {
     case "our-services":
@@ -94,12 +120,25 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     case "real-estate":
       data = pageRealEstate;
       break;
+    case "real-estate/buy-luxury-real-estate":
+      data = pageBuyLuxury;
+      break;
+    case "real-estate/buying-land-in-marbella":
+      data = pageBuyingLand;
+      break;
+  }
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
   }
 
   return {
     props: {
       data,
     },
+    revalidate: 100,
   };
 };
 

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import cn from "classnames";
 import { Button } from "@/components/button";
-import { getPhoneFromString } from "@/lib/helpers";
+import { EmailLink, PhoneLink } from "@/components/links";
 import styles from "./map-with-contact.module.scss";
 
 interface ContactInfoProps {
@@ -42,21 +42,17 @@ export const ContactInfo: FC<ContactInfoProps> = ({
             <p className={"text-sm-23"}>
               <span className={"text-grey-300"}>Call us by phone: </span>
               <strong>
-                <a
+                <PhoneLink
+                  value={phone}
                   className={cn(styles.phone, "text-sm-40")}
-                  href={`tel:${getPhoneFromString(phone)}`}
-                >
-                  {phone}
-                </a>
+                />
               </strong>
             </p>
           )}
           {email && (
             <p className={"text-sm-23"}>
               <span className={"text-grey-300"}>or write to our mail: </span>
-              <a className={styles.email} href={`mailto:${email}`}>
-                {email}
-              </a>
+              <EmailLink value={email} className={styles.email} />
             </p>
           )}
           {address && (

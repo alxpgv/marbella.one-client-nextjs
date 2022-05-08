@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import cn from "classnames";
-import { Button } from "@/components/button";
+import { Button, ButtonType } from "@/components/button";
 import { Icon } from "@/components/icon";
 import styles from "./tiled-items.module.scss";
 
@@ -9,36 +9,59 @@ export interface TiledItemProps {
   icon?: string;
   title: string;
   text?: string;
-  button?: "link" | "callback" | "consultation" | null;
-  href?: string;
+  button?: ButtonType;
 }
 
-interface TiledItemsProps {
+export interface TiledProps {
   items: TiledItemProps[];
   className?: any;
+  cols?: 3 | 4;
 }
 
-export const TiledItems: FC<TiledItemsProps> = ({ items, className }) => {
+export const TiledItems: FC<TiledProps> = ({ items, className, cols }) => {
   if (!items?.length) {
     return null;
   }
   return (
-    <div className={className?.tileItems}>
-      {items.map(({ id, icon, title, text, button, href }) => {
+    <div
+      className={cn(
+        className?.tileItems ? className?.tileItems : styles.tileItems,
+        styles[`tileItemsCol-${cols}`]
+      )}
+    >
+      {items.map(({ id, icon, title, text, button }) => {
         return (
-          <div key={id} className={className?.tileItem}>
+          <div
+            key={id}
+            className={
+              className?.tileItem ? className?.tileItem : styles.tileItem
+            }
+          >
             {icon && (
-              <div className={cn(styles.tileIcon, className?.tileIcon)}>
+              <div
+                className={
+                  className?.tileIcon ? className?.tileIcon : styles.tileIcon
+                }
+              >
                 <Icon
                   name={icon}
-                  className={cn(styles.icon, className?.icon)}
+                  className={className?.icon ? className?.icon : styles.icon}
                 />
               </div>
             )}
 
             {title && (
-              <div className={cn(styles.tileHeading, className?.tileHeading)}>
-                <h6 className={"text-sm-30"}>{title}</h6>
+              <div
+                className={
+                  className?.tileHeading
+                    ? className?.tileHeading
+                    : styles.tileHeading
+                }
+              >
+                <h6
+                  className={"text-sm-30"}
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
               </div>
             )}
 
@@ -46,17 +69,20 @@ export const TiledItems: FC<TiledItemsProps> = ({ items, className }) => {
               <p
                 className={cn(
                   "text-sm-20",
-                  styles.tileText,
-                  className?.tileText
+                  className?.tileText ? className?.tileText : styles.tileText
                 )}
               >
                 {text}
               </p>
             )}
 
-            {href && (
-              <div className={cn(styles.tileBtn, className?.tileBtn)}>
-                <Button size="sm">Read more</Button>
+            {button?.as && (
+              <div
+                className={
+                  className?.tileBtn ? className?.tileBtn : styles.tileBtn
+                }
+              >
+                <Button size="sm" className={styles.btn} {...button} />
               </div>
             )}
           </div>

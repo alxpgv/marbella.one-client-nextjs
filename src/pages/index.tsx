@@ -11,7 +11,7 @@ import { ListWithImage } from "@/blocks/list-with-image";
 import { AdvantageWithContact } from "@/blocks/advantage-with-contact";
 import { SaleConsultation } from "@/blocks/sale-consultation";
 import { OnlineService } from "@/blocks/online-service";
-import { Banner } from "@/blocks/banner";
+import { Banners } from "@/blocks/banners";
 import { OnlineConsultation } from "@/blocks/online-consultation";
 import { JoinUs } from "@/blocks/join-us";
 
@@ -23,7 +23,7 @@ const mapBlocks = {
   "advantage-with-contact": AdvantageWithContact,
   "sale-consultation": SaleConsultation,
   "online-service": OnlineService,
-  banners: Banner,
+  banners: Banners,
   "online-consultation": OnlineConsultation,
   "join-us": JoinUs,
 };

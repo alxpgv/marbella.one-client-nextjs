@@ -2,12 +2,13 @@ import React from "react";
 import { Logo } from "@/layout/logo";
 import { MainNav } from "@/layout/navigation/main-nav";
 import { mainMenu, settings } from "@/data/settings";
-import { getPhoneFromString } from "@/lib/helpers";
 import { Container } from "@/components/container";
 import { MainNavMobile } from "@/layout/navigation/main-nav-mobile";
 import styles from "./navbar.module.scss";
+import { PhoneLink } from "@/components/links";
 
 export const Navbar = () => {
+  const phone = settings?.contact?.phone;
   return (
     <div className={styles.navbar}>
       <Container>
@@ -22,14 +23,7 @@ export const Navbar = () => {
                 <MainNav menu={mainMenu} />
               </div>
             )}
-            {settings?.contact?.phone && (
-              <a
-                className="text-20"
-                href={`tel:${getPhoneFromString(settings.contact.phone)}`}
-              >
-                {settings.contact.phone}
-              </a>
-            )}
+            {phone && <PhoneLink value={phone} className={"text-20"} />}
             <div className={styles.mobile}>
               <MainNavMobile menu={mainMenu} contact={settings?.contact} />
             </div>
