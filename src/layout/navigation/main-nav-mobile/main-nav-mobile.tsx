@@ -45,6 +45,7 @@ export const MainNavMobile: FC<MainMobileNavProps> = ({ menu, contact }) => {
       <Hamburger handleClick={handleToggle} />
       <nav
         className={cn(styles.nav, isOpen ? styles.isOpen : "")}
+        style={{ visibility: isOpen ? "visible" : "hidden" }}
         role="navigation"
         onClick={clickOutside}
         ref={navRef}

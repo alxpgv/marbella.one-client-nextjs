@@ -40,7 +40,7 @@ export const HomePromo: FC<HomePromoProps> = ({
         <div className={cn(styles.content, "pt-navbar")}>
           {title && <h1 className={styles.title}>{title}</h1>}
           {text && (
-            <p className={cn("text-sm-40 text-grey-300", styles.text)}>
+            <p className={cn("text-md-10 text-grey-300", styles.text)}>
               {text}
             </p>
           )}

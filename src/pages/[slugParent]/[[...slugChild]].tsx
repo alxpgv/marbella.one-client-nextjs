@@ -22,6 +22,7 @@ import { ContactUs } from "@/blocks/contact-us";
 import { TitleWithTiledItems } from "@/blocks/title-with-tiled-items";
 import { pageBuyingLand } from "@/data/pages/buying-land-in-marbella";
 import { SloganWithTextExtend } from "@/blocks/slogan-with-text-extend";
+import { ImageWithContent } from "@/blocks/image-with-content";
 
 interface PageProps {
   data: {
@@ -41,6 +42,7 @@ const mapBlocks = {
   "map-with-contact": MapWithContact,
   "content-rows-with-images": ContentRowsWithImages,
   "content-extra-with-image": ContentExtraWithImage,
+  "image-with-content": ImageWithContent,
   "contact-us": ContactUs,
   "title-with-tiled-items": TitleWithTiledItems,
 };

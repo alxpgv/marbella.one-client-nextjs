@@ -2,40 +2,28 @@
 
 .wrapper {
   display: flex;
-  align-items: center;
-  padding: clamp(30px, 8vw, 110px) clamp(30px, 10vw, 130px);
-  background: $grey-600;
 
   @include not-md {
     flex-direction: column;
+    gap: 30px;
     text-align: center;
   }
 }
 
-.col {
-  flex: 1;
+.content {
+  flex: 1 80%;
+}
 
+.image {
+  flex: 0 1 360px;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.content {
   @include md {
-    &:first-child {
-      padding-right: 30px;
-    }
-
-    &:last-child {
-      padding-left: 30px;
-    }
+    padding-left: clamp(40px, 5vw, 100px);
   }
-
-  @include not-md {
-    &:first-child {
-      margin-bottom: 30px;
-    }
-  }
-}
-
-.title {
-  margin-bottom: 20px;
-}
-
-.btn {
-  margin-top: 20px;
 }
