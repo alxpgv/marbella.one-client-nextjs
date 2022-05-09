@@ -69,22 +69,22 @@ export const mainMenu = [
       {
         id: 10,
         title: "Sell luxury real estate",
-        url: "/#",
+        url: "/owners/sell-luxury-real-estate",
       },
       {
         id: 11,
         title: "Real estate price",
-        url: "/#",
+        url: "/owners/real-estate-price",
       },
       {
         id: 12,
         title: "We guarantee",
-        url: "/#",
+        url: "/owners/we-guarantee",
       },
       {
         id: 13,
         title: "Reasons to cooperate with us",
-        url: "/#",
+        url: "/owners/reasons-to-cooperate",
       },
     ],
   },

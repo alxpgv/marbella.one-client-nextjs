@@ -23,6 +23,11 @@ import { TitleWithTiledItems } from "@/blocks/title-with-tiled-items";
 import { pageBuyingLand } from "@/data/pages/buying-land-in-marbella";
 import { SloganWithTextExtend } from "@/blocks/slogan-with-text-extend";
 import { ImageWithContent } from "@/blocks/image-with-content";
+import { pageOwners } from "@/data/pages/owners";
+import { pageSellLuxury } from "@/data/pages/sell-luxury-real-estate";
+import { pageRealEstatePrice } from "@/data/pages/real-estate-price";
+import { pageWeGuarantee } from "@/data/pages/we-guarantee";
+import { pageReasonsToCooperate } from "@/data/pages/reasons-to-cooperate";
 
 interface PageProps {
   data: {
@@ -91,6 +96,33 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slugChild: ["buying-land-in-marbella"],
       },
     },
+    {
+      params: { slugParent: "owners", slugChild: [] },
+    },
+    {
+      params: {
+        slugParent: "owners",
+        slugChild: ["we-guarantee"],
+      },
+    },
+    {
+      params: {
+        slugParent: "owners",
+        slugChild: ["sell-luxury-real-estate"],
+      },
+    },
+    {
+      params: {
+        slugParent: "owners",
+        slugChild: ["real-estate-price"],
+      },
+    },
+    {
+      params: {
+        slugParent: "owners",
+        slugChild: ["reasons-to-cooperate"],
+      },
+    },
   ];
 
   return {
@@ -127,6 +159,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       break;
     case "real-estate/buying-land-in-marbella":
       data = pageBuyingLand;
+      break;
+    case "owners":
+      data = pageOwners;
+      break;
+    case "owners/we-guarantee":
+      data = pageWeGuarantee;
+      break;
+    case "owners/sell-luxury-real-estate":
+      data = pageSellLuxury;
+      break;
+    case "owners/real-estate-price":
+      data = pageRealEstatePrice;
+      break;
+    case "owners/reasons-to-cooperate":
+      data = pageReasonsToCooperate;
       break;
   }
 

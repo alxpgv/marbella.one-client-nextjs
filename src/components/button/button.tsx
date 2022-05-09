@@ -5,7 +5,12 @@ import Link from "next/link";
 import styles from "./button.module.scss";
 
 export interface ButtonType {
-  as?: "link" | "callback" | "online-consultation";
+  as?:
+    | "link"
+    | "callback"
+    | "online-consultation"
+    | "sell-property"
+    | "evaluate-property";
   href?: string;
 }
 
@@ -13,7 +18,7 @@ interface ButtonProps extends ButtonType {
   type?: "button" | "submit";
   size: "sm" | "md" | "lg";
   gutter?: "sm";
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "third";
   fullWidth?: boolean;
   children?: ReactNode;
   icon?: string;
@@ -25,6 +30,8 @@ const textBtnMap = {
   link: "Read More",
   callback: "Callback",
   "online-consultation": "Online Consultation",
+  "evaluate-property": "Evaluate property",
+  "sell-property": "Sell property",
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -58,7 +65,7 @@ export const Button: React.FC<ButtonProps> = ({
       <Link href={href}>
         <a className={classes} onClick={(e: any) => e.preventDefault()}>
           {children || textBtnMap[as]}
-          <ButtonIcon />
+          <Icon name={"arrow-left"} className={styles.icon} />
         </a>
       </Link>
     );

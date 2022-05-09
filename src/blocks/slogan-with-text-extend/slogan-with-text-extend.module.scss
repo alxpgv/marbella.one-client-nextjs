@@ -15,6 +15,10 @@
 .col {
   flex: 1;
 
+  &:first-child {
+    flex: 0 1 55%;
+  }
+
   @include md {
     &:first-child {
       padding-right: 30px;

@@ -20,9 +20,10 @@ export const SloganWithText: FC<SloganWithTextProps> = ({ title, text }) => {
             </div>
           )}
           {text && (
-            <div className={cn("text-grey-300", styles.text)}>
-              <p>{text}</p>
-            </div>
+            <div
+              className={cn("text-grey-300", styles.text)}
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
           )}
         </div>
       </Container>

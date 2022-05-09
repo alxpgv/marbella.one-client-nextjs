@@ -2,8 +2,9 @@
 
 .btn {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
+  text-align: center;
   font-weight: 500;
   line-height: 1;
   cursor: pointer;
@@ -17,23 +18,29 @@
     height: 8px;
     width: 8px;
     margin-left: 10px;
+    margin-top: 2px;
     stroke: currentColor;
     transition: 200ms transform ease-out;
+  }
+
+  &:hover,
+  &:active {
+    .icon {
+      transform: translateX(3px);
+    }
   }
 
   // primary
   &-primary {
     background: $red-400;
     color: $white;
+    border: 1px solid $red-400;
 
     &:hover,
     &:active {
       color: $white;
-      background: $red-300;
-
-      .icon {
-        transform: translateX(3px);
-      }
+      background: rgba($black, .8);
+      border: 1px solid rgba($white, .5);
     }
   }
 
@@ -41,12 +48,27 @@
   &-secondary {
     background: $red-400;
     color: $white;
-    border: 2px solid currentColor;
+    border: 1px solid currentColor;
 
     &:hover,
     &:active {
-      color: $white;
-      background: $red-300;
+      color: $red-400;
+      background: $white;
+      border: 1px solid rgba($red-300, .5);
+    }
+  }
+
+  // third
+  &-third {
+    background: transparent;
+    color: $blue-100;
+    border: 2px solid $blue-100;
+
+    &:hover,
+    &:active {
+      color: $black;
+      background: $blue-100;
+      border: 2px solid $black;
     }
   }
 }

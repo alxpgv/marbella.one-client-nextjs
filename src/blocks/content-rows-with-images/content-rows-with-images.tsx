@@ -39,7 +39,6 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
                   <Button
                     variant={"primary"}
                     size={"md"}
-                    icon={"arrow-left"}
                     {...rowPrimary.button}
                   />
                 </div>
@@ -82,7 +81,6 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
                   <Button
                     variant={"primary"}
                     size={"md"}
-                    icon={"arrow-left"}
                     {...rowSecondary.button}
                   />
                 </div>

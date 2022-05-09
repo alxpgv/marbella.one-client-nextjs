@@ -11,13 +11,14 @@ interface ContentExtraWithImageProps {
     title: string;
     subtitle: string;
     text: string;
+    button: ButtonType;
   };
   image: ImageProps;
   contentSecondary: string;
   extra: {
     title: string;
     text: string;
-    button: ButtonType & { text: string };
+    button: ButtonType;
   };
 }
 
@@ -40,12 +41,18 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
             {contentPrimary?.title && (
               <h2 className={styles.title}>{contentPrimary.title}</h2>
             )}
-            {contentPrimary?.text && (
-              <div
-                className={styles.text}
-                dangerouslySetInnerHTML={{ __html: contentPrimary.text }}
-              />
-            )}
+            <div className={styles.content}>
+              {contentPrimary?.text && (
+                <div
+                  dangerouslySetInnerHTML={{ __html: contentPrimary.text }}
+                />
+              )}
+              {contentPrimary.button && (
+                <div className={styles.btn}>
+                  <Button size={"md"} {...contentPrimary.button} />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className={styles.colSecondary}>
@@ -80,6 +87,8 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
                       <Button
                         variant={"secondary"}
                         size={"sm"}
+                        gutter={"sm"}
+                        fullWidth
                         {...extra.button}
                       />
                     </div>

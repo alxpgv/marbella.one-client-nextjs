@@ -10,6 +10,7 @@ export interface TiledItemProps {
   title: string;
   text?: string;
   button?: ButtonType;
+  variant?: "dark";
 }
 
 export interface TiledProps {
@@ -29,13 +30,14 @@ export const TiledItems: FC<TiledProps> = ({ items, className, cols }) => {
         styles[`tileItemsCol-${cols}`]
       )}
     >
-      {items.map(({ id, icon, title, text, button }) => {
+      {items.map(({ id, icon, title, text, button, variant }) => {
         return (
           <div
             key={id}
-            className={
-              className?.tileItem ? className?.tileItem : styles.tileItem
-            }
+            className={cn(
+              className?.tileItem ? className?.tileItem : styles.tileItem,
+              variant && styles[variant]
+            )}
           >
             {icon && (
               <div
@@ -79,7 +81,12 @@ export const TiledItems: FC<TiledProps> = ({ items, className, cols }) => {
                   className?.tileBtn ? className?.tileBtn : styles.tileBtn
                 }
               >
-                <Button size="sm" className={styles.btn} {...button} />
+                <Button
+                  size="sm"
+                  className={styles.btn}
+                  variant={variant && variant === "dark" ? "third" : "primary"}
+                  {...button}
+                />
               </div>
             )}
           </div>

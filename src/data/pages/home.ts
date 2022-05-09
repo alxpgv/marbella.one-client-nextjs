@@ -92,7 +92,7 @@ export const pageHome = {
         items: [
           {
             id: 1,
-            icon: "award",
+            icon: "medal",
             title:
               "Professionalism and solid experience in the real estate market",
           },
@@ -103,7 +103,7 @@ export const pageHome = {
           },
           {
             id: 3,
-            icon: "checkmark",
+            icon: "checkmark-round",
             title: "Responsibility and punctuality",
           },
           {
