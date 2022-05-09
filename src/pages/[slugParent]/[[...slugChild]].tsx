@@ -28,6 +28,9 @@ import { pageSellLuxury } from "@/data/pages/sell-luxury-real-estate";
 import { pageRealEstatePrice } from "@/data/pages/real-estate-price";
 import { pageWeGuarantee } from "@/data/pages/we-guarantee";
 import { pageReasonsToCooperate } from "@/data/pages/reasons-to-cooperate";
+import { pageAboutMe } from "@/data/pages/about-me";
+import { pageReviews } from "@/data/pages/reviews";
+import { pageOurPhilosophy } from "@/data/pages/our-philosophy";
 
 interface PageProps {
   data: {
@@ -123,6 +126,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slugChild: ["reasons-to-cooperate"],
       },
     },
+    {
+      params: {
+        slugParent: "about-me",
+        slugChild: [""],
+      },
+    },
+    {
+      params: {
+        slugParent: "about-me",
+        slugChild: ["reviews"],
+      },
+    },
+    {
+      params: {
+        slugParent: "about-me",
+        slugChild: ["our-philosophy"],
+      },
+    },
   ];
 
   return {
@@ -174,6 +195,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       break;
     case "owners/reasons-to-cooperate":
       data = pageReasonsToCooperate;
+      break;
+    case "about-me":
+      data = pageAboutMe;
+      break;
+    case "about-me/reviews":
+      data = pageReviews;
+      break;
+    case "about-me/our-philosophy":
+      data = pageOurPhilosophy;
       break;
   }
 

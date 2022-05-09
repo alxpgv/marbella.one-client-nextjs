@@ -29,17 +29,17 @@ export const mainMenu = [
   {
     id: 1,
     title: "About me",
-    url: "/about",
+    url: "/about-me",
     child: [
       {
         id: 3,
         title: "Our philosophy",
-        url: "/#",
+        url: "/about-me/our-philosophy",
       },
       {
         id: 4,
         title: "Reviews",
-        url: "/#",
+        url: "/about-me/reviews",
       },
     ],
   },
