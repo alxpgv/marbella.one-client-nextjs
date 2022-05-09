@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import { Section } from "@/components/section";
 import { Container } from "@/components/container";
-import type { ImageProps } from "@/types";
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import Link from "next/link";
 import styles from "./banners.module.scss";
 
@@ -21,9 +20,9 @@ export const Banners: FC<BannerProps> = ({ items }) => {
         <div className={styles.wrapper}>
           {items?.length > 0 &&
             items.map(({ id, image, href }) => {
-              const bannerImage = image?.url ? (
+              const bannerImage = image?.src ? (
                 <Image
-                  src={image.url}
+                  src={image.src}
                   layout="fill"
                   objectFit="cover"
                   alt={image.alt ?? ""}

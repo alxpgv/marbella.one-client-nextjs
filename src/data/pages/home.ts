@@ -21,7 +21,7 @@ export const pageHome = {
         title: "We will find your dream home!",
         text: "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
         image: {
-          url: "/images/home/hero-house-min.jpg",
+          src: "/images/home/hero-house-min.jpg",
           alt: "We will find your dream home!",
           height: 1920,
           width: 1080,
@@ -42,7 +42,7 @@ export const pageHome = {
           "Home is not just cozy rooms that smell delicious and have favorite things.",
         ],
         image: {
-          url: "/images/home/relax-min.jpg",
+          src: "/images/home/relax-min.jpg",
           alt: "An ideal home is your personal fortress",
           width: 740,
           height: 257,
@@ -53,7 +53,7 @@ export const pageHome = {
       blockName: "image-with-overlap-text",
       fields: {
         image: {
-          url: "/images/home/ideal-home-min.jpg",
+          src: "/images/home/ideal-home-min.jpg",
           alt: "Dream of a perfect home",
           width: 760,
           height: 589,
@@ -78,7 +78,7 @@ export const pageHome = {
           "Rent a yacht or plane in Spain",
         ],
         image: {
-          url: "/images/home/offer-clients-min.jpg",
+          src: "/images/home/offer-clients-min.jpg",
           alt: "We offer our clients",
           width: 673,
           height: 506,

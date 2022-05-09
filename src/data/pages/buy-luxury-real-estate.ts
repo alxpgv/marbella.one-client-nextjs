@@ -20,7 +20,7 @@ export const pageBuyLuxury = {
           {
             text: "<p>It is easy to buy unique luxury real estate in Spain. Of course, if your assistant is a reliable real estate agency proven by many clients.</p><h3>Violet Real Estate</h3><p>is one of those kind wizards who can make the dream of an ideal house a reality! We are sure that nothing is impossible and somewhere in Spain there is the very house or picturesque plot where your happiness will live.</p>",
             image: {
-              url: "/images/real-estate/violet-real-estate-min.jpg",
+              src: "/images/real-estate/violet-real-estate-min.jpg",
               alt: "Violet real estate",
               width: 360,
               height: 483,
@@ -29,7 +29,7 @@ export const pageBuyLuxury = {
           {
             text: "<h3>Our agency is the best in the field of real estate!</h3><ul><li>Own database of real estate objects</li><li>An individual approach to clients</li><li>Professionalism and experience</li></ul><p>Real estate agency Violet Real Estate guarantees comprehensive support and professional advice from experienced lawyers and tax advisors. Buy luxury real estate now!</p>",
             image: {
-              url: "/images/real-estate/best-of-real-estate-min.jpg",
+              src: "/images/real-estate/best-of-real-estate-min.jpg",
               alt: "Our agency is the best in the field of real estate",
               height: 742,
               width: 552,

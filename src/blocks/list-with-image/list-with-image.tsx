@@ -1,8 +1,7 @@
 import React, { FC } from "react";
-import type { ImageProps } from "@/types";
 import { Section } from "@/components/section";
 import { Container } from "@/components/container";
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import cn from "classnames";
 import { Button } from "@/components/button";
 import styles from "./list-with-image.module.scss";
@@ -43,10 +42,10 @@ export const ListWithImage: FC<ListWithImageProps> = ({
             <Button size={"md"} as={"online-consultation"} />
           </div>
         </div>
-        {image?.url && (
+        {image?.src && (
           <div className={styles.image}>
             <Image
-              src={image.url}
+              src={image.src}
               layout="fill"
               objectFit="cover"
               alt={image.alt ?? ""}

@@ -4,6 +4,7 @@ import { Container } from "@/components/container";
 import cn from "classnames";
 import styles from "./slogan-with-text-extend.module.scss";
 import type { ButtonType } from "@/components/button";
+import { Button } from "@/components/button";
 
 interface SloganWithTextExtendProps {
   cols: {
@@ -23,32 +24,36 @@ export const SloganWithTextExtend: FC<SloganWithTextExtendProps> = ({
     <Section>
       <Container>
         <div className={styles.wrapper}>
-          <div className={styles.colPrimary}>
+          <div className={styles.col}>
             {colPrimary?.title && (
-              <div className={cn(styles.heading, "text-grey-500")}>
-                <h3 className={cn(styles.title, "text-md-30")}>
-                  {colPrimary.title}
-                </h3>
-              </div>
+              <h2 className={cn(styles.title, "text-white text-lg-10")}>
+                {colPrimary.title}
+              </h2>
             )}
             {colPrimary?.text && (
-              <div className={cn("text-grey-300", "text-sm-23", styles.text)}>
-                <p>{colPrimary.text}</p>
-              </div>
+              <p className={cn(styles.text, "text-white", "text-sm-23")}>
+                {colPrimary.text}
+              </p>
             )}
           </div>
-          <div className={styles.colSecondary}>
+          <div className={styles.col}>
             {colSecondary?.title && (
-              <div className={cn(styles.heading, "text-grey-500")}>
-                <h3 className={cn(styles.title, "text-md-30")}>
-                  {colSecondary.title}
-                </h3>
-              </div>
+              <h3 className={cn(styles.title, "text-white text-md-30")}>
+                {colSecondary.title}
+              </h3>
             )}
             {colSecondary?.text && (
-              <div className={cn("text-grey-300", "text-sm-23", styles.text)}>
-                <p>{colSecondary.text}</p>
-              </div>
+              <p className={cn(styles.text, "text-white", "text-sm-20")}>
+                {colSecondary.text}
+              </p>
+            )}
+            {colSecondary?.button?.as && (
+              <Button
+                variant={"primary"}
+                size={"md"}
+                className={styles.btn}
+                {...colSecondary.button}
+              />
             )}
           </div>
         </div>

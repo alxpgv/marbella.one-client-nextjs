@@ -56,7 +56,7 @@ export const Button: React.FC<ButtonProps> = ({
   if (as && as === "link" && href) {
     return (
       <Link href={href}>
-        <a className={classes}>
+        <a className={classes} onClick={(e: any) => e.preventDefault()}>
           {children || textBtnMap[as]}
           <ButtonIcon />
         </a>

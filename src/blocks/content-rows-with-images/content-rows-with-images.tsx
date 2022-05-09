@@ -1,8 +1,7 @@
 import React, { FC } from "react";
-import type { ImageProps } from "@/types";
 import { Section } from "@/components/section";
 import { Container } from "@/components/container";
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import cn from "classnames";
 import { Button } from "@/components/button";
 import type { ButtonType } from "@/components/button";
@@ -46,10 +45,10 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
                 </div>
               )}
             </div>
-            {rowPrimary.image?.url && (
+            {rowPrimary.image?.src && (
               <div className={styles.image}>
                 <Image
-                  src={rowPrimary.image.url}
+                  src={rowPrimary.image.src}
                   layout="fill"
                   objectFit="cover"
                   alt={rowPrimary.image.alt ?? ""}
@@ -60,10 +59,10 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
         )}
         {rowSecondary && (
           <div className={cn(styles.row, styles.rowSecondary)}>
-            {rowSecondary.image?.url && (
+            {rowSecondary.image?.src && (
               <div className={styles.image}>
                 <Image
-                  src={rowSecondary.image.url}
+                  src={rowSecondary.image.src}
                   layout="fill"
                   objectFit="cover"
                   alt={rowSecondary.image.alt ?? ""}

@@ -1,8 +1,7 @@
 import React, { FC } from "react";
-import type { ImageProps } from "@/types";
 import { Section } from "@/components/section";
 import { Container } from "@/components/container";
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import cn from "classnames";
 import { Button, type ButtonType } from "@/components/button";
 import styles from "./image-with-overlap-text.module.scss";
@@ -23,10 +22,10 @@ export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({
   return (
     <Section>
       <Container className={styles.wrapper}>
-        {image?.url && (
+        {image?.src && (
           <div className={styles.image}>
             <Image
-              src={image.url}
+              src={image.src}
               layout="fill"
               objectFit="cover"
               alt={image.alt ?? ""}

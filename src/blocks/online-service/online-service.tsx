@@ -3,8 +3,7 @@ import { Section } from "@/components/section";
 import { Container } from "@/components/container";
 import cn from "classnames";
 import { Button } from "@/components/button";
-import Image from "next/image";
-import type { ImageProps } from "@/types";
+import Image, { type ImageProps } from "next/image";
 import { CallbackForm } from "@/components/callback-form";
 import styles from "./online-service.module.scss";
 
@@ -46,12 +45,12 @@ export const OnlineService: FC<OnlineServiceProps> = ({
             services.map(({ id, title, image, href }) => {
               return (
                 <div key={id} className={cn(styles.item, styles.itemService)}>
-                  {image?.url && (
+                  {image?.src && (
                     <div className={styles.itemServiceImageWrapper}>
                       <div className={styles.itemServiceImage}>
                         <Image
                           layout="fill"
-                          src={image.url}
+                          src={image.src}
                           objectFit="cover"
                           alt={image.alt ?? ""}
                         />

@@ -1,9 +1,8 @@
 import React, { FC } from "react";
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import { Button, ButtonType } from "@/components/button";
 import { Container } from "@/components/container";
 import cn from "classnames";
-import type { ImageProps } from "@/types";
 import styles from "./home-promo.module.scss";
 import { TiledItems, type TiledItemProps } from "@/components/tiled-items";
 
@@ -24,11 +23,11 @@ export const HomePromo: FC<HomePromoProps> = ({
 }) => {
   return (
     <div className={styles.promo}>
-      {image?.url && (
+      {image?.src && (
         <div className={styles.bgImageWrapper}>
           <div className={styles.bgImage}>
             <Image
-              src={image.url}
+              src={image.src}
               layout="fill"
               objectFit="cover"
               alt={image?.alt ?? ""}

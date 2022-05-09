@@ -1,10 +1,9 @@
 import React, { FC } from "react";
 import { Section } from "@/components/section";
 import { Container } from "@/components/container";
-import { ImageProps } from "@/types";
 import { Button, ButtonType } from "@/components/button";
 import cn from "classnames";
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import styles from "./content-extra-with-image.module.scss";
 
 interface ContentExtraWithImageProps {
@@ -53,9 +52,9 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
 
           <div className={styles.colSecondary}>
             <div className={styles.image}>
-              {image?.url && (
+              {image?.src && (
                 <Image
-                  src={image.url}
+                  src={image.src}
                   layout="fill"
                   objectFit="cover"
                   className={styles.image}

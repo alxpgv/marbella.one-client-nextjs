@@ -5,7 +5,7 @@ export const banners = {
       {
         id: 1,
         image: {
-          url: "/images/home/banner-repair-min.jpg",
+          src: "/images/home/banner-repair-min.jpg",
           alt: "Design and interior",
           width: 630,
           height: 300,
@@ -15,7 +15,7 @@ export const banners = {
         id: 2,
         href: "/#banner",
         image: {
-          url: "/images/home/banner-villa-turnkey-min.jpg",
+          src: "/images/home/banner-villa-turnkey-min.jpg",
           alt: "Construction of a turnkey villa",
           width: 630,
           height: 300,
