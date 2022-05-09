@@ -43,7 +43,7 @@ export const ListWithStrictImage: FC<ListWithStrictImageProps> = ({
         )}
         {text && (
           <div className={styles.text}>
-            <p className={"text-sm-30"}>{text}</p>
+            <p>{text}</p>
           </div>
         )}
       </Container>

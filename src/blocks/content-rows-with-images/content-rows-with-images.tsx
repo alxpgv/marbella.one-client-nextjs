@@ -30,7 +30,7 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
             <div className={styles.content}>
               {rowPrimary.text && (
                 <div
-                  className={styles.text}
+                  className={cn(styles.text, "content-mixed")}
                   dangerouslySetInnerHTML={{ __html: rowPrimary.text }}
                 />
               )}
@@ -73,7 +73,7 @@ export const ContentRowsWithImages: FC<ContentRowsWithImagesProps> = ({
             <div className={styles.content}>
               {rowSecondary.text && (
                 <div
-                  className={styles.text}
+                  className={cn(styles.text, "content-mixed")}
                   dangerouslySetInnerHTML={{ __html: rowSecondary.text }}
                 />
               )}

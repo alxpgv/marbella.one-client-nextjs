@@ -22,7 +22,7 @@ export const ContactUs: FC<ContactUsProps> = ({ title }) => {
           <div className={styles.col}>
             {title && (
               <h3
-                className={cn(styles.title, "text-md-30 text-white")}
+                className={cn(styles.title, "text-white")}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             )}
@@ -30,35 +30,33 @@ export const ContactUs: FC<ContactUsProps> = ({ title }) => {
           <div className={styles.col}>
             {phone && (
               <div className={styles.contactItem}>
-                <div className={cn(styles.contactLabel, "text-sm-23")}>
-                  Call us by phone
-                </div>
-                <div className={cn(styles.contactText, "text-md-10")}>
-                  <PhoneLink value={phone} />
-                </div>
+                <p className={styles.contactLabel}>Call us by phone</p>
+                <PhoneLink
+                  className={cn(styles.contactText, "text-md-10 text-white")}
+                  value={phone}
+                />
               </div>
             )}
             {email && (
               <div className={styles.contactItem}>
-                <div className={cn(styles.contactLabel, "text-sm-23")}>
-                  or write to our mail
-                </div>
-                <div className={cn(styles.contactText, "text-sm-23")}>
-                  <EmailLink value={email} />
-                </div>
+                <p className={styles.contactLabel}>or write to our mail</p>
+                <EmailLink
+                  className={cn(styles.contactText, "text-md text-white")}
+                  value={email}
+                />
               </div>
             )}
             <div className={styles.contactItem}>
-              <div
+              <p
                 className={cn(
                   styles.contactLabel,
                   styles.contactNote,
-                  "text-sm-20"
+                  "text-sm-10"
                 )}
               >
                 Contact us and we will advise on all issues related to the
                 purchase of real estate
-              </div>
+              </p>
               <div className={styles.contactText}>
                 <Button size={"md"}>Callback</Button>
               </div>

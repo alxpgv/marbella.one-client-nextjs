@@ -1,15 +1,18 @@
 @import "../../styles/utils";
 
+.subtitle, .heading {
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 5px;
+}
+
 .heading {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  text-align: center;
-
-  .subtitle {
-    margin-bottom: 5px;
-  }
 }
 
 .firstUppercase {

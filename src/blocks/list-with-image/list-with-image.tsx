@@ -21,11 +21,7 @@ export const ListWithImage: FC<ListWithImageProps> = ({
     <Section>
       <Container className={styles.wrapper}>
         <div className={styles.content}>
-          {title && (
-            <div className={styles.heading}>
-              <h2 className="text-lg-10">{title}</h2>
-            </div>
-          )}
+          {title && <h2>{title}</h2>}
           {items?.length > 0 && (
             <div className={styles.list}>
               {items.map((title, index) => (

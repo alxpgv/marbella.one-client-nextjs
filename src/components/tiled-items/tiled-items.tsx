@@ -58,17 +58,14 @@ export const TiledItems: FC<TiledProps> = ({ items, className, cols }) => {
                     : styles.tileHeading
                 }
               >
-                <h6
-                  className={"text-sm-30"}
-                  dangerouslySetInnerHTML={{ __html: title }}
-                />
+                <h6 dangerouslySetInnerHTML={{ __html: title }} />
               </div>
             )}
 
             {text && (
               <p
                 className={cn(
-                  "text-sm-20",
+                  "text-sm-10",
                   className?.tileText ? className?.tileText : styles.tileText
                 )}
               >

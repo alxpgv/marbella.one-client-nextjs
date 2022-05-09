@@ -28,16 +28,8 @@ export const OnlineService: FC<OnlineServiceProps> = ({
       <Container>
         <div className={styles.wrapper}>
           <div className={cn(styles.item, styles.itemIntro)}>
-            {title && (
-              <div className={styles.heading}>
-                <h3>{title}</h3>
-              </div>
-            )}
-            {text && (
-              <div className={styles.text}>
-                <p className={"text-sm-30"}>{text}</p>
-              </div>
-            )}
+            {title && <h3 className={styles.title}>{title}</h3>}
+            {text && <p>{text}</p>}
             <div className={styles.line} />
           </div>
 

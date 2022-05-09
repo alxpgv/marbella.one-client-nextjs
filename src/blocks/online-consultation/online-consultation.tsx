@@ -24,25 +24,13 @@ export const OnlineConsultation: FC<OnlineConsultationProps> = ({
         <div className={styles.wrapper}>
           <div className={styles.content}>
             {subTitle && (
-              <div className={styles.subHeading}>
-                <h6 className="text-sm-22 text-grey-300">{subTitle}</h6>
-              </div>
+              <h6 className={cn(styles.subHeading, "text-grey-300")}>
+                {subTitle}
+              </h6>
             )}
-            {title && (
-              <div className={styles.heading}>
-                <h2 className="text-lg-20">{title}</h2>
-              </div>
-            )}
-            {text && (
-              <div className={cn("text-grey-500", styles.text)}>
-                <p>{text}</p>
-              </div>
-            )}
-            {note && (
-              <div className={cn("text-grey-300", "text-sm")}>
-                <p>{note}</p>
-              </div>
-            )}
+            {title && <h2 className={styles.title}>{title}</h2>}
+            {text && <p className={cn("text-grey-500", styles.text)}>{text}</p>}
+            {note && <p className={cn("text-grey-300", "text-sm")}>{note}</p>}
           </div>
 
           <div className={styles.form}>

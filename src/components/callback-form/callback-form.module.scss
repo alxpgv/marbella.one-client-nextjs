@@ -38,7 +38,7 @@
 .formInput {
   width: 100%;
   padding: 10px 20px 10px 34px;
-  font-size: $font-size-14;
+  font-size: 14px;
   color: $grey-300;
   border: 1px solid $grey-200;
   border-radius: 10px;
@@ -78,7 +78,7 @@
   &:after {
     content: "\2713";
     position: relative;
-    font-size: $font-size-12;
+    font-size: 12px;
     font-weight: bold;
     color: $white;
   }
@@ -86,7 +86,5 @@
 
 .formAgreeText {
   margin-left: 10px;
-  color: $grey-300;
-  font-size: $font-size-14;
   text-align: left;
 }

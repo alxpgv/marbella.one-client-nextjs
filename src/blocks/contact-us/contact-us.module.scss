@@ -26,10 +26,6 @@
   }
 }
 
-.title + .title {
-  margin-top: 20px;
-}
-
 .contactItem {
   display: flex;
   align-items: center;
@@ -38,14 +34,6 @@
   @include not-sm {
     flex-direction: column;
     text-align: center;
-  }
-
-  a {
-    color: $white;
-
-    &:hover {
-      color: $red-400;
-    }
   }
 
   a[href^="mailto"] {

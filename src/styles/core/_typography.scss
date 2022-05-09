@@ -14,58 +14,59 @@ h1, h2, h3 {
   @include font-family($font-family-heading);
 }
 
-h6 {
-  @include font-family($font-family-primary);
+h1, h2, .text-xl {
+  font-size: clamp(26px, 4vw, 48px);
+}
+
+h3, .text-lg-10 {
+  font-size: clamp(24px, 4vw, 32px);
+}
+
+h4, .text-lg {
+  font-size: clamp(22px, 3vw, 28px);
+}
+
+h5, .text-md-10 {
+  font-size: clamp(18px, 2.6vw, 24px);
+}
+
+h6, p, ul, .text-md {
+  font-size: clamp(16px, 2.4vw, 20px);
+}
+
+.text-sm-10 {
+  font-size: clamp(14px, 2.6vw, 16px);
 }
 
 .text-sm {
   font-size: $font-size-14;
 }
 
-.text-sm-20 {
-  font-size: clamp(#{$font-size-14}, 2.8vw, #{$font-size-16});
+.content-mixed {
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+  }
+
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    margin-top: 30px;
+  }
+
+  ul + p {
+    margin-top: 20px;
+  }
+
+  ul {
+    li + li {
+      margin-top: 10px;
+    }
+  }
 }
 
-.text-sm-22 {
-  font-size: clamp(#{$font-size-14}, 2.8vw, #{$font-size-20});
-}
-
-.text-sm-23 {
-  font-size: clamp(#{$font-size-16}, 2.4vw, #{$font-size-20});
-}
-
-.text-sm-25 {
-  font-size: clamp(#{$font-size-14}, 2.4vw, #{$font-size-24});
-}
-
-.text-sm-30 {
-  font-size: clamp(#{$font-size-18}, 3vw, #{$font-size-20});
-}
-
-.text-sm-40 {
-  font-size: clamp(#{$font-size-18}, 2.2vw, #{$font-size-24});
-}
-
-.text-md-10 {
-  font-size: clamp(#{$font-size-20}, 2.8vw, #{$font-size-24});
-}
-
-.text-md-30 {
-  font-size: clamp(#{$font-size-24}, 2.2vw, #{$font-size-32});
-}
-
-.text-md-40 {
-  font-size: clamp(#{$font-size-24}, 3vw, #{$font-size-42});
-}
-
-.text-lg-10 {
-  font-size: clamp(#{$font-size-30}, 4vw, #{$font-size-48});
-}
-
-.text-lg-20 {
-  font-size: clamp(#{$font-size-42}, 4vw, #{$font-size-48});
-}
-
+// colors
 .text-grey-300 {
   color: $grey-300;
 }
@@ -80,7 +81,24 @@ h6 {
 
 .text-white {
   color: $white;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $red-400;
+    }
+  }
 }
+
+a.text-white {
+  color: $white;
+
+  &:hover {
+    color: $red-400;
+  }
+}
+
 
 a {
   color: $red-400;

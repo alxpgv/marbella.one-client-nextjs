@@ -15,12 +15,12 @@ export const SloganWithText: FC<SloganWithTextProps> = ({ title, text }) => {
       <Container>
         <div className={styles.wrapper}>
           {title && (
-            <div className={cn(styles.heading, "text-grey-500")}>
-              <h3 className={cn(styles.title, "text-md-30")}>{title}</h3>
+            <div className={styles.heading}>
+              <h3 className={styles.title}>{title}</h3>
             </div>
           )}
           {text && (
-            <div className={cn("text-grey-300", "text-sm-23", styles.text)}>
+            <div className={cn("text-grey-300", styles.text)}>
               <p>{text}</p>
             </div>
           )}

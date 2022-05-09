@@ -20,35 +20,11 @@
 }
 
 .content {
-  h2, h3 {
-    margin-bottom: 20px;
-    font-size: clamp(#{$font-size-24}, 2.2vw, #{$font-size-32});
-    color: $grey-500;
-  }
-
-  p, ul {
-    color: $grey-400;
-    font-size: clamp(#{$font-size-18}, 3vw, #{$font-size-20});
-  }
-
-  p + h2,
-  p + h3 {
-    margin-top: 30px;
-  }
-
-  ul + p {
-    margin-top: 20px;
-  }
-
   ul {
     li:before {
       position: relative;
       content: "\2022";
       margin-right: 10px;
-    }
-
-    li + li {
-      margin-top: 10px;
     }
   }
 }

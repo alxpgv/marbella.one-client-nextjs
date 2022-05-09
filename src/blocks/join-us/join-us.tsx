@@ -19,10 +19,10 @@ export const JoinUs = () => {
           <div className={styles.messengerCol}>
             <div className={styles.messengerContent}>
               <div className={styles.messengerTop}>
-                <h2 className={"text-lg-20"}>Join us!</h2>
+                <h2>Join us!</h2>
                 <a
                   href="/#"
-                  className={"text-sm-20"}
+                  className={"text-sm-10"}
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                 >
@@ -31,12 +31,13 @@ export const JoinUs = () => {
               </div>
 
               <div className={styles.messengerBottom}>
-                <div className={"text-sm-20"}>
-                  <p>More photos on instagram</p>
+                <div>
+                  <p className={"text-sm-10"}>More photos on instagram</p>
                 </div>
-                <div className={"text-sm-20"}>
+                <div>
                   <a
                     href="/#"
+                    className={"text-sm-10"}
                     target="_blank"
                     rel="noreferrer noopener nofollow"
                   >
@@ -57,8 +58,8 @@ export const JoinUs = () => {
             <div className={styles.socialHeading}>
               <h3 className={"text-white"}>We are in social networks!</h3>
             </div>
-            <div className={cn(styles.socialText, "text-sm-20")}>
-              <p>
+            <div className={styles.socialText}>
+              <p className={"text-sm-10"}>
                 Subscribe to our news on social networks and be always up to
                 date with the best real estate offers in Spain
               </p>

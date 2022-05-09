@@ -33,18 +33,16 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
         <div className={styles.wrapper}>
           <div className={styles.colPrimary}>
             {contentPrimary?.subtitle && (
-              <h6 className={cn(styles.subtitle, "text-sm-30 text-grey-300")}>
+              <h6 className={cn(styles.subtitle, "text-grey-300")}>
                 {contentPrimary.subtitle}
               </h6>
             )}
             {contentPrimary?.title && (
-              <h2 className={cn(styles.title, "text-lg-10")}>
-                {contentPrimary.title}
-              </h2>
+              <h2 className={styles.title}>{contentPrimary.title}</h2>
             )}
             {contentPrimary?.text && (
               <div
-                className={cn(styles.text, "text-sm-30 text-grey-400")}
+                className={styles.text}
                 dangerouslySetInnerHTML={{ __html: contentPrimary.text }}
               />
             )}
@@ -66,18 +64,16 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
               {extra && (
                 <div className={styles.extra}>
                   {extra.title && (
-                    <div
-                      className={cn(styles.extraTitle, "text-white text-sm-30")}
-                    >
+                    <p className={cn(styles.extraTitle, "text-white")}>
                       {extra.title}
-                    </div>
+                    </p>
                   )}
                   {extra.text && (
-                    <div
-                      className={cn(styles.extraText, "text-white text-sm-20")}
+                    <p
+                      className={cn(styles.extraText, "text-white text-sm-10")}
                     >
                       {extra.text}
-                    </div>
+                    </p>
                   )}
                   {extra.button && (
                     <div className={styles.extraBtn}>
@@ -92,7 +88,7 @@ export const ContentExtraWithImage: FC<ContentExtraWithImageProps> = ({
               )}
               {contentSecondary && (
                 <div
-                  className={styles.content}
+                  className={cn(styles.content, "content-mixed")}
                   dangerouslySetInnerHTML={{ __html: contentSecondary }}
                 />
               )}

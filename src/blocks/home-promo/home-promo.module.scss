@@ -55,7 +55,7 @@
   margin-bottom: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: clamp(#{$font-size-42}, 6vw, #{$font-size-60});
+  font-size: clamp(42px, 6vw, 60px);
 }
 
 .text {

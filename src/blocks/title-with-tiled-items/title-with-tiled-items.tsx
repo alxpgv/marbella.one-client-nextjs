@@ -26,9 +26,7 @@ export const TitleWithTiledItems: FC<ServiceListTiledProps> = ({
     <Section>
       <Container>
         {subtitle && (
-          <h6 className={cn(styles.subtitle, "text-sm-30 text-grey-300")}>
-            {subtitle}
-          </h6>
+          <h6 className={cn(styles.subtitle, "text-grey-300")}>{subtitle}</h6>
         )}
         {title && (
           <div
@@ -42,13 +40,13 @@ export const TitleWithTiledItems: FC<ServiceListTiledProps> = ({
               <>
                 <span className={styles.firstLetter}>{title.charAt(0)}</span>
                 <h2
-                  className={cn(styles.title, "text-lg-10")}
+                  className={styles.title}
                   dangerouslySetInnerHTML={{ __html: title.slice(1) }}
                 />
               </>
             ) : (
               <h2
-                className={cn(styles.title, "text-lg-10")}
+                className={styles.title}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             )}

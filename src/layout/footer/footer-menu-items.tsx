@@ -12,7 +12,7 @@ interface FooterMenuItems {
 export const FooterMenuItems: FC<FooterMenuItems> = ({ items, itemTitle }) => {
   if (items?.length > 0) {
     return (
-      <div className={cn(styles.col, styles.menu)}>
+      <div className={cn(styles.col, styles.menu, "text-white")}>
         {itemTitle && <div className={styles.menuTitle}>{itemTitle}</div>}
         {items.map(({ id, title, url }) => {
           return (

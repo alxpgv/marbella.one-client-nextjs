@@ -27,8 +27,8 @@ export const CallbackForm = ({ title, text, btnText }: CallbackFormProps) => {
 
   return (
     <div className={styles.wrapper}>
-      {title && <h3 className={cn(styles.title, "text-md-30")}>{title}</h3>}
-      {text && <p className={cn(styles.text, "text-sm-20")}>{text}</p>}
+      {title && <h3 className={styles.title}>{title}</h3>}
+      {text && <p className={cn(styles.text, "text-sm-10")}>{text}</p>}
 
       <form onSubmit={onSubmit}>
         <div className={styles.formField}>
@@ -74,7 +74,9 @@ export const CallbackForm = ({ title, text, btnText }: CallbackFormProps) => {
               checked={agreeIsChecked}
             />
             <span className={styles.formAgreeCheck} />
-            <span className={styles.formAgreeText}>
+            <span
+              className={cn(styles.formAgreeText, "text-sm", "text-grey-300")}
+            >
               You agree to the terms
               <br />
               <a href={"/#"}>processing of personal data</a>

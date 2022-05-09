@@ -1,17 +1,5 @@
 @import "../../styles/utils";
 
-.footer {
-  color: $white;
-
-  a {
-    color: $white;
-
-    &:hover {
-      color: $red-300;
-    }
-  }
-}
-
 // main row
 .main {
   padding: 20px 0 40px;
@@ -74,7 +62,7 @@
 }
 
 .contactPhone {
-  font-size: $font-size-18;
+  font-size: 18px;
 }
 
 .contactEmail {
@@ -90,12 +78,12 @@
     margin-bottom: 15px;
     padding-bottom: 15px;
     color: $white;
-    font-size: $font-size-20;
+    font-size: 20px;
     border-bottom: 1px solid #333333;
   }
 
   .menuItem {
-    font-size: $font-size-16;
+    font-size: 16px;
 
     &:not(:last-child) {
       margin-bottom: 10px;

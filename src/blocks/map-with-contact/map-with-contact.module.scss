@@ -30,15 +30,6 @@
   padding: 30px 30px 0 30px;
 }
 
-.phone,
-.email {
-  color: $white;
-
-  &:hover {
-    color: $red-300;
-  }
-}
-
 .phone {
   white-space: nowrap;
 }

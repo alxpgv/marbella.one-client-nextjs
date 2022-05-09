@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { Section } from "@/components/section";
 import { Container } from "@/components/container";
 import Image, { type ImageProps } from "next/image";
-import cn from "classnames";
 import { Button, type ButtonType } from "@/components/button";
 import styles from "./image-with-overlap-text.module.scss";
 
@@ -33,14 +32,10 @@ export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({
           </div>
         )}
         <div className={styles.content}>
-          {title && (
-            <div className={styles.contentHeading}>
-              <h2 className="text-lg-10">{title}</h2>
-            </div>
-          )}
+          {title && <h2 className={styles.title}>{title}</h2>}
           {text && (
             <div
-              className={cn("text-sm-30", styles.contentText)}
+              className={styles.text}
               dangerouslySetInnerHTML={{ __html: text }}
             />
           )}

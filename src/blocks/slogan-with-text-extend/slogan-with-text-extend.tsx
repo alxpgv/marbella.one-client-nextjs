@@ -26,24 +26,22 @@ export const SloganWithTextExtend: FC<SloganWithTextExtendProps> = ({
         <div className={styles.wrapper}>
           <div className={styles.col}>
             {colPrimary?.title && (
-              <h2 className={cn(styles.title, "text-white text-lg-10")}>
+              <h2 className={cn(styles.title, "text-white")}>
                 {colPrimary.title}
               </h2>
             )}
             {colPrimary?.text && (
-              <p className={cn(styles.text, "text-white", "text-sm-23")}>
-                {colPrimary.text}
-              </p>
+              <p className={cn(styles.text, "text-white")}>{colPrimary.text}</p>
             )}
           </div>
           <div className={styles.col}>
             {colSecondary?.title && (
-              <h3 className={cn(styles.title, "text-white text-md-30")}>
+              <h3 className={cn(styles.title, "text-white")}>
                 {colSecondary.title}
               </h3>
             )}
             {colSecondary?.text && (
-              <p className={cn(styles.text, "text-white", "text-sm-20")}>
+              <p className={cn(styles.text, "text-white", "text-sm-10")}>
                 {colSecondary.text}
               </p>
             )}

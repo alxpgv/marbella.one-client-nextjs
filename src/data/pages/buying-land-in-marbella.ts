@@ -56,7 +56,7 @@ export const pageBuyingLand = {
           height: 650,
         },
         contentSecondary:
-          "<h6>We guarantee every client</h6><ul><li>Support and advice</li><li>Search for a piece of land, taking into account your wishes</li><li>Support at every stage of cooperation</li><li>Large database of objects in different price ranges</li></ul>",
+          "<h5>We guarantee every client</h5><ul><li>Support and advice</li><li>Search for a piece of land, taking into account your wishes</li><li>Support at every stage of cooperation</li><li>Large database of objects in different price ranges</li></ul>",
         extra: {
           title: "Get expert advice right now",
           text: "We will answer all your questions for free!",

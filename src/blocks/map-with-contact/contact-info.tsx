@@ -17,7 +17,7 @@ export const ContactInfo: FC<ContactInfoProps> = ({
 }) => {
   return (
     <div className={cn(styles.content)}>
-      <div className={cn(styles.header, "text-md-30")}>
+      <div className={styles.header}>
         <h3 className={cn(styles.headerText, "text-white")}>
           — Do you want to cooperate with us?
         </h3>
@@ -28,7 +28,7 @@ export const ContactInfo: FC<ContactInfoProps> = ({
 
       <div className={styles.main}>
         <div className={styles.col}>
-          <h5 className={cn(styles.mainText, "text-sm-40", "text-white")}>
+          <h5 className={cn(styles.mainText, "text-white")}>
             You can always contact us in any convenient way!
           </h5>
           <p className={cn(styles.mainText, "text-sm", "text-white")}>
@@ -39,24 +39,27 @@ export const ContactInfo: FC<ContactInfoProps> = ({
         </div>
         <div className={cn(styles.col, "text-white")}>
           {phone && (
-            <p className={"text-sm-23"}>
+            <p>
               <span className={"text-grey-300"}>Call us by phone: </span>
               <strong>
                 <PhoneLink
                   value={phone}
-                  className={cn(styles.phone, "text-sm-40")}
+                  className={cn(styles.phone, "text-md-10 text-white")}
                 />
               </strong>
             </p>
           )}
           {email && (
-            <p className={"text-sm-23"}>
+            <p>
               <span className={"text-grey-300"}>or write to our mail: </span>
-              <EmailLink value={email} className={styles.email} />
+              <EmailLink
+                value={email}
+                className={cn(styles.email, "text-md text-white")}
+              />
             </p>
           )}
           {address && (
-            <p className={"text-sm-23"}>
+            <p>
               <span className={"text-grey-300"}>our office:</span> {address}
             </p>
           )}

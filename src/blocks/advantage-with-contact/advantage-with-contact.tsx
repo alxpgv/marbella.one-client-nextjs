@@ -18,11 +18,7 @@ export const AdvantageWithContact: FC<AdvantageWithContactProps> = ({
     <Section>
       <Container className={styles.wrapper}>
         <div className={styles.content}>
-          {title && (
-            <div className={styles.heading}>
-              <h2 className="text-lg-10">{title}</h2>
-            </div>
-          )}
+          {title && <h2 className={styles.title}>{title}</h2>}
           <TiledItems items={items} className={styles} />
         </div>
         <ContactInfo />
