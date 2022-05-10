@@ -24,20 +24,34 @@ export const Meta: FC<MetaProps> = ({ title, description, keywords }) => {
       />
       <meta name="keywords" content={keywords || defaultMeta.keywords || ""} />
 
-      {/*<link*/}
-      {/*  rel="preload"*/}
-      {/*  href="/fonts/SourceSansPro/SourceSansPro-Regular.woff"*/}
-      {/*  as="font"*/}
-      {/*  type="font/woff"*/}
-      {/*  crossOrigin="anonymous"*/}
-      {/*/>*/}
-      {/*<link*/}
-      {/*  rel="preload"*/}
-      {/*  href="/fonts/SourceSansPro/SourceSansPro-Regular.woff"*/}
-      {/*  as="font"*/}
-      {/*  type="font/woff"*/}
-      {/*  crossOrigin=""*/}
-      {/*/>*/}
+      <link
+        rel="preload"
+        href="/fonts/SourceSansPro-Regular.woff"
+        as="font"
+        type="font/woff"
+        crossOrigin=""
+      />
+      <link
+        rel="preload"
+        href="/fonts/SourceSansPro-Bold.woff"
+        as="font"
+        type="font/woff2"
+        crossOrigin=""
+      />
+      <link
+        rel="preload"
+        href="/fonts/Judson-Regular.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin=""
+      />
+      <link
+        rel="preload"
+        href="/fonts/Judson-Bold.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin=""
+      />
     </Head>
   );
 };
