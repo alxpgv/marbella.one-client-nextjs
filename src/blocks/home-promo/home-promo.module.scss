@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 500px;
+  height: 520px;
   max-width: 240px;
 
   @include min-landscape {
@@ -69,6 +69,10 @@
   justify-content: center;
   background: rgba($white, .9);
   border-radius: 5px;
+
+  @include not-xs {
+    flex-direction: column;
+  }
 }
 
 .tileItem {
