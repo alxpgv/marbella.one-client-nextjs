@@ -5,12 +5,18 @@ import { Icon } from "@/components/icon";
 import type { MenuProps } from "../types";
 import styles from "./main-nav-mobile.module.scss";
 
-export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
+interface MenuItemProps {
+  item: MenuProps;
+  onClick?: () => void;
+}
+
+export const MenuItem: FC<MenuItemProps> = ({ item, onClick }) => {
   const [openSubMenu, setOpenSubMenu] = useState(false);
   const { title, url, child } = item;
 
   const toggleSubMenu = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     setOpenSubMenu((prev) => !prev);
   };
 
@@ -18,7 +24,7 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
     return (
       <li>
         <Link href={url}>
-          <a className={openSubMenu ? styles.active : ""}>
+          <a className={openSubMenu ? styles.active : ""} onClick={onClick}>
             {title}
             <div className={styles.expandBtn} onClick={toggleSubMenu}>
               <span className={styles.iconWrapper}>
@@ -27,14 +33,14 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
             </div>
           </a>
         </Link>
-        <SubMenu items={child} isOpen={openSubMenu} />
+        <SubMenu items={child} isOpen={openSubMenu} onClickItem={onClick} />
       </li>
     );
   } else {
     return (
       <li>
         <Link href={url}>
-          <a>{title}</a>
+          <a onClick={onClick}>{title}</a>
         </Link>
       </li>
     );

@@ -61,7 +61,13 @@ export const MainNavMobile: FC<MainMobileNavProps> = ({ menu, contact }) => {
           </div>
           <ul className={styles.menu}>
             {menu?.length > 0 &&
-              menu.map((item, index) => <MenuItem item={item} key={index} />)}
+              menu.map((item, index) => (
+                <MenuItem
+                  item={item}
+                  key={index}
+                  onClick={() => setIsOpen(false)}
+                />
+              ))}
           </ul>
           <div className={styles.footer}>
             {contact?.socials && <SocialLinks socials={contact.socials} />}
