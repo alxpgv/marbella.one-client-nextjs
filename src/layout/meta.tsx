@@ -35,7 +35,7 @@ export const Meta: FC<MetaProps> = ({ title, description, keywords }) => {
         rel="preload"
         href="/fonts/SourceSansPro-Bold.woff"
         as="font"
-        type="font/woff2"
+        type="font/woff"
         crossOrigin=""
       />
       <link
