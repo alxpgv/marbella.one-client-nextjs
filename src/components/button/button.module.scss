@@ -34,13 +34,11 @@
   &-primary {
     background: $red-400;
     color: $white;
-    border: 1px solid $red-400;
 
     &:hover,
     &:active {
       color: $white;
-      background: rgba($black, .8);
-      border: 1px solid rgba($white, .5);
+      background: darken($red-400, 10%);
     }
   }
 
@@ -68,7 +66,7 @@
     &:active {
       color: $black;
       background: $blue-100;
-      border: 2px solid $white;
+      border: 2px solid $blue-100;
     }
   }
 }
