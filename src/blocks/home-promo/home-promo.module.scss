@@ -69,10 +69,6 @@
   justify-content: center;
   background: rgba($white, .9);
   border-radius: 5px;
-
-  @include not-xs {
-    flex-direction: column;
-  }
 }
 
 .tileItem {
@@ -82,11 +78,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 16px;
   text-align: center;
 
   @include xs {
     flex: 1 50%;
+    padding: 40px 20px;
   }
 
   @include md {
@@ -126,12 +123,12 @@
 
   // xs width every right line not last
   @include md {
-    &:nth-child(even):after {
-      border-right: 1px solid $red-400;
-    }
-
     &:last-child:after {
       border-right: none;
+    }
+
+    &:nth-child(even):after {
+      border-right: 1px solid $red-400;
     }
   }
 }
