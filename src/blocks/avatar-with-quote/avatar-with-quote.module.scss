@@ -3,7 +3,59 @@
 .wrapper {
   display: flex;
   align-items: center;
+
+  @include not-md {
+    flex-direction: column;
+  }
+}
+
+.image {
+  position: relative;
+  flex: 1 300px;
+
+  @include not-md {
+    margin-bottom: 30px;
+  }
+
+  img {
+    border-radius: 100%;
+  }
+}
+
+.content {
+  flex: 1 100%;
+  display: flex;
+  padding-left: 30px;
+
+  @include not-md {
+    padding-left: 0;
+  }
+}
+
+.textIcon {
+  flex: 0 1 100px;
+
+  @include not-md {
+    flex: 0 1 50px;
+    height: 40px;
+    margin-bottom: 30px;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    max-height: 75px;
+  }
 }
 
 .text {
+  flex: 1 100%;
+  padding-left: clamp(10px, 4vw, 30px);
+
+  p {
+    @include font-family($font-family-heading);
+    font-style: italic;
+    font-size: clamp(24px, 4vw, 32px);
+  }
 }

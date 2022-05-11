@@ -32,7 +32,12 @@ export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({
           </div>
         )}
         <div className={styles.content}>
-          {title && <h2 className={styles.title}>{title}</h2>}
+          {title && (
+            <div
+              className={styles.title}
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+          )}
           {text && (
             <div
               className={styles.text}

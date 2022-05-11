@@ -59,7 +59,7 @@ export const pageHome = {
           height: 589,
         },
         title:
-          "Do you already know what your ideal home will be? Draw it in your imagination?",
+          "<h2>Do you already know what your ideal home will be? Draw it in your imagination?</h2>",
         text: "<p>Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!</p><p>We understand your desire to cross the threshold of such a house one day, and therefore we will do our best to make it a reality!</p>",
         button: {
           as: "link",

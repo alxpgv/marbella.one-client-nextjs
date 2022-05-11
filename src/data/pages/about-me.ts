@@ -37,6 +37,18 @@ export const pageAboutMe = {
       },
     },
     {
+      blockName: "image-with-overlap-text",
+      fields: {
+        image: {
+          src: "/images/about/absolutely-everything-understandable-min.jpg",
+          alt: "Absolutely everything here seemed so dear",
+        },
+        title:
+          "<h3>Absolutely everything here seemed so dear, close and understandable!</h3>",
+        text: "<p>Love for this country turned all my plans upside down, changed all ideas about the future, and about how it should be ...</p><p>Due to the poor knowledge of the Spanish language, it was not easy to communicate with the locals. But their openness, ease, desire to help played an important role here too. Within a year I mastered Spanish. Special thanks to the Iberian friendliness and desire to share joy, and with it traditions, culture, language ...</p><p>My trip to Spain, which smoothly flowed into legal migration (and I was lucky here!), Began to acquire a calmer and more peaceful character. A bright first love turned into a deep relationship. There were work contracts, own real estate, continuous education at Spanish universities.</p>",
+      },
+    },
+    {
       blockName: "slogan-with-text",
       fields: {
         options: {

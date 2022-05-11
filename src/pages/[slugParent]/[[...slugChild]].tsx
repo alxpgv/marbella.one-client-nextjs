@@ -31,6 +31,8 @@ import { pageReasonsToCooperate } from "@/data/pages/reasons-to-cooperate";
 import { pageAboutMe } from "@/data/pages/about-me";
 import { pageReviews } from "@/data/pages/reviews";
 import { pageOurPhilosophy } from "@/data/pages/our-philosophy";
+import { AvatarWithQuote } from "@/blocks/avatar-with-quote";
+import { ImageWithOverlapText } from "@/blocks/image-with-overlap-text";
 
 interface PageProps {
   data: {
@@ -53,6 +55,8 @@ const mapBlocks = {
   "image-with-content": ImageWithContent,
   "contact-us": ContactUs,
   "title-with-tiled-items": TitleWithTiledItems,
+  "avatar-with-quote": AvatarWithQuote,
+  "image-with-overlap-text": ImageWithOverlapText,
 };
 
 const Page: NextPage<PageProps> = ({ data }) => {

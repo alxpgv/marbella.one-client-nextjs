@@ -3,6 +3,8 @@ import { Section } from "@/components/section";
 import { Container } from "@/components/container";
 import Image, { ImageProps } from "next/image";
 import styles from "./avatar-with-quote.module.scss";
+import cn from "classnames";
+import { Icon } from "@/components/icon";
 
 interface SloganWithTextProps {
   image: ImageProps;
@@ -18,13 +20,24 @@ export const AvatarWithQuote: FC<SloganWithTextProps> = ({ image, text }) => {
             <div className={styles.image}>
               <Image
                 src={image.src}
-                layout="fill"
-                objectFit="cover"
+                layout="intrinsic"
+                width="300"
+                height="300"
                 alt={image.alt ?? ""}
               />
             </div>
           )}
-          {text && <div className={styles.text}>{text}</div>})
+          {text && (
+            <div className={styles.content}>
+              <div className={styles.textIcon}>
+                <Icon name={"quote"} />
+              </div>
+              <div
+                className={cn(styles.text, "text-grey-400")}
+                dangerouslySetInnerHTML={{ __html: text }}
+              />
+            </div>
+          )}
         </div>
       </Container>
     </Section>
