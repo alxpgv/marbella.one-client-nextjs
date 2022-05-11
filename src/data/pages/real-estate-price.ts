@@ -16,8 +16,12 @@ export const pageRealEstatePrice = {
     {
       blockName: "slogan-with-text",
       fields: {
-        title: "What affects the price of real estate?",
-        text: "The price depends on whether the buyer agrees to the deal or refuses. Ideally, the cost should not be overpriced or understated. Too high will repel and the potential buyer will go to another seller. And if the cost is understated, doubts and suspicions will appear, which can also scare away the buyer of the house/apartment.",
+        options: {
+          sloganAlign: "left",
+          bgColor: "primary",
+        },
+        slogan: "<h3>What affects the price of real estate?</h3>",
+        text: "<p>The price depends on whether the buyer agrees to the deal or refuses. Ideally, the cost should not be overpriced or understated. Too high will repel and the potential buyer will go to another seller. And if the cost is understated, doubts and suspicions will appear, which can also scare away the buyer of the house/apartment.</p>",
       },
     },
     {

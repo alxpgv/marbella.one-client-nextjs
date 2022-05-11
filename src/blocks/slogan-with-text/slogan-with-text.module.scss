@@ -8,23 +8,62 @@
     flex-direction: column;
     text-align: center;
   }
+
+  &.left {
+    .slogan {
+      order: 0;
+    }
+
+    .content {
+      padding-left: 50px;
+
+      @include not-md {
+        padding: 20px 20px 0;
+      }
+    }
+  }
+
+  &.right {
+    .slogan {
+      order: 2;
+    }
+
+    .content {
+      padding-right: 50px;
+
+      @include not-md {
+        padding: 0 20px 20px;
+      }
+    }
+  }
 }
 
-.heading {
+.slogan {
   flex: 1 43%;
   padding: 50px 70px;
-  background: $grey-100;
 
   @include not-md {
     padding: 20px 40px;
   }
+
+  &.bg-primary {
+    background: $grey-100;
+  }
+
+  &.bg-secondary {
+    h2, h3, h4, h5, h6 {
+      color: $white;
+    }
+
+    background: $grey-500;
+  }
 }
 
-.text {
+.content {
   flex: 1 57%;
-  padding: 50px;
+  order: 1;
+}
 
-  @include not-md {
-    padding: 20px 20px 0;
-  }
+.btn {
+  margin-top: 20px;
 }

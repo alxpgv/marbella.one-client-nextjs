@@ -16,7 +16,12 @@ export const pageReasonsToCooperate = {
     {
       blockName: "slogan-with-text",
       fields: {
-        title: "The specialists of our agency are professional and competent!",
+        options: {
+          sloganAlign: "left",
+          bgColor: "primary",
+        },
+        slogan:
+          "<h3>The specialists of our agency are professional and competent!</h3>",
         text: "<p>Choosing a real estate agency, every seller and buyer wants to be sure of the competence and professionalism of the specialists.</p><p>We have a lot of experience in the real estate market, which means that you can really trust us. We know how to present real estate so that it is as attractive as possible for the buyer and, as a result, the interest ends in a successful transaction.</p>",
       },
     },

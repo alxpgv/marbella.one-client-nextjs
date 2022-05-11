@@ -99,7 +99,7 @@ export const pageBuyingLand = {
       blockName: "contact-us",
       fields: {
         title:
-          "If you want to buy a plot of land in Spain, be sure to specify what type of plot you need. Contact us!",
+          "If you want to buy a plot of land in Spain, be sure to specify what type of plot you need.<br/>Contact us!",
       },
     },
     onlineServices,

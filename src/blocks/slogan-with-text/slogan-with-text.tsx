@@ -1,30 +1,52 @@
 import React, { FC } from "react";
 import { Section } from "@/components/section";
 import { Container } from "@/components/container";
+import { Button, ButtonType } from "@/components/button";
 import cn from "classnames";
 import styles from "./slogan-with-text.module.scss";
 
 interface SloganWithTextProps {
-  title: string;
+  slogan: string;
   text: string;
+  button?: ButtonType;
+  options?: {
+    sloganAlign: "left" | "right";
+    bgColor: "primary" | "secondary";
+  };
 }
 
-export const SloganWithText: FC<SloganWithTextProps> = ({ title, text }) => {
+export const SloganWithText: FC<SloganWithTextProps> = ({
+  slogan,
+  text,
+  button,
+  options,
+}) => {
+  const sloganAlign = options?.sloganAlign;
+  const bgColor = options?.bgColor;
+
   return (
     <Section>
       <Container>
-        <div className={styles.wrapper}>
-          {title && (
-            <div className={styles.heading}>
-              <h3 className={styles.title}>{title}</h3>
-            </div>
-          )}
-          {text && (
+        <div className={cn(styles.wrapper, sloganAlign && styles[sloganAlign])}>
+          {slogan && (
             <div
-              className={cn("text-grey-300", styles.text)}
-              dangerouslySetInnerHTML={{ __html: text }}
+              className={cn(styles.slogan, bgColor && styles[`bg-${bgColor}`])}
+              dangerouslySetInnerHTML={{ __html: slogan }}
             />
           )}
+          <div className={styles.content}>
+            {text && (
+              <div
+                className={cn("text-grey-300", styles.text)}
+                dangerouslySetInnerHTML={{ __html: text }}
+              />
+            )}
+            {button?.as && (
+              <div className={styles.btn}>
+                <Button variant={"primary"} size={"md"} {...button} />
+              </div>
+            )}
+          </div>
         </div>
       </Container>
     </Section>

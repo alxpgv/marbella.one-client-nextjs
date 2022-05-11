@@ -12,6 +12,7 @@ export interface ButtonType {
     | "sell-property"
     | "evaluate-property";
   href?: string;
+  text?: string;
 }
 
 interface ButtonProps extends ButtonType {
@@ -44,6 +45,7 @@ export const Button: React.FC<ButtonProps> = ({
   icon,
   as,
   href,
+  text,
   onClick,
   className,
 }): JSX.Element => {
@@ -64,7 +66,7 @@ export const Button: React.FC<ButtonProps> = ({
     return (
       <Link href={href}>
         <a className={classes} onClick={(e: any) => e.preventDefault()}>
-          {children || textBtnMap[as]}
+          {children || text || textBtnMap[as]}
           <Icon name={"arrow-left"} className={styles.icon} />
         </a>
       </Link>

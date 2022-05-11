@@ -17,8 +17,13 @@ export const pageOurServices = {
     {
       blockName: "slogan-with-text",
       fields: {
-        title: "Violet Real Estate is your Spanish real estate agency!",
-        text: "We love our work and value every client. It is very important for us that you get exactly what you want. Therefore, we offer only high-quality professional services.",
+        options: {
+          sloganAlign: "left",
+          bgColor: "primary",
+        },
+        slogan:
+          "<h3>Violet Real Estate is your Spanish real estate agency!</h3>",
+        text: "<p>We love our work and value every client. It is very important for us that you get exactly what you want. Therefore, we offer only high-quality professional services.</p>",
       },
     },
     {

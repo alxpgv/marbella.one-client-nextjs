@@ -75,7 +75,7 @@ export const pageBuyLuxury = {
       blockName: "contact-us",
       fields: {
         title:
-          "Buying an exclusive property in sunny Spain is a snap! Contact us!",
+          "Buying an exclusive property in sunny Spain is a snap!<br/>Contact us!",
       },
     },
     onlineServices,
