@@ -44,7 +44,7 @@
   }
 }
 
-.image {
+.itemImage {
   position: relative;
   width: clamp(190px, 20vw, 290px);
   height: clamp(190px, 20vw, 290px);
@@ -55,15 +55,15 @@
   }
 }
 
-.title, .rating, .text {
+.itemTitle, .itemRating, .itemText {
   margin-bottom: 20px;
 }
 
-.name, .location {
+.itemName, .itemLocation {
   display: block;
 }
 
-.name {
+.itemName {
   margin-top: auto;
   margin-bottom: 5px;
 }

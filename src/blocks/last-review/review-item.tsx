@@ -38,7 +38,7 @@ export const ReviewItem: FC<ReviewProps> = ({
   return (
     <div key={id} className={styles.item}>
       {image?.src && (
-        <div className={styles.image}>
+        <div className={styles.itemImage}>
           <Image
             src={image.src}
             layout="fill"
@@ -48,20 +48,16 @@ export const ReviewItem: FC<ReviewProps> = ({
         </div>
       )}
       {rating && (
-        <div className={styles.rating}>
+        <div className={styles.itemRating}>
           <StarRating stars={rating} />
         </div>
       )}
-      {title && <h5 className={cn(styles.title, "text-black")}>{title}</h5>}
+      {title && <h5 className={cn(styles.itemTitle, "text-black")}>{title}</h5>}
       {reviewText && (
-        <p className={cn(styles.text, "text-sm-20", "text-grey-400")}>
+        <p className={cn(styles.itemText, "text-sm-20", "text-grey-400")}>
           {reviewText}
           {text.length > reviewText.length && (
-            <a
-              href="#"
-              className={cn(styles.linkMore, "text-sm-10")}
-              onClick={handleShowFullText}
-            >
+            <a href="#" className={"text-sm-10"} onClick={handleShowFullText}>
               {" "}
               <strong>read more</strong>
             </a>
@@ -70,12 +66,12 @@ export const ReviewItem: FC<ReviewProps> = ({
       )}
 
       {name && (
-        <strong className={cn(styles.name, "text-sm", "text-black")}>
+        <strong className={cn(styles.itemName, "text-sm", "text-black")}>
           {name}
         </strong>
       )}
       {location && (
-        <span className={cn(styles.location, "text-sm", "text-grey-300")}>
+        <span className={cn(styles.itemLocation, "text-sm", "text-grey-300")}>
           {location}
         </span>
       )}
