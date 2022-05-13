@@ -87,7 +87,6 @@ export const pageAboutMe = {
         items: reviewsItems,
       },
     },
-
     {
       blockName: "contact-us",
       fields: {
