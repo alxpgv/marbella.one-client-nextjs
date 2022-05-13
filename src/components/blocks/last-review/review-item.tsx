@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import cn from "classnames";
 import Image, { ImageProps } from "next/image";
-import { Rating } from "@/components/blocks/last-review/rating";
+import { Rating } from "@/components/ui/rating";
 import styles from "./last-review.module.scss";
 import { cutText } from "@/lib/helpers";
 

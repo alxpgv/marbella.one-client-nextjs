@@ -3,7 +3,7 @@ import { Icon } from "@/components/ui/icon";
 import styles from "./rating.module.scss";
 import cn from "classnames";
 
-export const Rating = ({ stars = 1 }) => {
+export const Rating = ({ stars = 0 }) => {
   return (
     <div className={styles.rating}>
       {[...Array(5)].map((star, index) => (
