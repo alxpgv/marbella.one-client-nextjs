@@ -8,8 +8,8 @@ import { PageTitle } from "@/components/page-title";
 import { type BlockProps, DisplayBlocks } from "@/blocks/display-blocks";
 import { pageOurServices } from "@/data/pages/our-services";
 import { pageContacts } from "@/data/pages/contacts";
-import { pageRealEstate } from "@/data/pages/real-estate";
-import { pageBuyLuxury } from "@/data/pages/buy-luxury-real-estate";
+import { pageRealEstate } from "@/data/pages/real-estate/real-estate";
+import { pageBuyLuxury } from "@/data/pages/real-estate/buy-luxury-real-estate";
 import { OnlineService } from "@/blocks/online-service";
 import { Banners } from "@/blocks/banners";
 import { OnlineConsultation } from "@/blocks/online-consultation";
@@ -20,19 +20,20 @@ import { ContentRowsWithImages } from "@/blocks/content-rows-with-images";
 import { ContentExtraWithImage } from "@/blocks/content-extra-with-image";
 import { ContactUs } from "@/blocks/contact-us";
 import { TitleWithTiledItems } from "@/blocks/title-with-tiled-items";
-import { pageBuyingLand } from "@/data/pages/buying-land-in-marbella";
+import { pageBuyingLand } from "@/data/pages/real-estate/buying-land-in-marbella";
 import { SloganWithTextExtend } from "@/blocks/slogan-with-text-extend";
 import { ImageWithContent } from "@/blocks/image-with-content";
-import { pageOwners } from "@/data/pages/owners";
-import { pageSellLuxury } from "@/data/pages/sell-luxury-real-estate";
-import { pageRealEstatePrice } from "@/data/pages/real-estate-price";
-import { pageWeGuarantee } from "@/data/pages/we-guarantee";
-import { pageReasonsToCooperate } from "@/data/pages/reasons-to-cooperate";
-import { pageAboutMe } from "@/data/pages/about-me";
-import { pageReviews } from "@/data/pages/reviews";
-import { pageOurPhilosophy } from "@/data/pages/our-philosophy";
+import { pageOwners } from "@/data/pages/owners/owners";
+import { pageSellLuxury } from "@/data/pages/owners/sell-luxury-real-estate";
+import { pageRealEstatePrice } from "@/data/pages/owners/real-estate-price";
+import { pageWeGuarantee } from "@/data/pages/owners/we-guarantee";
+import { pageReasonsToCooperate } from "@/data/pages/owners/reasons-to-cooperate";
+import { pageAboutMe } from "@/data/pages/about/about-me";
+import { pageReviews } from "@/data/pages/about/reviews";
+import { pageOurPhilosophy } from "@/data/pages/about/our-philosophy";
 import { AvatarWithQuote } from "@/blocks/avatar-with-quote";
 import { ImageWithOverlapText } from "@/blocks/image-with-overlap-text";
+import { LastReview } from "@/blocks/last-review/last-review";
 
 interface PageProps {
   data: {
@@ -57,6 +58,7 @@ const mapBlocks = {
   "title-with-tiled-items": TitleWithTiledItems,
   "avatar-with-quote": AvatarWithQuote,
   "image-with-overlap-text": ImageWithOverlapText,
+  "last-review": LastReview,
 };
 
 const Page: NextPage<PageProps> = ({ data }) => {

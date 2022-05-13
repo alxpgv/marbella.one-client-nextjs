@@ -34,6 +34,10 @@ h6, p, ul, .text-md {
   font-size: clamp(16px, 2.4vw, 20px);
 }
 
+.text-sm-20 {
+  font-size: clamp(14px, 2.6vw, 18px);
+}
+
 .text-sm-10 {
   font-size: clamp(14px, 2.6vw, 16px);
 }
@@ -67,6 +71,10 @@ h6, p, ul, .text-md {
 }
 
 // colors
+.text-black {
+  color: $black;
+}
+
 .text-grey-300 {
   color: $grey-300;
 }

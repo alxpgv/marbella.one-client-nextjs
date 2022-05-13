@@ -1,0 +1,19 @@
+@import "../../styles/utils";
+
+.rating {
+  display: inline-flex;
+}
+
+.item {
+  margin: 0 5px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: $grey-200;
+
+  &.active {
+    fill: #FFDA35;
+  }
+}

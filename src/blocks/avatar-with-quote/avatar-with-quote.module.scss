@@ -11,14 +11,14 @@
 
 .image {
   position: relative;
-  flex: 1 300px;
+  flex: 1 0 300px;
 
   @include not-md {
     margin-bottom: 30px;
   }
 
   img {
-    border-radius: 100%;
+    border-radius: 50%;
   }
 }
 
