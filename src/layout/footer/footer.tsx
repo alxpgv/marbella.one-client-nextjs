@@ -24,10 +24,8 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.main}>
         <Container>
-          <div className={styles.mainWrapper}>
-            <div
-              className={cn(styles.col, styles.contact, "text-sm text-white")}
-            >
+          <div className={cn(styles.mainWrapper, "text-white")}>
+            <div className={cn(styles.col, styles.contact, "text-sm")}>
               <Logo className={styles.logo} color={"secondary"} />
               {phone && (
                 <div className={cn(styles.contactItem, styles.contactPhone)}>
