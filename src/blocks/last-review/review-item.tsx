@@ -1,8 +1,9 @@
 import React, { FC, useState } from "react";
 import cn from "classnames";
 import Image, { ImageProps } from "next/image";
-import { StarRating } from "@/blocks/last-review/star-rating";
+import { Rating } from "@/blocks/last-review/rating";
 import styles from "./last-review.module.scss";
+import { cutText } from "@/lib/helpers";
 
 export interface ReviewProps {
   id: number;
@@ -23,14 +24,12 @@ export const ReviewItem: FC<ReviewProps> = ({
   rating,
   image,
 }) => {
-  const charsLength = 160;
-  const initialText =
-    text.length > charsLength ? `${text.substring(0, charsLength)}...` : text;
-  const [reviewText, setReviewText] = useState(initialText);
+  const textLength = 160;
+  const [reviewText, setReviewText] = useState(cutText(text, textLength));
 
   const handleShowFullText = (event: React.MouseEvent) => {
     event.preventDefault();
-    if (text.length > charsLength) {
+    if (text.length > textLength) {
       setReviewText(text);
     }
   };
@@ -49,7 +48,7 @@ export const ReviewItem: FC<ReviewProps> = ({
       )}
       {rating && (
         <div className={styles.itemRating}>
-          <StarRating stars={rating} />
+          <Rating stars={rating} />
         </div>
       )}
       {title && <h5 className={cn(styles.itemTitle, "text-black")}>{title}</h5>}

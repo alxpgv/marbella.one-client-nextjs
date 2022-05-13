@@ -1,9 +1,9 @@
 import React from "react";
 import { Icon } from "@/components/icon";
-import styles from "./star-rating.module.scss";
+import styles from "./rating.module.scss";
 import cn from "classnames";
 
-export const StarRating = ({ stars = 1 }) => {
+export const Rating = ({ stars = 1 }) => {
   return (
     <div className={styles.rating}>
       {[...Array(5)].map((star, index) => (
