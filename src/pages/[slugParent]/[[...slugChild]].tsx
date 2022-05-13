@@ -34,6 +34,7 @@ import { pageOurPhilosophy } from "@/data/pages/about/our-philosophy";
 import { AvatarWithQuote } from "@/blocks/avatar-with-quote";
 import { ImageWithOverlapText } from "@/blocks/image-with-overlap-text";
 import { LastReview } from "@/blocks/last-review/last-review";
+import { Text } from "@/blocks/text";
 
 interface PageProps {
   data: {
@@ -59,6 +60,7 @@ const mapBlocks = {
   "avatar-with-quote": AvatarWithQuote,
   "image-with-overlap-text": ImageWithOverlapText,
   "last-review": LastReview,
+  text: Text,
 };
 
 const Page: NextPage<PageProps> = ({ data }) => {

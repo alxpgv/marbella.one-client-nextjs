@@ -60,7 +60,10 @@ export const TiledItems: FC<TiledProps> = ({ items, className, cols }) => {
                     : styles.tileHeading
                 }
               >
-                <h6 dangerouslySetInnerHTML={{ __html: title }} />
+                <h6
+                  className={styles.tileTitle}
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
               </div>
             )}
 
