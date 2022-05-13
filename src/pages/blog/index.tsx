@@ -1,10 +1,10 @@
 import React from "react";
 import { NextPage } from "next";
-import { MainLayout } from "@/layout/main-layout";
-import { Meta } from "@/layout/meta";
-import { Container } from "@/components/container";
-import { Breadcrumb } from "@/components/breadcrumb";
-import { PageTitle } from "@/components/page-title";
+import { MainLayout } from "@/components/common/main-layout";
+import { Meta } from "@/components/common/meta";
+import { Container } from "@/components/ui/container";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { PageTitle } from "@/components/ui/page-title";
 
 const BlogIndex: NextPage = () => {
   return (

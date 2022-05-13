@@ -1,0 +1,71 @@
+@import "../../../../styles/utils";
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > li {
+    display: flex;
+    height: $navbar-height-lg + 5px;
+    margin: 0 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: $grey-500;
+
+      &:hover,
+      &.active {
+        color: $red-400;
+
+        .icon {
+          transform: rotate(-180deg);
+        }
+      }
+
+      .icon {
+        width: 6px;
+        height: 6px;
+        stroke: $grey-300;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.subMenu {
+  position: absolute;
+  top: 100%;
+  max-width: 320px;
+  min-width: 280px;
+  margin-top: 2px;
+  padding: 30px 35px;
+  background: $white;
+  box-shadow: 0 10px 15px rgba($black, 0.15);
+  border-radius: 0 0 10px 10px;
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  li {
+    a {
+      padding: 15px 10px;
+      border-bottom: 1px solid $grey-150;
+      white-space: nowrap;
+    }
+
+    &:last-child a {
+      border-bottom: none;
+    }
+  }
+}

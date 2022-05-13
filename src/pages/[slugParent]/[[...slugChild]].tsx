@@ -1,11 +1,14 @@
 import React from "react";
 import { NextPage, GetStaticProps, GetStaticPaths } from "next";
-import { MainLayout } from "@/layout/main-layout";
-import { Meta, type MetaProps } from "@/layout/meta";
-import { Container } from "@/components/container";
-import { Breadcrumb } from "@/components/breadcrumb";
-import { PageTitle } from "@/components/page-title";
-import { type BlockProps, DisplayBlocks } from "@/blocks/display-blocks";
+import { MainLayout } from "@/components/common/main-layout";
+import { Meta, type MetaProps } from "@/components/common/meta";
+import { Container } from "@/components/ui/container";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { PageTitle } from "@/components/ui/page-title";
+import {
+  type BlockProps,
+  DisplayBlocks,
+} from "@/components/blocks/display-blocks";
 import { pageOurServices } from "@/data/pages/our-services";
 import { pageContacts } from "@/data/pages/contacts";
 import { pageRealEstate } from "@/data/pages/real-estate/real-estate";
@@ -19,22 +22,22 @@ import { pageReasonsToCooperate } from "@/data/pages/owners/reasons-to-cooperate
 import { pageAboutMe } from "@/data/pages/about/about-me";
 import { pageReviews } from "@/data/pages/about/reviews";
 import { pageOurPhilosophy } from "@/data/pages/about/our-philosophy";
-import { OnlineService } from "@/blocks/online-service";
-import { Banners } from "@/blocks/banners";
-import { OnlineConsultation } from "@/blocks/online-consultation";
-import { JoinUs } from "@/blocks/join-us";
-import { SloganWithText } from "@/blocks/slogan-with-text";
-import { MapWithContact } from "@/blocks/map-with-contact";
-import { ContentRowsWithImages } from "@/blocks/content-rows-with-images";
-import { ContentExtraWithImage } from "@/blocks/content-extra-with-image";
-import { ContactUs } from "@/blocks/contact-us";
-import { TitleWithTiledItems } from "@/blocks/title-with-tiled-items";
-import { SloganWithTextExtend } from "@/blocks/slogan-with-text-extend";
-import { ImageWithContent } from "@/blocks/image-with-content";
-import { AvatarWithQuote } from "@/blocks/avatar-with-quote";
-import { ImageWithOverlapText } from "@/blocks/image-with-overlap-text";
-import { LastReview } from "@/blocks/last-review/last-review";
-import { Text } from "@/blocks/text";
+import { OnlineService } from "@/components/blocks/online-service";
+import { Banners } from "@/components/blocks/banners";
+import { OnlineConsultation } from "@/components/blocks/online-consultation";
+import { JoinUs } from "@/components/blocks/join-us";
+import { SloganWithText } from "@/components/blocks/slogan-with-text";
+import { MapWithContact } from "@/components/blocks/map-with-contact";
+import { ContentRowsWithImages } from "@/components/blocks/content-rows-with-images";
+import { ContentExtraWithImage } from "@/components/blocks/content-extra-with-image";
+import { ContactUs } from "@/components/blocks/contact-us";
+import { TitleWithTiledItems } from "@/components/blocks/title-with-tiled-items";
+import { SloganWithTextExtend } from "@/components/blocks/slogan-with-text-extend";
+import { ImageWithContent } from "@/components/blocks/image-with-content";
+import { AvatarWithQuote } from "@/components/blocks/avatar-with-quote";
+import { ImageWithOverlapText } from "@/components/blocks/image-with-overlap-text";
+import { LastReview } from "@/components/blocks/last-review/last-review";
+import { Text } from "@/components/blocks/text";
 
 interface PageProps {
   data: {

@@ -1,19 +1,19 @@
 import React from "react";
 import { NextPage } from "next";
 import { pageHome } from "@/data/pages/home";
-import { MainLayout } from "@/layout/main-layout";
-import { Meta } from "@/layout/meta";
-import { DisplayBlocks } from "@/blocks/display-blocks";
-import { HomePromo } from "@/blocks/home-promo";
-import { ListWithStrictImage } from "@/blocks/list-with-strict-image";
-import { ImageWithOverlapText } from "@/blocks/image-with-overlap-text";
-import { ListWithImage } from "@/blocks/list-with-image";
-import { AdvantageWithContact } from "@/blocks/advantage-with-contact";
-import { SaleConsultation } from "@/blocks/sale-consultation";
-import { OnlineService } from "@/blocks/online-service";
-import { Banners } from "@/blocks/banners";
-import { OnlineConsultation } from "@/blocks/online-consultation";
-import { JoinUs } from "@/blocks/join-us";
+import { MainLayout } from "@/components/common/main-layout";
+import { Meta } from "@/components/common/meta";
+import { DisplayBlocks } from "@/components/blocks/display-blocks";
+import { HomePromo } from "@/components/blocks/home-promo";
+import { ListWithStrictImage } from "@/components/blocks/list-with-strict-image";
+import { ImageWithOverlapText } from "@/components/blocks/image-with-overlap-text";
+import { ListWithImage } from "@/components/blocks/list-with-image";
+import { AdvantageWithContact } from "@/components/blocks/advantage-with-contact";
+import { SaleConsultation } from "@/components/blocks/sale-consultation";
+import { OnlineService } from "@/components/blocks/online-service";
+import { Banners } from "@/components/blocks/banners";
+import { OnlineConsultation } from "@/components/blocks/online-consultation";
+import { JoinUs } from "@/components/blocks/join-us";
 
 const mapBlocks = {
   "home-promo": HomePromo,

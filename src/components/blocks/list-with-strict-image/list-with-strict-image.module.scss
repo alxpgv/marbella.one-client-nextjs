@@ -1,0 +1,63 @@
+@import "../../../styles/utils";
+
+.wrapper {
+  display: grid;
+  column-gap: 50px;
+
+  @include md {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  @include lg {
+    column-gap: 100px;
+  }
+}
+
+.list {
+  @include sm {
+    grid-row: 2/3;
+  }
+
+  @include md {
+    grid-row: 1/3;
+  }
+}
+
+.image {
+  position: relative;
+  height: 150px;
+  grid-row: 1;
+
+  @include sm {
+    grid-column: 1/3;
+    height: 250px;
+  }
+
+  @include md {
+    grid-column: 2/3;
+  }
+
+  img {
+    object-position: right;
+  }
+}
+
+.text {
+  padding-top: 20px;
+}
+
+.listItem {
+  padding: 20px 0;
+  border-bottom: 1px solid $red-400;
+
+  @include md {
+    padding: 30px 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+

@@ -1,0 +1,62 @@
+@import "../../../styles/utils";
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  min-width: $body-min-width;
+  background: rgba($white, .85);
+  border-bottom: 2px solid $red-400;
+  z-index: 20;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  transition: height 200ms;
+  height: $navbar-height-sm;
+
+  @include lg {
+    height: $navbar-height-lg;
+  }
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 10px;
+
+  @include xs {
+    margin-left: 20px;
+  }
+}
+
+.logo {
+  img {
+    width: 85px;
+
+    @include lg {
+      width: 138px;
+    }
+  }
+}
+
+.menu {
+  flex: 1;
+  display: none;
+  margin-right: 20px;
+
+  @include lg {
+    display: block;
+  }
+}
+
+.mobile {
+  display: block;
+  margin-left: 20px;
+
+  @include lg {
+    display: none;
+  }
+}
