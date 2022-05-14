@@ -1,1 +1,49 @@
 @import "../../../styles/utils";
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.entry {
+  flex: 0 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  max-width: 630px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+
+  @include not-sm {
+    flex: 1 100%;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  height: clamp(250px, 30vw, 350px);
+  overflow: hidden;
+
+  img {
+    transition: transform 300ms ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.06);
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+
+.title, .description {
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: auto;
+}

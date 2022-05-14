@@ -154,6 +154,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // slugParent []
+  // slugChild ["", ""]
   const slugParent = params?.slugParent;
   const slugChild =
     params?.slugChild && params.slugChild[0] ? params.slugChild[0] : null;

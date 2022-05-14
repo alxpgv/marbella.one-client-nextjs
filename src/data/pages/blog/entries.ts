@@ -11,7 +11,7 @@ export const blogEntries = [
         "A wonderful pearl of Spain, a city with its own stunning energy, a piece of paradise, which is impossible not to fall in love with!",
       keywords: "",
     },
-    preview: {
+    image: {
       src: "/images/blog/marbella-min.jpg",
       alt: "A wonderful pearl of Spain",
     },
@@ -27,7 +27,7 @@ export const blogEntries = [
       description: "Spanish Saint Tropez!",
       keywords: "",
     },
-    preview: {
+    image: {
       src: "/images/blog/puerto-banus-min.jpg",
       alt: "Spanish Saint Tropez!",
     },
@@ -45,7 +45,7 @@ export const blogEntries = [
         "Do you have a luxury home, villa or townhouse in Spain that needs a professional renovation?",
       keywords: "",
     },
-    preview: {
+    image: {
       src: "/images/blog/renovation-of-luxury-real-estate-min.jpg",
       alt: "Renovation of luxury real estate",
     },
@@ -63,7 +63,7 @@ export const blogEntries = [
         "Holidays in sunny Spain can be not just perfect, but fabulous, magical, such as many dream of!",
       keywords: "",
     },
-    preview: {
+    image: {
       src: "/images/blog/yacht-charter-min.jpg",
       alt: "Holidays in sunny Spain can be not just perfect",
     },
@@ -79,7 +79,7 @@ export const blogEntries = [
       description: "Spain is a country with a special atmosphere of happiness!",
       keywords: "",
     },
-    preview: {
+    image: {
       src: "/images/blog/private-jet-charter-min.jpg",
       alt: "Private jet charter",
     },
@@ -97,7 +97,7 @@ export const blogEntries = [
         "A fairy tale that you can afford... Close your eyes and draw in your mind the house you want to live in...",
       keywords: "",
     },
-    preview: {
+    image: {
       src: "/images/blog/real-estate-construction-min.jpg",
       alt: "Real estate construction",
     },
@@ -115,7 +115,7 @@ export const blogEntries = [
         "Our team of professionals in love with their work helps to create such a paradise abode.",
       keywords: "",
     },
-    preview: {
+    image: {
       src: "/images/blog/houses-with-the-scent-of-paradise-min.jpg",
       alt: "Houses with the scent of paradise",
     },

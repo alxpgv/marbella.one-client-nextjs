@@ -34,11 +34,13 @@
   &-primary {
     background: $red-400;
     color: $white;
+    border: 1px solid transparent;
 
     &:hover,
     &:active {
-      color: $white;
-      background: darken($red-400, 10%);
+      color: $red-400;
+      background: $white;
+      border: 1px solid rgba($red-300, .5);
     }
   }
 
@@ -69,6 +71,21 @@
       border: 2px solid $blue-100;
     }
   }
+
+  // four
+  &-four {
+    background: $white;
+    color: $red-400;
+    border: 2px solid currentColor;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background: $red-400;
+      border: 2px solid lighten($red-400, 20%);
+    }
+  }
+
 }
 
 // sizes

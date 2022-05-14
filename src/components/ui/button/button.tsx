@@ -19,7 +19,7 @@ interface ButtonProps extends ButtonType {
   type?: "button" | "submit";
   size: "sm" | "md" | "lg";
   gutter?: "sm";
-  variant?: "primary" | "secondary" | "third";
+  variant?: "primary" | "secondary" | "third" | "four";
   fullWidth?: boolean;
   children?: ReactNode;
   icon?: string;

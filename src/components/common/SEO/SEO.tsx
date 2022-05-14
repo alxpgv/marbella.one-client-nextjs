@@ -9,7 +9,7 @@ interface OgImage {
   alt?: string;
 }
 
-interface SEOProps {
+export interface SEOProps {
   title?: string;
   description?: string;
   robots?: string;
