@@ -1,29 +1,14 @@
-import { FC } from "react";
-import Head from "next/head";
-import { settings } from "@/data/settings";
+import type { VFC } from "react";
+import { SEO } from "@/components/common/SEO";
 
-export interface MetaProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-
-export const Meta: FC<MetaProps> = ({ title, description, keywords }) => {
-  const defaultMeta = settings?.defaultMeta;
-
+export const Head: VFC = () => {
   return (
-    <Head>
-      <title>{title || defaultMeta.title || ""}</title>
+    <SEO>
       <meta
+        key="viewport"
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       />
-      <meta
-        name="description"
-        content={description || defaultMeta.description || ""}
-      />
-      <meta name="keywords" content={keywords || defaultMeta.keywords || ""} />
-
       <link
         rel="preload"
         href="/fonts/SourceSansPro-Regular.woff"
@@ -52,6 +37,8 @@ export const Meta: FC<MetaProps> = ({ title, description, keywords }) => {
         type="font/woff2"
         crossOrigin=""
       />
-    </Head>
+
+      {/*<link rel="manifest" href="/site.webmanifest" key="site-manifest" />*/}
+    </SEO>
   );
 };

@@ -3,5 +3,5 @@ export const getPhoneFromString = (value: string) => {
 };
 
 export const cutText = (value: string, length = 100) => {
-  return value?.length > length ? value.substring(0, length) + "..." : "";
+  return value?.length > length ? value.substring(0, length) + "..." : value;
 };

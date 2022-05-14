@@ -4,9 +4,9 @@ import {
   onlineConsultation,
   onlineServices,
 } from "@/data/static-blocks";
-import { blogItems } from "@/data/pages/blog/blogs";
+import { blogEntries } from "@/data/pages/blog/entries";
 
-export const blogMain = {
+export const blogCategory = {
   title: "Blog",
   description: "",
   meta: {
@@ -14,13 +14,8 @@ export const blogMain = {
     description: "",
     keywords: "",
   },
+  entries: blogEntries,
   blocks: [
-    {
-      blockName: "last-blog-items",
-      fields: {
-        items: blogItems,
-      },
-    },
     {
       blockName: "contact-us",
       fields: {

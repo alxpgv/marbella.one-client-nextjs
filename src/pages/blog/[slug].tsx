@@ -1,12 +1,12 @@
 import React from "react";
 import { NextPage } from "next";
 import { MainLayout } from "@/components/common/main-layout";
-import { Meta } from "@/components/common/meta";
 import { Container } from "@/components/ui/container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { PageTitle } from "@/components/ui/page-title";
+import type { EntryProps } from "@/types/entry";
 
-const BlogPage: NextPage = () => {
+const BlogPages: NextPage<{ page: EntryProps }> = ({ page }) => {
   return (
     <MainLayout>
       <Container>
@@ -17,4 +17,4 @@ const BlogPage: NextPage = () => {
   );
 };
 
-export default BlogPage;
+export default BlogPages;

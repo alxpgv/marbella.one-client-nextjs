@@ -24,12 +24,12 @@ export const ReviewItem: FC<ReviewProps> = ({
   rating,
   image,
 }) => {
-  const textLength = 160;
-  const [reviewText, setReviewText] = useState(cutText(text, textLength));
+  const maxTextLength = 160;
+  const [reviewText, setReviewText] = useState(cutText(text, maxTextLength));
 
   const handleShowFullText = (event: React.MouseEvent) => {
     event.preventDefault();
-    if (text.length > textLength) {
+    if (text.length > maxTextLength) {
       setReviewText(text);
     }
   };

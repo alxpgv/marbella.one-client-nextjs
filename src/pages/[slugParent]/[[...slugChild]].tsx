@@ -1,14 +1,10 @@
 import React from "react";
 import { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import { MainLayout } from "@/components/common/main-layout";
-import { Meta, type MetaProps } from "@/components/common/meta";
 import { Container } from "@/components/ui/container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { PageTitle } from "@/components/ui/page-title";
-import {
-  type BlockProps,
-  DisplayBlocks,
-} from "@/components/blocks/display-blocks";
+import { DisplayBlocks } from "@/components/blocks/display-blocks";
 import { pageOurServices } from "@/data/pages/our-services";
 import { pageContacts } from "@/data/pages/contacts";
 import { pageRealEstate } from "@/data/pages/real-estate/real-estate";
@@ -38,14 +34,8 @@ import { AvatarWithQuote } from "@/components/blocks/avatar-with-quote";
 import { ImageWithOverlapText } from "@/components/blocks/image-with-overlap-text";
 import { LastReview } from "@/components/blocks/last-review/last-review";
 import { Text } from "@/components/blocks/text";
-
-interface PageProps {
-  data: {
-    meta: MetaProps;
-    title: string;
-    blocks: BlockProps[];
-  };
-}
+import type { EntryProps } from "@/types/entry";
+import { SEO } from "@/components/common/SEO";
 
 const mapBlocks = {
   "online-service": OnlineService,
@@ -66,15 +56,15 @@ const mapBlocks = {
   text: Text,
 };
 
-const Page: NextPage<PageProps> = ({ data }) => {
-  if (!data) return null;
-  const meta = data?.meta;
-  const title = data?.title;
-  const blocks = data?.blocks;
+const Pages: NextPage<{ page: EntryProps }> = ({ page }) => {
+  if (!page) return null;
+  const meta = page?.meta;
+  const title = page?.title;
+  const blocks = page?.blocks;
 
   return (
     <MainLayout>
-      <Meta {...meta} />
+      <SEO {...meta} />
       <Container>
         <Breadcrumb />
         <PageTitle title={title} />
@@ -174,51 +164,51 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       : slugParent
     : null;
 
-  let data = null;
+  let page = null;
 
   switch (slug) {
     case "our-services":
-      data = pageOurServices;
+      page = pageOurServices;
       break;
     case "contacts":
-      data = pageContacts;
+      page = pageContacts;
       break;
     case "real-estate":
-      data = pageRealEstate;
+      page = pageRealEstate;
       break;
     case "real-estate/buy-luxury-real-estate":
-      data = pageBuyLuxury;
+      page = pageBuyLuxury;
       break;
     case "real-estate/buying-land-in-marbella":
-      data = pageBuyingLand;
+      page = pageBuyingLand;
       break;
     case "owners":
-      data = pageOwners;
+      page = pageOwners;
       break;
     case "owners/we-guarantee":
-      data = pageWeGuarantee;
+      page = pageWeGuarantee;
       break;
     case "owners/sell-luxury-real-estate":
-      data = pageSellLuxury;
+      page = pageSellLuxury;
       break;
     case "owners/real-estate-price":
-      data = pageRealEstatePrice;
+      page = pageRealEstatePrice;
       break;
     case "owners/reasons-to-cooperate":
-      data = pageReasonsToCooperate;
+      page = pageReasonsToCooperate;
       break;
     case "about-me":
-      data = pageAboutMe;
+      page = pageAboutMe;
       break;
     case "about-me/reviews":
-      data = pageReviews;
+      page = pageReviews;
       break;
     case "about-me/our-philosophy":
-      data = pageOurPhilosophy;
+      page = pageOurPhilosophy;
       break;
   }
 
-  if (!data) {
+  if (!page) {
     return {
       notFound: true,
     };
@@ -226,10 +216,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      data,
+      page,
     },
     revalidate: 100,
   };
 };
 
-export default Page;
+export default Pages;

@@ -1,4 +1,4 @@
-export const blogItems = [
+export const blogEntries = [
   {
     id: 1,
     title: "Marbella",
