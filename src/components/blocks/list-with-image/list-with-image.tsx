@@ -35,7 +35,9 @@ export const ListWithImage: FC<ListWithImageProps> = ({
             </div>
           )}
           <div className={styles.btn}>
-            <Button size={"md"} as={"online-consultation"} />
+            <Button size={"md"} as={"modal"}>
+              Online consultation
+            </Button>
           </div>
         </div>
         {image?.src && (
