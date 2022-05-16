@@ -106,7 +106,7 @@
     border-bottom: none;
   }
 
-  // xs width even right line
+  // width even right line
   @include xs {
     &:after {
       right: 0;
@@ -122,14 +122,14 @@
     }
   }
 
-  // xs width every right line not last
+  // width every right line not last
   @include md {
-    &:last-child:after {
-      border-right: none;
-    }
-
     &:nth-child(even):after {
       border-right: 1px solid $red-400;
+    }
+
+    &:last-child:after {
+      border-right: none;
     }
   }
 }
