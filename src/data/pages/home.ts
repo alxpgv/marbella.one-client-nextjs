@@ -28,7 +28,8 @@ export const pageHome = {
         },
         services: serviceItems,
         button: {
-          as: "online-consultation",
+          as: "modal",
+          text: "Online Consultation",
         },
       },
     },

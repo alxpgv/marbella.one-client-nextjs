@@ -44,7 +44,12 @@ export const ContactInfo = () => {
         )}
 
         <div className={styles.btn}>
-          <Button variant={"primary"} size={"md"} as={"callback"} />
+          <Button
+            variant={"primary"}
+            size={"md"}
+            as={"modal"}
+            text={"Callback"}
+          />
         </div>
       </div>
     </div>

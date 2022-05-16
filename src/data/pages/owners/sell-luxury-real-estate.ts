@@ -26,7 +26,8 @@ export const pageSellLuxury = {
               height: 512,
             },
             button: {
-              as: "evaluate-property",
+              as: "modal",
+              text: "Evaluate property",
             },
           },
           {
@@ -38,7 +39,8 @@ export const pageSellLuxury = {
               width: 560,
             },
             button: {
-              as: "sell-property",
+              as: "modal",
+              text: "Sell property",
             },
           },
         ],

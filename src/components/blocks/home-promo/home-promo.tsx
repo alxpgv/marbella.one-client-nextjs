@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Image, { type ImageProps } from "next/image";
-import { Button, ButtonType } from "@/components/ui/button";
+import { Button, ButtonAsType } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import cn from "classnames";
 import styles from "./home-promo.module.scss";
@@ -11,7 +11,7 @@ interface HomePromoProps {
   text: string;
   image: ImageProps;
   services: TiledItemProps[];
-  button: ButtonType;
+  button: ButtonAsType;
 }
 
 export const HomePromo: FC<HomePromoProps> = ({

@@ -11,7 +11,7 @@ import { Banners } from "@/components/blocks/banners";
 import { OnlineConsultation } from "@/components/blocks/online-consultation";
 import { JoinUs } from "@/components/blocks/join-us";
 import { ContactUs } from "@/components/blocks/contact-us";
-import { blogCategory } from "@/data/pages/blog/category";
+import { blogCategory } from "@/data/blog/category";
 import type { EntryProps } from "@/types/entry";
 import { SEO } from "@/components/common/SEO";
 

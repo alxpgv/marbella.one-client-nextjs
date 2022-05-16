@@ -4,18 +4,11 @@ import { Icon } from "@/components/ui/icon";
 import Link from "next/link";
 import styles from "./button.module.scss";
 
-export interface ButtonType {
-  as?:
-    | "link"
-    | "callback"
-    | "online-consultation"
-    | "sell-property"
-    | "evaluate-property";
-  href?: string;
-  text?: string;
+export interface ButtonAsType {
+  as?: "link" | "modal";
 }
 
-interface ButtonProps extends ButtonType {
+interface ButtonProps extends ButtonAsType {
   type?: "button" | "submit";
   size: "sm" | "md" | "lg";
   gutter?: "sm";
@@ -24,16 +17,10 @@ interface ButtonProps extends ButtonType {
   children?: ReactNode;
   icon?: string;
   onClick?: () => void;
+  href?: string;
+  text?: string;
   className?: string;
 }
-
-const textBtnMap = {
-  link: "Read More",
-  callback: "Callback",
-  "online-consultation": "Online Consultation",
-  "evaluate-property": "Evaluate property",
-  "sell-property": "Sell property",
-};
 
 export const Button: React.FC<ButtonProps> = ({
   type = "button",
@@ -51,11 +38,11 @@ export const Button: React.FC<ButtonProps> = ({
 }): JSX.Element => {
   const classes = cn(
     styles.btn,
-    className,
-    styles[`btn-${variant}`],
-    styles[`btn-${size}`],
-    styles[`btn-gutter-${gutter}`],
-    fullWidth && styles[`btn-full-width`]
+    styles[variant],
+    styles[size],
+    styles[`gutter-${gutter}`],
+    { [styles.fullWidth]: fullWidth },
+    className
   );
 
   const ButtonIcon = () =>
@@ -66,15 +53,15 @@ export const Button: React.FC<ButtonProps> = ({
     return (
       <Link href={href}>
         <a className={classes} onClick={(e: any) => e.preventDefault()}>
-          {children || text || textBtnMap[as]}
+          {children || text || "Read more"}
           <Icon name={"arrow-left"} className={styles.icon} />
         </a>
       </Link>
     );
-  } else if (as && Object.keys(textBtnMap).includes(as)) {
+  } else if (as && as === "modal") {
     return (
-      <button className={classes} onClick={() => console.log(textBtnMap[as])}>
-        {textBtnMap[as]}
+      <button className={classes} onClick={() => console.log("modal")}>
+        {children || text}
         <ButtonIcon />
       </button>
     );

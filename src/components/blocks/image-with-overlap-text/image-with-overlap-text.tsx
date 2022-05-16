@@ -2,14 +2,14 @@ import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import Image, { type ImageProps } from "next/image";
-import { Button, type ButtonType } from "@/components/ui/button";
+import { Button, type ButtonAsType } from "@/components/ui/button";
 import styles from "./image-with-overlap-text.module.scss";
 
 interface ImageWithOverlapTextProps {
   title?: string;
   text?: string;
   image: ImageProps;
-  button?: ButtonType;
+  button?: ButtonAsType;
 }
 
 export const ImageWithOverlapText: FC<ImageWithOverlapTextProps> = ({

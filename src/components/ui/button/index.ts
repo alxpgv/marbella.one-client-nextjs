@@ -1,1 +1,1 @@
-export { Button, type ButtonType } from "./button";
+export { Button, type ButtonAsType } from "./button";

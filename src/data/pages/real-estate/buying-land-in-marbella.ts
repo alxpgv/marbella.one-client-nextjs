@@ -35,7 +35,8 @@ export const pageBuyingLand = {
               width: 1,
             },
             button: {
-              as: "online-consultation",
+              as: "modal",
+              text: "Online Consultation",
             },
           },
         ],
@@ -61,7 +62,8 @@ export const pageBuyingLand = {
           title: "Get expert advice right now",
           text: "We will answer all your questions for free!",
           button: {
-            as: "callback",
+            as: "modal",
+            text: "Callback",
           },
         },
       },
@@ -77,7 +79,8 @@ export const pageBuyingLand = {
           {
             text: "Our team consists of only experienced professionals in the real estate market and land sales in Spain. We have all the contacts required for work in the country",
             button: {
-              as: "online-consultation",
+              as: "modal",
+              text: "Online Consultation",
             },
           },
         ],

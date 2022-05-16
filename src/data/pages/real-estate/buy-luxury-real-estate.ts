@@ -35,7 +35,8 @@ export const pageBuyLuxury = {
               width: 552,
             },
             button: {
-              as: "online-consultation",
+              as: "modal",
+              text: "Online Consultation",
             },
           },
         ],

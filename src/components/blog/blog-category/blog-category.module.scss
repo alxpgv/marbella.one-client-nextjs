@@ -24,7 +24,7 @@
   overflow: hidden;
 
   img {
-    transition: transform 300ms ease-in-out;
+    transition: transform 300ms cubic-bezier(.4, 0, .2, 1);
   }
 
   img:hover {

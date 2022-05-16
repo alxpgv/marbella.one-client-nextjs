@@ -61,10 +61,11 @@ export const pageRealEstatePrice = {
             title: null,
             text: "Do not rush to set a price, as ill-considered steps can lead to failure. It is better to seek help from professionals who will help you form the ideal value of your property, and therefore, get closer to the desired deal",
             icon: "checkmark-shield",
-            button: {
-              as: "online-consultation",
-            },
             variant: "dark",
+            button: {
+              as: "modal",
+              text: "Online Consultation",
+            },
           },
         ],
       },

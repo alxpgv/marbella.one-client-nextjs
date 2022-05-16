@@ -3,14 +3,14 @@ import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import cn from "classnames";
 import styles from "./slogan-with-text-extend.module.scss";
-import type { ButtonType } from "@/components/ui/button";
+import type { ButtonAsType } from "@/components/ui/button";
 import { Button } from "@/components/ui/button";
 
 interface SloganWithTextExtendProps {
   cols: {
     title?: string;
     text?: string;
-    button?: ButtonType;
+    button?: ButtonAsType;
   }[];
 }
 

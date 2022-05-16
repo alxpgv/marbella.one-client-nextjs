@@ -24,7 +24,9 @@ export const SaleConsultation: FC<SaleConsultationProps> = ({
           {title && <h2 className={styles.title}>{title}</h2>}
           {text && <p className={cn("text-grey-300", styles.text)}>{text}</p>}
           <div className={styles.btn}>
-            <Button size={"md"}>Sell property</Button>
+            <Button size={"md"} as={"modal"}>
+              Sell property
+            </Button>
           </div>
         </div>
       </Container>

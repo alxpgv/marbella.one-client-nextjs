@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import cn from "classnames";
-import { Button, ButtonType } from "@/components/ui/button";
+import { Button, type ButtonAsType } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import styles from "./tiled-items.module.scss";
 
@@ -9,7 +9,7 @@ export interface TiledItemProps {
   icon?: string;
   title: string;
   text?: string;
-  button?: ButtonType;
+  button?: ButtonAsType;
   variant?: "dark";
 }
 

@@ -75,6 +75,10 @@
     @include sm {
       min-height: 500px;
     }
+
+    @include xl {
+      min-height: 650px;
+    }
   }
 
   .footer {
@@ -157,6 +161,10 @@
           margin-right: 10px
         }
       }
+    }
+
+    ul + p {
+      margin-top: 12px;
     }
   }
 }

@@ -4,7 +4,7 @@ import {
   onlineConsultation,
   onlineServices,
 } from "@/data/static-blocks";
-import { blogEntries } from "@/data/pages/blog/entries";
+import { blogEntries } from "@/data/blog/entries";
 
 export const blogCategory = {
   title: "Blog",
