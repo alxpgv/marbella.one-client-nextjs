@@ -36,7 +36,7 @@ export const pageRealEstate = {
             },
             button: {
               as: "link",
-              href: "/#",
+              href: "/real-estate/buy-luxury-real-estate",
             },
           },
         ],
@@ -63,7 +63,7 @@ export const pageRealEstate = {
           text: "We will answer all your questions for free!",
           button: {
             as: "link",
-            href: "/#",
+            href: "/real-estate/buying-land-in-marbella",
           },
         },
       },

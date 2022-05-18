@@ -13,7 +13,7 @@ export const onlineServices = {
           height: 440,
           alt: "Yacht charter",
         },
-        href: "/#",
+        href: "/blog/yacht-charter",
       },
       {
         id: 2,
@@ -24,7 +24,7 @@ export const onlineServices = {
           height: 440,
           alt: "Private jet charter",
         },
-        href: "/#",
+        href: "/blog/private-jet-charter",
       },
     ],
   },

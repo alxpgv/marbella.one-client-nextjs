@@ -27,7 +27,7 @@ export const pageOwners = {
             },
             button: {
               as: "link",
-              href: "/#",
+              href: "/owners/sell-luxury-real-estate",
             },
           },
           {
@@ -40,7 +40,7 @@ export const pageOwners = {
             },
             button: {
               as: "link",
-              href: "/#",
+              href: "/owners/real-estate-price",
             },
           },
         ],
@@ -55,7 +55,7 @@ export const pageOwners = {
           text: "<p>Choosing a real estate agency, every seller and buyer wants to be sure of the competence and professionalism of the specialists.</p><p>We have a lot of experience in the real estate market, which means that you can really trust us. We know how to present real estate so that it is as attractive as possible for the buyer and, as a result, the interest ends in a successful transaction.</p>",
           button: {
             as: "link",
-            href: "/#",
+            href: "/owners/reasons-to-cooperate",
           },
         },
         image: {
@@ -71,7 +71,7 @@ export const pageOwners = {
           text: "There are really many reasons to choose our real estate agency!",
           button: {
             as: "link",
-            href: "/#",
+            href: "/about-me",
           },
         },
       },
@@ -88,7 +88,7 @@ export const pageOwners = {
             text: "Our real estate agency guarantees each client quality services and support at all stages of cooperation.",
             button: {
               as: "link",
-              href: "/#",
+              href: "/owners/we-guarantee",
             },
           },
         ],

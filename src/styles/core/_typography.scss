@@ -67,6 +67,10 @@ h6, p, ul,
   }
 }
 
+ul + p {
+  margin-top: 12px;
+}
+
 // colors
 .text-black {
   color: $black;

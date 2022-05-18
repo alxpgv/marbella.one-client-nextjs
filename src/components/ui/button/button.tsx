@@ -52,7 +52,7 @@ export const Button: React.FC<ButtonProps> = ({
   if (as && as === "link" && href) {
     return (
       <Link href={href}>
-        <a className={classes} onClick={(e: any) => e.preventDefault()}>
+        <a className={classes}>
           {children || text || "Read more"}
           <Icon name={"arrow-left"} className={styles.icon} />
         </a>

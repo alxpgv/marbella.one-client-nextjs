@@ -64,7 +64,7 @@ export const pageHome = {
         text: "<p>Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!</p><p>We understand your desire to cross the threshold of such a house one day, and therefore we will do our best to make it a reality!</p>",
         button: {
           as: "link",
-          href: "/#",
+          href: "/about-me",
         },
       },
     },
