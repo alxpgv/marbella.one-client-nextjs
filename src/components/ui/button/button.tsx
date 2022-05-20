@@ -1,28 +1,29 @@
-import React, { ReactNode } from "react";
+import React, { FC } from "react";
 import cn from "classnames";
 import { Icon } from "@/components/ui/icon";
 import Link from "next/link";
+import { MODAL_VIEWS, useUI } from "@/lib/contexts/ui-context";
 import styles from "./button.module.scss";
 
-export interface ButtonAsType {
+export interface ButtonBase {
   as?: "link" | "modal";
+  modalView?: MODAL_VIEWS;
+  text?: string;
 }
 
-interface ButtonProps extends ButtonAsType {
+interface ButtonProps extends ButtonBase {
   type?: "button" | "submit";
   size: "sm" | "md" | "lg";
   gutter?: "sm";
   variant?: "primary" | "secondary" | "third" | "four";
   fullWidth?: boolean;
-  children?: ReactNode;
   icon?: string;
   onClick?: () => void;
   href?: string;
-  text?: string;
   className?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   type = "button",
   size,
   gutter,
@@ -31,11 +32,14 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   icon,
   as,
+  modalView,
   href,
   text,
   onClick,
   className,
 }): JSX.Element => {
+  const { openModal, setModalView } = useUI();
+
   const classes = cn(
     styles.btn,
     styles[variant],
@@ -58,9 +62,16 @@ export const Button: React.FC<ButtonProps> = ({
         </a>
       </Link>
     );
-  } else if (as && as === "modal") {
+    // TODO: derive modal logic
+  } else if (as && as === "modal" && modalView) {
     return (
-      <button className={classes} onClick={() => console.log("modal")}>
+      <button
+        className={classes}
+        onClick={() => {
+          setModalView(modalView);
+          openModal();
+        }}
+      >
         {children || text}
         <ButtonIcon />
       </button>
