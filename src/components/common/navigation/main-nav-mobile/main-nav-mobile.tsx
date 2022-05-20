@@ -1,4 +1,10 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, {
+  FC,
+  MutableRefObject,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { Button } from "@/components/ui/button";
 import { MenuItem } from "./menu-item";
 import { SocialLinks } from "./social-links";
@@ -10,6 +16,7 @@ import {
 import { PhoneLink } from "@/components/ui/links";
 import cn from "clsx";
 import styles from "./main-nav-mobile.module.scss";
+import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
 
 interface MainMobileNavProps {
   menu: MenuProps[];
@@ -18,15 +25,17 @@ interface MainMobileNavProps {
 
 export const MainNavMobile: FC<MainMobileNavProps> = ({ menu, contact }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef(null);
+  const navRef = useRef() as MutableRefObject<any>;
 
   useEffect(() => {
-    isOpen
-      ? document.body.classList.add("overflow-hidden")
-      : document.body.classList.remove("overflow-hidden");
+    if (navRef.current) {
+      isOpen
+        ? disableBodyScroll(navRef.current, { reserveScrollBarGap: true })
+        : clearAllBodyScrollLocks();
+    }
 
     return () => {
-      document.body.classList.remove("overflow-hidden");
+      clearAllBodyScrollLocks();
     };
   }, [isOpen]);
 
