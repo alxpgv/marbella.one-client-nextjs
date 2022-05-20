@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import cn from "classnames";
+import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import styles from "./breadcrumb.module.scss";
 import { mainMenu } from "@/data/settings";

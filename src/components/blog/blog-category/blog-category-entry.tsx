@@ -3,7 +3,7 @@ import type { EntryProps } from "@/types/entry";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./blog-category.module.scss";
 
 export const BlogCategoryEntry: FC<EntryProps> = ({

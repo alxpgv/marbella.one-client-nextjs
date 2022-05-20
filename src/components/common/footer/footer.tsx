@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { settings, mainMenu } from "@/data/settings";
 import { FooterMenuItems } from "./footer-menu-items";
-import cn from "classnames";
+import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import styles from "./footer.module.scss";
 import { EmailLink, PhoneLink } from "@/components/ui/links";

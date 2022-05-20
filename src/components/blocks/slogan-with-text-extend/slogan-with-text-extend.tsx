@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./slogan-with-text-extend.module.scss";
 import type { ButtonBase } from "@/components/ui/button";
 import { Button } from "@/components/ui/button";

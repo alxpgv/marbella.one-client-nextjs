@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@/components/ui/icon";
 import styles from "./rating.module.scss";
-import cn from "classnames";
+import cn from "clsx";
 
 export const Rating = ({ stars = 0 }) => {
   return (

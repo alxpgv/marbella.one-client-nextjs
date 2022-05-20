@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import type { MenuItemProps } from "@/components/common/navigation/types";
 import Link from "next/link";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./footer.module.scss";
 
 interface FooterMenuItems {

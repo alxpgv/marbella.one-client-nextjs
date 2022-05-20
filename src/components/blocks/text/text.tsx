@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styles from "./text.module.scss";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
-import cn from "classnames";
+import cn from "clsx";
 
 interface TextProps {
   text: string;

@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import cn from "classnames";
+import cn from "clsx";
 import Image, { ImageProps } from "next/image";
 import { Rating } from "@/components/ui/rating";
 import styles from "./last-review.module.scss";

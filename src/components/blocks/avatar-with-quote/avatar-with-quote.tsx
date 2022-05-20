@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import Image, { ImageProps } from "next/image";
 import styles from "./avatar-with-quote.module.scss";
-import cn from "classnames";
+import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 
 interface SloganWithTextProps {

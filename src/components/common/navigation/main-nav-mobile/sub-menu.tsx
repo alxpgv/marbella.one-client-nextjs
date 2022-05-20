@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import type { MenuProps } from "../types";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./main-nav-mobile.module.scss";
 
 interface SubMenuProps {

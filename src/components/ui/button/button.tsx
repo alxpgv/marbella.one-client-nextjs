@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import cn from "classnames";
+import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import Link from "next/link";
 import { MODAL_VIEWS, useUI } from "@/lib/contexts/ui-context";

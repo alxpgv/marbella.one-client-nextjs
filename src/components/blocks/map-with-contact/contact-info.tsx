@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import cn from "classnames";
+import cn from "clsx";
 import { Button } from "@/components/ui/button";
 import { EmailLink, PhoneLink } from "@/components/ui/links";
 import styles from "./map-with-contact.module.scss";

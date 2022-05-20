@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Image, { type ImageProps } from "next/image";
 import { Button, ButtonBase } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import cn from "classnames";
+import cn from "clsx";
 import { TiledItems, type TiledItemProps } from "@/components/ui/tiled-items";
 import styles from "./home-promo.module.scss";
 

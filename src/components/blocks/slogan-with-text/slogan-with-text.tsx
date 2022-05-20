@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { Button, ButtonBase } from "@/components/ui/button";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./slogan-with-text.module.scss";
 
 interface SloganWithTextProps {

@@ -8,7 +8,7 @@ import {
   Hamburger,
 } from "@/components/common/navigation/main-nav-mobile/buttons";
 import { PhoneLink } from "@/components/ui/links";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./main-nav-mobile.module.scss";
 
 interface MainMobileNavProps {

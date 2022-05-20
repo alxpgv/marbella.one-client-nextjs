@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import cn from "classnames";
+import cn from "clsx";
 import { Button, type ButtonBase } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import styles from "./tiled-items.module.scss";

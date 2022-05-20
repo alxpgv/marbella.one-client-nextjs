@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { Button, ButtonBase } from "@/components/ui/button";
-import cn from "classnames";
+import cn from "clsx";
 import Image, { type ImageProps } from "next/image";
 import styles from "./content-extra-with-image.module.scss";
 

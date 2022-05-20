@@ -3,7 +3,7 @@ import React, { FormEvent, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./callback-form.module.scss";
 
 interface CallbackFormProps {

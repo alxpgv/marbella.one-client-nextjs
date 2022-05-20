@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./null-block.module.scss";
-import cn from "classnames";
+import cn from "clsx";
 
 export const NullBlock = ({ blockName }: { blockName: string }) => {
   return (

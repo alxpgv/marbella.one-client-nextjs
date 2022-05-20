@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { CallbackForm } from "@/components/ui/callback-form";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./online-consultation.module.scss";
 
 interface OnlineConsultationProps {

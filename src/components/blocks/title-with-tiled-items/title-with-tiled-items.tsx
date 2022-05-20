@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
-import cn from "classnames";
+import cn from "clsx";
 import { TiledItems, type TiledItemProps } from "@/components/ui/tiled-items";
 import styles from "./title-with-tiled-items.module.scss";
 import { TiledProps } from "@/components/ui/tiled-items/tiled-items";

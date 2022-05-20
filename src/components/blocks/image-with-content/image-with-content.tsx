@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import Image, { type ImageProps } from "next/image";
-import cn from "classnames";
+import cn from "clsx";
 import styles from "./image-with-content.module.scss";
 
 interface ImageWithContentProps {
