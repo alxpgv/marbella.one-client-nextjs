@@ -58,7 +58,7 @@ export const ContactUs: FC<ContactUsProps> = ({ title }) => {
                 purchase of real estate
               </p>
               <div className={styles.contactText}>
-                <Button size={"md"} as={"modal"}>
+                <Button size={"md"} as={"modal"} modalView={"CALLBACK"}>
                   Callback
                 </Button>
               </div>

@@ -27,6 +27,7 @@ export const pageSellLuxury = {
             },
             button: {
               as: "modal",
+              modalView: "EVALUATE_PROPERTY",
               text: "Evaluate property",
             },
           },
@@ -40,7 +41,7 @@ export const pageSellLuxury = {
             },
             button: {
               as: "modal",
-              text: "Sell property",
+              text: "SELL_PROPERTY",
             },
           },
         ],

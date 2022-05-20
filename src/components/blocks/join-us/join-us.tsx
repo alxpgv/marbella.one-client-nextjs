@@ -45,7 +45,7 @@ export const JoinUs = () => {
                   </a>
                 </div>
                 <div className={styles.messengerBtn}>
-                  <Button size={"md"} as={"modal"}>
+                  <Button size={"md"} as={"modal"} modalView={"SUBSCRIBE"}>
                     Subscribe now!
                   </Button>
                 </div>

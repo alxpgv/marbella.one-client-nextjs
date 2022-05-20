@@ -36,6 +36,7 @@ export const pageBuyLuxury = {
             },
             button: {
               as: "modal",
+              modalView: "ONLINE_CONSULTATION",
               text: "Online Consultation",
             },
           },

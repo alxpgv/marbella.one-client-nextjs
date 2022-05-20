@@ -25,6 +25,7 @@ export const pageWeGuarantee = {
             text: "Our real estate agency guarantees each client quality services and support at all stages of cooperation.",
             button: {
               as: "modal",
+              modalView: "ONLINE_CONSULTATION",
               text: "Online Consultation",
             },
           },

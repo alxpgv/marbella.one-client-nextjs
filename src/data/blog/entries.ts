@@ -69,6 +69,7 @@ export const blogEntries = [
             text: "We will answer all your questions for free!",
             button: {
               as: "modal",
+              modalView: "CALLBACK",
               text: "Callback",
             },
           },
@@ -153,6 +154,7 @@ export const blogEntries = [
             text: "We will answer all your questions for free!",
             button: {
               as: "modal",
+              modalView: "CALLBACK",
               text: "Callback",
             },
           },
@@ -206,6 +208,7 @@ export const blogEntries = [
               },
               button: {
                 as: "modal",
+                modalView: "SPECIALIST_CONSULTATION",
                 text: "Online specialist consultation",
               },
             },
@@ -260,6 +263,7 @@ export const blogEntries = [
               variant: "dark",
               button: {
                 as: "modal",
+                modalView: "ONLINE_CONSULTATION",
                 text: "Online consultation",
               },
             },
@@ -314,6 +318,7 @@ export const blogEntries = [
               },
               button: {
                 as: "modal",
+                modalView: "ORDER_YACHT",
                 text: "Order a yacht rental!",
               },
             },
@@ -345,6 +350,7 @@ export const blogEntries = [
             text: "We will answer all your questions for free!",
             button: {
               as: "modal",
+              modalView: "CALLBACK",
               text: "Callback",
             },
           },
@@ -396,6 +402,7 @@ export const blogEntries = [
               },
               button: {
                 as: "modal",
+                modalView: "ORDER_YACHT",
                 text: "Order a yacht rental!",
               },
             },
@@ -421,6 +428,7 @@ export const blogEntries = [
             text: "We will answer all your questions for free!",
             button: {
               as: "modal",
+              modalView: "CALLBACK",
               text: "Callback",
             },
           },
@@ -480,6 +488,7 @@ export const blogEntries = [
               },
               button: {
                 as: "modal",
+                modalView: "ONLINE_CONSULTATION",
                 text: "Online consultation",
               },
             },
@@ -526,6 +535,7 @@ export const blogEntries = [
               variant: "dark",
               button: {
                 as: "modal",
+                modalView: "ONLINE_CONSULTATION",
                 text: "Online consultation",
               },
             },
@@ -580,6 +590,7 @@ export const blogEntries = [
               },
               button: {
                 as: "modal",
+                modalView: "ONLINE_CONSULTATION",
                 text: "Online consultation",
               },
             },
@@ -605,6 +616,7 @@ export const blogEntries = [
             text: "We will answer all your questions for free!",
             button: {
               as: "modal",
+              modalView: "CALLBACK",
               text: "Callback",
             },
           },

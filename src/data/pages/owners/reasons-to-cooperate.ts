@@ -84,6 +84,7 @@ export const pageReasonsToCooperate = {
             text: "With us you will get closer to your dream even faster! Get started today, and we will definitely support you!",
             button: {
               as: "modal",
+              modalView: "ONLINE_CONSULTATION",
               text: "Online Consultation",
             },
           },

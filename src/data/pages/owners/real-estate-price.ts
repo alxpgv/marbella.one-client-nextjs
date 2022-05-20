@@ -64,6 +64,7 @@ export const pageRealEstatePrice = {
             variant: "dark",
             button: {
               as: "modal",
+              modalView: "ONLINE_CONSULTATION",
               text: "Online Consultation",
             },
           },

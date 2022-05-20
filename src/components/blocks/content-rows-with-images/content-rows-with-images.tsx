@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/container";
 import Image, { type ImageProps } from "next/image";
 import cn from "classnames";
 import { Button } from "@/components/ui/button";
-import type { ButtonAsType } from "@/components/ui/button";
+import type { ButtonBase } from "@/components/ui/button";
 import styles from "./content-rows-with-images.module.scss";
 
 interface ContentRowsWithImagesProps {
@@ -12,7 +12,7 @@ interface ContentRowsWithImagesProps {
     title?: string;
     text: string;
     image?: ImageProps;
-    button?: ButtonAsType;
+    button?: ButtonBase;
   }[];
 }
 

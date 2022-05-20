@@ -1,14 +1,14 @@
 import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
-import { Button, ButtonAsType } from "@/components/ui/button";
+import { Button, ButtonBase } from "@/components/ui/button";
 import cn from "classnames";
 import styles from "./slogan-with-text.module.scss";
 
 interface SloganWithTextProps {
   slogan: string;
   text: string;
-  button?: ButtonAsType;
+  button?: ButtonBase;
   options?: {
     sloganAlign: "left" | "right";
     bgColor: "primary" | "secondary";

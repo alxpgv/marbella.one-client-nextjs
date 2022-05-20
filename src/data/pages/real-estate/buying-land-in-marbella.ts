@@ -36,6 +36,7 @@ export const pageBuyingLand = {
             },
             button: {
               as: "modal",
+              modalView: "ONLINE_CONSULTATION",
               text: "Online Consultation",
             },
           },
@@ -63,6 +64,7 @@ export const pageBuyingLand = {
           text: "We will answer all your questions for free!",
           button: {
             as: "modal",
+            modalView: "CALLBACK",
             text: "Callback",
           },
         },
@@ -80,6 +82,7 @@ export const pageBuyingLand = {
             text: "Our team consists of only experienced professionals in the real estate market and land sales in Spain. We have all the contacts required for work in the country",
             button: {
               as: "modal",
+              modalView: "ONLINE_CONSULTATION",
               text: "Online Consultation",
             },
           },

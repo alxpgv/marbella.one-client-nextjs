@@ -35,7 +35,7 @@ export const ListWithImage: FC<ListWithImageProps> = ({
             </div>
           )}
           <div className={styles.btn}>
-            <Button size={"md"} as={"modal"}>
+            <Button size={"md"} as={"modal"} modalView={"ONLINE_CONSULTATION"}>
               Online consultation
             </Button>
           </div>

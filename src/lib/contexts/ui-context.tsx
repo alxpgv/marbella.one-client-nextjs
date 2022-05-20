@@ -12,7 +12,16 @@ interface UIState {
   modalView: string;
 }
 
-type MODAL_VIEWS = "CALLBACK" | "SUBSCRIBE" | "CONSULTATION";
+export type MODAL_VIEWS =
+  | "ONLINE_CONSULTATION"
+  | "CALLBACK"
+  | "SPECIALIST_CONSULTATION"
+  | "ORDER_YACHT"
+  | "EVALUATE_PROPERTY"
+  | "SELL_PROPERTY"
+  | "SUBSCRIBE"
+  | "FORM_SEND_SUCCESS"
+  | "FORM_SEND_ERROR";
 
 type Action =
   | { type: "OPEN_MODAL" }
@@ -58,8 +67,6 @@ export const UIProvider: FC = ({ children }, props) => {
     () => ({ ...state, openModal, closeModal, setModalView }),
     [state]
   );
-
-  console.log(value, props);
 
   return (
     <UIContext.Provider value={value} {...props}>

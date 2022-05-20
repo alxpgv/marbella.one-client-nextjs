@@ -29,6 +29,7 @@ export const pageHome = {
         services: serviceItems,
         button: {
           as: "modal",
+          modalView: "ONLINE_CONSULTATION",
           text: "Online Consultation",
         },
       },

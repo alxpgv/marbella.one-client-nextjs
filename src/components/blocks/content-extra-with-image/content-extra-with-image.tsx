@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
-import { Button, ButtonAsType } from "@/components/ui/button";
+import { Button, ButtonBase } from "@/components/ui/button";
 import cn from "classnames";
 import Image, { type ImageProps } from "next/image";
 import styles from "./content-extra-with-image.module.scss";
@@ -11,14 +11,14 @@ interface ContentExtraWithImageProps {
     title: string;
     subtitle: string;
     text: string;
-    button: ButtonAsType;
+    button: ButtonBase;
   };
   image: ImageProps;
   contentSecondary: string;
   extra: {
     title: string;
     text: string;
-    button: ButtonAsType;
+    button: ButtonBase;
   };
 }
 
