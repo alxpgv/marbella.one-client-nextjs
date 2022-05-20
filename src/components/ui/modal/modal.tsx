@@ -11,7 +11,6 @@ import styles from "./modal.module.scss";
 
 interface ModalProps {
   title?: string;
-  children?: React.ReactNode;
   onClose: () => void;
 }
 

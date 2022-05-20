@@ -12,26 +12,27 @@ interface UIState {
   modalView: string;
 }
 
-export type MODAL_VIEWS =
-  | "ONLINE_CONSULTATION"
-  | "CALLBACK"
-  | "SPECIALIST_CONSULTATION"
-  | "ORDER_YACHT"
-  | "EVALUATE_PROPERTY"
-  | "SELL_PROPERTY"
-  | "SUBSCRIBE"
-  | "FORM_SEND_SUCCESS"
-  | "FORM_SEND_ERROR";
+export enum MODAL_VIEWS {
+  "ONLINE_CONSULTATION" = "Online consultation",
+  "CALLBACK" = "Callback",
+  "SPECIALIST_CONSULTATION" = "Specialist consultation",
+  "ORDER_YACHT" = "Order yacht",
+  "EVALUATE_PROPERTY" = "Evaluate property",
+  "SELL_PROPERTY" = "Sell property",
+  "SUBSCRIBE" = "Subscribe now",
+  "FORM_SEND_SUCCESS" = "Success sending",
+  "FORM_SEND_ERROR" = "Error sending",
+}
+
+const initialState = {
+  displayModal: false,
+  modalView: Object.keys(MODAL_VIEWS)[0],
+};
 
 type Action =
   | { type: "OPEN_MODAL" }
   | { type: "CLOSE_MODAL" }
-  | { type: "SET_MODAL_VIEW"; view: MODAL_VIEWS };
-
-const initialState = {
-  displayModal: false,
-  modalView: "CALLBACK",
-};
+  | { type: "SET_MODAL_VIEW"; view: keyof typeof MODAL_VIEWS };
 
 const UIContext = createContext<UIState | any>(initialState);
 UIContext.displayName = "UIContext";
@@ -59,7 +60,8 @@ export const UIProvider: FC = ({ children }, props) => {
     [dispatch]
   );
   const setModalView = useCallback(
-    (view: MODAL_VIEWS) => dispatch({ type: "SET_MODAL_VIEW", view }),
+    (view: keyof typeof MODAL_VIEWS) =>
+      dispatch({ type: "SET_MODAL_VIEW", view }),
     [dispatch]
   );
 
@@ -67,6 +69,8 @@ export const UIProvider: FC = ({ children }, props) => {
     () => ({ ...state, openModal, closeModal, setModalView }),
     [state]
   );
+
+  console.log(value);
 
   return (
     <UIContext.Provider value={value} {...props}>
