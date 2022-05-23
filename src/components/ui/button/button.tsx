@@ -8,7 +8,7 @@ import styles from "./button.module.scss";
 
 export interface ButtonBase {
   as?: "link" | "modal";
-  modalView?: MODAL_VIEWS;
+  modalView?: keyof typeof MODAL_VIEWS;
   text?: string;
 }
 

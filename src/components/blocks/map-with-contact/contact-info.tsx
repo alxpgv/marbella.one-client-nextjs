@@ -36,7 +36,7 @@ export const ContactInfo: FC<ContactInfoProps> = ({
             Our experienced professionals will advise on real estate matters and
             tell you where to start if you want to buy or sell property!
           </p>
-          <Button size={"md"} as={"modal"} modalView={MODAL_VIEWS.CALLBACK}>
+          <Button size={"md"} as={"modal"} modalView={"CALLBACK"}>
             Callback
           </Button>
         </div>

@@ -1,4 +1,4 @@
-import React, { FC, FormEvent, useEffect, useRef, useState } from "react";
+import React, { FC, FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import cn from "clsx";
@@ -38,36 +38,48 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
   });
 
   const [status, setStatus] = useState<SendStatus>("intl");
-  const initialRender = useRef(true);
 
   const changeErrors = (field: string, error: string | null = null) => {
     setErrors((prev) => ({ ...prev, [field]: error }));
   };
 
-  const validate = () => {
-    let validation = true;
-    if (data.phone.length < 9) {
-      changeErrors("phone", errorMessages.required);
-      validation = false;
-    } else {
-      changeErrors("phone");
-    }
-
-    if (!data.agree) {
-      changeErrors("agree", errorMessages.agree);
-      validation = false;
-    } else {
-      changeErrors("agree");
-    }
-
-    return validation;
-  };
-
-  const onChange = (field: string, value: string | boolean) => {
+  const changeData = (field: string, value: string | boolean) => {
     setData((prev: any) => ({
       ...prev,
       [field]: value,
     }));
+  };
+
+  const changePhone = (value: string) => {
+    validatePhone(value);
+    changeData("phone", value);
+  };
+
+  const changeAgree = (value: boolean) => {
+    validateAgree(value);
+    changeData("agree", value);
+  };
+
+  const validatePhone = (value: string) => {
+    if (value.length < 9) {
+      changeErrors("phone", errorMessages.required);
+      return false;
+    }
+    changeErrors("phone");
+    return true;
+  };
+
+  const validateAgree = (value: boolean) => {
+    if (!value) {
+      changeErrors("agree", errorMessages.agree);
+      return false;
+    }
+    changeErrors("agree");
+    return true;
+  };
+
+  const validate = () => {
+    return validatePhone(data.phone) && validateAgree(data.agree);
   };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -79,13 +91,8 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
     }
   };
 
-  useEffect(() => {
-    if (initialRender.current) {
-      initialRender.current = false;
-    } else {
-      validate();
-    }
-  }, [data]);
+  console.log(data);
+  console.log(errors);
 
   return (
     <div className={styles.wrapper}>
@@ -100,10 +107,13 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
           <InputText
             className={styles.formInput}
             value={data.name}
-            onChange={(e) => onChange("name", e.target.value)}
+            onChange={(e) =>
+              setData((prev: any) => ({ ...prev, name: e.target.value }))
+            }
             placeholder={"Your name"}
           />
         </div>
+
         <div className={styles.formField}>
           {errors.phone && (
             <span className={styles.errorPopup}>{errors.phone}</span>
@@ -114,10 +124,11 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
           <InputPhone
             className={cn(styles.formInput, errors.phone && styles.error)}
             value={data.phone}
-            onChange={(value) => onChange("phone", value)}
+            onChange={(value) => changePhone(value)}
             placeholder={"Phone number"}
           />
         </div>
+
         <div className={styles.formField}>
           <Button
             type="submit"
@@ -134,9 +145,9 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
         <div className={cn(styles.formField)}>
           <label className={styles.formFieldAgree}>
             <input
-              className={styles.formAgreeControl}
+              className={styles.formAgreeInput}
               type={"checkbox"}
-              onChange={() => onChange("agree", !data.agree)}
+              onChange={() => changeAgree(!data.agree)}
               checked={data.agree}
             />
             <span

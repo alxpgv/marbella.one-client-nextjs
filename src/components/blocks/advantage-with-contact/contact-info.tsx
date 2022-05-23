@@ -49,7 +49,7 @@ export const ContactInfo = () => {
             variant={"primary"}
             size={"md"}
             as={"modal"}
-            modalView={MODAL_VIEWS.CALLBACK}
+            modalView={"CALLBACK"}
             text={"Callback"}
           />
         </div>

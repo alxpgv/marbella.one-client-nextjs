@@ -26,14 +26,27 @@
   padding: 10px 10px 20px;
   background: $white;
   border-radius: 4px;
+  animation: ease-in 100ms appearance_below;
 
   @include xs {
     padding: 20px 20px 40px;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
-.modal:focus {
-  outline: none;
+@keyframes appearance_below {
+  from {
+    transform: translate3d(0, 10%, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0%, 0);
+    opacity: 1;
+  }
 }
 
 .close {

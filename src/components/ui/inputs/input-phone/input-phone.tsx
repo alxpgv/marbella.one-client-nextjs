@@ -22,11 +22,6 @@ export const InputPhone: FC<InputPhoneProps> = ({
       specialLabel={""}
       onChange={onChange}
       value={value}
-      // inputClass={
-      //   errors.phone
-      //     ? "form-feedback__input error"
-      //     : "form-feedback__input"
-      // }
     />
   );
 };
