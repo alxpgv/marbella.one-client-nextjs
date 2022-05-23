@@ -40,6 +40,17 @@
     background: $white;
     border: 1px solid rgba($red-300, .5);
   }
+
+  &:disabled {
+    &,
+    &:hover,
+    &:active {
+      color: $white;
+      background: rgba($red-400, .5);
+      border: 1px solid transparent;
+      cursor: no-drop;
+    }
+  }
 }
 
 // secondary

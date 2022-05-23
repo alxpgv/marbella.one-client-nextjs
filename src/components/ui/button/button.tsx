@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import React, { ButtonHTMLAttributes, FC } from "react";
+
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import Link from "next/link";
@@ -11,8 +12,9 @@ export interface ButtonBase {
   text?: string;
 }
 
-interface ButtonProps extends ButtonBase {
-  type?: "button" | "submit";
+interface ButtonProps
+  extends ButtonBase,
+    ButtonHTMLAttributes<HTMLButtonElement> {
   size: "sm" | "md" | "lg";
   gutter?: "sm";
   variant?: "primary" | "secondary" | "third" | "four";
@@ -37,6 +39,7 @@ export const Button: FC<ButtonProps> = ({
   text,
   onClick,
   className,
+  disabled = false,
 }): JSX.Element => {
   const { openModal, setModalView } = useUI();
 
@@ -71,6 +74,7 @@ export const Button: FC<ButtonProps> = ({
           setModalView(modalView);
           openModal();
         }}
+        disabled={disabled}
       >
         {children || text}
         <ButtonIcon />
@@ -79,7 +83,12 @@ export const Button: FC<ButtonProps> = ({
   }
 
   return (
-    <button type={type} className={classes} onClick={onClick}>
+    <button
+      type={type}
+      className={classes}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
       <ButtonIcon />
     </button>
