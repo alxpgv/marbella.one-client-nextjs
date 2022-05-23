@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/container";
 import cn from "clsx";
 import { Button } from "@/components/ui/button";
 import Image, { type ImageProps } from "next/image";
-import { CallbackForm } from "@/components/ui/callback-form";
+import { FormFeedback } from "@/components/ui/forms/form-feedback";
 import styles from "./online-service.module.scss";
 
 interface OnlineServiceProps {
@@ -68,7 +68,7 @@ export const OnlineService: FC<OnlineServiceProps> = ({
             })}
 
           <div className={cn(styles.item, styles.itemForm)}>
-            <CallbackForm
+            <FormFeedback
               title={"Online booking"}
               text={
                 "if you want to charter a Yacht or Private jet, please fill out the form and we will call you back"

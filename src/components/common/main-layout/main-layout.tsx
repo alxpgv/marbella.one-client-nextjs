@@ -5,6 +5,7 @@ import { TopBtn } from "@/components/ui/top-btn";
 import { useUI } from "@/lib/contexts/ui-context";
 import dynamic from "next/dynamic";
 import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
+import { FormFeedback } from "@/components/ui/forms/form-feedback";
 
 interface MainLayoutProps {
   navbarOffset?: boolean;
@@ -25,9 +26,20 @@ const ModalView: FC<{
   closeModal(): void;
 }> = ({ modalView, closeModal }) => {
   return (
-    <Modal onClose={closeModal} title={MODAL_VIEWS[modalView]}>
-      {modalView === "CALLBACK" && "text"}
-      {modalView === "ONLINE_CONSULTATION" && "text"}
+    <Modal onClose={closeModal}>
+      {(modalView === "ONLINE_CONSULTATION" ||
+        modalView === "CALLBACK" ||
+        modalView === "SPECIALIST_CONSULTATION" ||
+        modalView === "ORDER_YACHT" ||
+        modalView === "EVALUATE_PROPERTY" ||
+        modalView === "SELL_PROPERTY") && (
+        <FormFeedback
+          title={MODAL_VIEWS[modalView]}
+          text={"Leave your phone number and our manager will contact you"}
+        />
+      )}
+      {modalView === "FORM_SEND_SUCCESS" && "FORM_SEND_SUCCESS"}
+      {modalView === "FORM_SEND_ERROR" && "FORM_SEND_ERROR"}
     </Modal>
   );
 };

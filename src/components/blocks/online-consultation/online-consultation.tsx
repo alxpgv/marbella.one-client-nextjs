@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
-import { CallbackForm } from "@/components/ui/callback-form";
+import { FormFeedback } from "@/components/ui/forms/form-feedback";
 import cn from "clsx";
 import styles from "./online-consultation.module.scss";
 
@@ -34,7 +34,7 @@ export const OnlineConsultation: FC<OnlineConsultationProps> = ({
           </div>
 
           <div className={styles.form}>
-            <CallbackForm
+            <FormFeedback
               title={"Free consultation"}
               text={"it is completely free and does not oblige you to anything"}
               btnText={"Get now!"}

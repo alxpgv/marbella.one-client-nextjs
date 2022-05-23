@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 import cn from "clsx";
 import { Button } from "@/components/ui/button";
-import { EmailLink, PhoneLink } from "@/components/ui/links";
+import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
 import styles from "./map-with-contact.module.scss";
+import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
 
 interface ContactInfoProps {
   phone: string;
@@ -35,7 +36,7 @@ export const ContactInfo: FC<ContactInfoProps> = ({
             Our experienced professionals will advise on real estate matters and
             tell you where to start if you want to buy or sell property!
           </p>
-          <Button size={"md"} as={"modal"} modalView={"CALLBACK"}>
+          <Button size={"md"} as={"modal"} modalView={MODAL_VIEWS.CALLBACK}>
             Callback
           </Button>
         </div>

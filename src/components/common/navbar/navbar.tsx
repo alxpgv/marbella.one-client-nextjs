@@ -5,7 +5,7 @@ import { mainMenu, settings } from "@/data/settings";
 import { Container } from "@/components/ui/container";
 import { MainNavMobile } from "@/components/common/navigation/main-nav-mobile";
 import styles from "./navbar.module.scss";
-import { PhoneLink } from "@/components/ui/links";
+import { PhoneLink } from "@/components/ui/contact-links";
 
 export const Navbar = () => {
   const phone = settings?.contact?.phone;

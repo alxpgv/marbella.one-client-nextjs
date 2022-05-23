@@ -13,7 +13,7 @@ import {
   CloseButton,
   Hamburger,
 } from "@/components/common/navigation/main-nav-mobile/buttons";
-import { PhoneLink } from "@/components/ui/links";
+import { PhoneLink } from "@/components/ui/contact-links";
 import cn from "clsx";
 import styles from "./main-nav-mobile.module.scss";
 import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";

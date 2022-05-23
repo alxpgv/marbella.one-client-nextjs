@@ -4,7 +4,8 @@ import { Icon } from "@/components/ui/icon";
 import cn from "clsx";
 import { settings } from "@/data/settings";
 import styles from "./advantage-with-contact.module.scss";
-import { EmailLink, PhoneLink } from "@/components/ui/links";
+import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
+import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
 
 export const ContactInfo = () => {
   const email = settings?.contact?.email;
@@ -48,7 +49,7 @@ export const ContactInfo = () => {
             variant={"primary"}
             size={"md"}
             as={"modal"}
-            modalView={"CALLBACK"}
+            modalView={MODAL_VIEWS.CALLBACK}
             text={"Callback"}
           />
         </div>

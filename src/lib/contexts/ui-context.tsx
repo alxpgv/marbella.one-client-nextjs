@@ -70,8 +70,6 @@ export const UIProvider: FC = ({ children }, props) => {
     [state]
   );
 
-  console.log(value);
-
   return (
     <UIContext.Provider value={value} {...props}>
       {children}

@@ -8,7 +8,7 @@ import { FooterMenuItems } from "./footer-menu-items";
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import styles from "./footer.module.scss";
-import { EmailLink, PhoneLink } from "@/components/ui/links";
+import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
 
 export const Footer = () => {
   const menuAbout = mainMenu[0];
