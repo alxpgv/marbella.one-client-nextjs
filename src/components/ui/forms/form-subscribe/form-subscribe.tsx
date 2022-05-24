@@ -2,13 +2,12 @@ import React, { FC, FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import cn from "clsx";
-import { InputPhone } from "@/components/ui/inputs/input-phone";
-import { InputText } from "@/components/ui/inputs/input-text";
-import { InputAgree } from "@/components/ui/inputs/input-agree";
+import * as EmailValidator from "email-validator";
 import { ErrorPopup } from "@/components/ui/inputs/error-popup";
 import { errorMessages } from "@/lib/contains";
+import { InputText } from "@/components/ui/inputs/input-text";
 
-interface FormFeedbackProps {
+interface FormSubscribeProps {
   title?: string;
   text?: string;
   btnText?: string;
@@ -16,20 +15,18 @@ interface FormFeedbackProps {
 
 type SendStatus = "intl" | "sending" | "success" | "error";
 
-export const FormFeedback: FC<FormFeedbackProps> = ({
+export const FormSubscribe: FC<FormSubscribeProps> = ({
   title,
   text,
   btnText,
 }) => {
   const [data, setData] = useState({
-    name: "",
-    phone: "",
+    email: "",
     agree: true,
   });
 
   const [errors, setErrors] = useState<{ [key in string]: null | string }>({
-    name: null,
-    phone: null,
+    email: null,
     agree: null,
   });
 
@@ -46,36 +43,22 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
     }));
   };
 
-  const changePhone = (value: string) => {
-    validatePhone(value);
-    changeData("phone", value);
+  const changeEmail = (value: string) => {
+    validateEmail(value);
+    changeData("email", value);
   };
 
-  const changeAgree = (value: boolean) => {
-    validateAgree(value);
-    changeData("agree", value);
-  };
-
-  const validatePhone = (value: string) => {
-    if (value.length < 9) {
-      changeErrors("phone", errorMessages.required);
+  const validateEmail = (value: string) => {
+    if (!EmailValidator.validate(value)) {
+      changeErrors("email", errorMessages.notValid);
       return false;
     }
-    changeErrors("phone");
-    return true;
-  };
-
-  const validateAgree = (value: boolean) => {
-    if (!value) {
-      changeErrors("agree", errorMessages.agree);
-      return false;
-    }
-    changeErrors("agree");
+    changeErrors("email");
     return true;
   };
 
   const validateAll = () => {
-    return validatePhone(data.phone) && validateAgree(data.agree);
+    return validateEmail(data.email);
   };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -99,27 +82,15 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
 
       <form onSubmit={onSubmit}>
         <div className="form-field">
+          {errors.email && <ErrorPopup text={errors.email} />}
           <span className="form-input-icon">
-            <Icon name={"user"} className="icon" />
+            <Icon name={"box-arrow-smooth"} className="icon-stroke" />
           </span>
           <InputText
-            className="form-input"
-            value={data.name}
-            onChange={(e) => changeData("name", e.target.value)}
-            placeholder={"Your name"}
-          />
-        </div>
-
-        <div className="form-field">
-          {errors.phone && <ErrorPopup text={errors.phone} />}
-          <span className="form-input-icon">
-            <Icon name={"phone"} className="icon" />
-          </span>
-          <InputPhone
-            className={cn("form-input", errors.phone && "error")}
-            value={data.phone}
-            onChange={(value) => changePhone(value)}
-            placeholder={"Phone number"}
+            className={cn("form-input", errors.email && "error")}
+            value={data.email}
+            onChange={(e) => changeEmail(e.target.value)}
+            placeholder={"Email address"}
           />
         </div>
 
@@ -134,13 +105,6 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
           >
             {btnText ? btnText : "Send"}
           </Button>
-        </div>
-
-        <div className="form-field">
-          <InputAgree
-            checked={data.agree}
-            onChange={() => changeAgree(!data.agree)}
-          />
         </div>
       </form>
     </div>

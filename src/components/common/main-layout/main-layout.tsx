@@ -6,6 +6,7 @@ import { useUI } from "@/lib/contexts/ui-context";
 import dynamic from "next/dynamic";
 import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
 import { FormFeedback } from "@/components/ui/forms/form-feedback";
+import { FormSubscribe } from "@/components/ui/forms/form-subscribe";
 
 interface MainLayoutProps {
   navbarOffset?: boolean;
@@ -36,6 +37,13 @@ const ModalView: FC<{
         <FormFeedback
           title={MODAL_VIEWS[modalView]}
           text={"Leave your phone number and our manager will contact you"}
+        />
+      )}
+      {modalView === "SUBSCRIBE" && (
+        <FormSubscribe
+          title={MODAL_VIEWS[modalView]}
+          text={"Subscribe to our news"}
+          btnText={"Subscribe"}
         />
       )}
       {modalView === "FORM_SEND_SUCCESS" && "FORM_SEND_SUCCESS"}

@@ -1,0 +1,41 @@
+@import "../../../../styles/utils";
+
+.agree {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.agreeInput {
+  display: none;
+
+  &:not(:checked) {
+    & + .agreeCheck:after {
+      content: "";
+    }
+  }
+}
+
+.agreeCheck {
+  flex: 0 0 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $grey-600;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:after {
+    content: "\2713";
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    color: $white;
+  }
+}
+
+.agreeText {
+  margin-left: 10px;
+  text-align: left;
+}
