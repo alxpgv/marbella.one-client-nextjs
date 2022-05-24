@@ -78,13 +78,13 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
     return true;
   };
 
-  const validate = () => {
+  const validateAll = () => {
     return validatePhone(data.phone) && validateAgree(data.agree);
   };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (validate()) {
+    if (validateAll()) {
       console.log("sending");
     } else {
       console.log("error");
@@ -107,9 +107,7 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
           <InputText
             className={styles.formInput}
             value={data.name}
-            onChange={(e) =>
-              setData((prev: any) => ({ ...prev, name: e.target.value }))
-            }
+            onChange={(e) => changeData("name", e.target.value)}
             placeholder={"Your name"}
           />
         </div>
