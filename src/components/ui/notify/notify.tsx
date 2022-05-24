@@ -6,13 +6,11 @@ import React, {
   useRef,
 } from "react";
 import { Icon } from "@/components/ui/icon";
-import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import styles from "./notify.module.scss";
 import cn from "clsx";
 
 interface NotifyProps {
   title?: string;
-  disableScroll?: boolean;
   type?: "success" | "error";
   text?: string;
   onClose: () => void;
@@ -22,7 +20,6 @@ export const Notify: FC<NotifyProps> = ({
   title,
   text,
   type = "success",
-  disableScroll = false,
   onClose,
 }) => {
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
@@ -40,17 +37,10 @@ export const Notify: FC<NotifyProps> = ({
     const notify = ref.current;
 
     if (notify) {
-      // if not another showing modal component
-      if (disableScroll) {
-        disableBodyScroll(notify, { reserveScrollBarGap: true });
-      }
       window.addEventListener("keydown", handleKey);
     }
 
     return () => {
-      if (disableScroll) {
-        clearAllBodyScrollLocks();
-      }
       window.removeEventListener("keydown", handleKey);
     };
   }, [handleKey]);

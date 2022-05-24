@@ -16,7 +16,6 @@ import {
 import { PhoneLink } from "@/components/ui/contact-links";
 import cn from "clsx";
 import styles from "./main-nav-mobile.module.scss";
-import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
 
 interface MainMobileNavProps {
   menu: MenuProps[];
@@ -30,12 +29,12 @@ export const MainNavMobile: FC<MainMobileNavProps> = ({ menu, contact }) => {
   useEffect(() => {
     if (navRef.current) {
       isOpen
-        ? disableBodyScroll(navRef.current, { reserveScrollBarGap: true })
-        : clearAllBodyScrollLocks();
+        ? document.body.classList.add("overflow-hidden")
+        : document.body.classList.remove("overflow-hidden");
     }
 
     return () => {
-      clearAllBodyScrollLocks();
+      document.body.classList.remove("overflow-hidden");
     };
   }, [isOpen]);
 
@@ -64,7 +63,9 @@ export const MainNavMobile: FC<MainMobileNavProps> = ({ menu, contact }) => {
             {contact?.phone && (
               <PhoneLink value={contact.phone} className={styles.phone} />
             )}
-            <Button size="sm">Callback</Button>
+            <Button size="sm" as={"modal"} modalView={"CALLBACK"}>
+              Callback
+            </Button>
 
             <CloseButton handleClick={() => setIsOpen(false)} />
           </div>

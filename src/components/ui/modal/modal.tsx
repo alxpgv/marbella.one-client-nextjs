@@ -6,7 +6,6 @@ import React, {
   useRef,
 } from "react";
 import { Icon } from "@/components/ui/icon";
-import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import styles from "./modal.module.scss";
 
 interface ModalProps {
@@ -30,12 +29,10 @@ export const Modal: FC<ModalProps> = ({ children, title, onClose }) => {
     const modal = ref.current;
 
     if (modal) {
-      // disableBodyScroll(modal, { reserveScrollBarGap: true });
       window.addEventListener("keydown", handleKey);
     }
 
     return () => {
-      // clearAllBodyScrollLocks();
       window.removeEventListener("keydown", handleKey);
     };
   }, [handleKey]);
