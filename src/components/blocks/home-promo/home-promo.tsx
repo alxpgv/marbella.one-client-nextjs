@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, MutableRefObject, useRef } from "react";
 import Image, { type ImageProps } from "next/image";
 import { Button, ButtonBase } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -9,7 +9,7 @@ import styles from "./home-promo.module.scss";
 interface HomePromoProps {
   title: string;
   text: string;
-  image: ImageProps;
+  image: any;
   services: TiledItemProps[];
   button?: ButtonBase;
 }
@@ -21,17 +21,34 @@ export const HomePromo: FC<HomePromoProps> = ({
   services,
   button,
 }) => {
+  // const imageRef = useRef() as MutableRefObject<HTMLImageElement>;
+
   return (
     <div className={styles.promo}>
       {image?.src && (
-        <div className={styles.bgImageWrapper}>
-          <div className={styles.bgImage}>
-            <Image
-              src={image.src}
-              layout="fill"
-              objectFit="cover"
+        <div className={styles.imageWrapper}>
+          <div className={styles.imageInner}>
+            <img
+              className={styles.image}
+              src={"/images/hero/hero-min.jpg"}
+              width={"100%"}
+              height={"100%"}
               alt={image?.alt ?? ""}
             />
+            <img
+              className={styles.imageCloudTop}
+              src={"/images/hero/compresspng/cloud-top-min.png"}
+              width={"100%"}
+              height={"100%"}
+              alt={""}
+            />
+            {/*<img*/}
+            {/*  className={styles.imageCloudBottom}*/}
+            {/*  src={"/images/hero/compresspng/cloud-bottom-1-min.png"}*/}
+            {/*  width={"100%"}*/}
+            {/*  height={"100%"}*/}
+            {/*  alt={""}*/}
+            {/*/>*/}
           </div>
         </div>
       )}
