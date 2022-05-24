@@ -87,8 +87,8 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
       openNotify();
       console.log("sending");
     } else {
-      setNotifyView("FORM_SEND_ERROR");
-      openNotify();
+      // setNotifyView("FORM_SEND_ERROR");
+      // openNotify();
       console.log("error");
     }
   };
