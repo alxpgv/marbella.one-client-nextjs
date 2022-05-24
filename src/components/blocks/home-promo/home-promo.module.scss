@@ -33,7 +33,6 @@
   top: 100px;
   height: 402px;
   object-position: left;
-  border: 1px solid green;
   animation: cloud_motion_one linear 110s infinite;
 }
 
@@ -41,7 +40,6 @@
   top: 30px;
   height: 602px;
   object-position: center;
-  border: 1px solid blue;
   animation: cloud_motion_two linear 180s infinite;
 }
 
@@ -49,7 +47,6 @@
   top: 130px;
   height: 502px;
   object-position: right;
-  border: 1px solid red;
   animation: cloud_motion_one linear 170s infinite;
 }
 
@@ -82,18 +79,6 @@
     transform: translate3d(0%, 0, 0);
   }
 }
-
-//@keyframes cloud_motion {
-//  0% {
-//    transform: translate3d(100%, 0, 0) scale(1);
-//  }
-//  50% {
-//    transform: translate3d(50%, 0, 0) scale(2);
-//  }
-//  100% {
-//    transform: translate3d(-100%, 0, 0) scale(.8);
-//  }
-//}
 
 .imageCloudBottom {
   position: absolute;
