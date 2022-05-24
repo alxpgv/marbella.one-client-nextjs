@@ -6,7 +6,8 @@ import { InputPhone } from "@/components/ui/inputs/input-phone";
 import { InputText } from "@/components/ui/inputs/input-text";
 import { InputAgree } from "@/components/ui/inputs/input-agree";
 import { ErrorPopup } from "@/components/ui/inputs/error-popup";
-import { errorMessages } from "@/lib/contains";
+import { errorMessages } from "@/lib/constants";
+import { useUI } from "@/lib/contexts/ui-context";
 
 interface FormFeedbackProps {
   title?: string;
@@ -34,6 +35,7 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
   });
 
   const [status, setStatus] = useState<SendStatus>("intl");
+  const { openNotify, closeNotify, setNotifyView } = useUI();
 
   const changeErrors = (field: string, error: string | null = null) => {
     setErrors((prev) => ({ ...prev, [field]: error }));
@@ -81,8 +83,12 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateAll()) {
+      setNotifyView("FORM_SEND_SUCCESS");
+      openNotify();
       console.log("sending");
     } else {
+      setNotifyView("FORM_SEND_ERROR");
+      openNotify();
       console.log("error");
     }
   };

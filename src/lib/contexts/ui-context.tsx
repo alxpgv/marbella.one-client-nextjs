@@ -10,6 +10,8 @@ import React, {
 interface UIState {
   displayModal: boolean;
   modalView: string;
+  displayNotify: boolean;
+  notifyView: string;
 }
 
 export enum MODAL_VIEWS {
@@ -20,6 +22,9 @@ export enum MODAL_VIEWS {
   "EVALUATE_PROPERTY" = "Evaluate property",
   "SELL_PROPERTY" = "Sell property",
   "SUBSCRIBE" = "Subscribe now",
+}
+
+export enum NOTIFY_VIEWS {
   "FORM_SEND_SUCCESS" = "Success sending",
   "FORM_SEND_ERROR" = "Error sending",
 }
@@ -27,12 +32,17 @@ export enum MODAL_VIEWS {
 const initialState = {
   displayModal: false,
   modalView: Object.keys(MODAL_VIEWS)[0],
+  displayNotify: false,
+  notifyView: Object.keys(NOTIFY_VIEWS)[0],
 };
 
 type Action =
   | { type: "OPEN_MODAL" }
   | { type: "CLOSE_MODAL" }
-  | { type: "SET_MODAL_VIEW"; view: keyof typeof MODAL_VIEWS };
+  | { type: "SET_MODAL_VIEW"; view: keyof typeof MODAL_VIEWS }
+  | { type: "OPEN_NOTIFY" }
+  | { type: "CLOSE_NOTIFY" }
+  | { type: "SET_NOTIFY_VIEW"; view: keyof typeof NOTIFY_VIEWS };
 
 const UIContext = createContext<UIState | any>(initialState);
 UIContext.displayName = "UIContext";
@@ -45,6 +55,12 @@ const uiReducer = (state: UIState, action: Action) => {
       return { ...state, displayModal: false };
     case "SET_MODAL_VIEW":
       return { ...state, modalView: action.view };
+    case "OPEN_NOTIFY":
+      return { ...state, displayNotify: true };
+    case "CLOSE_NOTIFY":
+      return { ...state, displayNotify: false };
+    case "SET_NOTIFY_VIEW":
+      return { ...state, notifyView: action.view };
   }
 };
 
@@ -65,8 +81,30 @@ export const UIProvider: FC = ({ children }, props) => {
     [dispatch]
   );
 
+  const openNotify = useCallback(
+    () => dispatch({ type: "OPEN_NOTIFY" }),
+    [dispatch]
+  );
+  const closeNotify = useCallback(
+    () => dispatch({ type: "CLOSE_NOTIFY" }),
+    [dispatch]
+  );
+  const setNotifyView = useCallback(
+    (view: keyof typeof NOTIFY_VIEWS) =>
+      dispatch({ type: "SET_NOTIFY_VIEW", view }),
+    [dispatch]
+  );
+
   const value = useMemo(
-    () => ({ ...state, openModal, closeModal, setModalView }),
+    () => ({
+      ...state,
+      openModal,
+      closeModal,
+      setModalView,
+      openNotify,
+      closeNotify,
+      setNotifyView,
+    }),
     [state]
   );
 

@@ -1,0 +1,98 @@
+@import "../../../styles/utils";
+
+.root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  padding: 20px;
+  overflow: auto;
+  z-index: 30;
+
+  background: rgba($black, .6);
+  -webkit-overflow-scrolling: touch;
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.notify {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  min-height: 100px;
+  margin: auto;
+  padding: 10px 10px 20px;
+  background: $white;
+  border-radius: 4px;
+  animation: ease-in 100ms appearance_below;
+
+  @include xs {
+    padding: 20px 20px 40px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@keyframes appearance_below {
+  from {
+    transform: translate3d(0, 10%, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0%, 0);
+    opacity: 1;
+  }
+}
+
+.close {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.iconClose {
+  width: 22px;
+  height: 22px;
+  stroke: $black;
+  opacity: .6;
+  transition: transform, opacity 200ms ease-in-out;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.title {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.iconWrapper {
+  text-align: center;
+}
+
+.icon {
+  width: 82px;
+  height: 82px;
+}
+
+.iconSuccess {
+  stroke: $success;
+}
+
+.iconError {
+  width: 32px;
+  height: 32px;
+  stroke: $error;
+}

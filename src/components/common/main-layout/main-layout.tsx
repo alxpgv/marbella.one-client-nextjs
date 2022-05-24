@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Footer } from "@/components/common/footer";
 import { Navbar } from "@/components/common/navbar";
 import { TopBtn } from "@/components/ui/top-btn";
-import { useUI } from "@/lib/contexts/ui-context";
+import { NOTIFY_VIEWS, useUI } from "@/lib/contexts/ui-context";
 import dynamic from "next/dynamic";
 import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
 import { FormFeedback } from "@/components/ui/forms/form-feedback";
@@ -12,10 +12,16 @@ interface MainLayoutProps {
   navbarOffset?: boolean;
 }
 
-const Loading = () => <div>loading ...</div>;
-
 const Modal: any = dynamic(
   (): any => import("@/components/ui/modal").then((mod) => mod.Modal),
+  {
+    // loading: Loading,
+    ssr: false,
+  }
+);
+
+const Notify: any = dynamic(
+  (): any => import("@/components/ui/notify").then((mod) => mod.Notify),
   {
     // loading: Loading,
     ssr: false,
@@ -46,8 +52,6 @@ const ModalView: FC<{
           btnText={"Subscribe"}
         />
       )}
-      {modalView === "FORM_SEND_SUCCESS" && "FORM_SEND_SUCCESS"}
-      {modalView === "FORM_SEND_ERROR" && "FORM_SEND_ERROR"}
     </Modal>
   );
 };
@@ -60,6 +64,40 @@ const ModalUI: FC = () => {
   ) : null;
 };
 
+const NotifyView: FC<{
+  notifyView: keyof typeof NOTIFY_VIEWS;
+  closeNotify(): void;
+}> = ({ notifyView, closeNotify }) => {
+  return (
+    <>
+      {notifyView === "FORM_SEND_SUCCESS" && (
+        <Notify
+          onClose={closeNotify}
+          type={"success"}
+          disableScroll={true}
+          title={"Your request has been sent"}
+        />
+      )}
+      {notifyView === "FORM_SEND_ERROR" && (
+        <Notify
+          onClose={closeNotify}
+          disableScroll={false}
+          title={"An error occurred while sending "}
+          type={"error"}
+        />
+      )}
+    </>
+  );
+};
+
+const NotifyUI: FC = () => {
+  const { displayNotify, closeNotify, notifyView } = useUI();
+
+  return displayNotify ? (
+    <NotifyView closeNotify={closeNotify} notifyView={notifyView} />
+  ) : null;
+};
+
 export const MainLayout: FC<MainLayoutProps> = ({
   navbarOffset = true,
   children,
@@ -68,6 +106,7 @@ export const MainLayout: FC<MainLayoutProps> = ({
     <>
       <Navbar />
       <ModalUI />
+      <NotifyUI />
       <main className={navbarOffset ? "pt-navbar" : ""}>{children}</main>
       <Footer />
       <TopBtn />
