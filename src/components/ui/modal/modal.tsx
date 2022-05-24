@@ -30,12 +30,12 @@ export const Modal: FC<ModalProps> = ({ children, title, onClose }) => {
     const modal = ref.current;
 
     if (modal) {
-      disableBodyScroll(modal, { reserveScrollBarGap: true });
+      // disableBodyScroll(modal, { reserveScrollBarGap: true });
       window.addEventListener("keydown", handleKey);
     }
 
     return () => {
-      clearAllBodyScrollLocks();
+      // clearAllBodyScrollLocks();
       window.removeEventListener("keydown", handleKey);
     };
   }, [handleKey]);

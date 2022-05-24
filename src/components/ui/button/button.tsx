@@ -70,8 +70,7 @@ export const Button: FC<ButtonProps> = ({
     return (
       <button
         className={classes}
-        onClick={(e) => {
-          e.preventDefault();
+        onClick={() => {
           setModalView(modalView);
           openModal();
         }}
