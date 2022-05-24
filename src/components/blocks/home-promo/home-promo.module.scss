@@ -12,10 +12,6 @@
   width: 100%;
   height: 100vh;
   max-height: 980px;
-
-  //@include md {
-  //  height: 80vh;
-  //}
 }
 
 .imageInner {
@@ -23,30 +19,81 @@
   display: flex;
   width: 100%;
   height: 100%;
-  background: black;
-  // background: linear-gradient(238.17deg, #33A0CA 10.87%, rgba(255, 255, 255, 0.99) 58.44%);
 }
 
-
-.imageCloudTop {
+.imageCloud {
   position: absolute;
-  top: 0;
-  height: 802px;
-  width: 150%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  object-position: top;
-  // border: 2px solid blue;
-  animation: motion_top linear 70s infinite;
+  @include noselect;
 }
 
-@keyframes motion_top {
-  from {
+.cloudOne {
+  top: 100px;
+  height: 402px;
+  object-position: left;
+  border: 1px solid green;
+  animation: cloud_motion_one linear 110s infinite;
+}
+
+.cloudTwo {
+  top: 30px;
+  height: 602px;
+  object-position: center;
+  border: 1px solid blue;
+  animation: cloud_motion_two linear 180s infinite;
+}
+
+.cloudThree {
+  top: 130px;
+  height: 502px;
+  object-position: right;
+  border: 1px solid red;
+  animation: cloud_motion_one linear 170s infinite;
+}
+
+@keyframes cloud_motion_one {
+  0% {
     transform: translate3d(100%, 0, 0);
   }
-  to {
+  100% {
     transform: translate3d(-100%, 0, 0);
   }
 }
+
+@keyframes cloud_motion_two {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  50% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  51% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  52% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+//@keyframes cloud_motion {
+//  0% {
+//    transform: translate3d(100%, 0, 0) scale(1);
+//  }
+//  50% {
+//    transform: translate3d(50%, 0, 0) scale(2);
+//  }
+//  100% {
+//    transform: translate3d(-100%, 0, 0) scale(.8);
+//  }
+//}
 
 .imageCloudBottom {
   position: absolute;
@@ -59,22 +106,22 @@
 
 .image {
   object-fit: cover;
-  // animation: show ease-in 3s;
+  animation: show ease-in 3s;
 }
 
-//
-//@keyframes show {
-//  0% {
-//    filter: grayscale(1);
-//    opacity: 0;
-//  }
-//  50% {
-//    opacity: 1;
-//  }
-//  100% {
-//    filter: grayscale(0);
-//  }
-//}
+
+@keyframes show {
+  0% {
+    filter: grayscale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    filter: grayscale(0);
+  }
+}
 
 .wrapper {
   position: relative;

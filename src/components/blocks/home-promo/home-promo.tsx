@@ -21,8 +21,6 @@ export const HomePromo: FC<HomePromoProps> = ({
   services,
   button,
 }) => {
-  // const imageRef = useRef() as MutableRefObject<HTMLImageElement>;
-
   return (
     <div className={styles.promo}>
       {image?.src && (
@@ -30,25 +28,32 @@ export const HomePromo: FC<HomePromoProps> = ({
           <div className={styles.imageInner}>
             <img
               className={styles.image}
-              src={"/images/hero/hero-min.jpg"}
+              src={"/images/hero/hero-2-min.jpg"}
               width={"100%"}
               height={"100%"}
               alt={image?.alt ?? ""}
             />
             <img
-              className={styles.imageCloudTop}
-              src={"/images/hero/compresspng/cloud-top-min.png"}
+              className={cn(styles.imageCloud, styles.cloudOne)}
+              src={"/images/hero/cloud/cloud-01-min.png"}
               width={"100%"}
               height={"100%"}
               alt={""}
             />
-            {/*<img*/}
-            {/*  className={styles.imageCloudBottom}*/}
-            {/*  src={"/images/hero/compresspng/cloud-bottom-1-min.png"}*/}
-            {/*  width={"100%"}*/}
-            {/*  height={"100%"}*/}
-            {/*  alt={""}*/}
-            {/*/>*/}
+            <img
+              className={cn(styles.imageCloud, styles.cloudTwo)}
+              src={"/images/hero/cloud/cloud-03-min.png"}
+              width={"100%"}
+              height={"100%"}
+              alt={""}
+            />
+            <img
+              className={cn(styles.imageCloud, styles.cloudThree)}
+              src={"/images/hero/cloud/cloud-04-min.png"}
+              width={"100%"}
+              height={"100%"}
+              alt={""}
+            />
           </div>
         </div>
       )}
