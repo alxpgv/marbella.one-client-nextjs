@@ -42,7 +42,7 @@ export const HomePromo: FC<HomePromoProps> = ({
             />
             <img
               className={cn(styles.imageCloud, styles.cloudTwo)}
-              src={"/images/hero/cloud/cloud-03-min.png"}
+              src={"/images/hero/cloud/cloud-04-min.png"}
               width={"100%"}
               height={"100%"}
               alt={""}

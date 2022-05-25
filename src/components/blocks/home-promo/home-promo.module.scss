@@ -22,7 +22,6 @@
 }
 
 .image {
-  // object-fit: cover;
   animation: show ease-in 3s;
 }
 
@@ -49,25 +48,23 @@
   height: 432px;
   width: 80%;
   object-position: center;
-  // border: 1px solid blue;
   animation: cloud_motion_one linear 280s infinite;
 }
 
 .cloudTwo {
-  top: -40px;
+  top: -70px;
   width: 100%;
   height: 582px;
   object-position: center;
-  // border: 1px solid red;
+  transform: rotate(-360deg);
   animation: cloud_motion_two linear 160s infinite;
 }
 
 .cloudThree {
-  top: -80px;
+  top: -120px;
   width: 100%;
   height: 502px;
   object-position: left;
-  // border: 1px solid green;
   animation: cloud_motion_one linear 160s infinite;
 }
 
@@ -160,6 +157,23 @@
   justify-content: center;
   padding: 40px 20px;
   text-align: center;
+  animation: fade_up cubic-bezier(0.4, 0, 1, 1);
+
+  &:nth-child(1) {
+    animation-duration: .8s;
+  }
+
+  &:nth-child(2) {
+    animation-duration: 1.2s;
+  }
+
+  &:nth-child(3) {
+    animation-duration: 1.6s;
+  }
+
+  &:nth-child(4) {
+    animation-duration: 2s;
+  }
 
   @include xs {
     flex: 1 50%;
@@ -211,5 +225,17 @@
     &:last-child:after {
       border-right: none;
     }
+  }
+}
+
+@keyframes fade_up {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
