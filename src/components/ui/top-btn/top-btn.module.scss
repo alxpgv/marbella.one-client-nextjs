@@ -7,7 +7,7 @@
   justify-content: center;
   width: 42px;
   height: 42px;
-  bottom: 15px;
+  bottom: 25px;
   right: 15px;
   border: 2px solid $grey-300;
   border-radius: 50%;
@@ -19,6 +19,10 @@
   @include sm {
     width: 48px;
     height: 48px;
+  }
+
+  @include md {
+    bottom: 125px;
   }
 
   &:hover,
