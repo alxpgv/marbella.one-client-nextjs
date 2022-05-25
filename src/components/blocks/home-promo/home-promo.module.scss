@@ -21,6 +21,20 @@
   height: 100%;
 }
 
+.image {
+  object-fit: cover;
+  animation: show ease-in 3s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .imageCloud {
   position: absolute;
   width: 100%;
@@ -33,7 +47,6 @@
   top: 100px;
   height: 402px;
   object-position: left;
-  border: 1px solid green;
   animation: cloud_motion_one linear 110s infinite;
 }
 
@@ -41,7 +54,6 @@
   top: 30px;
   height: 602px;
   object-position: center;
-  border: 1px solid blue;
   animation: cloud_motion_two linear 180s infinite;
 }
 
@@ -49,7 +61,6 @@
   top: 130px;
   height: 502px;
   object-position: right;
-  border: 1px solid red;
   animation: cloud_motion_one linear 170s infinite;
 }
 
@@ -80,20 +91,6 @@
   }
   100% {
     transform: translate3d(0%, 0, 0);
-  }
-}
-
-.image {
-  object-fit: cover;
-  animation: show ease-in 3s;
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
