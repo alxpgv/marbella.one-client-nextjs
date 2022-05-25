@@ -19,6 +19,7 @@
 .tileItem {
   position: relative;
   flex: 1 100%;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
