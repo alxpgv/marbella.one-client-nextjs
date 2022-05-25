@@ -27,7 +27,7 @@ export const HomePromo: FC<HomePromoProps> = ({
           <div className={styles.imageInner}>
             <img
               className={styles.image}
-              src={"/images/hero/hero-2-min.jpg"}
+              src={"/images/hero/hero-min.jpg"}
               width={"100%"}
               height={"100%"}
               alt={image?.alt ?? ""}
@@ -49,6 +49,13 @@ export const HomePromo: FC<HomePromoProps> = ({
             <img
               className={cn(styles.imageCloud, styles.cloudThree)}
               src={"/images/hero/cloud/cloud-04-min.png"}
+              width={"100%"}
+              height={"100%"}
+              alt={""}
+            />
+            <img
+              className={styles.imageBranch}
+              src={"/images/hero/palm-branch-min.png"}
               width={"100%"}
               height={"100%"}
               alt={""}

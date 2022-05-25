@@ -43,25 +43,29 @@
 }
 
 .cloudOne {
-  top: 100px;
-  height: 532px;
+  top: -80px;
+  height: 432px;
   width: 80%;
+  object-position: center;
+  // border: 1px solid blue;
   animation: cloud_motion_one linear 280s infinite;
 }
 
 .cloudTwo {
-  top: 30px;
+  top: -40px;
   width: 100%;
-  height: 682px;
+  height: 582px;
   object-position: center;
+  // border: 1px solid red;
   animation: cloud_motion_two linear 160s infinite;
 }
 
 .cloudThree {
-  top: 60px;
+  top: -80px;
   width: 100%;
-  height: 602px;
+  height: 502px;
   object-position: left;
+  // border: 1px solid green;
   animation: cloud_motion_one linear 160s infinite;
 }
 
@@ -92,6 +96,32 @@
   }
   100% {
     transform: translate3d(0%, 0, 0);
+  }
+}
+
+
+.imageBranch {
+  position: absolute;
+  top: 130px;
+  right: -20px;
+  width: auto;
+  height: 560px;
+  object-fit: contain;
+  // border: 2px solid yellow;
+  @include noselect;
+  animation: branch_motion ease-in 30s infinite;
+  transform-origin: center;
+}
+
+@keyframes branch_motion {
+  0% {
+    transform: rotate3d(0, 0, -10, 5deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate3d(0, 0, 5, 10deg) translate3d(10px, 0, 0);
+  }
+  100% {
+    transform: rotate3d(0, 0, -10, 5deg) translate3d(0, 0, 0);
   }
 }
 

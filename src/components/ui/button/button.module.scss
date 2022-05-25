@@ -36,8 +36,8 @@
 
   &:hover,
   &:active {
-    color: $red-400;
-    background: $white;
+    color: $white;
+    background: $red-500;
     border: 1px solid rgba($red-300, .5);
   }
 
@@ -61,8 +61,8 @@
 
   &:hover,
   &:active {
-    color: $red-400;
-    background: $white;
+    color: $white;
+    background: $red-500;
     border: 1px solid rgba($red-300, .5);
   }
 }
