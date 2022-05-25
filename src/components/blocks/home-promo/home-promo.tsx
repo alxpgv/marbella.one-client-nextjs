@@ -4,11 +4,12 @@ import { Container } from "@/components/ui/container";
 import cn from "clsx";
 import { TiledItems, type TiledItemProps } from "@/components/ui/tiled-items";
 import styles from "./home-promo.module.scss";
+import Image, { type ImageProps } from "next/image";
 
 interface HomePromoProps {
   title: string;
   text: string;
-  image: any;
+  image: ImageProps;
   services: TiledItemProps[];
   button?: ButtonBase;
 }
@@ -25,11 +26,11 @@ export const HomePromo: FC<HomePromoProps> = ({
       {image?.src && (
         <div className={styles.imageWrapper}>
           <div className={styles.imageInner}>
-            <img
+            <Image
               className={styles.image}
-              src={"/images/hero/hero-min.jpg"}
-              width={"100%"}
-              height={"100%"}
+              src={image.src}
+              layout={"fill"}
+              objectFit={"cover"}
               alt={image?.alt ?? ""}
             />
             <img
@@ -49,13 +50,6 @@ export const HomePromo: FC<HomePromoProps> = ({
             <img
               className={cn(styles.imageCloud, styles.cloudThree)}
               src={"/images/hero/cloud/cloud-04-min.png"}
-              width={"100%"}
-              height={"100%"}
-              alt={""}
-            />
-            <img
-              className={styles.imageBranch}
-              src={"/images/hero/palm-branch-min.png"}
               width={"100%"}
               height={"100%"}
               alt={""}

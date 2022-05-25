@@ -21,7 +21,7 @@ export const pageHome = {
         title: "We will find your dream home!",
         text: "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
         image: {
-          src: "/images/home/hero-house-min.jpg",
+          src: "/images/hero/hero-min.jpg",
           alt: "We will find your dream home!",
           height: 1920,
           width: 1080,

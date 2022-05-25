@@ -22,16 +22,18 @@
 }
 
 .image {
-  object-fit: cover;
+  // object-fit: cover;
   animation: show ease-in 3s;
 }
 
 @keyframes show {
   0% {
     opacity: 0;
+    filter: sepia(.5);
   }
   100% {
     opacity: 1;
+    filter: sepia(0);
   }
 }
 
@@ -96,32 +98,6 @@
   }
   100% {
     transform: translate3d(0%, 0, 0);
-  }
-}
-
-
-.imageBranch {
-  position: absolute;
-  top: 130px;
-  right: -20px;
-  width: auto;
-  height: 560px;
-  object-fit: contain;
-  // border: 2px solid yellow;
-  @include noselect;
-  animation: branch_motion ease-in 30s infinite;
-  transform-origin: center;
-}
-
-@keyframes branch_motion {
-  0% {
-    transform: rotate3d(0, 0, -10, 5deg) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: rotate3d(0, 0, 5, 10deg) translate3d(10px, 0, 0);
-  }
-  100% {
-    transform: rotate3d(0, 0, -10, 5deg) translate3d(0, 0, 0);
   }
 }
 
