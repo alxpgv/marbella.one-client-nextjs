@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import Image, { type ImageProps } from "next/image";
 import { Button, ButtonBase } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import cn from "clsx";
@@ -9,7 +8,7 @@ import styles from "./home-promo.module.scss";
 interface HomePromoProps {
   title: string;
   text: string;
-  image: ImageProps;
+  image: any;
   services: TiledItemProps[];
   button?: ButtonBase;
 }
@@ -26,42 +25,34 @@ export const HomePromo: FC<HomePromoProps> = ({
       {image?.src && (
         <div className={styles.imageWrapper}>
           <div className={styles.imageInner}>
-            <Image
+            <img
               className={styles.image}
               src={"/images/hero/hero-2-min.jpg"}
-              layout={"fill"}
+              width={"100%"}
+              height={"100%"}
               alt={image?.alt ?? ""}
             />
-            <div className={cn(styles.imageCloud, styles.cloudOne)}>
-              <Image
-                src={"/images/hero/cloud/cloud-01-min.png"}
-                width={"100%"}
-                height={"100%"}
-                layout={"intrinsic"}
-                objectFit={"contain"}
-                alt={""}
-              />
-            </div>
-            <div className={cn(styles.imageCloud, styles.cloudTwo)}>
-              <Image
-                src={"/images/hero/cloud/cloud-03-min.png"}
-                width={"100%"}
-                height={"100%"}
-                layout={"intrinsic"}
-                objectFit={"contain"}
-                alt={""}
-              />
-            </div>
-            <div className={cn(styles.imageCloud, styles.cloudThree)}>
-              <Image
-                src={"/images/hero/cloud/cloud-04-min.png"}
-                width={"100%"}
-                height={"100%"}
-                layout={"intrinsic"}
-                objectFit={"contain"}
-                alt={""}
-              />
-            </div>
+            <img
+              className={cn(styles.imageCloud, styles.cloudOne)}
+              src={"/images/hero/cloud/cloud-01-min.png"}
+              width={"100%"}
+              height={"100%"}
+              alt={""}
+            />
+            <img
+              className={cn(styles.imageCloud, styles.cloudTwo)}
+              src={"/images/hero/cloud/cloud-03-min.png"}
+              width={"100%"}
+              height={"100%"}
+              alt={""}
+            />
+            <img
+              className={cn(styles.imageCloud, styles.cloudThree)}
+              src={"/images/hero/cloud/cloud-04-min.png"}
+              width={"100%"}
+              height={"100%"}
+              alt={""}
+            />
           </div>
         </div>
       )}
