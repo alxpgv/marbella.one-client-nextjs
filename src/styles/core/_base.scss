@@ -47,3 +47,7 @@ input {
   border: 0;
   background: none;
 }
+
+[data-hidden="true"] {
+  display: none;
+}
