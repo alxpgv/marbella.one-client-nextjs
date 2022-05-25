@@ -1,4 +1,4 @@
-import React, { FC, MutableRefObject, useRef } from "react";
+import React, { FC } from "react";
 import Image, { type ImageProps } from "next/image";
 import { Button, ButtonBase } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -9,7 +9,7 @@ import styles from "./home-promo.module.scss";
 interface HomePromoProps {
   title: string;
   text: string;
-  image: any;
+  image: ImageProps;
   services: TiledItemProps[];
   button?: ButtonBase;
 }
