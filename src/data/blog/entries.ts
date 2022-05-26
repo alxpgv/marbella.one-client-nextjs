@@ -402,8 +402,8 @@ export const blogEntries = [
               },
               button: {
                 as: "modal",
-                modalView: "ORDER_YACHT",
-                text: "Order a yacht rental!",
+                modalView: "ORDER_JET",
+                text: "Order Private jet charter!",
               },
             },
           ],
