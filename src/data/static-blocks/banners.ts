@@ -4,6 +4,7 @@ export const banners = {
     items: [
       {
         id: 1,
+        href: "/blog/renovation-of-luxury-real-estate",
         image: {
           src: "/images/banners/banner-repair-min.jpg",
           alt: "Design and interior",
