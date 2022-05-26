@@ -27,7 +27,10 @@ export interface SEOProps {
 }
 
 const ogImage = ({ url, width, height, alt }: OgImage) => {
-  const imgUrl = url || configSite.openGraph.image.url;
+  const imgUrl =
+    url ??
+    settings?.meta?.openGraph?.image?.url ??
+    configSite.openGraph.image.url;
 
   return (
     <Fragment key={`og:image`}>
