@@ -54,6 +54,13 @@ export const HomePromo: FC<HomePromoProps> = ({
               height={"100%"}
               alt={""}
             />
+            <img
+              className={styles.imageMonkey}
+              src={"/images/hero/monkey.gif"}
+              width={"100%"}
+              height={"100%"}
+              alt={""}
+            />
           </div>
         </div>
       )}
