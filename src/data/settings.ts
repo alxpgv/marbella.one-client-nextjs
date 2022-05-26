@@ -1,4 +1,5 @@
 export const settings = {
+  siteUrl: process.env.SITE_URL,
   contact: {
     phone: "+34 608 281 712",
     email: "violet@marbella.one",
@@ -17,11 +18,26 @@ export const settings = {
   workMode: "Mo - So: 8:00-22:00",
   address: "Campos de Guadalmina 29069 Marbella",
   coordinates: [36.469447, -5.00314],
-  defaultMeta: {
+  meta: {
     title: "Violet Real Estate",
     description:
       "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
     keywords: "",
+    openGraph: {
+      title: "Violet Real Estate",
+      type: "website",
+      locale: "en_US",
+      description:
+        "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
+      site_name: "Violet Real Estate",
+      url: process.env.SITE_URL,
+      image: {
+        url: "/images/violet-preview.jpg",
+        width: "1192",
+        height: "779",
+        alt: "Violet Real Estate",
+      },
+    },
   },
 };
 

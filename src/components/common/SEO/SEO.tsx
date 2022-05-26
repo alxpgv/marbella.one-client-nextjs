@@ -1,5 +1,7 @@
-import { FC, Fragment, ReactNode } from "react";
+import { FC, Fragment } from "react";
 import Head from "next/head";
+import { configSite } from "@/config";
+import { useRouter } from "next/router";
 import { settings } from "@/data/settings";
 
 interface OgImage {
@@ -20,35 +22,30 @@ export interface SEOProps {
     description?: string;
     site_name?: string;
     url?: string;
-    images?: OgImage[];
+    image?: OgImage;
   };
-  children?: ReactNode;
 }
 
-const ogImage = ({ url, width, height, alt }: OgImage, index: number) => {
-  // generate full URL for OG image url with store base URL
-  const imgUrl = "";
+const ogImage = ({ url, width, height, alt }: OgImage) => {
+  const imgUrl = url || configSite.openGraph.image.url;
+
   return (
-    <Fragment key={`og:image:${index}`}>
+    <Fragment key={`og:image`}>
+      <meta key={`og:image:url`} property="og:image" content={imgUrl} />
       <meta
-        key={`og:image:url:${index}`}
-        property="og:image"
-        content={imgUrl}
-      />
-      <meta
-        key={`og:image:width:${index}`}
+        key={`og:image:width`}
         property="og:image:width"
-        content={width}
+        content={width || configSite.openGraph.image.width}
       />
       <meta
-        key={`og:image:height:${index}`}
+        key={`og:image:height`}
         property="og:image:height"
-        content={height}
+        content={height || configSite.openGraph.image.height}
       />
       <meta
-        key={`og:image:alt:${index}`}
+        key={`og:image:alt`}
         property="og:image:alt"
-        content={alt}
+        content={alt || configSite.openGraph.image.alt}
       />
     </Fragment>
   );
@@ -61,19 +58,89 @@ export const SEO: FC<SEOProps> = ({
   robots,
   children,
 }) => {
-  const defaultMeta = settings?.defaultMeta;
+  const router = useRouter();
+
+  const getTitle = (pageTitle = "") => {
+    const siteTitle = settings?.meta?.title || configSite.title;
+    // home page
+    if (router.pathname === "/") {
+      return pageTitle ?? siteTitle;
+    }
+    // other pages
+    return pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle;
+  };
 
   // The `key` property makes the tag is only rendered once,
   return (
     <Head>
-      <title key="title">
-        {`${title} | ${defaultMeta.title}` || defaultMeta.title || ""}
-      </title>
+      <title key="title">{getTitle(title)}</title>
       <meta
         key="description"
         name="description"
-        content={description || defaultMeta.description || ""}
+        content={description ?? settings?.meta?.description ?? configSite.title}
       />
+      <meta
+        key="og:type"
+        property="og:type"
+        content={openGraph?.type ?? configSite.openGraph.type}
+      />
+      <meta
+        key="og:title"
+        property="og:title"
+        content={
+          openGraph?.title ??
+          title ??
+          configSite.openGraph.title ??
+          configSite.title
+        }
+      />
+      <meta
+        key="og:description"
+        property="og:description"
+        content={
+          openGraph?.description ??
+          settings?.meta?.openGraph?.description ??
+          configSite.openGraph.description ??
+          description ??
+          configSite.description
+        }
+      />
+      <meta
+        key="og:site_name"
+        property="og:site_name"
+        content={
+          openGraph?.site_name ??
+          settings?.meta?.openGraph?.site_name ??
+          configSite.openGraph.site_name
+        }
+      />
+      <meta
+        key="og:url"
+        property="og:url"
+        content={
+          openGraph?.url ??
+          settings?.meta?.openGraph?.url ??
+          settings?.siteUrl ??
+          configSite.openGraph.url ??
+          configSite.siteUrl
+        }
+      />
+      <meta
+        key="og:locale"
+        property="og:locale"
+        content={
+          settings?.meta?.openGraph?.locale ?? configSite.openGraph.locale
+        }
+      />
+      {(settings?.meta?.openGraph?.image || configSite.openGraph?.image) && (
+        <meta
+          key="twitter:card"
+          name="twitter:card"
+          content="summary_large_image"
+        />
+      )}
+      <meta key="robots" name="robots" content={robots ?? "index,follow"} />
+      {ogImage({ ...openGraph?.image })}
       {children}
     </Head>
   );
