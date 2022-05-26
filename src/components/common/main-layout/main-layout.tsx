@@ -39,7 +39,8 @@ const ModalView: FC<{
         modalView === "SPECIALIST_CONSULTATION" ||
         modalView === "ORDER_YACHT" ||
         modalView === "EVALUATE_PROPERTY" ||
-        modalView === "SELL_PROPERTY") && (
+        modalView === "SELL_PROPERTY" ||
+        modalView === "ORDER_JET") && (
         <FormFeedback
           title={MODAL_VIEWS[modalView]}
           text={"Leave your phone number and our manager will contact you"}

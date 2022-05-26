@@ -22,6 +22,7 @@ export enum MODAL_VIEWS {
   "EVALUATE_PROPERTY" = "Evaluate property",
   "SELL_PROPERTY" = "Sell property",
   "SUBSCRIBE" = "Subscribe now",
+  "ORDER_JET" = "Order Private jet charter!",
 }
 
 export enum NOTIFY_VIEWS {
