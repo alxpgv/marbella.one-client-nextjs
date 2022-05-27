@@ -26,10 +26,12 @@ export const MenuItem: FC<MenuItemProps> = ({ item, onClick }) => {
         <Link href={url}>
           <a className={openSubMenu ? styles.active : ""} onClick={onClick}>
             {title}
-            <div className={styles.expandBtn} onClick={toggleSubMenu}>
-              <span className={styles.iconWrapper}>
-                <Icon name={"arrow"} className={styles.icon} />
-              </span>
+            <div className={styles.expandWrapper} onClick={toggleSubMenu}>
+              <div className={styles.expandBtn}>
+                <span className={styles.iconWrapper}>
+                  <Icon name={"arrow"} className={styles.icon} />
+                </span>
+              </div>
             </div>
           </a>
         </Link>

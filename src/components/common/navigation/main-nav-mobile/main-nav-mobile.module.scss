@@ -64,7 +64,7 @@
       align-items: center;
       justify-content: space-between;
       height: 60px;
-      padding: 0 20px;
+      padding: 0 14px;
       font-size: 16px;
       color: $grey-500;
       border-bottom: 1px solid $grey-200;
@@ -78,6 +78,15 @@
           transform: rotate(-180deg);
         }
       }
+    }
+
+    .expandWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-right: -14px;
+      padding: 0 10px 0 14px;
     }
 
     .expandBtn {
