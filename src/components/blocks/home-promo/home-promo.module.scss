@@ -116,15 +116,22 @@
 
   @include sm {
     max-width: 430px;
+
+    @include landscape {
+      height: 360px;
+    }
   }
 
   @include lg {
     max-width: 580px;
-    height: 540px;
   }
 
-  @include xl {
+  @include md {
     height: 640px;
+
+    @include landscape {
+      height: 640px;
+    }
   }
 }
 
