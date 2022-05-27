@@ -1,52 +1,47 @@
-import React from "react";
+import React, { FC } from "react";
 import Link from "next/link";
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
-import styles from "./breadcrumb.module.scss";
 import { mainMenu } from "@/data/settings";
 import { useRouter } from "next/router";
+import styles from "./breadcrumb.module.scss";
 
-interface BreadcrumbProps {
+interface CrumbItem {
   url?: string | undefined;
   title: string;
 }
 
-export const Breadcrumb = () => {
-  const breadcrumbs: BreadcrumbProps[] = [
+interface BreadcrumbProps {
+  title?: string;
+}
+
+export const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
+  const breadcrumbs: CrumbItem[] = [
     {
       url: "/",
       title: "Home",
     },
   ];
 
-  //TODO: rewrite this code
   const router = useRouter();
   const urlSegments = router.asPath.split("/");
   urlSegments.shift();
 
-  if (urlSegments[0]) {
+  if (urlSegments.length > 1) {
     const parentItem = mainMenu.find(
       (item) => item.url === `/${urlSegments[0]}`
     );
 
     if (parentItem) {
-      const newItem: BreadcrumbProps = {
+      breadcrumbs.push({
         title: parentItem.title,
-      };
-
-      // if have childs, then parent as link
-      newItem.url = urlSegments[1] ? parentItem.url : undefined;
-      breadcrumbs.push(newItem);
-
-      const child = parentItem.child;
-
-      if (urlSegments[1] && child?.length) {
-        const childItem = child.find(
-          (item) => item.url === `/${urlSegments[0]}/${urlSegments[1]}`
-        );
-        childItem && breadcrumbs.push({ title: childItem.title });
-      }
+        url: `/${urlSegments[0]}`,
+      });
     }
+  }
+
+  if (title) {
+    breadcrumbs.push({ title });
   }
 
   const Separator = () => (
@@ -56,23 +51,44 @@ export const Breadcrumb = () => {
   );
 
   return (
-    <div className={cn(styles.breadcrumb, "text-sm")}>
+    <ol
+      className={cn(styles.breadcrumb, "text-sm")}
+      itemScope
+      itemType="https://schema.org/BreadcrumbList"
+    >
       {breadcrumbs.map(({ url, title }, index) => {
         return (
-          <div key={index} className={styles.crumb}>
+          <li
+            key={index}
+            className={styles.crumb}
+            itemProp="itemListElement"
+            itemScope
+            itemType="https://schema.org/ListItem"
+          >
             {url ? (
               <Link href={url}>
-                <a className={styles.crumbLink}>{title}</a>
+                <>
+                  <a className={styles.crumbLink} itemProp="item">
+                    <span itemProp="name">{title}</span>
+                  </a>
+                  <meta itemProp="position" content={`${index + 1}`} />
+                </>
               </Link>
             ) : (
-              <span className={cn(styles.crumbItem, "text-grey-300")}>
-                {title}
-              </span>
+              <>
+                <span
+                  className={cn(styles.crumbItem, "text-grey-300")}
+                  itemProp="name"
+                >
+                  {title}
+                </span>
+                <meta itemProp="position" content={`${index + 1}`} />
+              </>
             )}
             {breadcrumbs.length > index + 1 && <Separator />}
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ol>
   );
 };

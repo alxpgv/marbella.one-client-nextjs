@@ -40,7 +40,7 @@ const BlogIndex: NextPage<BlogProps> = ({ page }) => {
     <MainLayout>
       <SEO {...meta} />
       <Container>
-        <Breadcrumb />
+        <Breadcrumb title={title} />
         <PageTitle title={title} />
       </Container>
       <BlogCategory entries={entries} />

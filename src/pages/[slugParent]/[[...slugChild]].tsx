@@ -65,7 +65,7 @@ const Pages: NextPage<{ page: EntryProps }> = ({ page }) => {
     <MainLayout>
       <SEO {...meta} />
       <Container>
-        <Breadcrumb />
+        <Breadcrumb title={title} />
         <PageTitle title={title} />
       </Container>
       <DisplayBlocks blocks={blocks} mapBlocks={mapBlocks} />
