@@ -32,6 +32,7 @@ export const HomePromo: FC<HomePromoProps> = ({
               layout={"fill"}
               objectFit={"cover"}
               alt={image?.alt ?? ""}
+              quality={90}
             />
             <img
               className={cn(styles.imageCloud, styles.cloudOne)}
