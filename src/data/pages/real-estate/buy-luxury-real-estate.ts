@@ -9,8 +9,7 @@ export const pageBuyLuxury = {
   title: "Buy luxury real estate",
   meta: {
     title: "Buy luxury real estate",
-    description: "",
-    keywords: "",
+    description: "Our agency is the best in the field of real estate!",
   },
   blocks: [
     {

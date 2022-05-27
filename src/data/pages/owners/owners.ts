@@ -9,8 +9,8 @@ export const pageOwners = {
   title: "Owners",
   meta: {
     title: "Owners",
-    description: "",
-    keywords: "",
+    description:
+      "Are you the owner of a luxury villa, apartment or townhouse in Spain?",
   },
   blocks: [
     {

@@ -3,7 +3,6 @@ import cn from "clsx";
 import { Button } from "@/components/ui/button";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
 import styles from "./map-with-contact.module.scss";
-import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
 
 interface ContactInfoProps {
   phone: string;

@@ -39,7 +39,6 @@ const mapBlocks = {
 };
 
 const BlogEntry: NextPage<{ page: EntryProps }> = ({ page }) => {
-  if (!page) return null;
   const meta = page?.meta;
   const title = page?.title;
   const blocks = page?.blocks;
@@ -65,15 +64,14 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug;
-  let page = null;
 
-  page = blogEntries.find((entry) => entry.slug === slug);
+  const page = blogEntries.find((entry) => entry.slug === slug);
 
   if (!page) {
     return {

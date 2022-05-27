@@ -4,7 +4,6 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { MessengerLinks } from "./messenger-links";
 import { SocialLinks } from "./social-links";
-import cn from "clsx";
 import { settings } from "@/data/settings";
 import styles from "./join-us.module.scss";
 

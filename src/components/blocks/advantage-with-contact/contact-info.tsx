@@ -5,7 +5,6 @@ import cn from "clsx";
 import { settings } from "@/data/settings";
 import styles from "./advantage-with-contact.module.scss";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
-import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
 
 export const ContactInfo = () => {
   const email = settings?.contact?.email;

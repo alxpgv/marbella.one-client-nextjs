@@ -1,4 +1,3 @@
-import { reviewsItems } from "@/data/reviews";
 import {
   banners,
   joinUs,
@@ -10,8 +9,8 @@ export const pageOurPhilosophy = {
   title: "Our philosophy",
   meta: {
     title: "Our philosophy",
-    description: "",
-    keywords: "",
+    description:
+      "We have extensive experience in the Spanish real estate market, so we are guaranteed to find the best solution for you.",
   },
   blocks: [
     {

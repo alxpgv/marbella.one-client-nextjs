@@ -31,8 +31,6 @@ const mapBlocks = {
 };
 
 const BlogIndex: NextPage<BlogProps> = ({ page }) => {
-  if (!page) return null;
-
   const meta = page?.meta;
   const title = page?.title;
   const blocks = page?.blocks;
@@ -53,6 +51,12 @@ const BlogIndex: NextPage<BlogProps> = ({ page }) => {
 
 export const getStaticProps = async () => {
   const page = blogCategory;
+
+  if (!page) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {

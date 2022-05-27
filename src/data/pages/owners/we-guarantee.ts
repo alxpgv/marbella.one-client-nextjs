@@ -9,8 +9,8 @@ export const pageWeGuarantee = {
   title: "We guarantee",
   meta: {
     title: "We guarantee",
-    description: "",
-    keywords: "",
+    description:
+      "ur real estate agency guarantees each client quality services and support at all stages of cooperation.",
   },
   blocks: [
     {

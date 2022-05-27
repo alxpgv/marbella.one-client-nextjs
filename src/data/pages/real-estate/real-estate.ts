@@ -9,8 +9,7 @@ export const pageRealEstate = {
   title: "Real Estate",
   meta: {
     title: "Real Estate",
-    description: "",
-    keywords: "",
+    description: "Our agency is the best in the field of real estate!",
   },
   blocks: [
     {

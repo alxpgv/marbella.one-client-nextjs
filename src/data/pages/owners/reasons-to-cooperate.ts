@@ -9,8 +9,8 @@ export const pageReasonsToCooperate = {
   title: "Reasons to cooperate with us",
   meta: {
     title: "Reasons to cooperate with us",
-    description: "",
-    keywords: "",
+    description:
+      "The specialists of our agency are professional and competent!",
   },
   blocks: [
     {

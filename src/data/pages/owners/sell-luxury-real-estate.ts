@@ -9,8 +9,8 @@ export const pageSellLuxury = {
   title: "Sell luxury real estate",
   meta: {
     title: "Sell luxury real estate",
-    description: "",
-    keywords: "",
+    description:
+      "Are you the owner of a luxury villa, apartment or townhouse in Spain?",
   },
   blocks: [
     {

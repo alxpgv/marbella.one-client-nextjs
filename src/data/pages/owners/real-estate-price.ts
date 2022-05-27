@@ -9,8 +9,7 @@ export const pageRealEstatePrice = {
   title: "Real estate price",
   meta: {
     title: "Real estate price",
-    description: "",
-    keywords: "",
+    description: "What affects the price of real estate?",
   },
   blocks: [
     {

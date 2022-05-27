@@ -12,7 +12,6 @@ export const pageHome = {
     title: "Violet Real Estate",
     description:
       "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
-    keywords: "",
   },
   blocks: [
     {

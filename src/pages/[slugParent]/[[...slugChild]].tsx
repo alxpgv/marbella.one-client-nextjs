@@ -57,7 +57,6 @@ const mapBlocks = {
 };
 
 const Pages: NextPage<{ page: EntryProps }> = ({ page }) => {
-  if (!page) return null;
   const meta = page?.meta;
   const title = page?.title;
   const blocks = page?.blocks;
@@ -149,7 +148,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 

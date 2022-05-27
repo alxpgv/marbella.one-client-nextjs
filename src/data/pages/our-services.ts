@@ -10,8 +10,8 @@ export const pageOurServices = {
   title: "Our services",
   meta: {
     title: "Our services",
-    description: "",
-    keywords: "",
+    description:
+      "We love our work and value every client. It is very important for us that you get exactly what you want.",
   },
   blocks: [
     {

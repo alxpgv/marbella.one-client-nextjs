@@ -30,7 +30,6 @@ const mapBlocks = {
 };
 
 const Index: NextPage<{ page: EntryProps }> = ({ page }) => {
-  if (!page) return null;
   const meta = page?.meta;
   const blocks = page?.blocks;
 
@@ -44,6 +43,12 @@ const Index: NextPage<{ page: EntryProps }> = ({ page }) => {
 
 export const getStaticProps = async () => {
   const page = pageHome;
+
+  if (!page) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {

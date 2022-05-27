@@ -93,10 +93,11 @@ export const Footer = () => {
             <div className={styles.col}>© VIOLET real estate, 2010 - 2022</div>
             <div className={styles.col}>
               <Image
-                src={"/images/booking-raiting-min.jpg"}
+                src={"/images/booking-rating-min.jpg"}
                 layout={"intrinsic"}
                 width={161}
                 height={30}
+                alt={"booking-rating"}
               />
             </div>
             <div className={cn(styles.col, styles.privacy)}>

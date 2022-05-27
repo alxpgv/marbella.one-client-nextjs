@@ -10,8 +10,8 @@ export const pageAboutMe = {
   title: "About me",
   meta: {
     title: "About me",
-    description: "",
-    keywords: "",
+    description:
+      "I am Violetta Mikhailova, founder and director of Violet Real Estate",
   },
   blocks: [
     {

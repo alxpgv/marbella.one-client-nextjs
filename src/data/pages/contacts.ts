@@ -9,7 +9,6 @@ export const pageContacts = {
   meta: {
     title: "Contacts",
     description: "",
-    keywords: "",
   },
   blocks: [mapWithContact, onlineConsultation, joinUs],
 };

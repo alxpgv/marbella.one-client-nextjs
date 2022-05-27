@@ -10,8 +10,7 @@ export const pageReviews = {
   title: "Reviews",
   meta: {
     title: "Reviews",
-    description: "",
-    keywords: "",
+    description: "We do our best to make your dreams come true!",
   },
   blocks: [
     {

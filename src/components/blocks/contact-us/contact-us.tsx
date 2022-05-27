@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
 import { settings } from "@/data/settings";
 import styles from "./contact-us.module.scss";
-import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
 
 interface ContactUsProps {
   title: string;

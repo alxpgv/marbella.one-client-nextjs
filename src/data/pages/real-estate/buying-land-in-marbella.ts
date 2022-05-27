@@ -9,8 +9,7 @@ export const pageBuyingLand = {
   title: "Buying land in Marbella",
   meta: {
     title: "Buying land in Marbella",
-    description: "",
-    keywords: "",
+    description: "The dream of owning your own home is real!",
   },
   blocks: [
     {
