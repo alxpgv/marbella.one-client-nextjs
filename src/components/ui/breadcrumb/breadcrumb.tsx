@@ -67,24 +67,19 @@ export const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
           >
             {url ? (
               <Link href={url}>
-                <>
-                  <a className={styles.crumbLink} itemProp="item">
-                    <span itemProp="name">{title}</span>
-                  </a>
-                  <meta itemProp="position" content={`${index + 1}`} />
-                </>
+                <a className={styles.crumbLink} itemProp="item">
+                  <span itemProp="name">{title}</span>
+                </a>
               </Link>
             ) : (
-              <>
-                <span
-                  className={cn(styles.crumbItem, "text-grey-300")}
-                  itemProp="name"
-                >
-                  {title}
-                </span>
-                <meta itemProp="position" content={`${index + 1}`} />
-              </>
+              <span
+                className={cn(styles.crumbItem, "text-grey-300")}
+                itemProp="name"
+              >
+                {title}
+              </span>
             )}
+            <meta itemProp="position" content={`${index + 1}`} />
             {breadcrumbs.length > index + 1 && <Separator />}
           </li>
         );
