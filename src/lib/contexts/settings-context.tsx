@@ -23,7 +23,6 @@ export const SettingsProvider: FC<SettingsProviderProps> = ({
   children,
   value = {},
 }) => {
-  console.log(value);
   return (
     <SettingsContext.Provider value={value}>
       {children}
