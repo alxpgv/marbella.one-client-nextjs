@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import Link from "next/link";
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
-import { mainMenu } from "@/data/settings";
 import { useRouter } from "next/router";
+import { useSettings } from "@/lib/contexts/settings-context";
 import styles from "./breadcrumb.module.scss";
 
 interface CrumbItem {
@@ -16,6 +16,8 @@ interface BreadcrumbProps {
 }
 
 export const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
+  const router = useRouter();
+  const { mainMenu } = useSettings();
   const breadcrumbs: CrumbItem[] = [
     {
       url: "/",
@@ -23,11 +25,10 @@ export const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
     },
   ];
 
-  const router = useRouter();
   const urlSegments = router.asPath.split("/");
   urlSegments.shift();
 
-  if (urlSegments.length > 1) {
+  if (mainMenu && urlSegments.length > 1) {
     const parentItem = mainMenu.find(
       (item) => item.url === `/${urlSegments[0]}`
     );

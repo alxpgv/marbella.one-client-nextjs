@@ -2,13 +2,12 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import cn from "clsx";
-import { settings } from "@/data/settings";
-import styles from "./advantage-with-contact.module.scss";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
+import { useSettings } from "@/lib/contexts/settings-context";
+import styles from "./advantage-with-contact.module.scss";
 
 export const ContactInfo = () => {
-  const email = settings?.contact?.email;
-  const phone = settings?.contact?.phone;
+  const { contact } = useSettings();
 
   return (
     <div className={styles.contact}>
@@ -26,18 +25,18 @@ export const ContactInfo = () => {
           Contact us now and we will quickly answer all your questions
         </p>
 
-        {phone && (
+        {contact?.phone && (
           <div>
             <p className="text-sm-10">Call us by phone</p>
-            <PhoneLink value={phone} className={"text-lg-10"} />
+            <PhoneLink value={contact.phone} className={"text-lg-10"} />
           </div>
         )}
 
-        {email && (
+        {contact?.email && (
           <div>
             <p className="text-sm-10">or write to our mail</p>
             <EmailLink
-              value={email}
+              value={contact.email}
               className={cn("text-md-10", styles.contactEmail)}
             />
           </div>

@@ -73,7 +73,7 @@ export const YaMap: FC<YaMapProps> = ({
     }
   };
 
-  if (!center[0] || !center[1]) return null;
+  if (!center || !center[0] || !center[1]) return null;
 
   return (
     <>

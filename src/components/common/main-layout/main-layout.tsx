@@ -29,7 +29,7 @@ const Notify: any = dynamic(
 );
 
 const ModalView: FC<{
-  modalView: keyof typeof MODAL_VIEWS;
+  modalView: string;
   closeModal(): void;
 }> = ({ modalView, closeModal }) => {
   return (
@@ -66,7 +66,7 @@ const ModalUI: FC = () => {
 };
 
 const NotifyView: FC<{
-  notifyView: keyof typeof NOTIFY_VIEWS;
+  notifyView: string;
   closeNotify(): void;
 }> = ({ notifyView, closeNotify }) => {
   return (

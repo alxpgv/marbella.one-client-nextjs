@@ -1,26 +1,29 @@
 import React, { createContext, FC, useContext } from "react";
 import { type MenuProps } from "@/components/common/navigation/types";
+import { SEOProps } from "@/components/common/SEO";
 
 interface SettingsState {
+  siteUrl?: string;
   contact?: any;
   workMode?: string;
   address?: string;
   coordinates?: [number, number];
-  defaultMeta?: {
-    title: string;
-    description: string;
-    keywords: string;
-  };
+  meta?: SEOProps;
   mainMenu?: MenuProps[];
 }
 
-const initialState = {};
+interface SettingsProviderProps {
+  value: SettingsState;
+}
 
-const SettingsContext = createContext<SettingsState | any>(initialState);
+const SettingsContext = createContext<SettingsState>({});
 SettingsContext.displayName = "SettingsContext";
 
-export const SettingsProvider: FC = ({ children }) => {
-  const value = {};
+export const SettingsProvider: FC<SettingsProviderProps> = ({
+  children,
+  value = {},
+}) => {
+  console.log(value);
   return (
     <SettingsContext.Provider value={value}>
       {children}

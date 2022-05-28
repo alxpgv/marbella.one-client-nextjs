@@ -93,8 +93,8 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
     }
   };
 
-  console.log(data);
-  console.log(errors);
+  // console.log(data);
+  // console.log(errors);
 
   return (
     <div className="form-container">

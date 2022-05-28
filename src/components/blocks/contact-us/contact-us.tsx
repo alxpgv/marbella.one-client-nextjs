@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/container";
 import cn from "clsx";
 import { Button } from "@/components/ui/button";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
-import { settings } from "@/data/settings";
+import { useSettings } from "@/lib/contexts/settings-context";
 import styles from "./contact-us.module.scss";
 
 interface ContactUsProps {
@@ -12,8 +12,7 @@ interface ContactUsProps {
 }
 
 export const ContactUs: FC<ContactUsProps> = ({ title }) => {
-  const phone = settings?.contact?.phone;
-  const email = settings?.contact?.email;
+  const { contact } = useSettings();
 
   return (
     <Section>
@@ -28,21 +27,21 @@ export const ContactUs: FC<ContactUsProps> = ({ title }) => {
             )}
           </div>
           <div className={styles.col}>
-            {phone && (
+            {contact?.phone && (
               <div className={styles.contactItem}>
                 <p className={styles.contactLabel}>Call us by phone</p>
                 <PhoneLink
                   className={cn(styles.contactText, "text-md-10 text-white")}
-                  value={phone}
+                  value={contact.phone}
                 />
               </div>
             )}
-            {email && (
+            {contact?.email && (
               <div className={styles.contactItem}>
                 <p className={styles.contactLabel}>or write to our mail</p>
                 <EmailLink
                   className={cn(styles.contactText, "text-md text-white")}
-                  value={email}
+                  value={contact.email}
                 />
               </div>
             )}

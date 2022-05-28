@@ -3,22 +3,21 @@ import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import Image from "next/image";
 import Link from "next/link";
-import { settings, mainMenu } from "@/data/settings";
 import { FooterMenuItems } from "./footer-menu-items";
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
-import styles from "./footer.module.scss";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
+import { useSettings } from "@/lib/contexts/settings-context";
+import styles from "./footer.module.scss";
 
 export const Footer = () => {
-  const menuAbout = mainMenu[0];
-  const menuRealEstate = mainMenu[2];
-  const menuOwners = mainMenu[3];
+  const { mainMenu, contact, workMode, address } = useSettings();
+  const menuAbout = mainMenu && mainMenu[0];
+  const menuRealEstate = mainMenu && mainMenu[2];
+  const menuOwners = mainMenu && mainMenu[3];
 
-  const phone = settings?.contact?.phone;
-  const email = settings?.contact?.email;
-  const workMode = settings?.workMode;
-  const address = settings?.address;
+  const phone = contact?.phone;
+  const email = contact?.email;
 
   return (
     <footer className={styles.footer}>
@@ -60,7 +59,9 @@ export const Footer = () => {
                 </div>
               )}
             </div>
-            <FooterMenuItems items={mainMenu} itemTitle={"Menu"} />
+            {mainMenu && (
+              <FooterMenuItems items={mainMenu} itemTitle={"Menu"} />
+            )}
             {menuAbout?.child && (
               <FooterMenuItems
                 items={menuAbout.child}

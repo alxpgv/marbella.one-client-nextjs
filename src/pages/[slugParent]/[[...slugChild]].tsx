@@ -36,6 +36,7 @@ import { LastReview } from "@/components/blocks/last-review/last-review";
 import { Text } from "@/components/blocks/text";
 import type { EntryProps } from "@/types/entry";
 import { SEO } from "@/components/common/SEO";
+import { settings } from "@/data/settings";
 
 const mapBlocks = {
   "online-service": OnlineService,
@@ -218,6 +219,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       page,
+      settings,
     },
     revalidate: 100,
   };

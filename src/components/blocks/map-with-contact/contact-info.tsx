@@ -5,9 +5,9 @@ import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
 import styles from "./map-with-contact.module.scss";
 
 interface ContactInfoProps {
-  phone: string;
-  email: string;
-  address: string;
+  phone?: string;
+  email?: string;
+  address?: string;
 }
 
 export const ContactInfo: FC<ContactInfoProps> = ({

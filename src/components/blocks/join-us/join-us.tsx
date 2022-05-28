@@ -4,12 +4,11 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { MessengerLinks } from "./messenger-links";
 import { SocialLinks } from "./social-links";
-import { settings } from "@/data/settings";
+import { useSettings } from "@/lib/contexts/settings-context";
 import styles from "./join-us.module.scss";
 
 export const JoinUs = () => {
-  const socials = settings?.contact?.socials;
-  const messengers = settings?.contact?.messengers;
+  const { contact } = useSettings();
 
   return (
     <Section>
@@ -50,9 +49,10 @@ export const JoinUs = () => {
                 </div>
               </div>
             </div>
-            {Object.keys(messengers).length > 0 && (
-              <MessengerLinks messengers={messengers} />
-            )}
+            {contact?.messengers &&
+              Object.keys(contact.messengers).length > 0 && (
+                <MessengerLinks messengers={contact.messengers} />
+              )}
           </div>
 
           <div className={styles.socialCol}>
@@ -65,8 +65,8 @@ export const JoinUs = () => {
                 date with the best real estate offers in Spain
               </p>
             </div>
-            {Object.keys(socials).length > 0 && (
-              <SocialLinks socials={socials} />
+            {contact?.socials && Object.keys(contact.socials).length > 0 && (
+              <SocialLinks socials={contact.socials} />
             )}
           </div>
         </div>

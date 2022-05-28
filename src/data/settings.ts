@@ -1,46 +1,3 @@
-export const settings = {
-  siteUrl: process.env.SITE_URL,
-  contact: {
-    phone: "+34 608 281 712",
-    email: "violet@marbella.one",
-    socials: {
-      twitter: "https://twitter.com",
-      youtube: "https://youtube.com",
-      instagram: "https://instagram.com",
-      facebook: "https://facebook.com",
-    },
-    messengers: {
-      whatsapp: "https://whatsapp.com",
-      telegram: "https://web.telegram.org",
-      viber: "https://www.viber.com",
-    },
-  },
-  workMode: "Mo - So: 8:00-22:00",
-  address: "Campos de Guadalmina 29069 Marbella",
-  coordinates: [36.469447, -5.00314],
-  meta: {
-    title: "Violet Real Estate",
-    description:
-      "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
-    keywords: "",
-    openGraph: {
-      title: "Violet Real Estate",
-      type: "website",
-      locale: "en_US",
-      description:
-        "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
-      site_name: "Violet Real Estate",
-      url: process.env.SITE_URL,
-      image: {
-        url: "/images/violet-preview.jpg",
-        width: "1192",
-        height: "779",
-        alt: "Violet Real Estate",
-      },
-    },
-  },
-};
-
 export const mainMenu = [
   {
     id: 1,
@@ -107,3 +64,47 @@ export const mainMenu = [
   { id: 14, title: "Blog", url: "/blog" },
   { id: 15, title: "Contacts", url: "/contacts" },
 ];
+
+export const settings = {
+  siteUrl: process.env.SITE_URL,
+  contact: {
+    phone: "+34 608 281 712",
+    email: "violet@marbella.one",
+    socials: {
+      twitter: "https://twitter.com",
+      youtube: "https://youtube.com",
+      instagram: "https://instagram.com",
+      facebook: "https://facebook.com",
+    },
+    messengers: {
+      whatsapp: "https://whatsapp.com",
+      telegram: "https://web.telegram.org",
+      viber: "https://www.viber.com",
+    },
+  },
+  workMode: "Mo - So: 8:00-22:00",
+  address: "Campos de Guadalmina 29069 Marbella",
+  coordinates: [36.469447, -5.00314],
+  meta: {
+    title: "Violet Real Estate",
+    description:
+      "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
+    keywords: "",
+    openGraph: {
+      title: "Violet Real Estate",
+      type: "website",
+      locale: "en_US",
+      description:
+        "Our real estate agency Violet Real Estate will help you make your dream of a perfect home come true!",
+      site_name: "Violet Real Estate",
+      url: process.env.SITE_URL,
+      image: {
+        url: "/images/violet-preview.jpg",
+        width: "1192",
+        height: "779",
+        alt: "Violet Real Estate",
+      },
+    },
+  },
+  mainMenu,
+};

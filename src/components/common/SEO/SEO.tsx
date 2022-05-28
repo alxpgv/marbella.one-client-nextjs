@@ -2,7 +2,7 @@ import { FC, Fragment } from "react";
 import Head from "next/head";
 import { configSite } from "@/config";
 import { useRouter } from "next/router";
-import { settings } from "@/data/settings";
+import { useSettings } from "@/lib/contexts/settings-context";
 
 interface OgImage {
   url?: string;
@@ -26,7 +26,9 @@ export interface SEOProps {
   };
 }
 
-const ogImage = ({ url, width, height, alt }: OgImage) => {
+const OgImage = ({ url, width, height, alt }: OgImage) => {
+  const settings = useSettings();
+
   const imgUrl =
     url ??
     settings?.meta?.openGraph?.image?.url ??
@@ -62,6 +64,7 @@ export const SEO: FC<SEOProps> = ({
   children,
 }) => {
   const router = useRouter();
+  const settings = useSettings();
 
   const getTitle = (pageTitle = "") => {
     const siteTitle = settings?.meta?.title || configSite.title;
@@ -143,7 +146,7 @@ export const SEO: FC<SEOProps> = ({
         />
       )}
       <meta key="robots" name="robots" content={robots ?? "index,follow"} />
-      {ogImage({ ...openGraph?.image })}
+      <OgImage {...openGraph?.image} />
       {children}
     </Head>
   );

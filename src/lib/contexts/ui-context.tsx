@@ -12,6 +12,12 @@ interface UIState {
   modalView: string;
   displayNotify: boolean;
   notifyView: string;
+  openModal: () => void;
+  closeModal: () => void;
+  setModalView: (view: keyof typeof MODAL_VIEWS) => void;
+  openNotify: () => void;
+  closeNotify: () => void;
+  setNotifyView: (view: keyof typeof NOTIFY_VIEWS) => void;
 }
 
 export enum MODAL_VIEWS {
@@ -35,6 +41,12 @@ const initialState = {
   modalView: Object.keys(MODAL_VIEWS)[0],
   displayNotify: false,
   notifyView: Object.keys(NOTIFY_VIEWS)[0],
+  openModal: () => null,
+  closeModal: () => null,
+  setModalView: () => null,
+  openNotify: () => null,
+  closeNotify: () => null,
+  setNotifyView: () => null,
 };
 
 type Action =
@@ -45,7 +57,7 @@ type Action =
   | { type: "CLOSE_NOTIFY" }
   | { type: "SET_NOTIFY_VIEW"; view: keyof typeof NOTIFY_VIEWS };
 
-const UIContext = createContext<UIState | any>(initialState);
+const UIContext = createContext<UIState>(initialState);
 UIContext.displayName = "UIContext";
 
 const uiReducer = (state: UIState, action: Action) => {

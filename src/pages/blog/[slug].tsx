@@ -21,6 +21,7 @@ import { ContactUs } from "@/components/blocks/contact-us";
 import { TitleWithTiledItems } from "@/components/blocks/title-with-tiled-items";
 import { ImageWithOverlapText } from "@/components/blocks/image-with-overlap-text";
 import { Text } from "@/components/blocks/text";
+import { settings } from "@/data/settings";
 
 const mapBlocks = {
   "online-service": OnlineService,
@@ -82,6 +83,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       page,
+      settings,
     },
     revalidate: 100,
   };

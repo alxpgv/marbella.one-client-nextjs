@@ -15,6 +15,7 @@ import { OnlineConsultation } from "@/components/blocks/online-consultation";
 import { JoinUs } from "@/components/blocks/join-us";
 import type { EntryProps } from "@/types/entry";
 import { SEO } from "@/components/common/SEO";
+import { settings } from "@/data/settings";
 
 const mapBlocks = {
   "home-promo": HomePromo,
@@ -53,8 +54,8 @@ export const getStaticProps = async () => {
   return {
     props: {
       page,
+      settings,
     },
-    revalidate: 100,
   };
 };
 

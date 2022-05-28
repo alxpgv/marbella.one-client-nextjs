@@ -14,6 +14,7 @@ import { ContactUs } from "@/components/blocks/contact-us";
 import { blogCategory } from "@/data/blog/category";
 import type { EntryProps } from "@/types/entry";
 import { SEO } from "@/components/common/SEO";
+import { settings } from "@/data/settings";
 
 export interface BlogProps {
   page: EntryProps & {
@@ -61,6 +62,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       page,
+      settings,
     },
     revalidate: 100,
   };
