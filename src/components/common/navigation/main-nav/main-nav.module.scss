@@ -19,12 +19,16 @@
       color: $grey-500;
 
       &:hover,
-      &.active {
+      &.isOpen {
         color: $red-400;
 
         .icon {
           transform: rotate(-180deg);
         }
+      }
+
+      &.active {
+        color: $red-400;
       }
 
       .icon {
