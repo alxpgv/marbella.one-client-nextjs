@@ -18,7 +18,10 @@ export const CookieBar = () => {
     const storageTime = localStorage.getItem("accept_cookies");
     if (!storageTime) {
       setShow(true);
-    } else if (Number(storageTime) + EXPIRED_PERIOD < new Date().getTime()) {
+    } else if (
+      storageTime &&
+      Number(storageTime) + EXPIRED_PERIOD < new Date().getTime()
+    ) {
       localStorage.removeItem("accept_cookies");
       setShow(true);
     }
