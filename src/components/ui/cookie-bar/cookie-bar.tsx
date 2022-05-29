@@ -4,7 +4,7 @@ import cn from "clsx";
 import { useEffect, useState } from "react";
 import styles from "./cookie-bar.module.scss";
 
-const EXPIRED_PERIOD = 3600 * 24 * 60 * 1000; // 2 month
+const EXPIRED_PERIOD = 3600 * 24 * 60 * 1000; // ms, 2 month
 
 export const CookieBar = () => {
   const [show, setShow] = useState(false);
@@ -18,10 +18,7 @@ export const CookieBar = () => {
     const storageTime = localStorage.getItem("accept_cookies");
     if (!storageTime) {
       setShow(true);
-    } else if (
-      storageTime &&
-      Number(storageTime) + EXPIRED_PERIOD < new Date().getTime()
-    ) {
+    } else if (Number(storageTime) + EXPIRED_PERIOD < new Date().getTime()) {
       localStorage.removeItem("accept_cookies");
       setShow(true);
     }
