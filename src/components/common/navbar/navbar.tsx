@@ -4,7 +4,7 @@ import { MainNav } from "@/components/common/navigation/main-nav";
 import { Container } from "@/components/ui/container";
 import { MainNavMobile } from "@/components/common/navigation/main-nav-mobile";
 import { PhoneLink } from "@/components/ui/contact-links";
-import { useSettings } from "@/lib/contexts/settings-context";
+import { useSettings } from "@/contexts/settings-context";
 import styles from "./navbar.module.scss";
 
 export const Navbar = () => {

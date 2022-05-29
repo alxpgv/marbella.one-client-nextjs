@@ -3,7 +3,7 @@ import React, { ButtonHTMLAttributes, FC } from "react";
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import Link from "next/link";
-import { MODAL_VIEWS, useUI } from "@/lib/contexts/ui-context";
+import { MODAL_VIEWS, useUI } from "@/contexts/ui-context";
 import styles from "./button.module.scss";
 
 export interface ButtonBase {

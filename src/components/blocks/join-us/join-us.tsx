@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { MessengerLinks } from "./messenger-links";
 import { SocialLinks } from "./social-links";
-import { useSettings } from "@/lib/contexts/settings-context";
+import { useSettings } from "@/contexts/settings-context";
 import styles from "./join-us.module.scss";
 
 export const JoinUs = () => {

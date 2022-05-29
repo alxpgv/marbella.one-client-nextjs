@@ -2,7 +2,7 @@ import { FC, Fragment } from "react";
 import Head from "next/head";
 import { configSite } from "@/config";
 import { useRouter } from "next/router";
-import { useSettings } from "@/lib/contexts/settings-context";
+import { useSettings } from "@/contexts/settings-context";
 
 interface OgImage {
   url?: string;

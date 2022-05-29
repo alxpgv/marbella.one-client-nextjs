@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/container";
 import cn from "clsx";
 import { Button } from "@/components/ui/button";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
-import { useSettings } from "@/lib/contexts/settings-context";
+import { useSettings } from "@/contexts/settings-context";
 import styles from "./contact-us.module.scss";
 
 interface ContactUsProps {

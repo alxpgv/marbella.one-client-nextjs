@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { ContactInfo } from "./contact-info";
 import { YaMap } from "@/components/ui/ya-map";
-import { useSettings } from "@/lib/contexts/settings-context";
+import { useSettings } from "@/contexts/settings-context";
 import styles from "./map-with-contact.module.scss";
 
 export const MapWithContact = () => {

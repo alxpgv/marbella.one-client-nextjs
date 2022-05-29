@@ -3,7 +3,7 @@ import Link from "next/link";
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import { useRouter } from "next/router";
-import { useSettings } from "@/lib/contexts/settings-context";
+import { useSettings } from "@/contexts/settings-context";
 import styles from "./breadcrumb.module.scss";
 
 interface CrumbItem {

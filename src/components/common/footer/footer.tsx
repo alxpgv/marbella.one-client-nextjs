@@ -7,7 +7,7 @@ import { FooterMenuItems } from "./footer-menu-items";
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
-import { useSettings } from "@/lib/contexts/settings-context";
+import { useSettings } from "@/contexts/settings-context";
 import styles from "./footer.module.scss";
 
 export const Footer = () => {
