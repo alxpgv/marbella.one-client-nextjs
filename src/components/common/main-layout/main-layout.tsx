@@ -2,11 +2,12 @@ import React, { FC } from "react";
 import { Footer } from "@/components/common/footer";
 import { Navbar } from "@/components/common/navbar";
 import { TopBtn } from "@/components/ui/top-btn";
-import { NOTIFY_VIEWS, useUI } from "@/lib/contexts/ui-context";
+import { useUI } from "@/lib/contexts/ui-context";
 import dynamic from "next/dynamic";
 import { MODAL_VIEWS } from "@/lib/contexts/ui-context";
 import { FormFeedback } from "@/components/ui/forms/form-feedback";
 import { FormSubscribe } from "@/components/ui/forms/form-subscribe";
+import cn from "clsx";
 
 interface MainLayoutProps {
   navbarOffset?: boolean;
@@ -108,7 +109,9 @@ export const MainLayout: FC<MainLayoutProps> = ({
       <Navbar />
       <ModalUI />
       <NotifyUI />
-      <main className={navbarOffset ? "pt-navbar" : ""}>{children}</main>
+      <main className={cn("main-layout", { "pt-navbar": navbarOffset })}>
+        {children}
+      </main>
       <Footer />
       <TopBtn />
     </>
