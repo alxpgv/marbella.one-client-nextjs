@@ -1,0 +1,36 @@
+@import "../../../styles/utils";
+
+.root {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba($white, .9);
+  box-shadow: 0 0 10px $grey-200;
+  z-index: 12;
+  animation: slide_up 400ms ease-in-out;
+}
+
+@keyframes slide_up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  flex: 1 0 140px;
+  margin-left: 10px;
+  text-align: right;
+}

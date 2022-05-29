@@ -16,7 +16,6 @@ interface MainLayoutProps {
 const Modal: any = dynamic(
   (): any => import("@/components/ui/modal").then((mod) => mod.Modal),
   {
-    // loading: Loading,
     ssr: false,
   }
 );
@@ -24,7 +23,13 @@ const Modal: any = dynamic(
 const Notify: any = dynamic(
   (): any => import("@/components/ui/notify").then((mod) => mod.Notify),
   {
-    // loading: Loading,
+    ssr: false,
+  }
+);
+
+const Cookie: any = dynamic(
+  (): any => import("@/components/ui/cookie-bar").then((mod) => mod.CookieBar),
+  {
     ssr: false,
   }
 );
@@ -113,6 +118,7 @@ export const MainLayout: FC<MainLayoutProps> = ({
         {children}
       </main>
       <Footer />
+      <Cookie />
       <TopBtn />
     </>
   );
