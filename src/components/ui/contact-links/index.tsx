@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { getPhoneFromString } from "@/lib/helpers";
+import { getPhoneFromString } from "@/utils/helpers";
 
 interface LinksProps {
   value: string;
