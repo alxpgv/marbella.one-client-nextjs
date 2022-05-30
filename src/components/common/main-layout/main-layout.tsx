@@ -73,8 +73,9 @@ const ModalUI: FC = () => {
 
 const NotifyView: FC<{
   notifyView: string;
+  notifyText: string;
   closeNotify(): void;
-}> = ({ notifyView, closeNotify }) => {
+}> = ({ notifyView, closeNotify, notifyText }) => {
   return (
     <>
       {notifyView === "FORM_SEND_SUCCESS" && (
@@ -83,6 +84,7 @@ const NotifyView: FC<{
           type={"success"}
           disableScroll={true}
           title={"Your request has been sent"}
+          text={notifyText}
         />
       )}
       {notifyView === "FORM_SEND_ERROR" && (
@@ -91,6 +93,7 @@ const NotifyView: FC<{
           disableScroll={false}
           title={"An error occurred while sending "}
           type={"error"}
+          text={notifyText}
         />
       )}
     </>
@@ -98,10 +101,14 @@ const NotifyView: FC<{
 };
 
 const NotifyUI: FC = () => {
-  const { displayNotify, closeNotify, notifyView } = useUI();
+  const { displayNotify, closeNotify, notifyView, notifyText } = useUI();
 
   return displayNotify ? (
-    <NotifyView closeNotify={closeNotify} notifyView={notifyView} />
+    <NotifyView
+      closeNotify={closeNotify}
+      notifyView={notifyView}
+      notifyText={notifyText}
+    />
   ) : null;
 };
 

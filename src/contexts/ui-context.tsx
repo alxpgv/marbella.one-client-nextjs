@@ -12,12 +12,16 @@ interface UIState {
   modalView: string;
   displayNotify: boolean;
   notifyView: string;
+  notifyText: string;
   openModal: () => void;
   closeModal: () => void;
   setModalView: (view: keyof typeof MODAL_VIEWS) => void;
   openNotify: () => void;
   closeNotify: () => void;
-  setNotifyView: (view: keyof typeof NOTIFY_VIEWS) => void;
+  setNotifyView: (
+    view: keyof typeof NOTIFY_VIEWS,
+    text?: JSX.Element[] | string
+  ) => void;
 }
 
 export enum MODAL_VIEWS {
@@ -41,12 +45,13 @@ const initialState = {
   modalView: Object.keys(MODAL_VIEWS)[0],
   displayNotify: false,
   notifyView: Object.keys(NOTIFY_VIEWS)[0],
-  openModal: () => null,
-  closeModal: () => null,
-  setModalView: () => null,
-  openNotify: () => null,
-  closeNotify: () => null,
-  setNotifyView: () => null,
+  notifyText: "",
+  openModal: () => undefined,
+  closeModal: () => undefined,
+  setModalView: () => undefined,
+  openNotify: () => undefined,
+  closeNotify: () => undefined,
+  setNotifyView: () => undefined,
 };
 
 type Action =
@@ -55,7 +60,7 @@ type Action =
   | { type: "SET_MODAL_VIEW"; view: keyof typeof MODAL_VIEWS }
   | { type: "OPEN_NOTIFY" }
   | { type: "CLOSE_NOTIFY" }
-  | { type: "SET_NOTIFY_VIEW"; view: keyof typeof NOTIFY_VIEWS };
+  | { type: "SET_NOTIFY_VIEW"; view: keyof typeof NOTIFY_VIEWS; text?: string };
 
 const UIContext = createContext<UIState>(initialState);
 UIContext.displayName = "UIContext";
@@ -73,7 +78,11 @@ const uiReducer = (state: UIState, action: Action) => {
     case "CLOSE_NOTIFY":
       return { ...state, displayNotify: false };
     case "SET_NOTIFY_VIEW":
-      return { ...state, notifyView: action.view };
+      return {
+        ...state,
+        notifyView: action.view,
+        notifyText: action.text ?? "",
+      };
   }
 };
 
@@ -103,8 +112,8 @@ export const UIProvider: FC = ({ children }, props) => {
     [dispatch]
   );
   const setNotifyView = useCallback(
-    (view: keyof typeof NOTIFY_VIEWS) =>
-      dispatch({ type: "SET_NOTIFY_VIEW", view }),
+    (view: keyof typeof NOTIFY_VIEWS, text) =>
+      dispatch({ type: "SET_NOTIFY_VIEW", view, text }),
     [dispatch]
   );
 
