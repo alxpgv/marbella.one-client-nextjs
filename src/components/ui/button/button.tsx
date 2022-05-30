@@ -1,9 +1,9 @@
 import React, { ButtonHTMLAttributes, FC } from "react";
-
 import cn from "clsx";
 import { Icon } from "@/components/ui/icon";
 import Link from "next/link";
 import { MODAL_VIEWS, useUI } from "@/contexts/ui-context";
+import { Spinner } from "@/components/ui/spinner";
 import styles from "./button.module.scss";
 
 export interface ButtonBase {
@@ -23,7 +23,11 @@ interface ButtonProps
   onClick?: () => void;
   href?: string;
   className?: string;
+  loading?: boolean;
 }
+
+const ButtonIcon = ({ icon }: { icon?: string }) =>
+  icon ? <Icon name={icon} className={styles.icon} /> : null;
 
 export const Button: FC<ButtonProps> = ({
   type = "button",
@@ -40,6 +44,7 @@ export const Button: FC<ButtonProps> = ({
   onClick,
   className,
   disabled = false,
+  loading = false,
 }): JSX.Element => {
   const { openModal, setModalView } = useUI();
 
@@ -51,9 +56,6 @@ export const Button: FC<ButtonProps> = ({
     { [styles.fullWidth]: fullWidth },
     className
   );
-
-  const ButtonIcon = () =>
-    icon ? <Icon name={icon} className={styles.icon} /> : null;
 
   // link
   if (as && as === "link" && href) {
@@ -77,7 +79,7 @@ export const Button: FC<ButtonProps> = ({
         disabled={disabled}
       >
         {children || text}
-        <ButtonIcon />
+        <ButtonIcon icon={icon} />
       </button>
     );
   }
@@ -90,7 +92,8 @@ export const Button: FC<ButtonProps> = ({
       disabled={disabled}
     >
       {children}
-      <ButtonIcon />
+      <ButtonIcon icon={icon} />
+      {loading && <Spinner size={"sm"} className={styles.loading} />}
     </button>
   );
 };
