@@ -6,17 +6,17 @@ export const useNotifyFormResponse = () => {
   const { openNotify, setNotifyView } = useUI();
 
   return (response: FormResponse | null) => {
-    // errors on server
     if (response?.status) {
       setNotifyView("FORM_SEND_SUCCESS");
       openNotify();
       return true;
     }
 
-    // each errors
+    // errors on server
     if (response?.errors?.length) {
       setNotifyView(
         "FORM_SEND_ERROR",
+        // each errors
         response.errors.map((error, index: number) => {
           const [key, value] = Object.entries(error)[0];
           return <div key={index}>{`${key}: ${value}`}</div>;
