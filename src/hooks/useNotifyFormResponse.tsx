@@ -1,15 +1,11 @@
 import { errorMessages } from "@/constants";
 import { useUI } from "@/contexts/ui-context";
-
-interface ResponseProps {
-  status: boolean;
-  errors?: { key: string; value: string }[];
-}
+import { type FormResponse } from "@/services/forms";
 
 export const useNotifyFormResponse = () => {
   const { openNotify, setNotifyView } = useUI();
 
-  return (response: ResponseProps) => {
+  return (response: FormResponse | null) => {
     if (response) {
       // errors on server
       if (response.status) {

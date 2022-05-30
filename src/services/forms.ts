@@ -1,4 +1,9 @@
-export const sendFeedback = async (body: any) => {
+export interface FormResponse {
+  status: boolean;
+  errors?: { key: string; value: string }[];
+}
+
+export const sendFeedback = async (body: any): Promise<FormResponse | null> => {
   const fetchUrl = `${process.env.SEND_FORM_URL}/feedback.php`;
   try {
     return await fetch(fetchUrl, {
