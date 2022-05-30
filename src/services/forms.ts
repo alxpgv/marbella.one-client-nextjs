@@ -3,8 +3,11 @@ export interface FormResponse {
   errors?: { key: string; value: string }[];
 }
 
-export const sendFeedback = async (body: any): Promise<FormResponse | null> => {
-  const fetchUrl = `${process.env.SEND_FORM_URL}/feedback.php`;
+const fetchForm = async (
+  url: string,
+  body: any
+): Promise<FormResponse | null> => {
+  const fetchUrl = `${process.env.SEND_FORM_URL}${url}`;
   try {
     return await fetch(fetchUrl, {
       method: "POST",
@@ -15,7 +18,11 @@ export const sendFeedback = async (body: any): Promise<FormResponse | null> => {
       body: JSON.stringify(body),
     }).then((response) => response.json());
   } catch (error) {
-    console.error(`Could not fetch feedback: ${error}`);
+    console.error(`Could not fetch form: ${error}`);
     return null;
   }
+};
+
+export const sendFeedback = (body: any) => {
+  return fetchForm("/feedback.php", body);
 };
