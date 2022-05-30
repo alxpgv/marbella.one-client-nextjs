@@ -3,7 +3,7 @@ import cn from "clsx";
 import Image, { ImageProps } from "next/image";
 import { Rating } from "@/components/ui/rating";
 import styles from "./last-review.module.scss";
-import { cutText } from "@/lib/helpers";
+import { cutText } from "@/utils/helpers";
 
 export interface ReviewProps {
   id: number;
