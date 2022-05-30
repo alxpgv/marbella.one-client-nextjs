@@ -25,6 +25,7 @@
   min-height: 100px;
   margin: auto;
   padding: 10px 10px 20px;
+  text-align: center;
   background: $white;
   border-radius: 4px;
   animation: ease-in 100ms appearance_below;
@@ -75,11 +76,6 @@
 
 .title {
   margin-bottom: 15px;
-  text-align: center;
-}
-
-.iconWrapper {
-  text-align: center;
 }
 
 .icon {

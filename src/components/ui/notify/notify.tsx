@@ -72,7 +72,7 @@ export const Notify: FC<NotifyProps> = ({
           </div>
         )}
         {title && <h3 className={styles.title}>{title}</h3>}
-        {text && <p>{text}</p>}
+        {text && <div className={"text-sm-20"}>{text}</div>}
       </div>
     </div>
   );
