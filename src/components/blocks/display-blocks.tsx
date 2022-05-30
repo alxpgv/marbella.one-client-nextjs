@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { NullBlock } from "@/components/blocks/null-block";
 import { HomePromo } from "@/components/blocks/home-promo";
 import { ListWithStrictImage } from "@/components/blocks/list-with-strict-image";
@@ -31,7 +31,7 @@ interface DisplayBlocksProps {
   blocks: BlockProps[];
 }
 
-const mapBlocks = {
+const mapBlocks: { [key: string]: ReactNode } = {
   "home-promo": HomePromo,
   "list-with-strict-image": ListWithStrictImage,
   "image-with-overlap-text": ImageWithOverlapText,
@@ -62,8 +62,7 @@ export const DisplayBlocks = ({ blocks }: DisplayBlocksProps) => {
         blocks.map(({ blockName, fields = {} }, i) => {
           const index = `${blockName}-${i}`;
           if (blockName in mapBlocks) {
-            // @ts-ignore
-            return React.createElement(mapBlocks[blockName], {
+            return React.createElement(mapBlocks[blockName] as string, {
               key: index,
               ...fields,
             });
