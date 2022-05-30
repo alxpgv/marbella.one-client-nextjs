@@ -18,44 +18,9 @@ import { pageReasonsToCooperate } from "@/data/pages/owners/reasons-to-cooperate
 import { pageAboutMe } from "@/data/pages/about/about-me";
 import { pageReviews } from "@/data/pages/about/reviews";
 import { pageOurPhilosophy } from "@/data/pages/about/our-philosophy";
-import { OnlineService } from "@/components/blocks/online-service";
-import { Banners } from "@/components/blocks/banners";
-import { OnlineConsultation } from "@/components/blocks/online-consultation";
-import { JoinUs } from "@/components/blocks/join-us";
-import { SloganWithText } from "@/components/blocks/slogan-with-text";
-import { MapWithContact } from "@/components/blocks/map-with-contact";
-import { ContentRowsWithImages } from "@/components/blocks/content-rows-with-images";
-import { ContentExtraWithImage } from "@/components/blocks/content-extra-with-image";
-import { ContactUs } from "@/components/blocks/contact-us";
-import { TitleWithTiledItems } from "@/components/blocks/title-with-tiled-items";
-import { SloganWithTextExtend } from "@/components/blocks/slogan-with-text-extend";
-import { ImageWithContent } from "@/components/blocks/image-with-content";
-import { AvatarWithQuote } from "@/components/blocks/avatar-with-quote";
-import { ImageWithOverlapText } from "@/components/blocks/image-with-overlap-text";
-import { LastReview } from "@/components/blocks/last-review/last-review";
-import { Text } from "@/components/blocks/text";
 import type { EntryProps } from "@/types/entry";
 import { SEO } from "@/components/common/SEO";
 import { settings } from "@/data/settings";
-
-const mapBlocks = {
-  "online-service": OnlineService,
-  banners: Banners,
-  "online-consultation": OnlineConsultation,
-  "join-us": JoinUs,
-  "slogan-with-text": SloganWithText,
-  "slogan-with-text-extend": SloganWithTextExtend,
-  "map-with-contact": MapWithContact,
-  "content-rows-with-images": ContentRowsWithImages,
-  "content-extra-with-image": ContentExtraWithImage,
-  "image-with-content": ImageWithContent,
-  "contact-us": ContactUs,
-  "title-with-tiled-items": TitleWithTiledItems,
-  "avatar-with-quote": AvatarWithQuote,
-  "image-with-overlap-text": ImageWithOverlapText,
-  "last-review": LastReview,
-  text: Text,
-};
 
 const Pages: NextPage<{ page: EntryProps }> = ({ page }) => {
   const meta = page?.meta;
@@ -69,7 +34,7 @@ const Pages: NextPage<{ page: EntryProps }> = ({ page }) => {
         <Breadcrumb title={title} />
         <PageTitle title={title} />
       </Container>
-      <DisplayBlocks blocks={blocks} mapBlocks={mapBlocks} />
+      <DisplayBlocks blocks={blocks} />
     </MainLayout>
   );
 };
