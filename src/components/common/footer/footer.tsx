@@ -95,9 +95,9 @@ export const Footer = () => {
             <div className={styles.col}>
               <Image
                 src={"/images/booking-rating-min.jpg"}
-                layout={"intrinsic"}
                 width="161"
                 height="30"
+                layout={"fixed"}
                 alt={"booking-rating"}
               />
             </div>
