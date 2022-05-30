@@ -4,7 +4,7 @@ import { Icon } from "@/components/ui/icon";
 import cn from "clsx";
 import * as EmailValidator from "email-validator";
 import { ErrorPopup } from "@/components/ui/inputs/error-popup";
-import { errorMessages } from "@/lib/constants";
+import { errorMessages } from "@/constants";
 import { InputText } from "@/components/ui/inputs/input-text";
 
 interface FormSubscribeProps {
