@@ -25,14 +25,14 @@ export const Head: VFC = () => {
         crossOrigin=""
         key="SourceSansPro-Bold"
       />
-      <link
-        rel="preload"
-        href="/fonts/Judson-Regular.woff2"
-        as="font"
-        type="font/woff2"
-        crossOrigin=""
-        key="Judson-Regular"
-      />
+      {/*<link*/}
+      {/*  rel="preload"*/}
+      {/*  href="/fonts/Judson-Regular.woff2"*/}
+      {/*  as="font"*/}
+      {/*  type="font/woff2"*/}
+      {/*  crossOrigin=""*/}
+      {/*  key="Judson-Regular"*/}
+      {/*/>*/}
       <link
         rel="preload"
         href="/fonts/Judson-Bold.woff2"
