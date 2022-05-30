@@ -96,8 +96,8 @@ export const Footer = () => {
               <Image
                 src={"/images/booking-rating-min.jpg"}
                 layout={"intrinsic"}
-                width={161}
-                height={30}
+                width="161"
+                height="30"
                 alt={"booking-rating"}
               />
             </div>
