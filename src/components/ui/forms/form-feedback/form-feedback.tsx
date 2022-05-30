@@ -6,16 +6,16 @@ import { InputPhone } from "@/components/ui/inputs/input-phone";
 import { InputText } from "@/components/ui/inputs/input-text";
 import { InputAgree } from "@/components/ui/inputs/input-agree";
 import { ErrorPopup } from "@/components/ui/inputs/error-popup";
-import { errorMessages } from "@/lib/constants";
-import { useUI } from "@/lib/contexts/ui-context";
+import { errorMessages } from "@/constants";
+import { sendFeedback } from "@/services/forms";
+import { useNotifyFormResponse } from "@/hooks/useNotifyFormResponse";
+import { useUI } from "@/contexts/ui-context";
 
 interface FormFeedbackProps {
   title?: string;
   text?: string;
   btnText?: string;
 }
-
-type SendStatus = "intl" | "sending" | "success" | "error";
 
 export const FormFeedback: FC<FormFeedbackProps> = ({
   title,
@@ -34,8 +34,9 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
     agree: null,
   });
 
-  const [status, setStatus] = useState<SendStatus>("intl");
-  const { openNotify, closeNotify, setNotifyView } = useUI();
+  const [isSending, setIsSending] = useState(false);
+  const { displayModal, closeModal } = useUI();
+  const viewNotifyFromResponse = useNotifyFormResponse();
 
   const changeErrors = (field: string, error: string | null = null) => {
     setErrors((prev) => ({ ...prev, [field]: error }));
@@ -80,21 +81,28 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
     return validatePhone(data.phone) && validateAgree(data.agree);
   };
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (validateAll()) {
-      setNotifyView("FORM_SEND_SUCCESS");
-      openNotify();
-      console.log("sending");
-    } else {
-      // setNotifyView("FORM_SEND_ERROR");
-      // openNotify();
-      console.log("error");
+      setIsSending(true);
+      const response = await sendFeedback({ title, ...data });
+      setIsSending(false);
+      const responseStatus = viewNotifyFromResponse(response);
+
+      if (responseStatus) {
+        if (displayModal) {
+          closeModal();
+        } else {
+          setData({
+            name: "",
+            phone: "",
+            agree: true,
+          });
+        }
+      }
     }
   };
-
-  // console.log(data);
-  // console.log(errors);
 
   return (
     <div className="form-container">
@@ -135,7 +143,8 @@ export const FormFeedback: FC<FormFeedbackProps> = ({
             size={"md"}
             gutter={"sm"}
             as={"modal"}
-            disabled={!data.agree}
+            disabled={!data.agree || isSending}
+            loading={isSending}
             fullWidth
           >
             {btnText ? btnText : "Send"}
