@@ -8,6 +8,7 @@ import { MODAL_VIEWS } from "@/contexts/ui-context";
 import { FormFeedback } from "@/components/ui/forms/form-feedback";
 import { FormSubscribe } from "@/components/ui/forms/form-subscribe";
 import cn from "clsx";
+import { CookieBar } from "@/components/ui/cookie-bar";
 
 interface MainLayoutProps {
   navbarOffset?: boolean;
@@ -27,12 +28,12 @@ const Notify: any = dynamic(
   }
 );
 
-const Cookie: any = dynamic(
-  (): any => import("@/components/ui/cookie-bar").then((mod) => mod.CookieBar),
-  {
-    ssr: false,
-  }
-);
+// const Cookie: any = dynamic(
+//   (): any => import("@/components/ui/cookie-bar").then((mod) => mod.CookieBar),
+//   {
+//     ssr: false,
+//   }
+// );
 
 const ModalView: FC<{
   modalView: string;
@@ -125,7 +126,7 @@ export const MainLayout: FC<MainLayoutProps> = ({
         {children}
       </main>
       <Footer />
-      <Cookie />
+      <CookieBar />
       <TopBtn />
     </>
   );
