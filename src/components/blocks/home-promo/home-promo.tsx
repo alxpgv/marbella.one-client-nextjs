@@ -34,27 +34,27 @@ export const HomePromo: FC<HomePromoProps> = ({
               alt={image?.alt ?? ""}
               quality={90}
             />
-            <img
-              className={cn(styles.imageCloud, styles.cloudOne)}
-              src={"/images/hero/cloud/cloud-01-min.png"}
-              width={"100%"}
-              height={"100%"}
-              alt={""}
-            />
-            <img
-              className={cn(styles.imageCloud, styles.cloudTwo)}
-              src={"/images/hero/cloud/cloud-04-min.png"}
-              width={"100%"}
-              height={"100%"}
-              alt={""}
-            />
-            <img
-              className={cn(styles.imageCloud, styles.cloudThree)}
-              src={"/images/hero/cloud/cloud-04-min.png"}
-              width={"100%"}
-              height={"100%"}
-              alt={""}
-            />
+            {/*<img*/}
+            {/*  className={cn(styles.imageCloud, styles.cloudOne)}*/}
+            {/*  src={"/images/hero/cloud/cloud-01-min.png"}*/}
+            {/*  width={"100%"}*/}
+            {/*  height={"100%"}*/}
+            {/*  alt={""}*/}
+            {/*/>*/}
+            {/*<img*/}
+            {/*  className={cn(styles.imageCloud, styles.cloudTwo)}*/}
+            {/*  src={"/images/hero/cloud/cloud-04-min.png"}*/}
+            {/*  width={"100%"}*/}
+            {/*  height={"100%"}*/}
+            {/*  alt={""}*/}
+            {/*/>*/}
+            {/*<img*/}
+            {/*  className={cn(styles.imageCloud, styles.cloudThree)}*/}
+            {/*  src={"/images/hero/cloud/cloud-04-min.png"}*/}
+            {/*  width={"100%"}*/}
+            {/*  height={"100%"}*/}
+            {/*  alt={""}*/}
+            {/*/>*/}
           </div>
         </div>
       )}
