@@ -2,7 +2,6 @@ import {
   banners,
   onlineConsultation,
   onlineServices,
-  joinUs,
 } from "@/data/static-blocks";
 
 export const pageReasonsToCooperate = {
@@ -94,6 +93,5 @@ export const pageReasonsToCooperate = {
     onlineServices,
     banners,
     onlineConsultation,
-    joinUs,
   ],
 };

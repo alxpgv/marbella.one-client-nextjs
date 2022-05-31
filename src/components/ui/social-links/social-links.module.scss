@@ -1,0 +1,62 @@
+@import "../../../styles/utils";
+
+.socials {
+  display: flex;
+
+  .socialIcon {
+    width: 18px;
+    height: 18px;
+    transition: 300ms fill;
+  }
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.primary {
+    .socialItem {
+      border: 1px solid $grey-500;
+    }
+
+    .socialIcon {
+      fill: $grey-500;
+    }
+  }
+
+  &.secondary {
+    @include not-md {
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    .socialItem {
+      border: 1px solid $grey-250;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+
+    .socialIcon {
+      fill: $white
+    }
+  }
+
+  &:is(.primary, .secondary) .socialItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: 300ms border;
+
+    &:hover {
+      border: 1px solid $red-400;
+
+      .socialIcon {
+        fill: $red-400;
+      }
+    }
+  }
+}

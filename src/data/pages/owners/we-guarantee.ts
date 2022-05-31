@@ -2,7 +2,6 @@ import {
   banners,
   onlineConsultation,
   onlineServices,
-  joinUs,
 } from "@/data/static-blocks";
 
 export const pageWeGuarantee = {
@@ -80,7 +79,6 @@ export const pageWeGuarantee = {
       },
     },
     onlineConsultation,
-    joinUs,
     onlineServices,
     banners,
   ],

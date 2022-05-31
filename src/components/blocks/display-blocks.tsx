@@ -41,7 +41,7 @@ const mapBlocks: { [key: string]: ReactNode } = {
   "online-service": OnlineService,
   banners: Banners,
   "online-consultation": OnlineConsultation,
-  "join-us": JoinUs,
+  // "join-us": JoinUs,
   "contact-us": ContactUs,
   "slogan-with-text": SloganWithText,
   "slogan-with-text-extend": SloganWithTextExtend,

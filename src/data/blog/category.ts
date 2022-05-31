@@ -1,6 +1,5 @@
 import {
   banners,
-  joinUs,
   onlineConsultation,
   onlineServices,
 } from "@/data/static-blocks";
@@ -25,6 +24,5 @@ export const blogCategory = {
     onlineServices,
     banners,
     onlineConsultation,
-    joinUs,
   ],
 };

@@ -70,21 +70,33 @@ export const settings = {
   contact: {
     phone: "+34 608 281 712",
     email: "violet@marbella.one",
-    socials: {
-      twitter: "https://twitter.com",
-      youtube: "https://youtube.com",
-      instagram: "https://instagram.com",
-      facebook: "https://facebook.com",
-    },
-    messengers: {
-      whatsapp: "https://whatsapp.com",
-      telegram: "https://web.telegram.org",
-      viber: "https://www.viber.com",
-    },
+    socials: [
+      { label: "twitter", url: "https://twitter.com", icon: "twitter" },
+      { label: "youtube", url: "https://youtube.com", icon: "youtube" },
+      { label: "instagram", url: "https://instagram.com", icon: "instagram" },
+      { label: "facebook", url: "https://facebook.com", icon: "facebook" },
+    ],
+    messengers: [
+      {
+        label: "whatsapp",
+        url: "https://wa.me/+34608281712",
+        icon: "whatsapp",
+      },
+      {
+        label: "telegram",
+        url: "https://telegram.me/username",
+        icon: "telegram",
+      },
+      {
+        label: "viber",
+        url: "viber://chat?number=%2B34608281712",
+        icon: "viber",
+      },
+    ],
+    workMode: "Mo - So: 8:00-22:00",
+    address: "Campos de Guadalmina 29069 Marbella",
+    coordinates: [36.469447, -5.00314],
   },
-  workMode: "Mo - So: 8:00-22:00",
-  address: "Campos de Guadalmina 29069 Marbella",
-  coordinates: [36.469447, -5.00314],
   meta: {
     title: "Violet Real Estate",
     description:

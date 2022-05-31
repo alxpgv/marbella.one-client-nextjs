@@ -3,18 +3,15 @@ import cn from "clsx";
 import { Button } from "@/components/ui/button";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
 import styles from "./map-with-contact.module.scss";
+import { SocialLinks } from "@/components/ui/social-links";
 
 interface ContactInfoProps {
-  phone?: string;
-  email?: string;
-  address?: string;
+  contact: any;
 }
 
-export const ContactInfo: FC<ContactInfoProps> = ({
-  phone,
-  email,
-  address,
-}) => {
+export const ContactInfo: FC<ContactInfoProps> = ({ contact }) => {
+  const { phone, email, address, messengers } = contact;
+
   return (
     <div className={cn(styles.content)}>
       <div className={styles.header}>
@@ -64,6 +61,11 @@ export const ContactInfo: FC<ContactInfoProps> = ({
             <p>
               <span className={"text-grey-300"}>our office:</span> {address}
             </p>
+          )}
+          {messengers && (
+            <div className={styles.socials}>
+              <SocialLinks items={messengers} variant="secondary" />
+            </div>
           )}
         </div>
       </div>

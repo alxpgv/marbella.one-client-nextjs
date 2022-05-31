@@ -1,6 +1,5 @@
 import {
   banners,
-  joinUs,
   onlineConsultation,
   onlineServices,
 } from "@/data/static-blocks";
@@ -105,6 +104,5 @@ export const pageOurPhilosophy = {
     onlineServices,
     banners,
     onlineConsultation,
-    joinUs,
   ],
 };

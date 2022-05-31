@@ -6,8 +6,6 @@ interface SettingsState {
   siteUrl?: string;
   contact?: any;
   workMode?: string;
-  address?: string;
-  coordinates?: [number, number];
   meta?: SEOProps;
   mainMenu?: MenuProps[];
 }

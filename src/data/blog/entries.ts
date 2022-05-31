@@ -1,6 +1,5 @@
 import {
   banners,
-  joinUs,
   onlineConsultation,
   onlineServices,
 } from "@/data/static-blocks";
@@ -90,7 +89,6 @@ export const blogEntries = [
       onlineServices,
       banners,
       onlineConsultation,
-      joinUs,
     ],
   },
   {
@@ -169,7 +167,6 @@ export const blogEntries = [
       onlineServices,
       banners,
       onlineConsultation,
-      joinUs,
     ],
   },
   {
@@ -279,7 +276,6 @@ export const blogEntries = [
       onlineServices,
       banners,
       onlineConsultation,
-      joinUs,
     ],
   },
   {
@@ -365,7 +361,6 @@ export const blogEntries = [
       onlineServices,
       banners,
       onlineConsultation,
-      joinUs,
     ],
   },
   {
@@ -449,7 +444,6 @@ export const blogEntries = [
       onlineServices,
       banners,
       onlineConsultation,
-      joinUs,
     ],
   },
   {
@@ -551,7 +545,6 @@ export const blogEntries = [
       onlineServices,
       banners,
       onlineConsultation,
-      joinUs,
     ],
   },
   {
@@ -631,7 +624,6 @@ export const blogEntries = [
       onlineServices,
       banners,
       onlineConsultation,
-      joinUs,
     ],
   },
 ];

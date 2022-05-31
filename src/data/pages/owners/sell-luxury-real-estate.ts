@@ -2,7 +2,6 @@ import {
   banners,
   onlineConsultation,
   onlineServices,
-  joinUs,
 } from "@/data/static-blocks";
 
 export const pageSellLuxury = {
@@ -79,7 +78,6 @@ export const pageSellLuxury = {
       },
     },
     onlineConsultation,
-    joinUs,
     onlineServices,
     banners,
   ],

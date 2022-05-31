@@ -2,7 +2,6 @@ import {
   banners,
   onlineConsultation,
   onlineServices,
-  joinUs,
 } from "@/data/static-blocks";
 
 export const pageRealEstatePrice = {
@@ -71,7 +70,6 @@ export const pageRealEstatePrice = {
       },
     },
     onlineConsultation,
-    joinUs,
     onlineServices,
     banners,
   ],

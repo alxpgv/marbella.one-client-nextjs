@@ -2,7 +2,6 @@ import {
   banners,
   onlineConsultation,
   onlineServices,
-  joinUs,
 } from "@/data/static-blocks";
 
 export const pageOwners = {
@@ -95,7 +94,6 @@ export const pageOwners = {
       },
     },
     onlineConsultation,
-    joinUs,
     onlineServices,
     banners,
   ],

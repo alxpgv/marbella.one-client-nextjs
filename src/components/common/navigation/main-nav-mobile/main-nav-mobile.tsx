@@ -7,7 +7,6 @@ import React, {
 } from "react";
 import { Button } from "@/components/ui/button";
 import { MenuItem } from "./menu-item";
-import { SocialLinks } from "./social-links";
 import type { MenuProps } from "../types";
 import {
   CloseButton,
@@ -16,6 +15,7 @@ import {
 import { PhoneLink } from "@/components/ui/contact-links";
 import cn from "clsx";
 import styles from "./main-nav-mobile.module.scss";
+import { SocialLinks } from "@/components/ui/social-links";
 
 interface MainMobileNavProps {
   menu: MenuProps[];
@@ -80,7 +80,9 @@ export const MainNavMobile: FC<MainMobileNavProps> = ({ menu, contact }) => {
               ))}
           </ul>
           <div className={styles.footer}>
-            {contact?.socials && <SocialLinks socials={contact.socials} />}
+            {contact?.messengers && (
+              <SocialLinks items={contact.messengers} justify={"between"} />
+            )}
           </div>
         </div>
       </nav>

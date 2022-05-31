@@ -7,19 +7,14 @@ import { useSettings } from "@/contexts/settings-context";
 import styles from "./map-with-contact.module.scss";
 
 export const MapWithContact = () => {
-  const { contact, address, coordinates } = useSettings();
+  const { contact } = useSettings();
 
   return (
     <Section>
       <Container>
-        <ContactInfo
-          phone={contact?.phone}
-          email={contact?.email}
-          address={address}
-        />
-
+        <ContactInfo contact={contact} />
         <YaMap
-          center={coordinates as [number, number]}
+          center={contact?.coordinates as [number, number]}
           zoom={16}
           className={styles}
         />

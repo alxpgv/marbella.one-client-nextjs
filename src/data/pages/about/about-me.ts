@@ -1,6 +1,5 @@
 import {
   banners,
-  joinUs,
   onlineConsultation,
   onlineServices,
 } from "@/data/static-blocks";
@@ -96,6 +95,5 @@ export const pageAboutMe = {
     onlineServices,
     banners,
     onlineConsultation,
-    joinUs,
   ],
 };

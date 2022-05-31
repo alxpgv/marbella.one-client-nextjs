@@ -6,6 +6,7 @@ import * as EmailValidator from "email-validator";
 import { ErrorPopup } from "@/components/ui/inputs/error-popup";
 import { errorMessages } from "@/constants";
 import { InputText } from "@/components/ui/inputs/input-text";
+import { InputAgree } from "@/components/ui/inputs/input-agree";
 
 interface FormSubscribeProps {
   title?: string;
@@ -30,7 +31,7 @@ export const FormSubscribe: FC<FormSubscribeProps> = ({
     agree: null,
   });
 
-  const [status, setStatus] = useState<SendStatus>("intl");
+  const [isSending, setIsSending] = useState(false);
 
   const changeErrors = (field: string, error: string | null = null) => {
     setErrors((prev) => ({ ...prev, [field]: error }));
@@ -48,6 +49,11 @@ export const FormSubscribe: FC<FormSubscribeProps> = ({
     changeData("email", value);
   };
 
+  const changeAgree = (value: boolean) => {
+    validateAgree(value);
+    changeData("agree", value);
+  };
+
   const validateEmail = (value: string) => {
     if (!EmailValidator.validate(value)) {
       changeErrors("email", errorMessages.notValid);
@@ -57,8 +63,17 @@ export const FormSubscribe: FC<FormSubscribeProps> = ({
     return true;
   };
 
+  const validateAgree = (value: boolean) => {
+    if (!value) {
+      changeErrors("agree", errorMessages.agree);
+      return false;
+    }
+    changeErrors("agree");
+    return true;
+  };
+
   const validateAll = () => {
-    return validateEmail(data.email);
+    return validateEmail(data.email) && validateAgree(data.agree);
   };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -105,6 +120,13 @@ export const FormSubscribe: FC<FormSubscribeProps> = ({
           >
             {btnText ? btnText : "Send"}
           </Button>
+        </div>
+
+        <div className="form-field">
+          <InputAgree
+            checked={data.agree}
+            onChange={() => changeAgree(!data.agree)}
+          />
         </div>
       </form>
     </div>

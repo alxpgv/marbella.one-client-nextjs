@@ -2,7 +2,6 @@ import {
   banners,
   onlineConsultation,
   onlineServices,
-  joinUs,
 } from "@/data/static-blocks";
 
 export const pageBuyingLand = {
@@ -110,6 +109,5 @@ export const pageBuyingLand = {
     onlineServices,
     banners,
     onlineConsultation,
-    joinUs,
   ],
 };

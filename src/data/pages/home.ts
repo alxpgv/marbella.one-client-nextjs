@@ -2,7 +2,6 @@ import {
   onlineServices,
   banners,
   onlineConsultation,
-  joinUs,
 } from "@/data/static-blocks";
 import { serviceItems } from "@/data/service-items";
 
@@ -126,6 +125,5 @@ export const pageHome = {
     onlineServices,
     banners,
     onlineConsultation,
-    joinUs,
   ],
 };

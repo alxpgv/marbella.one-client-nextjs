@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
-import Image from "next/image";
 import Link from "next/link";
 import { FooterMenuItems } from "./footer-menu-items";
 import cn from "clsx";
@@ -9,9 +8,10 @@ import { Icon } from "@/components/ui/icon";
 import { EmailLink, PhoneLink } from "@/components/ui/contact-links";
 import { useSettings } from "@/contexts/settings-context";
 import styles from "./footer.module.scss";
+import { SocialLinks } from "@/components/ui/social-links";
 
 export const Footer = () => {
-  const { mainMenu, contact, workMode, address } = useSettings();
+  const { mainMenu, contact } = useSettings();
   const menuAbout = mainMenu && mainMenu[0];
   const menuRealEstate = mainMenu && mainMenu[2];
   const menuOwners = mainMenu && mainMenu[3];
@@ -34,12 +34,12 @@ export const Footer = () => {
                   <PhoneLink value={phone} />
                 </div>
               )}
-              {workMode && (
+              {contact?.workMode && (
                 <div className={cn(styles.contactItem, styles.contactWorkMode)}>
                   <span className={styles.iconWrapper}>
                     <Icon name={"calendar-smooth"} className={styles.icon} />
                   </span>
-                  {workMode}
+                  {contact.workMode}
                 </div>
               )}
               {email && (
@@ -50,12 +50,12 @@ export const Footer = () => {
                   <EmailLink value={email} />
                 </div>
               )}
-              {address && (
+              {contact?.address && (
                 <div className={cn(styles.contactItem, styles.contactLocation)}>
                   <span className={styles.iconWrapper}>
                     <Icon name={"location-smooth"} className={styles.icon} />
                   </span>
-                  {address}
+                  {contact.address}
                 </div>
               )}
             </div>
@@ -93,13 +93,11 @@ export const Footer = () => {
           <div className={styles.bottomWrapper}>
             <div className={styles.col}>© VIOLET real estate, 2010 - 2022</div>
             <div className={styles.col}>
-              <Image
-                src={"/images/booking-rating-min.jpg"}
-                width="161"
-                height="30"
-                layout={"fixed"}
-                alt={"booking-rating"}
-              />
+              {contact?.messengers && (
+                <div className={styles.socials}>
+                  <SocialLinks items={contact.messengers} variant="secondary" />
+                </div>
+              )}
             </div>
             <div className={cn(styles.col, styles.privacy)}>
               <Link href={"/#"}>
