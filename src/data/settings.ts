@@ -84,7 +84,7 @@ export const settings = {
       },
       {
         label: "telegram",
-        url: "https://telegram.me/username",
+        url: "https://telegram.me/VIOLET_REAL_ESTATE",
         icon: "telegram",
       },
       {
