@@ -21,6 +21,8 @@ import { pageOurPhilosophy } from "@/data/pages/about/our-philosophy";
 import type { EntryProps } from "@/types/entry";
 import { SEO } from "@/components/common/SEO";
 import { settings } from "@/data/settings";
+import { pagePrivacy } from "@/data/pages/privacy-policy";
+import { pagePersonalData } from "@/data/pages/personal-data";
 
 const Pages: NextPage<{ page: EntryProps }> = ({ page }) => {
   const meta = page?.meta;
@@ -49,6 +51,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
     },
     {
       params: { slugParent: "our-services", slugChild: [] },
+    },
+    {
+      params: { slugParent: "privacy-policy", slugChild: [] },
+    },
+    {
+      params: { slugParent: "personal-data", slugChild: [] },
     },
     {
       params: { slugParent: "real-estate", slugChild: [] },
@@ -172,6 +180,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       break;
     case "about-me/our-philosophy":
       page = pageOurPhilosophy;
+      break;
+    case "privacy-policy":
+      page = pagePrivacy;
+      break;
+    case "personal-data":
+      page = pagePersonalData;
       break;
   }
 

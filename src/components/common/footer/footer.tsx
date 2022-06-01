@@ -100,10 +100,10 @@ export const Footer = () => {
               )}
             </div>
             <div className={cn(styles.col, styles.privacy)}>
-              <Link href={"/#"}>
+              <Link href={"/privacy-policy"}>
                 <a>Privacy Policy</a>
               </Link>
-              <Link href={"/#"}>
+              <Link href={"/personal-data"}>
                 <a>Processing of personal data</a>
               </Link>
             </div>

@@ -24,7 +24,7 @@ export const InputAgree: FC<InputAgreeProps> = ({
         <span className={cn(styles.agreeText, "text-sm", "text-grey-300")}>
           You agree to the terms
           <br />
-          <a href={"/#"}>processing of personal data</a>
+          <a href={"/personal-data"}>processing of personal data</a>
         </span>
       </label>
     </>
