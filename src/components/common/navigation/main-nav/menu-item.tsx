@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from "react";
+import React, { FC, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import type { MenuProps } from "../types";
@@ -10,7 +10,7 @@ import styles from "./main-nav.module.scss";
 export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const router = useRouter();
-  const { title, url, child } = item;
+  const { label, slug, child } = item;
 
   const activeItem = (currenUrl: string) => {
     const segments = router.asPath.split("/");
@@ -33,14 +33,14 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
   if (child?.length) {
     return (
       <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <Link href={url}>
+        <Link href={slug}>
           <a
             className={cn({
               [styles.isOpen]: openSubMenu,
-              [styles.active]: activeItem(url),
+              [styles.active]: activeItem(slug),
             })}
           >
-            {title}
+            {label}
             <Icon name={"arrow"} className={styles.icon} />
           </a>
         </Link>
@@ -50,8 +50,8 @@ export const MenuItem: FC<{ item: MenuProps }> = ({ item }) => {
   } else {
     return (
       <li>
-        <Link href={url}>
-          <a className={cn({ [styles.active]: activeItem(url) })}>{title}</a>
+        <Link href={slug}>
+          <a className={cn({ [styles.active]: activeItem(slug) })}>{label}</a>
         </Link>
       </li>
     );

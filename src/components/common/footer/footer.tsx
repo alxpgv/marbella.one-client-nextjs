@@ -65,14 +65,14 @@ export const Footer = () => {
             {menuAbout?.child && (
               <FooterMenuItems
                 items={menuAbout.child}
-                itemTitle={<Link href={menuAbout.url}>{menuAbout.title}</Link>}
+                itemTitle={<Link href={menuAbout.slug}>{menuAbout.label}</Link>}
               />
             )}
             {menuRealEstate?.child && (
               <FooterMenuItems
                 items={menuRealEstate.child}
                 itemTitle={
-                  <Link href={menuRealEstate.url}>{menuRealEstate.title}</Link>
+                  <Link href={menuRealEstate.slug}>{menuRealEstate.label}</Link>
                 }
               />
             )}
@@ -80,7 +80,7 @@ export const Footer = () => {
               <FooterMenuItems
                 items={menuOwners.child}
                 itemTitle={
-                  <Link href={menuOwners.url}>{menuOwners.title}</Link>
+                  <Link href={menuOwners.slug}>{menuOwners.label}</Link>
                 }
               />
             )}

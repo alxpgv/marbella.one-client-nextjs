@@ -1,68 +1,71 @@
 export const mainMenu = [
   {
     id: 1,
-    title: "About me",
-    url: "/about-me",
+    label: "About me",
+    type: "page",
+    slug: "/about-me",
     child: [
       {
         id: 3,
-        title: "Our philosophy",
-        url: "/about-me/our-philosophy",
+        label: "Our philosophy",
+        slug: "/about-me/our-philosophy",
       },
       {
         id: 4,
-        title: "Reviews",
-        url: "/about-me/reviews",
+        label: "Reviews",
+        slug: "/about-me/reviews",
       },
     ],
   },
-  { id: 5, title: "Our services", url: "/our-services" },
+  { id: 5, label: "Our services", slug: "/our-services", type: "page" },
   {
     id: 6,
-    title: "Real Estate",
-    url: "/real-estate",
+    label: "Real Estate",
+    slug: "/real-estate",
+    type: "page",
     child: [
       {
         id: 7,
-        title: "Buy luxury real estate",
-        url: "/real-estate/buy-luxury-real-estate",
+        label: "Buy luxury real estate",
+        slug: "/real-estate/buy-luxury-real-estate",
       },
       {
         id: 8,
-        title: "Buying land in Marbella",
-        url: "/real-estate/buying-land-in-marbella",
+        label: "Buying land in Marbella",
+        slug: "/real-estate/buying-land-in-marbella",
       },
     ],
   },
   {
     id: 9,
-    title: "Owners",
-    url: "/owners",
+    label: "Owners",
+    slug: "/owners",
+    type: "page",
     child: [
       {
         id: 10,
-        title: "Sell luxury real estate",
-        url: "/owners/sell-luxury-real-estate",
+        label: "Sell luxury real estate",
+        slug: "/owners/sell-luxury-real-estate",
       },
       {
         id: 11,
-        title: "Real estate price",
-        url: "/owners/real-estate-price",
+        label: "Real estate price",
+        slug: "/owners/real-estate-price",
       },
       {
         id: 12,
-        title: "We guarantee",
-        url: "/owners/we-guarantee",
+        label: "We guarantee",
+        slug: "/owners/we-guarantee",
       },
       {
         id: 13,
-        title: "Reasons to cooperate with us",
-        url: "/owners/reasons-to-cooperate",
+        label: "Reasons to cooperate with us",
+        slug: "/owners/reasons-to-cooperate",
       },
     ],
   },
-  { id: 14, title: "Blog", url: "/blog" },
-  { id: 15, title: "Contacts", url: "/contacts" },
+  { id: 14, label: "Blog", slug: "/blog" },
+  { id: 15, label: "Contacts", slug: "/contacts", type: "page" },
 ];
 
 export const settings = {

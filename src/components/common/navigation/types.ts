@@ -1,12 +1,10 @@
 export interface MenuItemProps {
   id: number;
-  title: string;
-  url: string;
+  label: string;
+  slug: string;
+  type?: string;
 }
 
-export interface MenuProps {
-  id: number;
-  title: string;
-  url: string;
+export interface MenuProps extends MenuItemProps {
   child?: MenuItemProps[];
 }

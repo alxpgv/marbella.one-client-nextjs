@@ -11,10 +11,10 @@ interface SubMenuProps {
 export const SubMenu: FC<SubMenuProps> = ({ items, isOpen }) => {
   return (
     <ul className={`${styles.subMenu} ${isOpen ? styles.open : ""}`}>
-      {items.map(({ url, title }, index: number) => (
+      {items.map(({ slug, label }, index: number) => (
         <li key={index}>
-          <Link href={url}>
-            <a>{title}</a>
+          <Link href={slug}>
+            <a>{label}</a>
           </Link>
         </li>
       ))}

@@ -12,7 +12,7 @@ interface MenuItemProps {
 
 export const MenuItem: FC<MenuItemProps> = ({ item, onClick }) => {
   const [openSubMenu, setOpenSubMenu] = useState(false);
-  const { title, url, child } = item;
+  const { label, slug, child } = item;
 
   const toggleSubMenu = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -23,9 +23,9 @@ export const MenuItem: FC<MenuItemProps> = ({ item, onClick }) => {
   if (child?.length) {
     return (
       <li>
-        <Link href={url}>
+        <Link href={slug}>
           <a className={openSubMenu ? styles.active : ""} onClick={onClick}>
-            {title}
+            {label}
             <div className={styles.expandWrapper} onClick={toggleSubMenu}>
               <div className={styles.expandBtn}>
                 <span className={styles.iconWrapper}>
@@ -41,8 +41,8 @@ export const MenuItem: FC<MenuItemProps> = ({ item, onClick }) => {
   } else {
     return (
       <li>
-        <Link href={url}>
-          <a onClick={onClick}>{title}</a>
+        <Link href={slug}>
+          <a onClick={onClick}>{label}</a>
         </Link>
       </li>
     );

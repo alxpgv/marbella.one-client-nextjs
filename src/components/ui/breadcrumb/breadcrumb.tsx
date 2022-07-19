@@ -30,12 +30,12 @@ export const Breadcrumb: FC<BreadcrumbProps> = ({ title }) => {
 
   if (mainMenu && urlSegments.length > 1) {
     const parentItem = mainMenu.find(
-      (item) => item.url === `/${urlSegments[0]}`
+      (item) => item.slug === `/${urlSegments[0]}`
     );
 
     if (parentItem) {
       breadcrumbs.push({
-        title: parentItem.title,
+        title: parentItem.label,
         url: `/${urlSegments[0]}`,
       });
     }

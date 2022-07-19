@@ -14,10 +14,10 @@ export const FooterMenuItems: FC<FooterMenuItems> = ({ items, itemTitle }) => {
     return (
       <div className={cn(styles.col, styles.menu)}>
         {itemTitle && <div className={styles.menuTitle}>{itemTitle}</div>}
-        {items.map(({ id, title, url }) => {
+        {items.map(({ id, label, slug }) => {
           return (
-            <Link key={id} href={url}>
-              <a className={styles.menuItem}>{title}</a>
+            <Link key={id} href={slug}>
+              <a className={styles.menuItem}>{label}</a>
             </Link>
           );
         })}

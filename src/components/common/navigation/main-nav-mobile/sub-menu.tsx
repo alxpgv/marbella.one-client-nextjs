@@ -13,10 +13,10 @@ interface SubMenuProps {
 export const SubMenu: FC<SubMenuProps> = ({ items, isOpen, onClickItem }) => {
   return (
     <ul className={cn(styles.subMenu, isOpen ? styles.isOpen : "")}>
-      {items.map(({ url, title }, index: number) => (
+      {items.map(({ slug, label }, index: number) => (
         <li key={index}>
-          <Link href={url}>
-            <a onClick={onClickItem}>{title}</a>
+          <Link href={slug}>
+            <a onClick={onClickItem}>{label}</a>
           </Link>
         </li>
       ))}
